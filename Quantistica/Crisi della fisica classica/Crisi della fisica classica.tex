@@ -1,0 +1,708 @@
+\documentclass[11pt, a4paper]{article}
+
+% --- Pacchetti per la lingua e i font ---
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+% --- Pacchetti Matematici ---
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{physics} % Molto utile per derivate e notazione bra-ket
+\usepackage{cancel}  % Per le semplificazioni nelle formule
+
+% --- Pacchetti Grafici e di Layout ---
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{a4paper, top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+\usepackage{float}   % Per forzare la posizione delle immagini con [H]
+
+% --- Titolo ---
+\title{Appunti di Fisica Quantistica e Meccanica Statistica}
+\author{Il tuo nome}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+% --- Qui inizieremo a incollare le sezioni tradotte ---
+
+\section{Introduzione}
+
+\subsection{Confronto tra Fisica Classica e Onde}
+La fisica classica traccia una netta distinzione tra il comportamento delle particelle e quello delle onde.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{p{0.45\textwidth} p{0.45\textwidth}}
+        \textbf{Particelle (Urti)} & \textbf{Onde (Lampi)} \\
+        \hline
+        Legge di Newton & Leggi di Maxwell \\
+        Massa $m$, Posizione $\vec{r}$ & Funzione d'onda $\psi = f(\vec{r}, t)$ \\
+        Traiettoria $\vec{r} = \vec{r}(t)$ & Frequenza $\nu$, con $\lambda \nu = |v|$ \\
+        Velocità $\vec{v} = \frac{d\vec{r}}{dt}$ & Vettore d'onda $\vec{k} = \frac{2\pi}{\lambda}\hat{u}_{\text{prop}}$ \\
+        Quantità di moto $\vec{p} = m\vec{v}$ (momento lineare) & Fenomeni di interferenza e diffrazione \\
+        Energia cinetica $K = \frac{1}{2}mv^2$ (Localizzata) & Intensità $I \propto |A|^2$ (Delocalizzate) \\
+    \end{tabular}
+\end{table}
+
+\subsection{Energia Relativistica e Non Relativistica}
+L'energia totale di una particella in relatività è data da:
+\begin{equation}
+    E^2 = p^2c^2 + m^2c^4
+\end{equation}
+Estraendo la radice e raccogliendo il termine $m^2c^4$ si ottiene:
+\begin{equation}
+    E = \sqrt{p^2c^2 + m^2c^4} = mc^2 \sqrt{1 + \frac{p^2}{m^2c^2}}
+\end{equation}
+Nel limite non relativistico, in cui $p \ll mc$, possiamo sviluppare la radice in serie di Taylor ($\sqrt{1+x} \approx 1 + \frac{x}{2}$):
+\begin{equation}
+    E \approx mc^2 \left( 1 + \frac{p^2}{2m^2c^2} \right) = \underbrace{mc^2}_{\text{En. di riposo (costante)}} + \underbrace{\frac{p^2}{2m}}_{K_c}
+\end{equation}
+Da cui si ricava l'energia nel \textbf{regime non relativistico}:
+\begin{equation}
+    E = \frac{p^2}{2m} = \frac{1}{2}mv^2
+\end{equation}
+
+\subsection{Quantizzazione}
+Nel corso della storia, si è arrivati a quantizzare diverse grandezze fisiche:
+\begin{itemize}
+    \item \textbf{Materia}: dalle prime intuizioni di Leucippo e Democrito (V sec. a.C.) e l'introduzione dell'atomo nel 1700, fino alla tavola periodica e al concetto di mole ($N_A = 6.02 \cdot 10^{23}$).
+    \item \textbf{Carica}: la carica elementare dell'elettrone è $q_e = -1.6 \cdot 10^{-19} \text{ C}$.
+    \item \textbf{Energia (Planck)}: l'energia non è continua ma scambiata in pacchetti discreti proporzionali alla frequenza $\nu$:
+    \begin{equation}
+        E = n(h\nu) \quad \text{con } n = 1, 2, 3, \dots
+    \end{equation}
+    dove $h = 6.626 \cdot 10^{-34} \text{ J s}$ è la costante di Planck. Spesso si utilizza la costante di Planck ridotta $\hbar = \frac{h}{2\pi}$, riscrivendo l'energia come:
+    \begin{equation}
+        E = n(\hbar\omega)
+    \end{equation}
+    Dimensionalmente, la costante di Planck equivale a un \textbf{momento angolare}.
+\end{itemize}
+
+\section{Formalismo Lagrangiano}
+
+Mentre l'approccio newtoniano parte dalle forze:
+\begin{equation}
+    F_x^{\text{tot}} = m a_x \implies m \frac{d^2x(t)}{dt^2} = F_x^{\text{tot}}
+\end{equation}
+che, date le condizioni iniziali $x(0)$ e $\dot{x}(0)$, porta alla legge del moto $x = x(t)$, il formalismo lagrangiano si basa su considerazioni energetiche.
+
+Definiamo prima i \textbf{Gradi di Libertà (GdL)}: il numero $n$ di parametri indipendenti necessari per descrivere interamente il sistema. A questi corrispondono $n$ coordinate generalizzate $q_1, q_2, \dots, q_n$ e le rispettive velocità generalizzate $\dot{q}_i = \frac{dq_i}{dt}$. Lo scopo rimane trovare l'evoluzione temporale $q = q(t)$.
+
+Si definisce la \textbf{Lagrangiana} $\mathcal{L}$ come la differenza tra energia cinetica $K$ ed energia potenziale $V$:
+\begin{equation}
+    \mathcal{L}(q, \dot{q}, t) = \underbrace{K(q, \dot{q})}_{\text{Energ. Cinetica}} - \underbrace{V(q, t)}_{\text{Energ. Potenziale}}
+\end{equation}
+Per sistemi conservativi non vi è dipendenza esplicita di $V$ dalle velocità. Per un sistema di $N$ punti materiali, l'energia cinetica si scrive come $K = \sum_{i=1}^N \frac{1}{2}m_i |\vec{v}_i|^2$ e $V = V(\vec{r}_1, \dots, \vec{r}_N, t)$.
+
+Definiamo quindi l'\textbf{Azione} $S$ come l'integrale della Lagrangiana nel tempo:
+\begin{equation}
+    S = \int_{t_1}^{t_2} \mathcal{L}(q(t), \dot{q}(t), t) dt
+\end{equation}
+L'azione ha le dimensioni di un'energia per un tempo ($[S] = E \cdot t$), equivalenti a quelle di un momento angolare. $S$ è un \textit{funzionale}, poiché dipende dall'intera funzione $q(t)$ la quale, in principio, non è univocamente definita (vi è un'infinita famiglia di possibili percorsi tra $t_1$ e $t_2$).
+
+% --- SPAZIO PER IMMAGINE 1 ---
+\begin{figure}[H]
+    \centering
+    \rule{6cm}{4cm} % Sostituisci con \includegraphics{nome_immagine.png}
+    \caption{Famiglia di possibili traiettorie $q(t)$ tra $t_1$ e $t_2$.}
+\end{figure}
+
+\subsection{Principio di Hamilton (Azione Stazionaria)}
+Il principio di Hamilton stabilisce che il moto fisico del sistema è quello che rende stazionaria l'azione, ovvero il differenziale del funzionale $S$ deve essere nullo:
+\begin{equation}
+    \delta S = \delta \int_{t_1}^{t_2} \mathcal{L}(q, \dot{q}, t) dt = 0
+\end{equation}
+Calcoliamo la variazione $\delta S$ per uno scostamento infinitesimo $\delta q(t)$ dalla traiettoria reale (con $\mathcal{L} = K(q, \dot{q}) - V(q)$):
+\begin{equation}
+    \delta S = \int_{t_1}^{t_2} \left( \frac{\partial \mathcal{L}}{\partial q} \delta q + \frac{\partial \mathcal{L}}{\partial \dot{q}} \delta \dot{q} \right) dt = 0
+\end{equation}
+Poiché $\delta \dot{q} = \frac{d}{dt}(\delta q)$, integriamo per parti il secondo termine rispetto al tempo:
+\begin{equation}
+    \int_{t_1}^{t_2} \left[ \frac{\partial \mathcal{L}}{\partial \dot{q}} \frac{d}{dt}(\delta q) \right] dt = \left[ \frac{\partial \mathcal{L}}{\partial \dot{q}} \delta q \right]_{t_1}^{t_2} - \int_{t_1}^{t_2} \frac{d}{dt} \left( \frac{\partial \mathcal{L}}{\partial \dot{q}} \right) \delta q \, dt
+\end{equation}
+Poiché le configurazioni iniziale e finale sono fissate, le variazioni agli estremi sono nulle ($\delta q(t_1) = \delta q(t_2) = 0$). Di conseguenza, il primo termine valutato agli estremi si annulla. Sostituendo nell'integrale originale:
+\begin{equation}
+    \int_{t_1}^{t_2} \left[ \frac{\partial \mathcal{L}}{\partial q} \delta q - \frac{d}{dt} \left( \frac{\partial \mathcal{L}}{\partial \dot{q}} \right) \delta q \right] dt = 0
+\end{equation}
+Raccogliendo $\delta q$:
+\begin{equation}
+    \int_{t_1}^{t_2} \left[ \frac{\partial \mathcal{L}}{\partial q} - \frac{d}{dt} \left( \frac{\partial \mathcal{L}}{\partial \dot{q}} \right) \right] \delta q \, dt = 0
+\end{equation}
+Poiché questo deve valere per qualsiasi variazione $\delta q$ arbitraria, l'integranda tra parentesi quadre deve essere identicamente nulla. Otteniamo così le equazioni del moto, note come \textbf{Equazioni di Lagrange} (analogo della legge di Newton):
+\begin{equation}
+    \frac{d}{dt} \left( \frac{\partial \mathcal{L}}{\partial \dot{q}_i} \right) = \frac{\partial \mathcal{L}}{\partial q_i}
+\end{equation}
+
+\subsection{Momento Canonico e Coordinate Cicliche}
+Si definisce \textbf{momento canonico} $p_k$ coniugato alla coordinata $q_k$ la quantità:
+\begin{equation}
+    p_k = \frac{\partial \mathcal{L}}{\partial \dot{q}_k}
+\end{equation}
+L'equazione di Lagrange può essere riscritta in funzione del momento:
+\begin{equation}
+    \frac{d}{dt} p_k = \frac{\partial \mathcal{L}}{\partial q_k}
+\end{equation}
+Se la Lagrangiana non dipende esplicitamente da una certa coordinata $q_k$ (ovvero $\mathcal{L} \neq \mathcal{L}(q_k) \implies \frac{\partial \mathcal{L}}{\partial q_k} = 0$), tale coordinata è detta \textbf{ciclica}. In questo caso:
+\begin{equation}
+    \frac{d}{dt} p_k = 0 \implies p_k = \text{costante}
+\end{equation}
+Il momento canonico associato a una coordinata ciclica è una quantità conservata.
+
+\subsection{Esempi di Formalismo Lagrangiano}
+A differenza dell'approccio newtoniano che valuta le equazioni del moto istante per istante, il principio di Hamilton valuta un integrale: considera l'intera traiettoria globale e, tra tutti i percorsi possibili, seleziona quello che minimizza l'azione.
+
+% --- SPAZIO PER IMMAGINE 2 ---
+\begin{figure}[H]
+    \centering
+    \rule{6cm}{4cm} % Sostituisci con \includegraphics{nome_immagine.png}
+    \caption{Confronto tra l'approccio "punto per punto" (Newton) e quello "globale" (Hamilton) per la traiettoria da $q(t_1)$ a $q(t_2)$.}
+\end{figure}
+
+\textbf{Esempio 1: Particella in un campo gravitazionale 3D} \\
+Consideriamo un sistema con coordinate $q = (x, y, z)$ e potenziale $V = mgz$. La Lagrangiana è:
+\begin{equation}
+    \mathcal{L} = \frac{1}{2}m(\dot{x}^2 + \dot{y}^2 + \dot{z}^2) - mgz
+\end{equation}
+Applicando le equazioni di Lagrange avremo 3 equazioni scalari.
+Per $i = x$:
+\begin{equation}
+    \frac{d}{dt}\left(\frac{\partial \mathcal{L}}{\partial \dot{x}}\right) = \frac{\partial \mathcal{L}}{\partial x} \implies \frac{d}{dt}(m\dot{x}) = 0 \implies p_x = \text{costante}
+\end{equation}
+Lo stesso vale per $y$. Le coordinate $x$ e $y$ sono cicliche.
+Per $i = z$:
+\begin{equation}
+    \frac{d}{dt}\left(\frac{\partial \mathcal{L}}{\partial \dot{z}}\right) = \frac{\partial \mathcal{L}}{\partial z} \implies \frac{d}{dt}(m\dot{z}) = -mg \implies m\ddot{z} + mg = 0
+\end{equation}
+che restituisce la nota equazione di Newton per il moto del proiettile.
+
+\vspace{0.5cm}
+\textbf{Esempio 2: Particella in un piano con forza centrale $F = F(r)$} \\
+Passando alle coordinate polari, la velocità è $\vec{v} = \dot{r}\hat{u}_r + r\dot{\theta}\hat{u}_\theta$. L'energia cinetica e il potenziale sono:
+\begin{equation}
+    K = \frac{1}{2}m(\dot{r}^2 + r^2\dot{\theta}^2), \quad V = V(r)
+\end{equation}
+La Lagrangiana diventa $\mathcal{L} = \frac{1}{2}m(\dot{r}^2 + r^2\dot{\theta}^2) - V(r)$. Calcolando il momento coniugato a $\theta$:
+\begin{equation}
+    p_\theta = \frac{\partial \mathcal{L}}{\partial \dot{\theta}} = m r^2 \dot{\theta} = m \omega r^2 = |\vec{L}|
+\end{equation}
+Poiché $\theta$ non compare esplicitamente in $\mathcal{L}$ (è ciclica), il momento angolare $|\vec{L}|$ si conserva.
+
+% --- SPAZIO PER IMMAGINE 3 ---
+\begin{figure}[H]
+    \centering
+    \rule{5cm}{4cm} % Sostituisci con \includegraphics{nome_immagine.png}
+    \caption{Coordinate polari per una particella soggetta a forza centrale nel piano.}
+\end{figure}
+
+\section{Formalismo Hamiltoniano}
+Con la formulazione lagrangiana abbiamo ottenuto $n$ equazioni differenziali del secondo ordine, che necessitano delle condizioni iniziali $q_i(0)$ e $\dot{q}_i(0)$. Il formalismo Hamiltoniano raddoppia le variabili indipendenti, passando da $(q_i, \dot{q}_i)$ a $(q_i, p_i)$, trasformando il problema in $2n$ equazioni del primo ordine.
+
+Definiamo l'\textbf{Hamiltoniana} $H(q,p)$ tramite la Trasformata di Legendre della Lagrangiana:
+\begin{equation}
+    H(q, p) = \sum_{i=1}^n p_i \dot{q}_i - \mathcal{L}(q, \dot{q})
+\end{equation}
+Se il sistema è conservativo, si dimostra che l'Hamiltoniana corrisponde all'energia totale del sistema:
+\begin{equation}
+    H(q, p) = K(q, p) + V(q)
+\end{equation}
+Le equazioni del moto diventano le \textbf{Equazioni di Hamilton}:
+\begin{equation}
+    \begin{cases}
+        \dot{q}_i = \dfrac{\partial H}{\partial p_i} \\[1em]
+        \dot{p}_i = -\dfrac{\partial H}{\partial q_i}
+    \end{cases}
+    \quad \text{per } i = 1, \dots, n
+\end{equation}
+
+\textbf{Esempio: Hamiltoniana per una particella con $V(x,y,z)$} \\
+Data $\mathcal{L} = \frac{1}{2}m(\dot{x}^2 + \dot{y}^2 + \dot{z}^2) - V(x,y,z)$, sappiamo che $p_x = \frac{\partial \mathcal{L}}{\partial \dot{x}} = m\dot{x} \implies \dot{x} = \frac{p_x}{m}$.
+L'Hamiltoniana è:
+\begin{align}
+    H &= (p_x\dot{x} + p_y\dot{y} + p_z\dot{z}) - \mathcal{L} \nonumber \\
+      &= \left(\frac{p_x^2}{m} + \frac{p_y^2}{m} + \frac{p_z^2}{m}\right) - \left[ \frac{1}{2}m\left(\frac{p_x^2}{m^2} + \frac{p_y^2}{m^2} + \frac{p_z^2}{m^2}\right) - V(x,y,z) \right] \nonumber \\
+      &= \underbrace{\frac{1}{2m}(p_x^2 + p_y^2 + p_z^2)}_{K(p)} + \underbrace{V(x,y,z)}_{V(q)}
+\end{align}
+
+\subsection{Particella in un Campo Elettromagnetico}
+Richiamiamo brevemente le \textbf{Equazioni di Maxwell}:
+\begin{align}
+    \nabla \cdot \vec{E} &= \frac{\rho}{\varepsilon_0} & \nabla \times \vec{E} &= -\frac{\partial \vec{B}}{\partial t} \nonumber \\
+    \nabla \cdot \vec{B} &= 0 & \nabla \times \vec{B} &= \mu_0 \vec{J} + \mu_0 \varepsilon_0 \frac{\partial \vec{E}}{\partial t}
+\end{align}
+I campi si possono esprimere tramite il potenziale vettore $\vec{A}(x,y,z,t)$ e il potenziale scalare $\phi(x,y,z,t)$:
+\begin{equation}
+    \vec{B} = \nabla \times \vec{A}, \quad \vec{E} = -\nabla \phi - \frac{\partial \vec{A}}{\partial t}
+\end{equation}
+I potenziali sono soggetti alla \textit{Gauge invariance} (possono essere trasformati come $\vec{A}' = \vec{A} + \nabla f$ e $\phi' = \phi - \frac{\partial f}{\partial t}$ lasciando invariata la fisica).
+
+La Lagrangiana di una particella in un campo E.M. è:
+\begin{equation}
+    \mathcal{L} = \underbrace{\frac{1}{2}m|\vec{v}|^2}_{E_K} - \underbrace{e\phi}_{\text{En. pot.}} + \underbrace{e\vec{v}\cdot\vec{A}}_{\text{Interazione}}
+\end{equation}
+Esplicitando le componenti della velocità:
+\begin{equation}
+    \mathcal{L} = \frac{1}{2}m(v_x^2 + v_y^2 + v_z^2) - e\phi + e(v_x A_x + v_y A_y + v_z A_z)
+\end{equation}
+Scriviamo l'equazione di Lagrange per $q = x$ e $\dot{q} = v_x$. Calcoliamo i due termini separatamente:
+
+\textbf{1) Derivata rispetto a $v_x$ e al tempo:}
+\begin{align}
+    \frac{d}{dt}\left(\frac{\partial \mathcal{L}}{\partial v_x}\right) &= \frac{d}{dt}(m v_x + e A_x) = m a_x + e \frac{dA_x}{dt} \nonumber \\
+    &= m a_x + e \left( \frac{\partial A_x}{\partial x}v_x + \frac{\partial A_x}{\partial y}v_y + \frac{\partial A_x}{\partial z}v_z + \frac{\partial A_x}{\partial t} \right)
+\end{align}
+(Notare l'uso della regola della catena per la derivata totale nel tempo di $A_x$).
+
+\textbf{2) Derivata rispetto a $x$:}
+\begin{equation}
+    \frac{\partial \mathcal{L}}{\partial x} = -e\frac{\partial \phi}{\partial x} + e\left( \frac{\partial A_x}{\partial x}v_x + \frac{\partial A_y}{\partial x}v_y + \frac{\partial A_z}{\partial x}v_z \right)
+\end{equation}
+
+Uguagliando i due termini e isolando $ma_x$:
+\begin{align}
+    m a_x &= -e \left( \frac{\partial A_x}{\partial x}v_x + \frac{\partial A_x}{\partial y}v_y + \frac{\partial A_x}{\partial z}v_z + \frac{\partial A_x}{\partial t} \right) - e\frac{\partial \phi}{\partial x} + e\left( \frac{\partial A_x}{\partial x}v_x + \frac{\partial A_y}{\partial x}v_y + \frac{\partial A_z}{\partial x}v_z \right) \nonumber \\
+          &= -e \left[ \frac{\partial \phi}{\partial x} + \frac{\partial A_x}{\partial t} \right] + e \left[ v_y \left( \frac{\partial A_y}{\partial x} - \frac{\partial A_x}{\partial y} \right) + v_z \left( \frac{\partial A_z}{\partial x} - \frac{\partial A_x}{\partial z} \right) \right]
+\end{align}
+Riconosciamo nel primo termine la componente $x$ del campo elettrico e, nelle parentesi tonde, le componenti del rotore di $\vec{A}$ (ovvero $\vec{B}$):
+\begin{equation}
+    m a_x = -e E_x + e (v_y B_z - v_z B_y) = -e E_x + e (\vec{v} \times \vec{B})_x
+\end{equation}
+Generalizzando in 3D si recupera la legge di Newton con la Forza di Lorentz:
+\begin{equation}
+    m\vec{a} = -e\vec{E} + e(\vec{v} \times \vec{B})
+\end{equation}
+\textit{(Nota: gli appunti presentano la formula con $-e\vec{E}$, assumendo convenzionalmente una carica negativa o una notazione specifica per l'Elettrodinamica).}
+
+\section{Spazio delle Fasi}
+Consideriamo un sistema meccanico descritto dalle variabili coniugate $(q, p)$. 
+Per un singolo punto materiale in 1D, lo stato del sistema in ogni istante $t$ è rappresentato da un punto di coordinate $(x(t), p_x(t))$ in un piano bidimensionale. 
+
+Se passiamo a un sistema composto da $N$ particelle in 3 dimensioni, avremo $3N$ gradi di libertà. Il sistema sarà descritto da $3N$ coordinate generalizzate $q_i$ e $3N$ momenti coniugati $p_i$. L'iper-spazio a $6N$ dimensioni generato da queste coordinate prende il nome di \textbf{Spazio delle Fasi} (indicato con $\Gamma$).
+
+L'evoluzione temporale del sistema è rappresentata da una singola traiettoria in questo iper-spazio. Un elemento di volume infinitesimo nello spazio delle fasi è dato da:
+\begin{equation}
+    d\Gamma = d^{3N}q \, d^{3N}p
+\end{equation}
+Analizzando le dimensioni fisiche del prodotto tra una coordinata e il suo momento coniugato, otteniamo:
+\begin{equation}
+    [p_i \cdot q_i] = \left[ \frac{\partial \mathcal{L}}{\partial \dot{q}_i} q_i \right] = E \cdot t
+\end{equation}
+Questa dimensione corrisponde a quella di un \textbf{Momento Angolare}, ovvero a un'\textbf{Azione}.
+
+% --- SPAZIO PER IMMAGINE 4 ---
+\begin{figure}[H]
+    \centering
+    \rule{6cm}{4cm} % Sostituisci con \includegraphics{nome_immagine.png}
+    \caption{Rappresentazione di una traiettoria nello spazio delle fasi.}
+\end{figure}
+
+
+\section{Fondamenti di Meccanica Statistica: Ensemble}
+
+\subsection{Il Problema dei Sistemi Macroscopici}
+Prendiamo come esempio un gas perfetto monoatomico. A livello macroscopico, possiamo descriverlo con poche variabili termodinamiche: Pressione ($P$), Volume ($V$) e Temperatura ($T$).
+
+A livello microscopico, tuttavia, 1 mole di gas contiene un numero di particelle pari alla costante di Avogadro ($N_A \simeq 10^{24}$). Per descrivere meccanicamente il sistema, dovremmo risolvere il sistema di equazioni di Hamilton:
+\begin{equation}
+    \begin{cases}
+        \dot{q}_i = \dfrac{\partial H}{\partial p_i} \\[1em]
+        \dot{p}_i = -\dfrac{\partial H}{\partial q_i}
+    \end{cases}
+\end{equation}
+Questo richiede di risolvere $\approx 10^{24}$ equazioni differenziali e di conoscere le condizioni iniziali $(q_i(0), p_i(0))$ per ogni singola particella. Questo approccio è \textbf{ovviamente non fattibile}.
+
+Se volessimo calcolare il valore di una certa grandezza macroscopica $G = G(q_1, \dots, q_N, p_1, \dots, p_N)$, dovremmo farne la \textbf{media temporale} lungo la traiettoria reale del sistema:
+\begin{equation}
+    \bar{G} = \frac{1}{T} \int_0^T G(q(t), p(t)) \, dt
+\end{equation}
+Anche in questo caso, non conoscendo $q(t)$ e $p(t)$, il calcolo diretto è impossibile.
+
+\subsection{L'Ensemble e la Media di Ensemble}
+Per aggirare questo ostacolo, Gibbs introdusse il concetto di \textbf{Ensemble}. Invece di seguire un singolo sistema nel tempo, supponiamo di costruire $M$ "repliche" mentali del nostro contenitore (il sistema). Tutte queste repliche si trovano nelle \textbf{stesse condizioni macroscopiche} ($P, V, T$), ma differiscono per le condizioni iniziali a livello microscopico. 
+
+Rappresentando queste $M$ repliche nello spazio delle fasi, non avremo più una singola traiettoria, ma $M$ punti (o traiettorie) distinti. 
+Possiamo quindi definire la \textbf{media pesata sull'ensemble} per la grandezza $G$:
+\begin{equation}
+    \langle G \rangle = \frac{1}{M} \sum_{k=1}^M G_k(q^{(k)}, p^{(k)})
+\end{equation}
+
+Nel limite in cui il numero di repliche tende all'infinito ($M \to +\infty$), i punti rappresentativi riempiono un volume continuo nello spazio delle fasi. Possiamo definire una \textbf{densità di probabilità classica} $\rho(q, p)$:
+\begin{equation}
+    \rho(q, p) = \frac{\text{Numero di sistemi con } (q, p)}{\text{Volume in } \Gamma}
+\end{equation}
+Il numero di sistemi in un volumetto $d\Gamma$ sarà quindi $dM(q, p) = M \rho(q, p) d\Gamma$. Affinché $\rho$ sia una densità di probabilità ben definita, deve essere normalizzata a 1:
+\begin{equation}
+    \int_\Gamma \rho(q, p) \, d\Gamma = 1
+\end{equation}
+Sostituendo la somma discreta con un integrale sull'intero spazio delle fasi, la media di ensemble diventa:
+\begin{equation}
+    \langle G \rangle = \int_\Gamma G(q, p) \rho(q, p) \, d\Gamma
+\end{equation}
+
+% --- SPAZIO PER IMMAGINE 5 ---
+\begin{figure}[H]
+    \centering
+    \rule{8cm}{4cm} % Sostituisci con \includegraphics{nome_immagine.png}
+    \caption{Rappresentazione di un ensemble di sistemi nello spazio delle fasi per $M \to \infty$.}
+\end{figure}
+
+\subsection{Ipotesi Ergodica}
+Il legame tra la meccanica pura (media temporale) e la statistica (media di ensemble) è garantito dall'\textbf{Ipotesi Ergodica}, la quale postula che per un sistema all'equilibrio, la media temporale di una grandezza fisica sia uguale alla sua media di ensemble:
+\begin{equation}
+    \bar{G} = \langle G \rangle
+\end{equation}
+Di conseguenza, il problema fondamentale della meccanica statistica si riduce a trovare la forma funzionale corretta della densità di probabilità $\rho(q, p)$ per i vari tipi di ensemble (microcanonico, canonico, grancanonico).
+
+\subsection{Ensemble Microcanonico}
+L'ensemble microcanonico descrive \textbf{sistemi isolati}, per i quali l'energia $E$ si conserva rigorosamente. 
+Il sistema si trova in uno stato con energia compresa in un intervallo strettissimo $E = E_0 \pm \delta E$. 
+La probabilità $p(E)$ di trovare il sistema in un determinato stato di energia è definita come:
+\begin{equation}
+    p(E) = 
+    \begin{cases} 
+        \text{costante} & \text{per } E \cong E_0 \\ 
+        0 & \text{altrove}
+    \end{cases}
+\end{equation}
+
+\textbf{Esempio: Coordinate accessibili nello spazio delle fasi} \\
+Consideriamo un sistema semplificato con due coordinate spaziali $(q_1, q_2)$ e due momenti $(p_1, p_2)$. 
+Nello spazio delle configurazioni spaziali, le coordinate accessibili formano un'area (ad esempio un quadrato di lato $L$) che rappresenta tutte le possibili combinazioni posizionali che il sistema può assumere.
+
+% --- SPAZIO PER IMMAGINE 6 ---
+\begin{figure}[H]
+    \centering
+    \rule{5cm}{4cm} % Sostituisci con \includegraphics{nome_immagine.png}
+    \caption{Spazio delle coordinate $(q_1, q_2)$ accessibili al sistema.}
+\end{figure}
+
+Per quanto riguarda i momenti, la conservazione dell'energia cinetica impone un vincolo preciso:
+\begin{equation}
+    \frac{p_1^2}{2m} + \frac{p_2^2}{2m} = E_0 \implies p_1^2 + p_2^2 = 2mE_0
+\end{equation}
+Questa è l'equazione di una circonferenza di raggio $r = \sqrt{2mE_0}$ nel piano $(p_1, p_2)$. Considerando l'incertezza $\delta E$, i momenti accessibili si trovano in un guscio circolare di spessore proporzionale a $\delta E$.
+
+% --- SPAZIO PER IMMAGINE 7 ---
+\begin{figure}[H]
+    \centering
+    \rule{5cm}{4cm} % Sostituisci con \includegraphics{nome_immagine.png}
+    \caption{Spazio dei momenti $(p_1, p_2)$: guscio circolare corrispondente all'energia $E_0 \pm \delta E$.}
+\end{figure}
+
+Il volume totale accessibile nello spazio delle fasi $\Gamma(q_1, q_2, p_1, p_2)$ è dato dalla combinazione del quadrato delle coordinate e della circonferenza dei momenti. Questo iper-volume 4D contiene tutte le repliche possibili del sistema. 
+Poiché tutti questi sistemi hanno la stessa energia, la probabilità di trovare una replica in un volumetto $(\bar{q}_1, \bar{q}_2, \bar{p}_1, \bar{p}_2)$ è la stessa per tutti i sistemi; da qui l'assunzione fondamentale che $p(E) = \text{costante}$.
+
+\subsection{Ensemble Canonico}
+L'ensemble canonico descrive \textbf{sistemi in equilibrio termico}. 
+In questo caso, il sistema di interesse (sottosistema $s$) \textbf{non è isolato}, ma si trova all'interno di un sistema totale $t$ molto più grande che funge da \textbf{termostato} (o bagno termico). 
+Il sottosistema scambia energia con il termostato, il quale mantiene la temperatura $T$ costante.
+
+% --- SPAZIO PER IMMAGINE 8 ---
+\begin{figure}[H]
+    \centering
+    \rule{6cm}{4cm} % Sostituisci con \includegraphics{nome_immagine.png}
+    \caption{Schema di un ensemble canonico: un sottosistema scambia solo energia con un termostato.}
+\end{figure}
+
+Poiché vi è scambio di energia, le $M$ repliche del sottosistema $s$ avranno un'energia $E$ diversa tra loro. Non avendo più un'energia fissa, si definisce un'energia media $\langle E \rangle$ e la sua incertezza (o fluttuazione statistica) $\Delta E$.
+Si dimostra che la fluttuazione relativa diminuisce all'aumentare del numero di particelle $N$:
+\begin{equation}
+    \frac{\Delta E}{\langle E \rangle} \propto \frac{1}{\sqrt{N}}
+\end{equation}
+Nel limite termodinamico ($N \to +\infty$), la fluttuazione relativa tende a zero, rendendo l'energia macroscopica del sistema di fatto definita con precisione.
+
+\subsection{Ensemble Grancanonico}
+L'ensemble grancanonico è un'ulteriore generalizzazione. Oltre allo scambio di energia, il sottosistema può scambiare anche materia (particelle) con il termostato.
+
+% --- SPAZIO PER IMMAGINE 9 ---
+\begin{figure}[H]
+    \centering
+    \rule{6cm}{4cm} % Sostituisci con \includegraphics{nome_immagine.png}
+    \caption{Schema di un ensemble grancanonico: il sottosistema scambia energia e particelle con il termostato.}
+\end{figure}
+
+In questo scenario, ogni singola replica del sottosistema avrà non solo una diversa energia $E$, ma anche un diverso numero di particelle $N$.
+L'analisi si basa quindi sulla definizione dell'energia media $\langle E \rangle$ con fluttuazione $\Delta E$, e del numero medio di particelle $\langle N \rangle$ con relativa fluttuazione $\Delta N$.
+
+\subsection{Ripresa dell'Ensemble Canonico: Distribuzione di Boltzmann}
+Per un sistema in equilibrio termico descritto da un ensemble canonico, la densità di probabilità di trovare il sistema in uno stato con energia $E$ segue un andamento esponenziale decrescente noto come \textbf{Distribuzione di Boltzmann}[cite: 16]:
+\begin{equation}
+    p(E) = c \, e^{-\beta E} = c \, e^{-\frac{E}{k_B T}}
+\end{equation}
+dove $c$ è una costante di normalizzazione e $\beta = \frac{1}{k_B T}$. La costante di Boltzmann $k_B$ vale circa $1.38 \cdot 10^{-23} \text{ J/K}$[cite: 16]. 
+
+A titolo di esempio, a temperatura ambiente ($T = 300 \text{ K}$), l'energia termica caratteristica è[cite: 16]:
+\begin{equation}
+    k_B T \approx 4.14 \cdot 10^{-21} \text{ J} \approx 2.5 \cdot 10^{-2} \text{ eV} = 25 \text{ meV}
+\end{equation}
+(Ricordiamo che $1 \text{ eV} = 1.6 \cdot 10^{-19} \text{ J}$ rappresenta l'energia cinetica acquisita da un elettrone accelerato da una differenza di potenziale di 1 Volt [cite: 16]).
+
+Affinché $p(E)$ sia una densità di probabilità corretta, deve essere normalizzata a 1 sull'intero spazio delle fasi[cite: 16]:
+\begin{equation}
+    \int p(q, p) \, dq dp = 1 \implies c \int e^{-\beta E} \, dq dp = 1 \implies c = \frac{1}{\int e^{-\beta E} \, dq dp}
+\end{equation}
+Il termine al denominatore è di fondamentale importanza e prende il nome di \textbf{Funzione di Partizione} ($Z$)[cite: 16]:
+\begin{equation}
+    Z = \int e^{-\beta E} \, dq dp
+\end{equation}
+La probabilità normalizzata diventa quindi $p(E) = \frac{e^{-\beta E}}{Z}$ e il valore medio di una qualsiasi grandezza fisica $G$ è[cite: 16]:
+\begin{equation}
+    \langle G \rangle = \frac{1}{Z} \int G(q, p) e^{-\beta E} \, dq dp
+\end{equation}
+
+\subsection{Sistemi Indipendenti ed Energia Media}
+Se un sistema è composto da due sottosistemi indipendenti $S_1$ e $S_2$, l'energia totale è additiva: $E_{1+2} = E_1 + E_2$[cite: 17]. 
+La funzione di partizione totale fattorizza nel prodotto delle singole funzioni di partizione[cite: 17]:
+\begin{equation}
+    Z_{1+2} = \int e^{-\beta(E_1 + E_2)} \, dq_1 dp_1 dq_2 dp_2 = Z_1 \cdot Z_2
+\end{equation}
+Estendendo il ragionamento a $N$ sottosistemi indipendenti, si ottiene $Z_N = \prod_{i=1}^N Z_i$[cite: 17].
+
+Possiamo calcolare l'energia media (ovvero l'energia interna macroscopica $U$) direttamente dalla funzione di partizione[cite: 17]. Sappiamo che $\langle E \rangle = \frac{1}{Z} \int E(q,p) e^{-\beta E} dq dp$. Osserviamo che la derivata del logaritmo naturale di $Z$ rispetto a $\beta$ produce esattamente questo risultato[cite: 17]:
+\begin{equation}
+    \frac{\partial \ln Z}{\partial \beta} = \frac{1}{Z} \frac{\partial Z}{\partial \beta} = \frac{1}{Z} \int \frac{\partial}{\partial \beta} \left( e^{-\beta E} \right) dq dp = -\frac{1}{Z} \int E e^{-\beta E} \, dq dp
+\end{equation}
+Da cui si ricava la relazione fondamentale[cite: 17]:
+\begin{equation}
+    \langle E \rangle = U = -\frac{\partial \ln Z}{\partial \beta}
+\end{equation}
+
+\subsection{Teorema di Equipartizione dell'Energia}
+Questo teorema stabilisce come si distribuisce l'energia tra i vari gradi di libertà in un sistema all'equilibrio termico[cite: 18]. 
+Supponiamo che l'energia del sistema possa essere scritta separando il contributo quadratico di una singola variabile $x$ (che può essere una coordinata o un momento) dal resto delle variabili: $E = a x^2 + f(q, p)$ con $q, p \neq x$[cite: 18].
+
+Calcoliamo il valore medio di questo termine quadratico[cite: 18]:
+\begin{equation}
+    \langle a x^2 \rangle = \frac{\int a x^2 e^{-\beta(a x^2 + f)} \, dq dp}{\int e^{-\beta(a x^2 + f)} \, dq dp} = \frac{\int a x^2 e^{-\beta a x^2} dx \cdot \int e^{-\beta f} dq dp}{\int e^{-\beta a x^2} dx \cdot \int e^{-\beta f} dq dp}
+\end{equation}
+Gli integrali sulle variabili diverse da $x$ si semplificano. Rimane il rapporto tra due integrali gaussiani[cite: 18]:
+\begin{equation}
+    \langle a x^2 \rangle = \frac{\int a x^2 e^{-\beta a x^2} dx}{\int e^{-\beta a x^2} dx} = -\frac{\partial}{\partial \beta} \ln \left[ \int e^{-\beta a x^2} dx \right]
+\end{equation}
+Sfruttando il risultato dell'integrale gaussiano noto $\int e^{-\alpha x^2} dx = \sqrt{\frac{\pi}{\alpha}}$, otteniamo[cite: 18]:
+\begin{equation}
+    -\frac{\partial}{\partial \beta} \ln \left( \sqrt{\frac{\pi}{\beta a}} \right) = -\frac{1}{2} \frac{\partial}{\partial \beta} \left[ \ln \pi - \ln \beta - \ln a \right] = -\frac{1}{2} \left( -\frac{1}{\beta} \right) = \frac{1}{2\beta} = \frac{1}{2} k_B T
+\end{equation}
+Quindi, ogni grado di libertà che compare in modo puramente quadratico nell'espressione dell'energia contribuisce all'energia media totale con una quantità pari a $\frac{1}{2} k_B T$[cite: 18].
+
+\subsection{Applicazione: Gas Perfetto Monoatomico}
+Consideriamo un recipiente a volume fisso contenente 1 mole di gas monoatomico ($N_A$ particelle) a temperatura $T$[cite: 19]. 
+
+% --- SPAZIO PER IMMAGINE 10 ---
+\begin{figure}[H]
+    \centering
+    \rule{7cm}{3cm} % Sostituisci con \includegraphics{nome_immagine.png}
+    \caption{Modello di una singola particella e del gas macroscopico a contatto con un termostato.}
+\end{figure}
+
+L'energia della singola particella (atomo) è puramente cinetica[cite: 19]:
+\begin{equation}
+    E_{1 \text{ mol}} = \frac{1}{2m} (p_x^2 + p_y^2 + p_z^2)
+\end{equation}
+La sua funzione di partizione si calcola integrando sulle coordinate spaziali (che restituiscono il volume $V$) e sui momenti[cite: 19]:
+\begin{equation}
+    Z_{\text{mol}} = \int e^{-\beta \frac{p^2}{2m}} \, dx dy dz \, dp_x dp_y dp_z = V \left( \int e^{-\beta \frac{p^2}{2m}} dp \right)^3 = V (2\pi m k_B T)^{3/2}
+\end{equation}
+Trattandosi di un gas ideale, le $N_A$ molecole costituiscono sottosistemi indipendenti e non interagenti. La funzione di partizione totale è[cite: 19]:
+\begin{equation}
+    Z_{\text{gas}} = (Z_{\text{mol}})^{N_A} = V^{N_A} (2\pi m k_B T)^{\frac{3N_A}{2}}
+\end{equation}
+Calcoliamo ora l'energia interna del gas usando la formula ricavata precedentemente[cite: 19]:
+\begin{align}
+    \langle E \rangle = U_{\text{gas}} &= -\frac{\partial}{\partial \beta} \ln(Z_{\text{gas}}) = -\frac{\partial}{\partial \beta} \left[ N_A \ln V + \frac{3N_A}{2} \ln \left( \frac{2\pi m}{\beta} \right) \right] \nonumber \\
+    &= -\frac{3N_A}{2} \frac{\beta}{2\pi m} \left( -\frac{2\pi m}{\beta^2} \right) = \frac{3N_A}{2\beta} = \frac{3}{2} N_A k_B T = \frac{3}{2} R T
+\end{align}
+Lo stesso risultato si ricava istantaneamente dal \textbf{Teorema di Equipartizione}: poiché la particella ha 3 gradi di libertà quadratici (i momenti spaziali), la sua energia media è $3 \times \frac{1}{2}k_B T = \frac{3}{2}k_B T$. Moltiplicando per il numero di particelle $N_A$, riotteniamo $U_{\text{gas}} = \frac{3}{2} N_A k_B T = \frac{3}{2} R T$[cite: 19].
+
+Infine, calcoliamo il calore specifico a volume costante[cite: 19]:
+\begin{equation}
+    C_V = \left( \frac{\partial U}{\partial T} \right)_V = \frac{3}{2} R
+\end{equation}
+
+\section{Fisica Atomica e Particelle}
+
+\subsection{Metodi Sperimentali e Classici per la Massa}
+Consideriamo due gas diversi, ad esempio Idrogeno ($H_2$) e Ossigeno ($O_2$), mantenuti nelle stesse condizioni macroscopiche di pressione $P$, volume $V$ e temperatura $T$. 
+Sperimentalmente si osserva che il rapporto tra le masse dei due gas nel recipiente è:
+\begin{equation}
+    \frac{m_{H_2}}{m_{O_2}} = \frac{1}{16}
+\end{equation}
+Da queste osservazioni si definisce storicamente il \textbf{Peso Atomico} (o peso molecolare). Ponendo convenzionalmente l'atomo di idrogeno $H \to 1$, la molecola biatomica $H_2 \to 2$, l'atomo di ossigeno $O \to 16$ e la molecola $O_2 \to 32$.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \textbf{1 mol di Sostanza} & $H_2$ & $O_2$ & $Ar$ & $H_2O$ \\
+        \hline
+        \textbf{Peso Atomico} & \begin{tabular}{@{}c@{}} $H \to 1$ \\ $H_2 \to 2$ \end{tabular} & \begin{tabular}{@{}c@{}} $O \to 16$ \\ $O_2 \to 32$ \end{tabular} & $Ar \to 40$ & \begin{tabular}{@{}c@{}} $H \to 1, O \to 16$ \\ $H_2O \to 18$ \end{tabular} \\
+        \hline
+        \textbf{Massa (per mole)} & $2\text{ g}$ & $32\text{ g}$ & $40\text{ g}$ & $18\text{ g}$ \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Si introduce così l'\textbf{Unità di Massa Atomica (U.m.a.)}, che risulta essere approssimativamente pari alla massa di un protone o di un neutrone:
+\begin{equation}
+    1 \text{ U.m.a.} = m_H \simeq m_p \simeq m_n = \frac{1}{2} \frac{(1 \text{ mol di } H_2)}{N_A} = 1.67 \cdot 10^{-24} \text{ g}
+\end{equation}
+
+\subsection{Spettrometro di Massa}
+Lo spettrometro di massa è uno strumento che permette di misurare con precisione il rapporto carica/massa ($q/m$) delle particelle e, di conseguenza, la loro massa. 
+Le molecole da misurare vengono ionizzate (ad esempio tramite effetto termoionico) e accelerate da una differenza di potenziale $\Delta V$. Sfruttando la conservazione dell'energia otteniamo la velocità d'uscita:
+\begin{equation}
+    \frac{1}{2}mv^2 = q\Delta V \implies v = \sqrt{\frac{2q\Delta V}{m}}
+\end{equation}
+Successivamente, le particelle entrano in una regione con un campo magnetico uniforme $\vec{B}$ perpendicolare alla loro velocità. La forza di Lorentz agisce come forza centripetale, inducendo un moto circolare di raggio $r$:
+\begin{equation}
+    qvB = m\frac{v^2}{r} \implies r = \frac{mv}{qB}
+\end{equation}
+Elevando al quadrato l'espressione del raggio e sostituendo la velocità al quadrato ricavata in precedenza:
+\begin{equation}
+    r^2 = \frac{m^2}{q^2 B^2} \left( \frac{2q\Delta V}{m} \right) = \frac{2m\Delta V}{qB^2}
+\end{equation}
+Invertendo la formula si ottiene il rapporto carica-massa in funzione di sole grandezze note e misurabili:
+\begin{equation}
+    \frac{q}{m} = \frac{2\Delta V}{r^2 B^2}
+\end{equation}
+Poiché $\Delta V$ e $B$ sono parametri noti impostati dallo strumento, misurando il raggio di curvatura $r$ è possibile determinare esplicitamente la massa della particella analizzata.
+
+% --- SPAZIO PER IMMAGINE 11 ---
+\begin{figure}[H]
+    \centering
+    \rule{8cm}{5cm} % Sostituisci con \includegraphics{nome_immagine.png}
+    \caption{Schema di principio di uno spettrometro di massa.}
+\end{figure}
+
+\subsection{Metodi per Stimare il Raggio Atomico}
+
+\textbf{1. Libero Cammino Medio} \\
+Il libero cammino medio $l_m$ è la distanza media percorsa da un atomo tra due urti successivi. Considerando gli atomi come sfere rigide di raggio $r$, due atomi urtano se i loro centri passano a una distanza inferiore a $2r$. 
+Nel tempo $\Delta t$, un atomo in moto spazza un volume equivalente a un cilindro di raggio $2r$ e altezza $v\Delta t$:
+\begin{equation}
+    V_{\text{cil}} = S_{\text{cil}} \cdot h_{\text{cil}} = \pi(2r)^2 \cdot v\Delta t = 4\pi r^2 v \Delta t
+\end{equation}
+Indicando con $n$ la densità numerica (numero di atomi per unità di volume), il numero di urti in $\Delta t$ equivale al numero di atomi presenti in questo cilindro, ovvero $n \cdot V_{\text{cil}}$. 
+Il libero cammino medio è quindi:
+\begin{equation}
+    l_m = \frac{\text{distanza percorsa in } \Delta t}{\text{numero di urti in } \Delta t} = \frac{v \Delta t}{n 4\pi r^2 v \Delta t} = \frac{1}{4\pi n r^2}
+\end{equation}
+(Nota: considerando il fatto che in un gas \textit{tutti} gli atomi si muovono simultaneamente, una correzione statistica introduce un fattore moltiplicativo al denominatore, ottenendo $l_m = \frac{1}{\sqrt{2} \cdot 4\pi n r^2}$). 
+Misurando $l_m$ tramite viscosimetri (es. per l'aria $l_m \approx 10^{-7} \text{ m}$), è possibile invertire la formula per ricavare il raggio atomico $r$.
+
+\vspace{0.5cm}
+\textbf{2. Equazione di Stato dei Gas Reali} \\
+L'equazione di Van der Waals per 1 mole di gas reale corregge l'equazione dei gas ideali tenendo conto del volume intrinseco degli atomi e delle interazioni:
+\begin{equation}
+    \left( P + \frac{a}{V^2} \right) (V - b) = RT
+\end{equation}
+Il parametro $b$ prende il nome di \textbf{covolume} ed è strettamente legato al volume fisico occupato dagli atomi:
+\begin{equation}
+    b = 4 \cdot N_A \underbrace{\left( \frac{4}{3}\pi r^3 \right)}_{\text{Vol. atomo}}
+\end{equation}
+Fissando il volume $V$ del recipiente e misurando sperimentalmente coppie di dati $(T, P)$, si può effettuare un fit dei dati per trovare i parametri $a$ e $b$, e da quest'ultimo estrarre il raggio $r$.
+
+\vspace{0.5cm}
+\textbf{3. Diffrazione di Bragg} \\
+Investendo un reticolo cristallino con raggi X e misurando l'angolo dei massimi di interferenza, è possibile misurare il passo reticolare $a$. Assumendo un modello di impacchettamento in cui gli atomi (sfere) sono tangenti, si ottiene una relazione puramente geometrica, ad esempio $a = 2r$.
+
+\vspace{0.5cm}
+\textbf{Confronto dei risultati} \\
+I tre metodi indipendenti restituiscono stime coerenti. Ad esempio, per il Neon ($Ne$):
+\begin{itemize}
+    \item $r_{Ne} \approx 1.18 \cdot 10^{-10} \text{ m}$ (dal libero cammino medio)
+    \item $r_{Ne} \approx 2.1 \cdot 10^{-10} \text{ m}$ (dai gas reali)
+    \item $r_{Ne} \approx 1.6 \cdot 10^{-10} \text{ m}$ (da diffrazione cristallografica)
+\end{itemize}
+A titolo informativo, per l'idrogeno ($Z=1$) si ha $r_H = 0.53 \text{ \AA} = 0.53 \cdot 10^{-10} \text{ m}$ (il noto raggio di Bohr), mentre per un atomo pesante come l'uranio ($Z=92$) si ha un raggio $r_U = 1.4 \text{ \AA}$, a dimostrazione del fatto che le dimensioni atomiche non scalano linearmente con il numero di nucleoni.
+
+\section{Particelle Elementari e Interazione con la Materia}
+
+\subsection{Elettroni e Particelle $\alpha$}
+Gli elettroni hanno una massa a riposo molto inferiore a quella dei nucleoni:
+\begin{equation}
+    m_e = \frac{1}{1840} m_p = 9.1 \cdot 10^{-31} \text{ kg}
+\end{equation}
+La loro carica elementare è $q_e = -1.6 \cdot 10^{-19} \text{ C}$. Sperimentalmente, fasci di elettroni possono essere generati sfruttando l'\textbf{effetto termoionico}, riscaldando un filamento in un tubo a vuoto.
+
+Le particelle $\alpha$, invece, coincidono con i nuclei di Elio ($^4_2\text{He}^{++}$) e hanno una massa $m_\alpha \approx 4 \text{ U.m.a.}$. Vengono generate naturalmente nei decadimenti radioattivi, con energie cinetiche tipiche $E_k \approx 1 \div 10 \text{ MeV}$. In aria, viaggiano a velocità $v \approx 10^7 \text{ m/s}$ e hanno un libero cammino medio $l_m \approx 10 \text{ cm}$.
+
+\subsection{Raggi X: Interazione Luce-Materia}
+I Raggi X sono radiazione elettromagnetica (luce) ad altissima frequenza, con lunghezze d'onda tipiche dell'ordine dell'Angstrom ($\lambda \approx 1 \text{ \AA}$). Possono interagire con un centro diffusore (atomo) in quattro modi principali:
+\begin{itemize}
+    \item \textbf{Assorbimento (Effetto Fotoelettrico)}: il fotone X viene completamente assorbito, espellendo un elettrone atomico.
+    \item \textbf{Diffusione Elastica (Scattering di Rayleigh)}: il fotone viene deviato senza perdita di energia ($\lambda_{\text{in}} = \lambda_{\text{out}}$).
+    \item \textbf{Diffusione Inelastica (Scattering Compton)}: il fotone cede parte della sua energia a un elettrone esterno, venendo diffuso con una lunghezza d'onda maggiore ($\lambda' > \lambda$).
+    \item \textbf{Creazione di Coppie}: se l'energia del fotone incidente è superiore alla massa a riposo di due elettroni ($E > 2m_e c^2 \approx 1.02 \text{ MeV}$), il fotone può materializzarsi in una coppia elettrone-positrone ($e^-$, $e^+$).
+\end{itemize}
+
+% --- SPAZIO PER IMMAGINE 12 ---
+\begin{figure}[H]
+    \centering
+    \rule{8cm}{4cm} % Sostituisci con \includegraphics{nome_immagine.png}
+    \caption{Rappresentazione dei principali fenomeni di interazione dei Raggi X con la materia.}
+\end{figure}
+
+\section{Sezione d'Urto}
+
+\subsection{Definizione Macroscopica e Attenuazione}
+Per studiare la struttura della materia si utilizzano fasci sonda (es. elettroni o raggi X) sparati contro un bersaglio (un foglio sottile di materiale). 
+Sia $N_0$ il numero di particelle incidenti. Attraversando il materiale, una parte del fascio viene diffusa o assorbita, per cui il numero di particelle trasmesse è $N < N_0$. Il numero di particelle rimosse dal fascio primario è $R = N_0 - N$.
+
+Se il bersaglio ha area $A$ e contiene $n_0$ atomi (centri diffusori), a ogni centro è associata un'area efficace definita \textbf{sezione d'urto} $\sigma$ (misurata in $m^2$). 
+Assumendo che il foglio sia abbastanza sottile da non avere sovrapposizione tra le sezioni d'urto ($\sigma \cdot n_0 \ll A$), la probabilità di rimozione per una singola particella sonda è:
+\begin{equation}
+    P = \frac{n_0 \cdot \sigma}{A}
+\end{equation}
+Il numero totale di eventi (particelle rimosse) sarà quindi $R = P \cdot N_0$. 
+Nota che la sezione d'urto totale è la somma delle sezioni d'urto dei singoli processi competitivi: $\sigma_{\text{tot}} = \sigma_{\text{fotoel}} + \sigma_{\text{comp}} + \sigma_{\text{ray}}$.
+
+Consideriamo ora un fascio che attraversa uno spessore macroscopico $x$. Sia $\rho$ la densità numerica (atomi per unità di volume). Nello strato infinitesimo $dx$, il numero di centri diffusori per unità di area è $\rho \, dx$. La variazione del numero di particelle del fascio è proporzionale al numero di particelle presenti a quella profondità $N(x)$:
+\begin{equation}
+    -dN = N(x) - N(x+dx) = \sigma \rho N(x) dx \implies dN = -\sigma \rho N(x) dx
+\end{equation}
+Integrando questa equazione differenziale tra $0$ e $x$ con la condizione iniziale $N(0) = N_0$, si ottiene la \textbf{legge di attenuazione esponenziale}:
+\begin{equation}
+    N(x) = N_0 e^{-\sigma \rho x}
+\end{equation}
+Da questa formula si definisce il \textbf{libero cammino medio} macroscopico $\Lambda$, che corrisponde alla distanza dopo la quale l'intensità del fascio si riduce di un fattore $1/e$:
+\begin{equation}
+    \Lambda = \frac{1}{\sigma \rho}
+\end{equation}
+
+\subsection{Calcolo Geometrico del Parametro d'Impatto}
+Analizziamo ora l'urto a livello microscopico. Definiamo \textbf{parametro d'impatto} $b$ la distanza perpendicolare tra la traiettoria asintotica della particella incidente e l'asse passante per il centro del diffusore. L'angolo di deviazione finale della particella è l'\textbf{angolo di diffusione} $\theta$. Esiste una relazione ben precisa $\theta = \theta(b)$.
+
+% --- SPAZIO PER IMMAGINE 13 ---
+\begin{figure}[H]
+    \centering
+    \rule{7cm}{5cm} % Sostituisci con \includegraphics{nome_immagine.png}
+    \caption{Geometria dell'urto elastico contro una sfera rigida: parametro d'impatto $b$ e angolo di scattering $\theta$.}
+\end{figure}
+
+Modellizzando il centro diffusore come una \textbf{sfera rigida inaccessibile} di raggio $R$, la particella urta la superficie e viene riflessa elasticamente. Tracciando la normale alla superficie nel punto d'impatto, definiamo $\alpha$ l'angolo tra la normale e la direzione incidente.
+Per la legge della riflessione, l'angolo di deviazione totale $\theta$ e l'angolo di incidenza $\alpha$ sono legati dalla geometria del triangolo:
+\begin{equation}
+    2\alpha + \theta = \pi \implies \alpha = \frac{\pi}{2} - \frac{\theta}{2}
+\end{equation}
+Il parametro d'impatto $b$ può essere espresso tramite trigonometria sul triangolo rettangolo formato dal raggio $R$:
+\begin{equation}
+    b = R \sin\alpha = R \sin\left(\frac{\pi}{2} - \frac{\theta}{2}\right) = R \cos\left(\frac{\theta}{2}\right)
+\end{equation}
+Invertendo questa relazione, otteniamo l'angolo di diffusione in funzione del parametro d'impatto:
+\begin{equation}
+    \theta(b) = 
+    \begin{cases}
+        2 \arccos\left(\frac{b}{R}\right) & \text{se } b \le R \\
+        0 & \text{altrimenti (nessun urto)}
+    \end{cases}
+\end{equation}
+Questa espressione è il punto di partenza per calcolare la sezione d'urto differenziale nei modelli classici.
+
+\end{document}
