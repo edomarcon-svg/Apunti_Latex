@@ -15,6 +15,7 @@
 \usepackage{booktabs}
 \usepackage{multirow}
 \usepackage{sectsty}
+\usepackage{float}
 \allsectionsfont{\underline}
 
 \begin{document}
@@ -155,16 +156,13 @@ Questo è l'analogo della Legge di Newton. Se la Lagrangiana non dipende esplici
     \item $x = x(t) \Rightarrow m \frac{d^2x(t)}{dt^2} = F_x^{\text{TOT}}$.
 \end{enumerate}
 
-% ---------------------------------------------------------
-% \begin{figure}[h!]
-%     \centering
-%     % \includegraphics[width=0.4\textwidth]{traiettoria_azione.png}
-%     \vspace{2.5cm} % Spazio provvisorio
-%     \caption{\textit{[Spazio per disegno: grafico q-t con traiettoria tra t1 e t2]}}
-% \end{figure}
-% ---------------------------------------------------------
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.25\textwidth]{immagini/2026-03-04-14-40-01.png}
+\end{figure}
 
-Hamilton è un integrale $\Rightarrow$ considera già tutta la traiettoria, non punto per punto. Considero tutti i percorsi e scelgo quello che rende minima l'azione.
+\noindent
+Hamilton è un integrale $\Rightarrow$ considera già tutta la traiettoria, non punto per punto. Considero tutti i percorsi e scelgo quello che rende minima l'azione.\\
 
 \subsubsection*{Es. 1: Particella nel campo 3D}
 Coordinate $q_i = (x,y,z)$, potenziale $V = mgz$.
@@ -178,14 +176,7 @@ Coordinate $q_i = (x,y,z)$, potenziale $V = mgz$.
 
 \subsubsection*{Es. 2: Particella in un piano con forza centrale $F=F(r)$}
 
-% ---------------------------------------------------------
-% \begin{figure}[h!]
-%     \centering
-%     % \includegraphics[width=0.4\textwidth]{coordinate_polari.png}
-%     \vspace{2.5cm} % Spazio provvisorio
-%     \caption{\textit{[Spazio per disegno: assi x-y, vettore r, massa m e angolo theta]}}
-% \end{figure}
-% ---------------------------------------------------------
+
 
 In coordinate polari: $\vec{v} = v_r \hat{u}_r + v_\theta \hat{u}_\theta = \dot{r} \hat{u}_r + r\dot{\theta} \hat{u}_\theta$.
 Energia cinetica $K = \frac{1}{2}m(\dot{r}^2 + r^2\dot{\theta}^2)$ e potenziale $V = V(r)$.
@@ -197,7 +188,11 @@ Il momento coniugato a $\theta$ è:
     p_\theta = \frac{\partial \mathcal{L}}{\partial \dot{\theta}} = mr^2\dot{\theta} = mvr = |\vec{L}| \quad (\text{Momento Angolare } \Rightarrow \text{SI CONSERVA})
 \end{equation*}
 
-\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.25\textwidth]{immagini/2026-03-04-14-43-17.png}
+\end{figure}
+
 \section*{Formalismo Hamiltoniano}
 
 Partiamo dalle $n$ Equazioni di Lagrange del II ordine:
@@ -205,12 +200,14 @@ Partiamo dalle $n$ Equazioni di Lagrange del II ordine:
     \frac{d}{dt}\left(\frac{\partial \mathcal{L}}{\partial \dot{q}_i}\right) = \frac{\partial \mathcal{L}}{\partial q_i} \quad i=1\dots n \qquad \text{con cond. iniziali } \begin{cases} q_i(0) \\ \dot{q}_i(0) = \frac{dq_i}{dt}(0) \end{cases}
 \end{equation*}
 
+\noindent
 Passiamo da $n$ variabili indipendenti a $2n$ variabili indipendenti tramite la trasformazione di Legendre: $(q_i, \dot{q}_i) \rightleftarrows (q_i, p_i)$. Definiamo l'Hamiltoniana:
 \begin{equation}
     H(q,p) = \sum_{i=1}^n p_i \dot{q}_i - \mathcal{L}(q, \dot{q})
 \end{equation}
 $\rightarrow$ Se il sistema è conservativo $\Rightarrow \boxed{H(q,p) = K(q,p) + V(q)}$
 
+\noindent
 Le equazioni del moto diventano le \textbf{Equazioni di Hamilton} (ho raddoppiato le variabili, ma ora le equazioni sono del I ordine):
 \begin{equation}
     \text{Cond. iniziali: } \begin{cases} q_i(0) \\ p_i(0) \end{cases} \Rightarrow \quad \begin{cases} \dot{q}_i = \frac{\partial H}{\partial p_i} \\ \dot{p}_i = -\frac{\partial H}{\partial q_i} \end{cases} \quad i=1\dots n
@@ -227,7 +224,6 @@ Ricordando che $p_i = \frac{\partial \mathcal{L}}{\partial \dot{q}_i} \Rightarro
       &= \underbrace{\frac{1}{2m}(p_x^2 + p_y^2 + p_z^2)}_{K(p)} + \underbrace{V(x,y,z)}_{V(q)}
 \end{align*}
 
-\newpage
 \subsection*{Es.: $\mathcal{L}$ di una particella immersa in un campo Elettromagnetico}
 
 \textbf{Equazioni di Maxwell e Potenziali:}
@@ -236,8 +232,9 @@ Ricordando che $p_i = \frac{\partial \mathcal{L}}{\partial \dot{q}_i} \Rightarro
     \text{rot} \vec{E} &= -\frac{\partial \vec{B}}{\partial t} \quad \Rightarrow \quad \vec{E} = -\nabla \varphi - \frac{\partial \vec{A}}{\partial t} & \text{rot} \vec{B} &= \mu_0 \vec{J} + \mu_0\varepsilon_0 \frac{\partial \vec{E}}{\partial t}
 \end{align*}
 Vettore potenziale e potenziale scalare: $\vec{A} = \begin{bmatrix} A_x(x,y,z,t) \\ A_y(x,y,z,t) \\ A_z(x,y,z,t) \end{bmatrix}$ e $\varphi = \varphi(x,y,z,t)$. \\
-Invarianza di \textbf{Gauge}: $\vec{A} \rightarrow \vec{A}' = \vec{A} + \nabla f$ e $\varphi \rightarrow \varphi' = \varphi - \frac{\partial f}{\partial t}$.
+Invarianza di \textbf{Gauge}: $\vec{A} \rightarrow \vec{A}' = \vec{A} + \nabla f$ e $\varphi \rightarrow \varphi' = \varphi - \frac{\partial f}{\partial t}$.\\
 
+\noindent
 \textbf{La Lagrangiana} è data da:
 \begin{equation}
     \boxed{ \mathcal{L} = \underbrace{\frac{1}{2}m|\vec{v}|^2}_{E_K} - \underbrace{e\varphi + e\vec{v}\cdot\vec{A}}_{\vec{F}_{el} \text{ e } \vec{J}\cdot\vec{A}} }
@@ -272,8 +269,9 @@ Uguagliando (1) e (2) ed elidendo i termini $e\frac{\partial A_x}{\partial x}v_x
 Generalizzando in 3D, ritroviamo la \textbf{Forza di Lorentz}:
 \begin{equation*}
     \ulcorner m\vec{a} = -e\vec{E} + e(\vec{v} \wedge \vec{B}) \lrcorner \quad \text{(Newton con Forza di Lorentz)}
-\end{equation*}
+\end{equation*}\\
 
+\noindent
 \textbf{Hamiltoniana del campo E.M.:}
 Troviamo il momento canonico $p_x = \frac{\partial \mathcal{L}}{\partial \dot{x}} = m\dot{x} + eA_x \Rightarrow \ulcorner \vec{p} = m\vec{v} + e\vec{A} \lrcorner \Rightarrow m\vec{v} = \vec{p} - e\vec{A}$.
 Poiché $H = K + V$:
@@ -281,29 +279,33 @@ Poiché $H = K + V$:
     \boxed{ H = \underbrace{\frac{(\vec{p} - e\vec{A})^2}{2m}}_{\text{solo dipendente da } \vec{v}} + \underbrace{e\varphi}_{\text{en. pot. elettrost.}} }
 \end{equation}
 
-% --- CONTINUAZIONE DAL BLOCCO PRECEDENTE ---
 
-\newpage
 \section*{Spazio delle Fasi}
 
-% ---------------------------------------------------------
-% \begin{figure}[h!]
-%     \centering
-%     % \includegraphics[width=0.4\textwidth]{spazio_fasi_1D.png}
-%     \vspace{2.5cm} % Spazio provvisorio
-%     \caption{\textit{[Spazio per disegno: grafico 1D con x e px, e andamento di px(t) in funzione di x(t)]}}
-% \end{figure}
-% ---------------------------------------------------------
-
 Se consideriamo un sistema descritto dalle coordinate $(x, p_x)$, le equazioni del moto definiscono una curva parametrizzata dal tempo $t$:
-\begin{equation*}
-    \begin{cases}
-        x = x(t) \\
-        p_x = p_x(t)
-    \end{cases}
-\end{equation*}
+\begin{figure}[ht]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{immagini/2026-03-04-14-53-43.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        \begin{equation*}
+            \begin{cases}
+                x = x(t) \\
+                p_x = p_x(t)
+            \end{cases}
+        \end{equation*}
+    \end{minipage}
+\end{figure}
 
+\noindent
 Estendendo a $N$ particelle in 3 dimensioni (3D): avremo $3N$ coordinate generalizzate e $3N$ momenti coniugati, per un totale di $6N$ assi. Lo spazio delle fasi $\Gamma$ diventa quindi un \textbf{iperspazio a $6N$ dimensioni}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.3\textwidth]{immagini/2026-03-04-14-54-52.png}
+\end{figure}
 
 L'elemento di volume nello spazio delle fasi è definito come:
 \begin{equation}
@@ -316,7 +318,6 @@ Ricordando che $p_i = \frac{\partial \mathcal{L}}{\partial \dot{q}_i}$, abbiamo 
     [p_i \times q_i] = [\mathcal{L}] \cdot t = E \cdot t \quad \Rightarrow \quad \text{MOMENTO ANGOLARE} \quad \Rightarrow \quad \text{AZIONE}
 \end{equation*}
 
-\newpage
 \section*{Fondamenti di Meccanica Statistica: Ensemble}
 
 Prendiamo come esempio un \textbf{Gas Perfetto Monoatomico}:
@@ -330,6 +331,7 @@ Microscopicamente, per ogni particella abbiamo coordinate $(x,y,z)$ e momenti $(
     \end{cases} \quad \text{con cond. iniziali } (q_i(0), p_i(0))
 \end{equation*}
 
+\noindent
 Data una generica grandezza macroscopica $G = G(x_1 \dots x_N, p_1 \dots p_N) = G(q,p)$, vorremmo calcolarne la \textbf{media temporale}:
 \begin{equation}
     \bar{G} = \frac{1}{T} \int_0^T G(q(t), p(t)) \, dt
@@ -350,21 +352,34 @@ Tuttavia, questo calcolo è \textbf{NON FATTIBILE} perché richiederebbe di cono
 Supponiamo di costruire $M$ repliche del barattolo originale. Tutte le repliche hanno le \textbf{stesse condizioni macroscopiche} ($p, V, T$) ma \textbf{condizioni iniziali (microscopiche) diverse}.
 Facendo tendere il numero di repliche all'infinito ($M \to \infty$), otteniamo un \textbf{ENSEMBLE}.
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.25\textwidth]{immagini/2026-03-04-15-00-35.png}
+\end{figure}
+
+\noindent
 Possiamo ora definire la \textbf{Media Pesata sull'Ensemble}:
 \begin{equation}
     \langle G \rangle = \frac{1}{M} \sum_{i=1}^M G_i
 \end{equation}
 
+\noindent
 Nello spazio delle fasi, queste innumerevoli repliche creano una densità continua. Definiamo la densità di sistemi in $\Gamma$:
 \begin{equation*}
     \rho(q,p) = \frac{\text{\# sistemi che hanno } (q_i, p_i)}{\text{Vol. in } \Gamma} \quad \Rightarrow \quad dM(q_i, p_i) = \rho(q_i, p_i) d\Gamma
 \end{equation*}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.25\textwidth]{immagini/2026-03-04-14-59-22.png}
+\end{figure}
 
 Passando al continuo, la media della grandezza $G$ diventa:
 \begin{equation}
     \langle G \rangle = \frac{\int G(q, p) \rho(q, p) \, dq \, dp}{\int \rho(q, p) \, dq \, dp}
 \end{equation}
 
+\noindent
 Se normalizziamo il numero totale di sistemi a 1, ovvero $\int \rho(q, p) \, dq \, dp = 1$, la densità $\rho(q,p)$ diventa una vera e propria \textbf{Densità di Probabilità Classica}. L'equazione si semplifica in:
 \begin{equation}
     \boxed{ \langle G \rangle = \int G(q, p) \rho(q, p) \, d\Gamma }
@@ -377,6 +392,7 @@ L'assunzione fondamentale che permette di collegare la media temporale con quell
 \end{equation}
 (La media temporale di un singolo sistema per $T \to \infty$ è uguale alla media sull'ensemble a un dato istante $t$).
 
+\noindent
 Il punto fondamentale della Meccanica Statistica diventa quindi trovare la distribuzione di probabilità corretta: \textbf{$\rho(q,p) = ?$}.
 
 % --- CONTINUAZIONE DAL BLOCCO PRECEDENTE ---
@@ -388,19 +404,20 @@ Il punto fondamentale della meccanica statistica è trovare la densità $\rho(q,
     \boxed{ \frac{d}{dt}[\rho(q,p)] = 0 } \quad \text{STAZIONARIA}
 \end{equation}
 Di conseguenza, la densità di probabilità può dipendere dalle coordinate e dai momenti solo tramite l'energia del sistema:
-\begin{equation*}
-    \rho(q,p) \Rightarrow \rho(E) = \rho[E(q,p)]
-\end{equation*}
+\begin{figure}[ht]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=0.8\textwidth]{immagini/2026-03-04-15-24-06.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        \begin{equation*}
+            \rho(q,p) \Rightarrow \rho(E) = \rho[E(q,p)]
+        \end{equation*}
+    \end{minipage}
+\end{figure}
 
-% ---------------------------------------------------------
-% \begin{figure}[h!]
-%     \centering
-%     % \includegraphics[width=0.4\textwidth]{cilindro_liouville.png}
-%     \vspace{2.5cm} % Spazio provvisorio
-%     \caption{\textit{[Spazio per disegno: cilindro con particelle e vettori velocità]}}
-% \end{figure}
-% ---------------------------------------------------------
-
+\noindent
 Verifichiamo l'Ipotesi Ergodica ($\bar{v} = \langle v \rangle$) confrontando i due approcci per una grandezza come la velocità:
 \begin{enumerate}
     \item \textbf{Media temporale:} $\bar{v} = \frac{1}{T} \int_0^T v(q_1, q_2, p_1, p_2) \, dt$
@@ -408,7 +425,6 @@ Verifichiamo l'Ipotesi Ergodica ($\bar{v} = \langle v \rangle$) confrontando i d
 \end{enumerate}
 
 
-\newpage
 \section*{I Tipi di Ensemble}
 
 \subsection*{1. Ensemble Microcanonico}
@@ -424,42 +440,51 @@ La distribuzione di probabilità è definita come:
 
 \textbf{Coordinate Accessibili:} tutte le possibili combinazioni che il sistema può avere.
 
-% ---------------------------------------------------------
-% \begin{figure}[h!]
-%     \centering
-%     % \includegraphics[width=0.8\textwidth]{spazio_microcanonico.png}
-%     \vspace{3.5cm} % Spazio provvisorio
-%     \caption{\textit{[Spazio per disegno: grafico 1D con punti 0-L, grafico 2D con area q1-q2, grafico dei momenti p1-p2 con corona circolare]}}
-% \end{figure}
-% ---------------------------------------------------------
-
 Esempio per l'energia cinetica di due particelle:
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.6\textwidth]{immagini/2026-03-04-15-26-10.png}
+\end{figure}
+
 \begin{equation*}
     \frac{p_1^2}{2m} + \frac{p_2^2}{2m} = E_0 \quad \Rightarrow \quad p_1^2 + p_2^2 = 2mE_0
 \end{equation*}
 Nello spazio dei momenti, questo definisce una circonferenza di raggio $r = \sqrt{2mE_0}$ (e spessore $\delta E$).
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.3\textwidth]{immagini/2026-03-04-15-26-45.png}
+\end{figure}
+
+\noindent
 Considerando lo spazio delle fasi completo $\Gamma(q_1, q_2, p_1, p_2)$, combiniamo il "quadrato" delle posizioni con la "circonferenza" dei momenti e otteniamo un volume in 4D in cui replichiamo tutti i sistemi possibili.
 Poiché tutti i sistemi hanno la stessa Energia, la probabilità di avere una replica con volume $(\bar{q}_1, \bar{q}_2, \bar{p}_1, \bar{p}_2)$ è la stessa per tutti i sistemi $\Rightarrow \rho(E) = \text{cost}$.
 
 \subsection*{2. Ensemble Canonico}
 Descrive \textbf{SISTEMI in equilibrio TERMICO}.
-\begin{itemize}
+
+\begin{figure}[ht]
+	\centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=0.5\textwidth]{immagini/2026-03-04-15-27-52.png}
+    \end{minipage}\hfill
+    % Seconda colonna: il testo (prende l'altro 45%)
+    \begin{minipage}{0.65\textwidth}
+       \begin{itemize}
     \item $t$: Sistema totale isolato.
     \item $s$: Sottosistema $\Rightarrow$ \textbf{NON ISOLATO} $\Rightarrow$ SCAMBIA $E$ COL TERMOSTATO.
     \item $r$: Termostato in equilibrio termico con $s$ (sono in contatto, $r$ mantiene la temperatura di $s$).
 \end{itemize}
+    \end{minipage}
+\end{figure}
 
-% ---------------------------------------------------------
-% \begin{figure}[h!]
-%     \centering
-%     % \includegraphics[width=0.4\textwidth]{ensemble_canonico.png}
-%     \vspace{2.5cm} % Spazio provvisorio
-%     \caption{\textit{[Spazio per disegno: schema a blocchi con termostato (r), sistema totale (t) e sottosistema (s) che scambia calore]}}
-% \end{figure}
-% ---------------------------------------------------------
+\noindent
+Le $M$ repliche di $s$ hanno una $E$ diversa tra loro. 
 
-Le $M$ repliche di $s$ hanno una $E$ diversa tra loro. Si definisce un'energia media $\langle E \rangle$ e un'incertezza $\Delta E$. Si dimostra che, per un numero di particelle $N \to +\infty$:
+\noindent
+Si definisce un'energia media $\langle E \rangle$ e un'incertezza $\Delta E$. Si dimostra che, per un numero di particelle $N \to +\infty$:
 \begin{equation}
     \frac{\Delta E}{\langle E \rangle} \propto \frac{1}{\sqrt{N}} \xrightarrow{N \to +\infty} 0
 \end{equation}
@@ -467,30 +492,177 @@ Le fluttuazioni diventano quindi trascurabili al limite termodinamico.
 
 \subsection*{3. Ensemble Grancanonico}
 Si estende il concetto del canonico permettendo anche lo scambio di particelle.
-\begin{itemize}
-    \item Il sottosistema $s$ scambia sia energia $E$ che numero di particelle $N$ con il termostato.
-    \item Ogni replica del sottosistema ha una diversa $E$ e un diverso $N$.
-    \item Si definiscono quindi i valori medi e le fluttuazioni sia per l'energia ($\langle E \rangle$ e $\Delta E$) sia per il numero di particelle ($\langle N \rangle$ e $\Delta N$).
-\end{itemize}
+\begin{figure}[ht]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-03-04-15-48-12.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        \begin{itemize}
+            \item Il sottosistema $s$ scambia sia energia $E$ che numero di particelle $N$ con il termostato.
+            \item Ogni replica del sottosistema ha una diversa $E$ e un diverso $N$.
+            \item Si definiscono quindi i valori medi e le fluttuazioni sia per l'energia ($\langle E \rangle$ e $\Delta E$) sia per il numero di particelle ($\langle N \rangle$ e $\Delta N$).
+        \end{itemize}
+    \end{minipage}
+\end{figure}
 
-% ---------------------------------------------------------
-% \begin{figure}[h!]
-%     \centering
-%     % \includegraphics[width=0.4\textwidth]{ensemble_grancanonico.png}
-%     \vspace{2.5cm} % Spazio provvisorio
-%     \caption{\textit{[Spazio per disegno: schema simile al canonico ma con frecce per scambio di E e N]}}
-% \end{figure}
-% ---------------------------------------------------------
+\section*{Distribuzione di Boltzmann e Funzione di Partizione}
 
-% --- CONTINUAZIONE DAL BLOCCO PRECEDENTE ---
+Riprendiamo l'\textbf{Ensemble Canonico} (Sistemi in equilibrio termico). La probabilità di trovare il sistema con energia $E$ è data dalla \textbf{Distribuzione di Boltzmann}:
+\begin{equation*}
+    \rho(E) = c e^{-\beta E} = c e^{-\frac{E}{k_B T}}
+\end{equation*}
+dove $c = \text{cost}$, $\beta = \frac{1}{k_B T}$, e $k_B = 1,38 \cdot 10^{-23} \text{ J/K}$ (Costante di Boltzmann).\\
 
-\newpage
+\noindent
+\textit{Esempio dimensionale:} A temperatura ambiente $T = 300 \text{ K}$:
+\begin{equation*}
+    k_B T = 4,14 \cdot 10^{-21} \text{ J}
+\end{equation*}
+Introducendo l'elettronvolt ($1 \text{ eV} = 1,6 \cdot 10^{-19} \text{ J}$, l'energia cinetica acquisita da un elettrone sotto una differenza di potenziale di 1 Volt):
+\begin{equation*}
+    k_B T \simeq 2,5 \cdot 10^{-2} \text{ eV} = 25 \text{ meV}
+\end{equation*}
+
+Affinché la densità di probabilità sia normalizzata a 1 nello spazio delle fasi $\Gamma$:
+\begin{equation*}
+    1 = \int \rho(q,p) \, dq \, dp = \int c e^{-\beta E} \, dq \, dp \quad \Rightarrow \quad c = \frac{1}{\int e^{-\beta E} \, dq \, dp}
+\end{equation*}
+
+Definiamo il denominatore dell'espressione come \textbf{Funzione di Partizione} ($Z$):
+\begin{equation}
+    \boxed{ Z = \int e^{-\beta E} \, dq \, dp }
+\end{equation}
+(Se $c$ ha questo valore, allora $\rho$ è una vera e propria densità di probabilità).\\
+
+\noindent
+La probabilità normalizzata diventa quindi: $\rho(E) = \frac{e^{-\beta E}}{Z}$. 
+Di conseguenza, il valore medio di una qualsiasi grandezza $G$ è:
+\begin{equation}
+    \boxed{ \langle G \rangle = \frac{\int G(q,p) e^{-\beta E} \, dq \, dp}{Z} }
+\end{equation}
+
+\subsection*{Energia Media e Sottosistemi}
+
+Se consideriamo due sottosistemi $S_1$ e $S_2$ distinti e indipendenti, l'energia si somma: $E_{1+2} = E_1 + E_2$.
+La funzione di partizione totale si fattorizza nel prodotto delle singole funzioni di partizione:
+\begin{figure}[ht]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-03-04-15-59-39.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        \begin{align*}
+            Z_{1+2} &= \int e^{-\beta E_{1+2}} \, dq_1 \, dp_1 \, dq_2 \, dp_2 = \int e^{-\beta(E_1 + E_2)} \, dq_1 \, dp_1 \, dq_2 \, dp_2 = \\
+                    &= \left( \int e^{-\beta E_1} \, dq_1 \, dp_1 \right) \cdot \left( \int e^{-\beta E_2} \, dq_2 \, dp_2 \right) = Z_1 \cdot Z_2
+        \end{align*}
+    \end{minipage}
+\end{figure}
+
+Generalizzando a $N$ sottosistemi indipendenti: $Z_N = \prod_{j=1}^N Z_j$.\\
+
+\noindent
+Calcoliamo ora l'Energia Media $\langle E \rangle = U$ sfruttando $Z$:
+\begin{equation*}
+    \frac{\partial}{\partial \beta} \ln(Z) = \frac{1}{Z} \frac{\partial Z}{\partial \beta} = \frac{1}{Z} \frac{\partial}{\partial \beta} \int e^{-\beta E} \, dq \, dp = \frac{1}{Z} \int \frac{\partial}{\partial \beta}(e^{-\beta E}) \, dq \, dp = -\frac{1}{Z} \int E e^{-\beta E} \, dq \, dp
+\end{equation*}
+Riconosciamo nell'ultimo termine la definizione di valore medio, ottenendo la relazione fondamentale:
+\begin{equation}
+    \boxed{ \langle E \rangle = U = -\frac{\partial}{\partial \beta} \ln Z }
+\end{equation}
+
+\section*{Teorema di Equipartizione dell'Energia}
+(Valido per sistemi all'equilibrio termico).
+
+\noindent
+Supponiamo che l'energia dipenda in modo quadratico da una delle variabili dello spazio delle fasi (chiamiamola $x$, che può essere una coordinata $q_i$ o un momento $p_i$) e che questa sia indipendente dal resto delle variabili:
+\begin{equation*}
+    E = a x^2 + f(q,p)_{q \neq x}
+\end{equation*}
+Il valore medio dell'energia sarà $\langle E \rangle = \langle a x^2 \rangle + \langle f(q,p) \rangle$.
+
+Calcoliamo esplicitamente $\langle a x^2 \rangle$:
+\begin{align*}
+    \langle a x^2 \rangle &= \frac{\int a x^2 e^{-\beta E} \, dq \, dp}{Z} = \frac{\int a x^2 e^{-\beta(a x^2 + f)} \, dq \, dp}{\int e^{-\beta(a x^2 + f)} \, dq \, dp} = \\
+    &= \frac{\int a x^2 e^{-\beta a x^2} \, dx \cdot \cancel{\int e^{-\beta f} \, d(q,p)_{q \neq x}}}{\int e^{-\beta a x^2} \, dx \cdot \cancel{\int e^{-\beta f} \, d(q,p)_{q \neq x}}}
+\end{align*}
+
+Questo è l'integrale di una gaussiana. Possiamo usare il "trucco" della derivata del logaritmo:
+\begin{align*}
+    \frac{\int a x^2 e^{-\beta a x^2} \, dx}{\int e^{-\beta a x^2} \, dx} &= -\frac{\partial}{\partial \beta} \ln \left[ \int e^{-\beta a x^2} \, dx \right] = -\frac{\partial}{\partial \beta} \ln \left[ \sqrt{\frac{\pi}{\beta a}} \right] = \\
+    &= -\frac{1}{2} \frac{\partial}{\partial \beta} [\ln \pi - \ln \beta - \ln a] = -\frac{1}{2} \left(-\frac{1}{\beta}\right) = \frac{1}{2\beta} = \frac{1}{2} k_B T
+\end{align*}
+Ne consegue che ogni termine quadratico indipendente "assorbe" un'energia media pari a:
+\begin{equation}
+    \boxed{ \langle a x^2 \rangle = \frac{1}{2} k_B T }
+\end{equation}
+\textit{Esempio:} Se $E = a x^2 + b p_y^2 + c x_1 + d p_1 \Rightarrow \langle E \rangle = \frac{1}{2} k_B T + \frac{1}{2} k_B T + \langle c x_1 + d p_1 \rangle$.
+
+\section*{Applicazione: Gas Perfetto Monoatomico}
+
+Consideriamo la singola molecola di massa $m$ (ha solo energia cinetica traslazionale):
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.6\textwidth]{immagini/2026-03-04-16-28-01.png}
+\end{figure}
+
+\begin{equation*}
+    E_{1mol} = \frac{1}{2m}(p_x^2 + p_y^2 + p_z^2)
+\end{equation*}
+La funzione di partizione di questa singola particella ($Z_{mol}$) è:
+\begin{align*}
+    Z_{mol} &= \int e^{-\beta E} \, dq \, dp = \int e^{-\beta \left[\frac{1}{2m}(p_x^2 + p_y^2 + p_z^2)\right]} \, dx \, dy \, dz \, dp_x \, dp_y \, dp_z = \\
+            &= V \cdot \left( \int e^{-\beta \frac{p^2}{2m}} \, dp \right)^3 = V \cdot (2\pi m k_B T)^{3/2}
+\end{align*}
+
+\noindent
+Se consideriamo una mole di gas perfetto, ovvero $N_A$ molecole come $N_A$ sottosistemi \textbf{NON INTERAGENTI}, la funzione di partizione del gas si fattorizza:
+\begin{equation}
+    \boxed{ Z_{gas} = \prod_{i=1}^{N_A} Z_{moli} = \left[ V (2\pi m k_B T)^{3/2} \right]^{N_A} = V^{N_A} (2\pi m k_B T)^{\frac{3N_A}{2}} }
+\end{equation}
+
+Troviamo l'Energia Interna del gas ($U_{gas}$) derivando $Z_{gas}$:
+\begin{align*}
+    \langle E \rangle = U_{gas} &= -\frac{\partial}{\partial \beta} \ln(Z_{gas}) = -\frac{\partial}{\partial \beta} \ln \left[ V^{N_A} \left( \frac{2\pi m}{\beta} \right)^{\frac{3N_A}{2}} \right] = -\frac{\partial}{\partial \beta} \ln \left[ \frac{V^{2/3} 2\pi m}{\beta} \right]^{\frac{3N_A}{2}} = \\
+    &= -\frac{3N_A}{2} \frac{\partial}{\partial \beta} \ln \left( \frac{V^{2/3} 2\pi m}{\beta} \right) = -\frac{3N_A}{2} \left( \frac{1}{\frac{V^{2/3} 2\pi m}{\beta}} \right) \cdot \left( -\frac{V^{2/3} 2\pi m}{\beta^2} \right) = \\
+    &= \frac{3N_A}{2} \frac{1}{\beta} = \frac{3}{2} N_A k_B T = \frac{3}{2} R T
+\end{align*}
+
+*Possiamo ottenere lo stesso risultato istantaneamente dal Teorema di Equipartizione:*
+\begin{equation*}
+    E_{1mol} = \frac{p_x^2}{2m} + \frac{p_y^2}{2m} + \frac{p_z^2}{2m} \quad \Rightarrow \quad \langle E_{1mol} \rangle = \underbrace{\frac{1}{2} k_B T}_x + \underbrace{\frac{1}{2} k_B T}_y + \underbrace{\frac{1}{2} k_B T}_z = \frac{3}{2} k_B T
+\end{equation*}
+Da cui, per l'intero gas con $N_A$ particelle:
+\begin{equation}
+    \langle E_{gas} \rangle = \langle E_{1mol} \rangle N_A = \frac{3}{2} N_A k_B T = \frac{3}{2} R T
+\end{equation}
+
+Infine, il calore specifico a volume costante si calcola come:
+\begin{equation}
+    C_v = \left( \frac{\partial U}{\partial T} \right)_V = \frac{3}{2} R
+\end{equation}
+
+% --- FINE BLOCCO INTEGRATIVO ---
+
 \section*{Atomi e Particelle: metodi sperimentali e classici}
 
-Consideriamo volumi uguali di gas diversi alla stessa pressione $p$ e temperatura $T$:
-\begin{equation*}
-    \frac{m_{H_2}}{m_{O_2}} = \frac{1}{16}
-\end{equation*}
+\begin{figure}[ht]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-03-04-16-31-52.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        Consideriamo volumi uguali di gas diversi alla stessa pressione $p$ e temperatura $T$:
+        \begin{equation*}
+            \frac{m_{H_2}}{m_{O_2}} = \frac{1}{16}
+        \end{equation*}
+    \end{minipage}
+\end{figure}
+
 $\Rightarrow$ \textbf{Peso Atomico (Peso molecolare):} $H \rightarrow 1$, $H_2 \rightarrow 2$, $O \rightarrow 16$, $O_2 \rightarrow 32$.
 
 \begin{table}[h!]
@@ -514,19 +686,19 @@ Definiamo l'Unità di Massa Atomica (U.m.a.):
 
 \subsection*{Misura della massa: Spettrometro di massa}
 
-% ---------------------------------------------------------
-% \begin{figure}[h!]
-%     \centering
-%     % \includegraphics[width=0.6\textwidth]{spettrometro_massa.png}
-%     \vspace{4.5cm} % Spazio provvisorio
-%     \caption{\textit{[Spazio per disegno: schema spettrometro di massa con filamento (effetto termoionico), accelerazione Delta V e deflessione in campo B]}}
-% \end{figure}
-% ---------------------------------------------------------
-
 Le molecole da misurare si ionizzano (es. per effetto termoionico) e vengono accelerate da una differenza di potenziale $\Delta V$:
-\begin{equation*}
-    \frac{1}{2}mv^2 = q\Delta V \quad \Rightarrow \quad v = \sqrt{\frac{2q\Delta V}{m}}
-\end{equation*}
+\begin{figure}[ht]
+    \centering
+    \begin{minipage}{0.4\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-03-04-16-36-02.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.55\textwidth}
+        \begin{equation*}
+            \frac{1}{2}mv^2 = q\Delta V \quad \Rightarrow \quad v = \sqrt{\frac{2q\Delta V}{m}}
+        \end{equation*}
+    \end{minipage}
+\end{figure}
 Entrano poi in una regione con campo magnetico $\vec{B}$ uniforme perpendicolare alla velocità. La forza di Lorentz agisce come forza centripeta:
 \begin{equation*}
     qvB = m\frac{v^2}{r} \quad \Rightarrow \quad r = \frac{mv}{qB}
@@ -537,21 +709,23 @@ Sostituendo la velocità, otteniamo:
 \end{equation}
 Poiché $\Delta V$ e $B$ sono \textbf{NOTI}, misurando il raggio di curvatura $r$ si ricava il rapporto $q/m$.
 
-\newpage
 \section*{Stimare il Raggio Atomico}
 
 \subsection*{1. Libero cammino medio ($\ell_m$)}
 $\ell_m$ = distanza percorsa da un atomo tra 2 urti.
 
-% ---------------------------------------------------------
-% \begin{figure}[h!]
-%     \centering
-%     % \includegraphics[width=0.4\textwidth]{cilindro_collisioni.png}
-%     \vspace{3.5cm} % Spazio provvisorio
-%     \caption{\textit{[Spazio per disegno: atomo che si muove in un cilindro di raggio 2r urtando altri atomi]}}
-% \end{figure}
-% ---------------------------------------------------------
+\begin{figure}[ht]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=0.7\linewidth]{immagini/2026-03-04-16-38-58.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        \includegraphics[width=0.7\linewidth]{immagini/2026-03-04-16-39-19.png}
+    \end{minipage}
+\end{figure}
 
+\noindent
 Consideriamo una densità $n$ di atomi. L'atomo spazza un cilindro di raggio $2r$ (dove $r$ è il raggio atomico) e altezza $v\Delta t$:
 \begin{equation*}
     V_{\text{cil}} = \text{Area}_{\text{base}} \cdot \text{altezza} = \pi(2r)^2 \cdot v\Delta t = 4\pi r^2 v \Delta t
@@ -579,16 +753,16 @@ Fissato $V$, si misura $P$ in funzione di $T$. Si fittano i dati trovando le cos
 
 \subsection*{3. Diffrazione di Bragg}
 
-% ---------------------------------------------------------
-% \begin{figure}[h!]
-%     \centering
-%     % \includegraphics[width=0.5\textwidth]{diffrazione_bragg.png}
-%     \vspace{3.0cm} % Spazio provvisorio
-%     \caption{\textit{[Spazio per disegno: raggi che incidono su piani reticolari distanti a, e sfere impacchettate con a=2r]}}
-% \end{figure}
-% ---------------------------------------------------------
-
-Misurando il passo reticolare $a$ con i raggi X, e sapendo che per atomi a contatto $a \simeq 2r$, si ricava $r$.
+\begin{figure}[ht]
+    \centering
+    \begin{minipage}{0.4\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-03-04-16-46-09.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.55\textwidth}
+        Misurando il passo reticolare $a$ con i raggi X, e sapendo che per atomi a contatto $a \simeq 2r$, si ricava $r$.
+    \end{minipage}
+\end{figure}
 
 \subsection*{Confronto Raggi Atomici}
 Esempio per il \textbf{Neon ($Ne$)}:
@@ -603,9 +777,6 @@ Altri esempi:
     \item \textbf{Uranio ($U$):} $Z=92 \Rightarrow r_U = 1,4 \text{ \AA}$
 \end{itemize}
 
-% --- CONTINUAZIONE DAL BLOCCO PRECEDENTE ---
-
-\newpage
 \section*{Elettroni e Particelle Elementari} % [cite: 549, 552]
 
 \begin{itemize}
@@ -613,65 +784,78 @@ Altri esempi:
     \item Carica: $q_e = -1.6 \cdot 10^{-19} \text{ C}$ % [cite: 553]
 \end{itemize}
 
-Gli elettroni si generano tipicamente per \textbf{effetto termoionico}[cite: 554].
-
-% ---------------------------------------------------------
-% \begin{figure}[h!]
-%     \centering
-%     % \includegraphics[width=0.4\textwidth]{effetto_termoionico.png}
-%     \vspace{2.5cm} % Spazio provvisorio
-%     \caption{\textit{[Spazio per disegno: condensatore con campo elettrico E, filamento e resistenza per l'emissione di elettroni]}}
-% \end{figure}
-% ---------------------------------------------------------
+\begin{figure}[ht]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=0.8\linewidth]{immagini/2026-03-04-16-48-12.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        Gli elettroni si generano tipicamente per \textbf{effetto termoionico}.
+    \end{minipage}
+\end{figure}
 
 \begin{itemize}
     \item \textbf{Particelle $\alpha$:} $m_\alpha = 4 \text{ u.m.a.} \Rightarrow$ Nuclei di Elio ($^4_2\text{He}^{++}$) % [cite: 558, 559, 561]
 \end{itemize}
 
-Queste si generano da decadimenti radioattivi[cite: 562]. Hanno energie cinetiche tipiche $E_K = \text{1-10 MeV}$, un libero cammino medio $\ell_m \simeq \text{10 cm}$, e una velocità $v \simeq \text{10}^7 \text{ m/s}$ %[cite: 562, 566].
+\noindent
+Queste si generano da decadimenti radioattivi. Hanno energie cinetiche tipiche $E_K = \text{1-10 MeV}$, un libero cammino medio $\ell_m \simeq \text{10 cm}$, e una velocità $v \simeq \text{10}^7 \text{ m/s}$ %[cite: 562, 566].
 
 \subsection*{Raggi X}
 Sono luce (onde elettromagnetiche) con lunghezza d'onda $\lambda \simeq 1 \text{ \AA}$ %[cite: 567]. 
 Quando interagiscono con la materia, possono subire diversi processi:
 
-% ---------------------------------------------------------
-% \begin{figure}[h!]
-%     \centering
-%     % \includegraphics[width=0.6\textwidth]{interazioni_raggi_x.png}
-%     \vspace{5.0cm} % Spazio provvisorio
-%     \caption{\textit{[Spazio per disegno: schemi di Assorbimento, Diffusione Elastica, Diffusione Anelastica e Creazione di coppie]}}
-% \end{figure}
-% ---------------------------------------------------------
-
 \begin{enumerate}
     \item \textbf{Assorbimento:} (Effetto Fotoelettrico) %[cite: 568, 571].
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[width=0.15\linewidth]{immagini/2026-03-04-16-50-02.png}
+        \end{figure}
     \item \textbf{Diffusione Elastica:} (Scattering Rayleigh) %[cite: 572].
+     \begin{figure}[ht]
+        \centering
+        \includegraphics[width=0.15\linewidth]{immagini/2026-03-04-16-50-30.png}
+        \end{figure}
     \item \textbf{Diffusione Anelastica:} (Scattering Compton) su un centro diffusore (atomo) %[cite: 574, 576].
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.15\linewidth]{immagini/2026-03-04-16-50-53.png}
+        \end{figure}
     \item \textbf{Creazione di Coppie:} un fotone si divide in un elettrone ($e^-$) e un positrone ($e^+$). Avviene \textbf{solo se} l'energia del fotone è sufficientemente alta: $E > 2m_ec^2$ %[cite: 577, 578, 581, 582].
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.15\linewidth]{immagini/2026-03-04-16-55-17.png}
+        \end{figure}
 \end{enumerate}
 
-\newpage
 \section*{Sezione d'Urto ($\sigma$)} % [cite: 583]
 
 Per misurare le proprietà della materia, si utilizzano \textbf{SONDE} (es. fascio di elettroni o raggi X) indirizzate contro un sottile foglio di materiale che funge da bersaglio %[cite: 584, 585].
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{immagini/2026-03-04-17-00-31.png}
+    \end{figure}
+
+\noindent
 Sia $n_0$ il numero di atomi del bersaglio (che agiscono da centri diffusori) e $N_0$ l'intensità del fascio primario incidente %[cite: 586, 589, 590, 591].
 Oltrepassato il bersaglio, il numero di particelle trasmesse è $N < N_0$, mentre il numero di particelle "rimosse" dal fascio è $R = N_0 - N$ %[cite: 593, 594].
 
-% ---------------------------------------------------------
-% \begin{figure}[h!]
-%     \centering
-%     % \includegraphics[width=0.6\textwidth]{fascio_bersaglio.png}
-%     \vspace{4.0cm} % Spazio provvisorio
-%     \caption{\textit{[Spazio per disegno: fascio primario N0 incidente su bersaglio ad area A con centri diffusori n0, e fascio trasmesso N]}}
-% \end{figure}
-% ---------------------------------------------------------
-
-Definiamo la \textbf{sezione d'urto} $\sigma$ (misurata in $\text{m}^2$) %[cite: 597].
-La probabilità di un evento di rimozione dal fascio è il rapporto tra l'area coperta dai centri diffusori e l'area totale $A$ del bersaglio:
-\begin{equation}
-    P = \frac{n_0 \cdot \sigma}{A} % [cite: 600, 601]
-\end{equation}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-03-04-17-01-29.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        Definiamo la \textbf{sezione d'urto} $\sigma$ (misurata in $\text{m}^2$) %[cite: 597].
+        La probabilità di un evento di rimozione dal fascio è il rapporto tra l'area coperta dai centri diffusori e l'area totale $A$ del bersaglio:
+        \begin{equation}
+            P = \frac{n_0 \cdot \sigma}{A} % [cite: 600, 601]
+        \end{equation}
+    \end{minipage}
+\end{figure}
 \textit{Nota: se $n_0 \sigma = A \Rightarrow$ non passa nulla.} % [cite: 598, 603]
 
 Il numero di particelle rimosse sarà quindi:
@@ -685,51 +869,78 @@ La sezione d'urto totale è la somma delle sezioni d'urto dei singoli processi:
 \end{equation*}
 
 \subsection*{Attenuazione del Fascio}
-Definiamo la densità numerica di centri diffusori $\rho$ (numero di atomi per unità di volume) %[cite: 607, 608].
-Considerando uno spessore infinitesimo $dx$, la variazione del numero di particelle nel fascio è:
-\begin{equation}
-    -dN = N(x+dx) - N(x) = \sigma \rho N(x) dx \quad \Rightarrow \quad \frac{dN}{N(x)} = -\sigma \rho \, dx % [cite: 615, 616]
-\end{equation}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-03-04-17-02-56.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        Definiamo la densità numerica di centri diffusori $\rho$ (numero di atomi per unità di volume) %[cite: 607, 608].
+        Considerando uno spessore infinitesimo $dx$, la variazione del numero di particelle nel fascio è:
+        \begin{equation}
+            -dN = N(x+dx) - N(x) = \sigma \rho N(x) dx \quad \Rightarrow \quad \frac{dN}{N(x)} = -\sigma \rho \, dx % [cite: 615, 616]
+        \end{equation}
+    \end{minipage}
+\end{figure}
 Integrando, otteniamo la legge di attenuazione esponenziale:
 \begin{equation}
     \boxed{ N(x) = N_0 e^{-\sigma \rho x} = N_0 e^{-x/\Lambda} } % [cite: 617, 618]
 \end{equation}
 dove $\Lambda = \frac{1}{\sigma \rho}$ è il \textbf{libero cammino medio} %[cite: 628, 629].
 
-Ricordando la formula del libero cammino medio dai gas: $\ell_m = \frac{1}{4\pi r^2 \rho}$. Uguagliandola a $\Lambda = \frac{1}{\sigma \rho}$, ricaviamo la sezione d'urto geometrica:
-\begin{equation*}
-    \sigma = 4\pi r^2 % [cite: 630]
-\end{equation*}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=0.8\linewidth]{immagini/2026-03-04-17-03-49.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        Ricordando la formula del libero cammino medio dai gas: $\ell_m = \frac{1}{4\pi r^2 \rho}$. Uguagliandola a $\Lambda = \frac{1}{\sigma \rho}$, ricaviamo la sezione d'urto geometrica:
+        \begin{equation*}
+            \sigma = 4\pi r^2 % [cite: 630]
+        \end{equation*}
+    \end{minipage}
+\end{figure}
 
-\newpage
 \subsection*{Scattering e Parametro d'Impatto}
 
-Consideriamo un centro diffusore immobile e una particella sonda in arrivo. Definiamo:
-\begin{itemize}
-    \item $b = \text{parametro d'impatto}$ %[cite: 634, 635].
-    \item $\theta = \text{angolo di diffusione}$ %[cite: 635].
-\end{itemize}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-03-04-17-06-22.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        Consideriamo un centro diffusore immobile e una particella sonda in arrivo. Definiamo:
+        \begin{itemize}
+            \item $b = \text{parametro d'impatto}$ %[cite: 634, 635].
+            \item $\theta = \text{angolo di diffusione}$ %[cite: 635].
+        \end{itemize}
+    \end{minipage}
+\end{figure}
 
-L'angolo di diffusione dipende dal parametro d'impatto: $\theta = \theta(b)$ %[cite: 635, 638].
+L'angolo di diffusione dipende dal parametro d'impatto: $\theta = \theta(b)$
 
-% ---------------------------------------------------------
-% \begin{figure}[h!]
-%     \centering
-%     % \includegraphics[width=0.6\textwidth]{geometria_scattering.png}
-%     \vspace{4.0cm} % Spazio provvisorio
-%     \caption{\textit{[Spazio per disegno: geometria dell'urto con sonda, centro diffusore R, parametro d'impatto b e angoli alpha e theta]}}
-% \end{figure}
-% ---------------------------------------------------------
-
+\noindent
 Dalla geometria della collisione (con raggio del centro diffusore $R$), abbiamo $b = R \sin\alpha$ %[cite: 638]. 
 Osservando gli angoli, notiamo che:
-\begin{equation*}
-    2\alpha + \theta = \pi \quad \Rightarrow \quad \alpha = \frac{\pi}{2} - \frac{\theta}{2} % [cite: 637, 638]
-\end{equation*}
-Sostituendo $\alpha$:
-\begin{equation}
-    b = R \sin\left(\frac{\pi}{2} - \frac{\theta}{2}\right) = R \cos\left(\frac{\theta}{2}\right) % [cite: 638]
-\end{equation}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-03-04-17-07-33.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        \begin{equation*}
+            2\alpha + \theta = \pi \quad \Rightarrow \quad \alpha = \frac{\pi}{2} - \frac{\theta}{2} % [cite: 637, 638]
+        \end{equation*}
+        Sostituendo $\alpha$:
+        \begin{equation}
+            b = R \sin\left(\frac{\pi}{2} - \frac{\theta}{2}\right) = R \cos\left(\frac{\theta}{2}\right) % [cite: 638]
+        \end{equation}
+    \end{minipage}
+\end{figure}
 
 Invertendo la relazione, otteniamo l'angolo di scattering in funzione del parametro d'impatto:
 \begin{equation}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.1)  1 MAR 2026 20:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.2.27)  4 MAR 2026 17:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -210,28 +210,35 @@ LaTeX Warning: Command \underbar  has changed.
 LaTeX Warning: Command \underline  has changed.
                Check if current package is valid.
 
+) (C:\Users\edoma\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count309
+\float@exts=\toks26
+\float@box=\box55
+\@float@everytoks=\toks27
+\@floatcapt=\box56
 ) (C:\Users\edoma\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count309
+\l__color_backend_stack_int=\count310
 ) (Crisi della fisica classica.aux)
 \openout1 = `"Crisi della fisica classica.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Info: Redefining \it@ocap on input line 20.
-LaTeX Info: Redefining \it@ccap on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Info: Redefining \it@ocap on input line 21.
+LaTeX Info: Redefining \it@ccap on input line 21.
 
 
 File italian.ldf warning: 
@@ -239,21 +246,21 @@ italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting
-italian.ldf    on input line 20.
+italian.ldf    on input line 21.
 
 (C:\Users\edoma\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count310
+\scratchcounter=\count311
 \scratchdimen=\dimen183
-\scratchbox=\box55
-\nofMPsegments=\count311
-\nofMParguments=\count312
-\everyMPshowfont=\toks26
-\MPscratchCnt=\count313
+\scratchbox=\box57
+\nofMPsegments=\count312
+\nofMParguments=\count313
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count314
 \MPscratchDim=\dimen184
-\MPnumerator=\count314
-\makeMPintoPDFobject=\count315
-\everyMPtoPDFconversion=\toks27
+\MPnumerator=\count315
+\makeMPintoPDFobject=\count316
+\everyMPtoPDFconversion=\toks29
 ) (C:\Users\edoma\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -294,21 +301,21 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 22.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 23.
 (C:\Users\edoma\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 22.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 23.
  (C:\Users\edoma\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 <immagini/2026-03-01-19-00-58.png, id=1, 104.64093pt x 71.51718pt>
 File: immagini/2026-03-01-19-00-58.png Graphic file (type png)
 <use immagini/2026-03-01-19-00-58.png>
-Package pdftex.def Info: immagini/2026-03-01-19-00-58.png  used on input line 62.
+Package pdftex.def Info: immagini/2026-03-01-19-00-58.png  used on input line 63.
 (pdftex.def)             Requested size: 91.04742pt x 62.22598pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--69
+Underfull \hbox (badness 10000) in paragraph at lines 68--70
 
  []
 
@@ -318,31 +325,231 @@ Underfull \hbox (badness 10000) in paragraph at lines 67--69
 <immagini/2026-03-01-20-21-30.png, id=19, 268.00125pt x 221.32687pt>
 File: immagini/2026-03-01-20-21-30.png Graphic file (type png)
 <use immagini/2026-03-01-20-21-30.png>
-Package pdftex.def Info: immagini/2026-03-01-20-21-30.png  used on input line 83.
+Package pdftex.def Info: immagini/2026-03-01-20-21-30.png  used on input line 84.
 (pdftex.def)             Requested size: 136.57462pt x 112.78738pt.
 <immagini/2026-03-01-20-35-48.png, id=20, 291.33844pt x 208.52907pt>
 File: immagini/2026-03-01-20-35-48.png Graphic file (type png)
 <use immagini/2026-03-01-20-35-48.png>
-Package pdftex.def Info: immagini/2026-03-01-20-35-48.png  used on input line 108.
+Package pdftex.def Info: immagini/2026-03-01-20-35-48.png  used on input line 109.
 (pdftex.def)             Requested size: 136.57462pt x 97.7573pt.
- [2 <./immagini/2026-03-01-20-21-30.png> <./immagini/2026-03-01-20-35-48.png>] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] (Crisi della fisica classica.aux)
+ [2 <./immagini/2026-03-01-20-21-30.png> <./immagini/2026-03-01-20-35-48.png>]
+<immagini/2026-03-04-14-40-01.png, id=24, 274.02374pt x 175.40532pt>
+File: immagini/2026-03-04-14-40-01.png Graphic file (type png)
+<use immagini/2026-03-04-14-40-01.png>
+Package pdftex.def Info: immagini/2026-03-04-14-40-01.png  used on input line 161.
+(pdftex.def)             Requested size: 113.81102pt x 72.8534pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 164--166
+
+ []
+
+[3]
+<immagini/2026-03-04-14-43-17.png, id=31, 265.74281pt x 150.5625pt>
+File: immagini/2026-03-04-14-43-17.png Graphic file (type png)
+<use immagini/2026-03-04-14-43-17.png>
+Package pdftex.def Info: immagini/2026-03-04-14-43-17.png  used on input line 193.
+(pdftex.def)             Requested size: 113.81102pt x 64.48329pt.
+ [4 <./immagini/2026-03-04-14-40-01.png> <./immagini/2026-03-04-14-43-17.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 233--236
+
+ []
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 272--273
+
+ []
+
+<immagini/2026-03-04-14-53-43.png, id=38, 428.35031pt x 225.84375pt>
+File: immagini/2026-03-04-14-53-43.png Graphic file (type png)
+<use immagini/2026-03-04-14-53-43.png>
+Package pdftex.def Info: immagini/2026-03-04-14-53-43.png  used on input line 290.
+(pdftex.def)             Requested size: 136.57462pt x 72.00612pt.
+<immagini/2026-03-04-14-54-52.png, id=39, 419.31656pt x 245.41687pt>
+File: immagini/2026-03-04-14-54-52.png Graphic file (type png)
+<use immagini/2026-03-04-14-54-52.png>
+Package pdftex.def Info: immagini/2026-03-04-14-54-52.png  used on input line 307.
+(pdftex.def)             Requested size: 136.57462pt x 79.9318pt.
+[6 <./immagini/2026-03-04-14-53-43.png> <./immagini/2026-03-04-14-54-52.png>]
+<immagini/2026-03-04-15-00-35.png, id=43, 455.45157pt x 169.38281pt>
+File: immagini/2026-03-04-15-00-35.png Graphic file (type png)
+<use immagini/2026-03-04-15-00-35.png>
+Package pdftex.def Info: immagini/2026-03-04-15-00-35.png  used on input line 357.
+(pdftex.def)             Requested size: 113.81102pt x 42.3249pt.
+<immagini/2026-03-04-14-59-22.png, id=44, 342.5297pt x 261.22594pt>
+File: immagini/2026-03-04-14-59-22.png Graphic file (type png)
+<use immagini/2026-03-04-14-59-22.png>
+Package pdftex.def Info: immagini/2026-03-04-14-59-22.png  used on input line 374.
+(pdftex.def)             Requested size: 113.81102pt x 86.79474pt.
+ [7 <./immagini/2026-03-04-15-00-35.png> <./immagini/2026-03-04-14-59-22.png>]
+<immagini/2026-03-04-15-24-06.png, id=49, 158.84344pt x 183.68625pt>
+File: immagini/2026-03-04-15-24-06.png Graphic file (type png)
+<use immagini/2026-03-04-15-24-06.png>
+Package pdftex.def Info: immagini/2026-03-04-15-24-06.png  used on input line 411.
+(pdftex.def)             Requested size: 109.2601pt x 126.35123pt.
+ [8 <./immagini/2026-03-04-15-24-06.png>]
+<immagini/2026-03-04-15-26-10.png, id=54, 880.79062pt x 256.70906pt>
+File: immagini/2026-03-04-15-26-10.png Graphic file (type png)
+<use immagini/2026-03-04-15-26-10.png>
+Package pdftex.def Info: immagini/2026-03-04-15-26-10.png  used on input line 447.
+(pdftex.def)             Requested size: 273.14923pt x 79.6103pt.
+<immagini/2026-03-04-15-26-45.png, id=55, 353.82187pt x 274.02374pt>
+File: immagini/2026-03-04-15-26-45.png Graphic file (type png)
+<use immagini/2026-03-04-15-26-45.png>
+Package pdftex.def Info: immagini/2026-03-04-15-26-45.png  used on input line 457.
+(pdftex.def)             Requested size: 136.57462pt x 105.77333pt.
+<immagini/2026-03-04-15-27-52.png, id=56, 207.02344pt x 218.31563pt>
+File: immagini/2026-03-04-15-27-52.png Graphic file (type png)
+<use immagini/2026-03-04-15-27-52.png>
+Package pdftex.def Info: immagini/2026-03-04-15-27-52.png  used on input line 471.
+(pdftex.def)             Requested size: 68.28731pt x 72.01439pt.
+<immagini/2026-03-04-15-48-12.png, id=57, 473.51906pt x 295.1025pt>
+File: immagini/2026-03-04-15-48-12.png Graphic file (type png)
+<use immagini/2026-03-04-15-48-12.png>
+Package pdftex.def Info: immagini/2026-03-04-15-48-12.png  used on input line 499.
+(pdftex.def)             Requested size: 136.57462pt x 85.11372pt.
+ [9 <./immagini/2026-03-04-15-26-10.png> <./immagini/2026-03-04-15-26-45.png> <./immagini/2026-03-04-15-27-52.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 515--517
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 536--538
+
+ []
+
+<immagini/2026-03-04-15-59-39.png, id=61, 240.14719pt x 243.91125pt>
+File: immagini/2026-03-04-15-59-39.png Graphic file (type png)
+<use immagini/2026-03-04-15-59-39.png>
+Package pdftex.def Info: immagini/2026-03-04-15-59-39.png  used on input line 554.
+(pdftex.def)             Requested size: 136.57462pt x 138.71822pt.
+
+Overfull \hbox (21.74152pt too wide) detected at line 560
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 564--565
+
+ []
+
+[10 <./immagini/2026-03-04-15-48-12.png>]
+<immagini/2026-03-04-16-28-01.png, id=66, 655.69969pt x 204.765pt>
+File: immagini/2026-03-04-16-28-01.png Graphic file (type png)
+<use immagini/2026-03-04-16-28-01.png>
+Package pdftex.def Info: immagini/2026-03-04-16-28-01.png  used on input line 609.
+(pdftex.def)             Requested size: 273.14923pt x 85.30083pt.
+ [11 <./immagini/2026-03-04-15-59-39.png>]
+<immagini/2026-03-04-16-31-52.png, id=70, 398.99063pt x 150.5625pt>
+File: immagini/2026-03-04-16-31-52.png Graphic file (type png)
+<use immagini/2026-03-04-16-31-52.png>
+Package pdftex.def Info: immagini/2026-03-04-16-31-52.png  used on input line 656.
+(pdftex.def)             Requested size: 136.57462pt x 51.53748pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<immagini/2026-03-04-16-36-02.png, id=71, 434.37282pt x 330.48468pt>
+File: immagini/2026-03-04-16-36-02.png Graphic file (type png)
+<use immagini/2026-03-04-16-36-02.png>
+Package pdftex.def Info: immagini/2026-03-04-16-36-02.png  used on input line 694.
+(pdftex.def)             Requested size: 182.09486pt x 138.54543pt.
+[12 <./immagini/2026-03-04-16-28-01.png>]
+<immagini/2026-03-04-16-38-58.png, id=75, 159.59625pt x 124.96687pt>
+File: immagini/2026-03-04-16-38-58.png Graphic file (type png)
+<use immagini/2026-03-04-16-38-58.png>
+Package pdftex.def Info: immagini/2026-03-04-16-38-58.png  used on input line 721.
+(pdftex.def)             Requested size: 95.6018pt x 74.85866pt.
+<immagini/2026-03-04-16-39-19.png, id=76, 383.18156pt x 239.39438pt>
+File: immagini/2026-03-04-16-39-19.png Graphic file (type png)
+<use immagini/2026-03-04-16-39-19.png>
+Package pdftex.def Info: immagini/2026-03-04-16-39-19.png  used on input line 724.
+(pdftex.def)             Requested size: 207.13321pt x 129.40984pt.
+ [13 <./immagini/2026-03-04-16-31-52.png> <./immagini/2026-03-04-16-36-02.png>]
+<immagini/2026-03-04-16-46-09.png, id=83, 530.73282pt x 231.86626pt>
+File: immagini/2026-03-04-16-46-09.png Graphic file (type png)
+<use immagini/2026-03-04-16-46-09.png>
+Package pdftex.def Info: immagini/2026-03-04-16-46-09.png  used on input line 760.
+(pdftex.def)             Requested size: 182.09486pt x 79.55522pt.
+ [14 <./immagini/2026-03-04-16-38-58.png> <./immagini/2026-03-04-16-39-19.png> <./immagini/2026-03-04-16-46-09.png>]
+<immagini/2026-03-04-16-48-12.png, id=87, 260.47313pt x 130.98938pt>
+File: immagini/2026-03-04-16-48-12.png Graphic file (type png)
+<use immagini/2026-03-04-16-48-12.png>
+Package pdftex.def Info: immagini/2026-03-04-16-48-12.png  used on input line 791.
+(pdftex.def)             Requested size: 109.2601pt x 54.94519pt.
+<immagini/2026-03-04-16-50-02.png, id=88, 182.93344pt x 135.50626pt>
+File: immagini/2026-03-04-16-50-02.png Graphic file (type png)
+<use immagini/2026-03-04-16-50-02.png>
+Package pdftex.def Info: immagini/2026-03-04-16-50-02.png  used on input line 813.
+(pdftex.def)             Requested size: 68.28383pt x 50.58105pt.
+<immagini/2026-03-04-16-50-30.png, id=89, 187.45032pt x 112.16907pt>
+File: immagini/2026-03-04-16-50-30.png Graphic file (type png)
+<use immagini/2026-03-04-16-50-30.png>
+Package pdftex.def Info: immagini/2026-03-04-16-50-30.png  used on input line 818.
+(pdftex.def)             Requested size: 68.28383pt x 40.86006pt.
+<immagini/2026-03-04-16-50-53.png, id=90, 219.06844pt x 151.3153pt>
+File: immagini/2026-03-04-16-50-53.png Graphic file (type png)
+<use immagini/2026-03-04-16-50-53.png>
+Package pdftex.def Info: immagini/2026-03-04-16-50-53.png  used on input line 823.
+(pdftex.def)             Requested size: 68.28383pt x 47.16585pt.
+<immagini/2026-03-04-16-55-17.png, id=91, 384.6872pt x 143.03438pt>
+File: immagini/2026-03-04-16-55-17.png Graphic file (type png)
+<use immagini/2026-03-04-16-55-17.png>
+Package pdftex.def Info: immagini/2026-03-04-16-55-17.png  used on input line 828.
+(pdftex.def)             Requested size: 68.28383pt x 25.38931pt.
+<immagini/2026-03-04-17-00-31.png, id=92, 992.95969pt x 298.11375pt>
+File: immagini/2026-03-04-17-00-31.png Graphic file (type png)
+<use immagini/2026-03-04-17-00-31.png>
+Package pdftex.def Info: immagini/2026-03-04-17-00-31.png  used on input line 838.
+(pdftex.def)             Requested size: 318.66948pt x 95.67128pt.
+ [15 <./immagini/2026-03-04-16-48-12.png> <./immagini/2026-03-04-16-50-02.png> <./immagini/2026-03-04-16-50-30.png> <./immagini/2026-03-04-16-50-53.png> <./immagini/2026-03-04-16-55-17.png>]
+<immagini/2026-03-04-17-01-29.png, id=96, 280.04625pt x 197.23688pt>
+File: immagini/2026-03-04-17-01-29.png Graphic file (type png)
+<use immagini/2026-03-04-17-01-29.png>
+Package pdftex.def Info: immagini/2026-03-04-17-01-29.png  used on input line 849.
+(pdftex.def)             Requested size: 136.57462pt x 96.19244pt.
+<immagini/2026-03-04-17-02-56.png, id=97, 313.17pt x 237.13594pt>
+File: immagini/2026-03-04-17-02-56.png Graphic file (type png)
+<use immagini/2026-03-04-17-02-56.png>
+Package pdftex.def Info: immagini/2026-03-04-17-02-56.png  used on input line 876.
+(pdftex.def)             Requested size: 136.57462pt x 103.41743pt.
+<immagini/2026-03-04-17-03-49.png, id=98, 207.77625pt x 234.8775pt>
+File: immagini/2026-03-04-17-03-49.png Graphic file (type png)
+<use immagini/2026-03-04-17-03-49.png>
+Package pdftex.def Info: immagini/2026-03-04-17-03-49.png  used on input line 896.
+(pdftex.def)             Requested size: 109.2601pt x 123.50964pt.
+ [16 <./immagini/2026-03-04-17-00-31.png> <./immagini/2026-03-04-17-01-29.png> <./immagini/2026-03-04-17-02-56.png>]
+<immagini/2026-03-04-17-06-22.png, id=102, 390.70969pt x 245.41687pt>
+File: immagini/2026-03-04-17-06-22.png Graphic file (type png)
+<use immagini/2026-03-04-17-06-22.png>
+Package pdftex.def Info: immagini/2026-03-04-17-06-22.png  used on input line 912.
+(pdftex.def)             Requested size: 136.57462pt x 85.78484pt.
+<immagini/2026-03-04-17-07-33.png, id=103, 353.82187pt x 169.38281pt>
+File: immagini/2026-03-04-17-07-33.png Graphic file (type png)
+<use immagini/2026-03-04-17-07-33.png>
+Package pdftex.def Info: immagini/2026-03-04-17-07-33.png  used on input line 932.
+(pdftex.def)             Requested size: 136.57462pt x 65.38187pt.
+ [17 <./immagini/2026-03-04-17-03-49.png> <./immagini/2026-03-04-17-06-22.png> <./immagini/2026-03-04-17-07-33.png>] (Crisi della fisica classica.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4980 strings out of 467871
- 78947 string characters out of 5418377
- 520279 words of memory out of 5000000
- 33800 multiletter control sequences out of 15000+600000
+ 5257 strings out of 467871
+ 88020 string characters out of 5418376
+ 523719 words of memory out of 5000000
+ 34073 multiletter control sequences out of 15000+600000
  639361 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,19n,65p,512b,317s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,19n,65p,512b,328s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\edoma\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/latxfont/line10.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "Crisi della fisica classica.pdf" (16 pages, 328203 bytes).
+Output written on "Crisi della fisica classica.pdf" (17 pages, 1033071 bytes).
 PDF statistics:
- 158 PDF objects out of 1000 (max. 8388607)
+ 190 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 161 words of extra memory for PDF output out of 10000 (max. 10000000)
 
