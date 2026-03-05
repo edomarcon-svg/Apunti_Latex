@@ -16,11 +16,15 @@
 \usepackage{multirow}
 \usepackage{sectsty}
 \usepackage{float}
+\usepackage{xcolor}
 \allsectionsfont{\underline}
+\setcounter{secnumdepth}{0}
 
 \begin{document}
+\tableofcontents
 
-\section*{Introduzione}
+\newpage
+\section{Introduzione}
 
 \begin{table}[h!]
     \centering
@@ -39,7 +43,7 @@
     \end{tabular}
 \end{table}
 
-\subsection*{Regime Relativistico e Non Relativistico}
+\subsection{Regime Relativistico e Non Relativistico}
 Energia totale particella:
 \begin{equation}
     E^2 = p^2c^2 + m^2c^4
@@ -51,7 +55,7 @@ Sviluppo in serie per il regime non relativistico ($p \ll mc$):
 \end{equation}
 $\Rightarrow$ REGIME NON RELATIVISTICO $\Rightarrow E = \frac{p^2}{2m} = \frac{1}{2}mv^2$.
 
-\subsection*{Quantizzazione}
+\subsection{Quantizzazione}
 \begin{itemize}
     \item \textbf{Della materia}: Leucippo, Democrito (V sec. a.C.) \\
     $\simeq 1700 \Rightarrow \text{Atomi} \Rightarrow \text{Tavola periodica} \Rightarrow \text{MOLE} \rightarrow N_A = 6,02 \cdot 10^{23}$
@@ -71,7 +75,7 @@ $\Rightarrow$ REGIME NON RELATIVISTICO $\Rightarrow E = \frac{p^2}{2m} = \frac{1
     Si può anche esprimere come $E = n(\hbar\omega)$, dove $\hbar = \frac{h}{2\pi}$ è la costante di Planck ridotta (che ha le dimensioni di un \textbf{MOMENTO ANGOLARE}).
 \end{itemize}
 
-\section*{Formalismo Lagrangiano}
+\section{Formalismo Lagrangiano}
 
 Dalla Legge di Newton:
 \begin{equation}
@@ -89,7 +93,7 @@ Dalla Legge di Newton:
 $n \text{ GdL} \Rightarrow n$ Coordinate Generalizzate $q_1, q_2, q_3, \dots, q_n \Rightarrow \dot{q}_i = \frac{dq_i}{dt}$ (velocità generalizzate). \\
 \textbf{Scopo}: trovare $q = q(t)$.
 
-\subsection*{Lagrangiana}
+\subsection{Lagrangiana}
 \begin{equation}
     \mathcal{L} = \mathcal{L}(q_1, \dots, q_n ; \dot{q}_1, \dots, \dot{q}_n, t) = \underbrace{K(q_1\dots q_n, \dot{q}_1\dots \dot{q}_n)}_{\text{Energ. Cinet.}} - \underbrace{V(q_1\dots q_n, t)}_{\text{Energ. pot.}}
 \end{equation}
@@ -98,7 +102,7 @@ $\mathcal{L} = K(q, \dot{q}) - V(q, t) \longrightarrow$ Sistemi conservativi.
 \noindent
 $\rightarrow$ Sistema di $N$ punti materiali: $K = \sum_{i=1}^N \frac{1}{2} m_i |\vec{v}_i|^2$ (dove $\vec{v}_i \rightarrow \dot{q}_{ix}, \dot{q}_{iy}, \dot{q}_{iz}$) e $V = V(\vec{r}_1 \dots \vec{r}_n, t)$.
 
-\subsection*{Azione e Principio di Hamilton}
+\subsection{Azione e Principio di Hamilton}
 L'\textbf{Azione} è definita come:
 \begin{equation}
     S = \int_{t_1}^{t_2} \mathcal{L}(q(t), \dot{q}(t), t) dt \quad \text{dove } [S] = E \cdot t \Rightarrow \text{Momento angolare}
@@ -138,7 +142,7 @@ Sostituendo indietro:
 \end{equation}
 Queste sono le \textbf{Eq. di Lagrange}.
 
-\subsection*{Momento Canonico e Coordinate Cicliche}
+\subsection{Momento Canonico e Coordinate Cicliche}
 Definiamo il momento canonico coniugato alla coordinata $q_k$:
 \begin{equation}
     p_k = \frac{\partial \mathcal{L}}{\partial \dot{q}_k} \quad \Rightarrow \quad \frac{d}{dt}\left(\frac{\partial \mathcal{L}}{\partial \dot{q}_k}\right) = \frac{\partial \mathcal{L}}{\partial q_k} \quad \Rightarrow \quad \frac{d}{dt}(p_k) = \frac{\partial \mathcal{L}}{\partial q_k}
@@ -164,7 +168,7 @@ Questo è l'analogo della Legge di Newton. Se la Lagrangiana non dipende esplici
 \noindent
 Hamilton è un integrale $\Rightarrow$ considera già tutta la traiettoria, non punto per punto. Considero tutti i percorsi e scelgo quello che rende minima l'azione.\\
 
-\subsubsection*{Es. 1: Particella nel campo 3D}
+\subsubsection{Es. 1: Particella nel campo 3D}
 Coordinate $q_i = (x,y,z)$, potenziale $V = mgz$.
 \begin{equation*}
     \mathcal{L} = \frac{1}{2}m(\dot{x}^2 + \dot{y}^2 + \dot{z}^2) - mgz \quad (3 \text{ GdL} \rightarrow 3 \text{ Eq. di Lag.})
@@ -174,7 +178,7 @@ Coordinate $q_i = (x,y,z)$, potenziale $V = mgz$.
     \item $i=z \Rightarrow \frac{d}{dt}\left(\frac{\partial \mathcal{L}}{\partial \dot{z}}\right) = \frac{\partial \mathcal{L}}{\partial z} \Rightarrow \frac{d}{dt}(m\dot{z}) = -mg \iff m\frac{d^2z}{dt^2} + mg = 0$ \quad (Newton)
 \end{itemize}
 
-\subsubsection*{Es. 2: Particella in un piano con forza centrale $F=F(r)$}
+\subsubsection{Es. 2: Particella in un piano con forza centrale $F=F(r)$}
 
 
 
@@ -193,7 +197,7 @@ Il momento coniugato a $\theta$ è:
 	\includegraphics[width=0.25\textwidth]{immagini/2026-03-04-14-43-17.png}
 \end{figure}
 
-\section*{Formalismo Hamiltoniano}
+\section{Formalismo Hamiltoniano}
 
 Partiamo dalle $n$ Equazioni di Lagrange del II ordine:
 \begin{equation*}
@@ -213,7 +217,7 @@ Le equazioni del moto diventano le \textbf{Equazioni di Hamilton} (ho raddoppiat
     \text{Cond. iniziali: } \begin{cases} q_i(0) \\ p_i(0) \end{cases} \Rightarrow \quad \begin{cases} \dot{q}_i = \frac{\partial H}{\partial p_i} \\ \dot{p}_i = -\frac{\partial H}{\partial q_i} \end{cases} \quad i=1\dots n
 \end{equation}
 
-\subsubsection*{Es.: $H(q,p)$ per particella con $V(x,y,z)$}
+\subsubsection{Es.: $H(q,p)$ per particella con $V(x,y,z)$}
 \begin{equation*}
     \mathcal{L} = \frac{1}{2}m(\dot{x}^2 + \dot{y}^2 + \dot{z}^2) - V(x,y,z) \quad \Rightarrow \quad H = \sum_{i=x,y,z} p_i \dot{q}_i - \mathcal{L}
 \end{equation*}
@@ -224,7 +228,7 @@ Ricordando che $p_i = \frac{\partial \mathcal{L}}{\partial \dot{q}_i} \Rightarro
       &= \underbrace{\frac{1}{2m}(p_x^2 + p_y^2 + p_z^2)}_{K(p)} + \underbrace{V(x,y,z)}_{V(q)}
 \end{align*}
 
-\subsection*{Es.: $\mathcal{L}$ di una particella immersa in un campo Elettromagnetico}
+\subsection{Es.: $\mathcal{L}$ di una particella immersa in un campo Elettromagnetico}
 
 \textbf{Equazioni di Maxwell e Potenziali:}
 \begin{align*}
@@ -280,7 +284,7 @@ Poiché $H = K + V$:
 \end{equation}
 
 
-\section*{Spazio delle Fasi}
+\section{Spazio delle Fasi}
 
 Se consideriamo un sistema descritto dalle coordinate $(x, p_x)$, le equazioni del moto definiscono una curva parametrizzata dal tempo $t$:
 \begin{figure}[ht]
@@ -318,7 +322,7 @@ Ricordando che $p_i = \frac{\partial \mathcal{L}}{\partial \dot{q}_i}$, abbiamo 
     [p_i \times q_i] = [\mathcal{L}] \cdot t = E \cdot t \quad \Rightarrow \quad \text{MOMENTO ANGOLARE} \quad \Rightarrow \quad \text{AZIONE}
 \end{equation*}
 
-\section*{Fondamenti di Meccanica Statistica: Ensemble}
+\section{Fondamenti di Meccanica Statistica: Ensemble}
 
 Prendiamo come esempio un \textbf{Gas Perfetto Monoatomico}:
 Consideriamo 1 mole di gas, che contiene un numero di Avogadro di particelle ($N_A \simeq 10^{24}$). 
@@ -338,7 +342,7 @@ Data una generica grandezza macroscopica $G = G(x_1 \dots x_N, p_1 \dots p_N) = 
 \end{equation}
 Tuttavia, questo calcolo è \textbf{NON FATTIBILE} perché richiederebbe di conoscere $\sim 10^{24}$ condizioni iniziali $\begin{cases} q_i(0) \\ p_i(0) \end{cases}$.
 
-\subsection*{Il Concetto di Ensemble}
+\subsection{Il Concetto di Ensemble}
 
 % ---------------------------------------------------------
 % \begin{figure}[h!]
@@ -385,7 +389,7 @@ Se normalizziamo il numero totale di sistemi a 1, ovvero $\int \rho(q, p) \, dq 
     \boxed{ \langle G \rangle = \int G(q, p) \rho(q, p) \, d\Gamma }
 \end{equation}
 
-\subsection*{Ipotesi Ergodica}
+\subsection{Ipotesi Ergodica}
 L'assunzione fondamentale che permette di collegare la media temporale con quella statistica è l'\textbf{Ipotesi Ergodica}:
 \begin{equation}
     \boxed{ \bar{G} = \langle G \rangle }
@@ -397,7 +401,7 @@ Il punto fondamentale della Meccanica Statistica diventa quindi trovare la distr
 
 % --- CONTINUAZIONE DAL BLOCCO PRECEDENTE ---
 
-\subsection*{Teorema di Liouville}
+\subsection{Teorema di Liouville}
 
 Il punto fondamentale della meccanica statistica è trovare la densità $\rho(q,p)$. Il \textbf{Teorema di Liouville} stabilisce che per un sistema in equilibrio la densità di probabilità nello spazio delle fasi è una costante del moto:
 \begin{equation}
@@ -425,9 +429,9 @@ Verifichiamo l'Ipotesi Ergodica ($\bar{v} = \langle v \rangle$) confrontando i d
 \end{enumerate}
 
 
-\section*{I Tipi di Ensemble}
+\section{I Tipi di Ensemble}
 
-\subsection*{1. Ensemble Microcanonico}
+\subsection{1. Ensemble Microcanonico}
 Descrive \textbf{SISTEMI ISOLATI} $\rightarrow$ l'Energia $E$ si conserva.
 Sappiamo che l'energia ha una certa fluttuazione infinitesima: $E = E_0 \pm \delta E$.
 La distribuzione di probabilità è definita come:
@@ -461,7 +465,7 @@ Nello spazio dei momenti, questo definisce una circonferenza di raggio $r = \sqr
 Considerando lo spazio delle fasi completo $\Gamma(q_1, q_2, p_1, p_2)$, combiniamo il "quadrato" delle posizioni con la "circonferenza" dei momenti e otteniamo un volume in 4D in cui replichiamo tutti i sistemi possibili.
 Poiché tutti i sistemi hanno la stessa Energia, la probabilità di avere una replica con volume $(\bar{q}_1, \bar{q}_2, \bar{p}_1, \bar{p}_2)$ è la stessa per tutti i sistemi $\Rightarrow \rho(E) = \text{cost}$.
 
-\subsection*{2. Ensemble Canonico}
+\subsection{2. Ensemble Canonico}
 Descrive \textbf{SISTEMI in equilibrio TERMICO}.
 
 \begin{figure}[ht]
@@ -490,7 +494,7 @@ Si definisce un'energia media $\langle E \rangle$ e un'incertezza $\Delta E$. Si
 \end{equation}
 Le fluttuazioni diventano quindi trascurabili al limite termodinamico.
 
-\subsection*{3. Ensemble Grancanonico}
+\subsection{3. Ensemble Grancanonico}
 Si estende il concetto del canonico permettendo anche lo scambio di particelle.
 \begin{figure}[ht]
     \centering
@@ -507,7 +511,7 @@ Si estende il concetto del canonico permettendo anche lo scambio di particelle.
     \end{minipage}
 \end{figure}
 
-\section*{Distribuzione di Boltzmann e Funzione di Partizione}
+\section{Distribuzione di Boltzmann e Funzione di Partizione}
 
 Riprendiamo l'\textbf{Ensemble Canonico} (Sistemi in equilibrio termico). La probabilità di trovare il sistema con energia $E$ è data dalla \textbf{Distribuzione di Boltzmann}:
 \begin{equation*}
@@ -543,7 +547,7 @@ Di conseguenza, il valore medio di una qualsiasi grandezza $G$ è:
     \boxed{ \langle G \rangle = \frac{\int G(q,p) e^{-\beta E} \, dq \, dp}{Z} }
 \end{equation}
 
-\subsection*{Energia Media e Sottosistemi}
+\subsection{Energia Media e Sottosistemi}
 
 Se consideriamo due sottosistemi $S_1$ e $S_2$ distinti e indipendenti, l'energia si somma: $E_{1+2} = E_1 + E_2$.
 La funzione di partizione totale si fattorizza nel prodotto delle singole funzioni di partizione:
@@ -573,7 +577,7 @@ Riconosciamo nell'ultimo termine la definizione di valore medio, ottenendo la re
     \boxed{ \langle E \rangle = U = -\frac{\partial}{\partial \beta} \ln Z }
 \end{equation}
 
-\section*{Teorema di Equipartizione dell'Energia}
+\section{Teorema di Equipartizione dell'Energia}
 (Valido per sistemi all'equilibrio termico).
 
 \noindent
@@ -600,7 +604,7 @@ Ne consegue che ogni termine quadratico indipendente "assorbe" un'energia media 
 \end{equation}
 \textit{Esempio:} Se $E = a x^2 + b p_y^2 + c x_1 + d p_1 \Rightarrow \langle E \rangle = \frac{1}{2} k_B T + \frac{1}{2} k_B T + \langle c x_1 + d p_1 \rangle$.
 
-\section*{Applicazione: Gas Perfetto Monoatomico}
+\section{Applicazione: Gas Perfetto Monoatomico}
 
 Consideriamo la singola molecola di massa $m$ (ha solo energia cinetica traslazionale):
 
@@ -647,7 +651,7 @@ Infine, il calore specifico a volume costante si calcola come:
 
 % --- FINE BLOCCO INTEGRATIVO ---
 
-\section*{Atomi e Particelle: metodi sperimentali e classici}
+\section{Atomi e Particelle: metodi sperimentali e classici}
 
 \begin{figure}[ht]
     \centering
@@ -684,7 +688,7 @@ Definiamo l'Unità di Massa Atomica (U.m.a.):
     1 \text{ U.m.a.} = m_H \simeq m_{\text{protone}} \simeq m_{\text{neutrone}} = \frac{1}{2} \frac{(1 \text{ mol } H_2)}{N_A} = 1,67 \cdot 10^{-24} \text{ g}
 \end{equation}
 
-\subsection*{Misura della massa: Spettrometro di massa}
+\subsection{Misura della massa: Spettrometro di massa}
 
 Le molecole da misurare si ionizzano (es. per effetto termoionico) e vengono accelerate da una differenza di potenziale $\Delta V$:
 \begin{figure}[ht]
@@ -709,9 +713,9 @@ Sostituendo la velocità, otteniamo:
 \end{equation}
 Poiché $\Delta V$ e $B$ sono \textbf{NOTI}, misurando il raggio di curvatura $r$ si ricava il rapporto $q/m$.
 
-\section*{Stimare il Raggio Atomico}
+\section{Stimare il Raggio Atomico}
 
-\subsection*{1. Libero cammino medio ($\ell_m$)}
+\subsection{1. Libero cammino medio ($\ell_m$)}
 $\ell_m$ = distanza percorsa da un atomo tra 2 urti.
 
 \begin{figure}[ht]
@@ -741,7 +745,7 @@ Il libero cammino medio è il rapporto tra la distanza totale e il numero di urt
 \textit{(Nota: se tutti gli atomi si muovono, si moltiplica il denominatore per $\sqrt{2}$).} \\
 I \textbf{Viscosimetri} misurano $\ell_m$. Ad esempio, in aria $\ell_m \simeq 10^{-7} \text{ m}$.
 
-\subsection*{2. Equazione di stato dei Gas Reali (1 mol)}
+\subsection{2. Equazione di stato dei Gas Reali (1 mol)}
 \begin{equation}
     \left(p + \frac{a}{V^2}\right)(V - b) = RT
 \end{equation}
@@ -751,7 +755,7 @@ Il parametro $b$ rappresenta il covolume, ovvero il volume escluso dalle partice
 \end{equation*}
 Fissato $V$, si misura $P$ in funzione di $T$. Si fittano i dati trovando le costanti $a$ e $b$, e da $b$ si ricava il raggio $r$.
 
-\subsection*{3. Diffrazione di Bragg}
+\subsection{3. Diffrazione di Bragg}
 
 \begin{figure}[ht]
     \centering
@@ -764,7 +768,7 @@ Fissato $V$, si misura $P$ in funzione di $T$. Si fittano i dati trovando le cos
     \end{minipage}
 \end{figure}
 
-\subsection*{Confronto Raggi Atomici}
+\subsection{Confronto Raggi Atomici}
 Esempio per il \textbf{Neon ($Ne$)}:
 \begin{itemize}
     \item $r_{Ne} \rightarrow 1,18 \cdot 10^{-10} \text{ m}$ (da Libero cammino medio $\ell_m$)
@@ -777,7 +781,7 @@ Altri esempi:
     \item \textbf{Uranio ($U$):} $Z=92 \Rightarrow r_U = 1,4 \text{ \AA}$
 \end{itemize}
 
-\section*{Elettroni e Particelle Elementari} % [cite: 549, 552]
+\section{Elettroni e Particelle Elementari} % [cite: 549, 552]
 
 \begin{itemize}
     \item \textbf{Elettroni:} $m_e = \frac{1}{1840} m_p = 9.1 \cdot 10^{-31} \text{ kg}$ % [cite: 549, 550, 551]
@@ -802,7 +806,7 @@ Altri esempi:
 \noindent
 Queste si generano da decadimenti radioattivi. Hanno energie cinetiche tipiche $E_K = \text{1-10 MeV}$, un libero cammino medio $\ell_m \simeq \text{10 cm}$, e una velocità $v \simeq \text{10}^7 \text{ m/s}$ %[cite: 562, 566].
 
-\subsection*{Raggi X}
+\subsection{Raggi X}
 Sono luce (onde elettromagnetiche) con lunghezza d'onda $\lambda \simeq 1 \text{ \AA}$ %[cite: 567]. 
 Quando interagiscono con la materia, possono subire diversi processi:
 
@@ -829,7 +833,7 @@ Quando interagiscono con la materia, possono subire diversi processi:
         \end{figure}
 \end{enumerate}
 
-\section*{Sezione d'Urto ($\sigma$)} % [cite: 583]
+\section{Sezione d'Urto ($\sigma$)} % [cite: 583]
 
 Per misurare le proprietà della materia, si utilizzano \textbf{SONDE} (es. fascio di elettroni o raggi X) indirizzate contro un sottile foglio di materiale che funge da bersaglio %[cite: 584, 585].
 
@@ -868,7 +872,7 @@ La sezione d'urto totale è la somma delle sezioni d'urto dei singoli processi:
     \sigma_{\text{TOT}} = \sigma_{\text{FOTOEL}} + \sigma_{\text{COMP}} + \sigma_{\text{RAY}} \quad \Rightarrow \quad \sigma_{\text{TOT}} = \sum \sigma_i % [cite: 606]
 \end{equation*}
 
-\subsection*{Attenuazione del Fascio}
+\subsection{Attenuazione del Fascio}
 \begin{figure}[H]
     \centering
     \begin{minipage}{0.3\textwidth}
@@ -903,7 +907,7 @@ dove $\Lambda = \frac{1}{\sigma \rho}$ è il \textbf{libero cammino medio} %[cit
     \end{minipage}
 \end{figure}
 
-\subsection*{Scattering e Parametro d'Impatto}
+\subsection{Scattering e Parametro d'Impatto}
 
 \begin{figure}[H]
     \centering
@@ -952,15 +956,620 @@ Invertendo la relazione, otteniamo l'angolo di scattering in funzione del parame
     }
 \end{equation}
 
+\subsection{Sezione d'Urto Differenziale}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.9\linewidth]{immagini/2026-03-05-17-34-27.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.5\textwidth}
+        \includegraphics[width=0.8\linewidth]{immagini/2026-03-05-17-34-54.png}
+    \end{minipage}
+\end{figure}
+
+Considerando la simmetria cilindrica, l'area dell'anello infinitesimo associato al parametro d'impatto è:
+\begin{equation}
+    \boxed{ d\sigma = 2\pi b \, db } \quad \leftarrow \text{SEZIONE D'URTO INFINITESIMA}
+\end{equation}
+
+\noindent
+Sulla sfera di raggio $r$, l'elemento di superficie $dS$ spazzato dall'angolo solido $d\Omega$ è:
+\begin{equation*}
+    dS = r \cdot r \, d\theta = 2\pi r^2 \sin\theta \, d\theta
+\end{equation*}
+L'angolo solido è quindi:
+\begin{equation*}
+    d\Omega = \frac{dS}{r^2} = 2\pi \sin\theta \, d\theta \quad \Rightarrow \quad d\sigma \propto d\Omega
+\end{equation*}
+
+\noindent
+\textbf{DEF. SEZIONE D'URTO DIFFERENZIALE:} $\Rightarrow$ Sez. d'urto per unità di angolo solido
+\begin{equation}
+    \boxed{ D(\theta) = \frac{d\sigma}{d\Omega} }
+\end{equation}
+
+\noindent
+Siano $N_0$ le particelle incidenti e $R$ il numero di particelle rimosse (scatterate). Se $n$ è la densità dei centri di scattering, abbiamo:
+\begin{equation*}
+    R = n \sigma N_0 \quad \Rightarrow \quad dN = n \, d\sigma \, N_0 \quad \Rightarrow \quad \frac{dN}{d\Omega} = n \frac{d\sigma}{d\Omega} N_0
+\end{equation*}
+Da cui si ricava operativamente la sezione d'urto differenziale:
+\begin{equation}
+    \boxed{ \frac{d\sigma}{d\Omega} = D(\theta) = \frac{1}{n N_0} \frac{dN}{d\Omega} }
+\end{equation}
+(Questa formula correla il numero di particelle scatterate a un determinato angolo solido).
+
+\section{Modelli Classici dell'Atomo}
+
+\subsection{1. Modello di Thomson ($\simeq 1900$) $\rightarrow$ Modello a "panettone"}
 
 
+Il campo elettrico generato dalla distribuzione uniforme di carica positiva (raggio $r_{atm}$) è:
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=0.8\linewidth]{immagini/2026-03-05-17-39-42.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        \begin{equation}
+            \vec{E} = 
+            \begin{cases}
+                \displaystyle \frac{Z e}{4\pi\varepsilon_0 r_{atm}^3} r \hat{u}_r & \text{se } r < r_{atm} \\
+                \displaystyle \frac{Z e}{4\pi\varepsilon_0 r^2} \hat{u}_r & \text{se } r \ge r_{atm}
+            \end{cases}
+        \end{equation}
+    \end{minipage}
+\end{figure}
 
+\noindent
+All'interno dell'atomo la forza è del tipo $\vec{F}_{el} \propto -r$, ovvero una \textbf{Forza elastica}. Gli elettroni possono quindi oscillare di moto armonico, comportandosi come dipoli oscillanti che possono emettere luce.
+$\rightarrow$ \textit{Il modello giustifica l'emissione di luce.}
 
+\subsection{2. Esperimento di Geiger e Marsden (1909)}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{immagini/2026-03-05-17-40-46.png}
+    \end{figure}
 
+Bombardando una foglia d'oro con particelle $\alpha$, ci si aspetta che $N(\theta) \propto \frac{d\sigma}{d\Omega} = D(\theta)$.
+Dal grafico sperimentale: tante particelle non deflesse (angolo piccolo), ma un numero considerevole di particelle \textbf{deflesse tantissimo} (fino a $120^\circ$).
 
+Facciamo due assunzioni classiche:
+\begin{enumerate}
+    \item $m_\alpha \gg m_{atm} \Rightarrow$ Atomi bersaglio considerati immobili.
+    \item $m_\alpha \gg m_e \Rightarrow$ Conta solo la distribuzione di carica positiva.
+\end{enumerate}
+Valutiamo la forza massima nel modello di Thomson (alla superficie dell'atomo):
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=0.8\linewidth]{immagini/2026-03-05-17-42-26.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        \begin{equation*}
+            |\vec{F}_{max}| = q_\alpha |\vec{E}_{max}| = (2e) \cdot \frac{Z e}{4\pi\varepsilon_0 r_{atm}^2} \quad \rightarrow \quad \theta \simeq 0,02^\circ
+        \end{equation*}
+    \end{minipage}
+\end{figure}
+$\Rightarrow$ Secondo Thomson \textbf{non ci dovrebbe essere praticamente deflessione}.
 
+\subsection{3. Modello di Rutherford (Modello planetario)}
 
+Per aumentare l'angolo di deflessione devo aumentare $F$. Allora suppongo di \textbf{diminuire il raggio} della carica positiva.
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.6\linewidth]{immagini/2026-03-05-18-03-39.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.45\textwidth}
+        
+        \includegraphics[width=0.8\linewidth]{immagini/2026-03-05-18-03-05.png}
+    \end{minipage}
+\end{figure}
+
+\noindent
+Applicando la meccanica classica a un nucleo puntiforme, la \textbf{sezione d'urto differenziale di Rutherford} risulta:
+\begin{equation}
+    D(\theta) = \frac{d\sigma}{d\Omega} \propto \csc^4\left(\frac{\theta}{2}\right)
+\end{equation}
+L'andamento teorico fa un \textit{fit} perfetto con la curva dei dati di Geiger e Marsden!
+
+\noindent
+È possibile stimare le dimensioni: $D \simeq r_{nucleo} \simeq 10^{-14} \text{ m}$
+(Mentre $r_{atm} \simeq 1\text{\AA} = 10^{-10} \text{ m}$, quindi il nucleo è $10.000$ volte più piccolo dell'atomo).
+
+\noindent
+\textbf{Problemi del modello di Rutherford:}
+Sebbene Rutherford spieghi lo scattering (e in linea di principio l'emissione di luce):
+\begin{itemize}
+    \item \textbf{Teorema di Earnshaw:} una collezione di cariche in cui agisce solo $\vec{F}_{el}$ non può stare in equilibrio stabile. $\Rightarrow$ QUINDI L'ELETTRONE DEVE GIRARE.
+    \item Se gira, deve subire un'accelerazione normale (centripeta).
+    \item Per l'elettromagnetismo classico, una carica accelerata \textbf{EMETTE LUCE SEMPRE} (irradia energia).
+    \item Quindi l'elettrone perde energia, inizia un moto a spirale e \textbf{collassa sul nucleo} in $\tau \simeq 10^{-12} \text{ s}$! (Problema di stabilità).
+    \item Inoltre, spiraleggiando, la luce emessa avrebbe una frequenza in continuo cambiamento, portando a uno \textbf{spettro a banda continua} (in totale contrasto con i dati sperimentali che mostrano righe spettrali discrete).
+\end{itemize}
+
+\section{Il Problema del Corpo Nero}
+
+\textbf{Sorgenti delle onde:}
+\begin{enumerate}
+    \item \textbf{Atomi:} dipolo oscillante (Drude-Lorentz)
+    \item \textbf{Cariche Accelerate:} irraggiamento ($P \propto a^2$)
+    \item \textbf{Laser:} emissione stimolata
+    \item \textbf{Sorgenti Termiche:} $T > 0 \Rightarrow$ Emette luce (es. lampadine a incandescenza)
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{immagini/2026-03-05-18-07-29.png}
+    \end{figure}
+
+\subsection{Sorgenti Termiche}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=0.8\linewidth]{immagini/2026-03-05-18-08-23.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        Un corpo con temperatura $T > T_{amb}$ vuole andare in equilibrio termico a $T_{amb} \Rightarrow$ l'emissione di luce lo raffredda.
+        
+        \textit{Esempi pratici:}
+        \begin{itemize}
+            \item Rame (Cu) a $T = \text{600°C} \Rightarrow$ Colore rosso/arancione (luce visibile).
+            \item Corpo umano a $T = \text{310 K} \Rightarrow$ Emette a $\lambda \simeq 10 \mu\text{m}$ (Infrarosso - IR).
+        \end{itemize}
+    \end{minipage}
+\end{figure}
+
+\noindent
+Definiamo la potenza emessa da un corpo per unità di superficie tra le frequenze $\nu$ e $\nu + d\nu$:
+\begin{equation}
+    dW = e(\nu, T) \, d\nu \quad [\text{W/m}^2]
+\end{equation}
+dove $e(\nu, T)$ è il \textbf{Potere emissivo} (o emissività) a temperatura fissata, misurato in $[\text{J/m}^2]$.
+
+\noindent
+La potenza totale irradiata su tutta la superficie e su tutte le frequenze è:
+\begin{equation}
+    W_{TOT} = \int_{S_{corpo}} dS \int_0^{+\infty} e(\nu, T) \, d\nu
+\end{equation}\\
+
+\noindent
+Definiamo inoltre il \textbf{Potere assorbente} $a(\nu, T)$ come la frazione di potenza assorbita dal corpo. È una funzione adimensionale tale che $a \le 1$.
+Per la conservazione dell'energia, la somma delle frazioni assorbita ($a$), riflessa ($r$) e trasmessa ($t$) deve essere unitaria:
+\begin{equation}
+    a(\nu_0, T_0) + r(\nu_0, T_0) + t(\nu_0, T_0) = 1
+\end{equation}
+
+\subsection{Teorema di Kirchhoff (1870)}
+
+Kirchhoff dimostrò che il rapporto tra potere emissivo e potere assorbente è una \textbf{funzione universale} della frequenza e della temperatura, indipendente dal materiale:
+\begin{equation}
+    \boxed{ \frac{e(\nu, T)}{a(\nu, T)} = f(\nu, T) }
+\end{equation}
+Fissando $\nu_0$ e $T_0$, si ottiene $f_0 = \frac{e(\nu_0, T_0)}{a(\nu_0, T_0)}$. 
+Questo significa che un corpo \textbf{EMETTE BENE dove ASSORBE} bene.
+
+\subsection{Esperimenti e Leggi Empiriche}
+
+Studiando l'emissione del corpo nero, sperimentalmente si deducono due leggi fondamentali:
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-03-05-18-14-00.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.7\textwidth}
+        \begin{enumerate}
+            \item \textbf{Legge di Stefan-Boltzmann:} 
+            La potenza totale emessa cresce con la quarta potenza della temperatura.
+            \begin{equation}
+                \boxed{ W_{TOT} = \sigma S T^4 }
+            \end{equation}
+            dove $S$ è la superficie e $\sigma = 5,7 \cdot 10^{-8} \text{ W/(m}^2\text{K}^4)$ è la costante di Stefan-Boltzmann.
+        
+            \item \textbf{Legge di Wien (dello spostamento):}
+            La lunghezza d'onda del picco di emissione $\lambda_{max}$ è inversamente proporzionale alla temperatura.
+            \begin{equation}
+                \boxed{ \lambda_{max} T = \text{COST} \simeq 3000 \, \mu\text{m} \cdot \text{K} } \quad \Rightarrow \quad \lambda_{max}(\mu\text{m}) = \frac{3000}{T(\text{K})}
+            \end{equation}
+            \textit{(Al crescere della temperatura $T$, la $\lambda_{max}$ diminuisce, spostandosi verso il blu/ultravioletto).}
+        \end{enumerate}
+    \end{minipage}
+\end{figure}
+
+\textit{Esempio:}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-03-05-18-15-42.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.7\textwidth}
+        \begin{itemize}
+            \item $T = \text{6000 K}$ (Temp. superficiale del Sole) $\Rightarrow$ Il picco cade esattamente nella fascia della \textbf{luce visibile}.
+            \item $T = \text{3000 K}$ e $T = \text{1500 K} \Rightarrow$ L'intensità massima diminuisce e il picco trasla verso l'infrarosso (frequenze minori, $\lambda$ maggiori).
+        \end{itemize}
+    \end{minipage}
+\end{figure}
+
+\section{Definizione di Corpo Nero} %
+
+\textbf{DEFINIZIONE:} Un corpo nero è un oggetto ideale che assorbe tutta la radiazione elettromagnetica incidente, indipendentemente dalla frequenza e dalla temperatura. %
+\begin{equation*}
+    a_{CN}(\nu, T) = 1 \quad \forall \nu, T \quad \Rightarrow \quad \boxed{ e_{CN}(\nu, T) = f(\nu, T) }
+\end{equation*}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-03-05-18-18-02.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        Realizzazione pratica: una cavità con un piccolo foro. %
+        Ogni riflessione sulle pareti interne comporta un assorbimento $\Rightarrow$ tutta la luce in ingresso viene assorbita. %
+        Al contempo, le pareti interne della cavità emettono luce. %
+        Se la cavità è a contatto con un \textbf{TERMOSTATO}, si raggiunge l'Equilibrio Termico: %
+        \begin{equation*}
+            T_{\text{PARETI}} = T_{\text{CAVITÀ}} = T_{\text{TERMOSTATO}}
+        \end{equation*}
+    \end{minipage}
+\end{figure}
+
+\noindent
+In questo stato macroscopico, c'è un equilibrio termico esatto tra la luce emessa e quella assorbita, che si può studiare formalmente con la \textbf{MECCANICA STATISTICA}. %
+
+\subsection{Densità di Energia Spettrale} %
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-03-05-18-20-08.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        Per un corpo reale alla stessa temperatura $T$: %
+        \begin{equation*}
+            e_{\text{CORPO}}(\nu, T) = a_{\text{CORPO}}(\nu, T) \cdot e_{CN}(\nu, T)
+        \end{equation*}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.25\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-03-05-18-22-34.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.73\textwidth}
+        Definiamo $\mu(\nu, T)$ come la \textbf{Densità di Energia Spettrale} $[\text{J/m}^3]$. %
+        $\mu(\nu, T) d\nu$ rappresenta l'energia per unità di volume compresa nel range di frequenze tra $\nu$ e $\nu + d\nu$. %
+        
+        Consideriamo un volumetto cilindrico di luce di area di base $S$ che avanza a velocità $c$ in un tempo $dt$ (ovvero di lunghezza $dz = c dt$). L'energia elettromagnetica contenuta è: %
+        \begin{equation*}
+            dU = \mu \, dz \, S = \mu \, c \, dt \, S
+        \end{equation*}
+        La potenza irradiata per unità di superficie nel range di frequenze considerato è: %
+        \begin{equation*}
+            dW = \frac{dU_{d\nu}}{dt \, S} = \frac{\mu(\nu, T) d\nu \cdot S \cdot c \, dt}{S \, dt} = c \, \mu(\nu, T) \, d\nu
+        \end{equation*}
+        Poiché per definizione $dW = e_{CN}(\nu, T) d\nu$, otteniamo una prima stima utile: %
+        \begin{equation*}
+            \boxed{ e_{CN} = c \, \mu(\nu, T) }
+        \end{equation*}
+    \end{minipage}
+\end{figure}
+
+Tuttavia, facendo i calcoli esatti (mediando su tutte le direzioni spaziali con il Vettore di Poynting), si ottiene un fattore correttivo geometrico pari a $1/4$: %
+\begin{equation}
+    e_{CN}(\nu, T) = \frac{c}{4} \mu(\nu, T)
+\end{equation}
+
+\noindent
+L'obiettivo pratico diventa quindi \textbf{CALCOLARE $\mu(\nu, T)$} per poi \textbf{STIMARE $e(\nu, T)$} teorica, e fare il \textbf{CONFRONTO CON I DATI} sperimentali. %
+La formula base per ricavare la densità di energia spettrale è il prodotto tra numero di onde e la loro energia: %
+\begin{equation}
+    \mu(\nu, T) d\nu = \frac{1}{V} \times dN_{\text{ONDE}} \times \langle E \rangle_{\text{1 ONDA}} \quad \text{(valido tra } \nu \text{ e } \nu + d\nu \text{)}
+\end{equation}
+\vspace{1cm}
+
+\subsection{Onde Stazionarie nella Cavità} %
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-03-05-18-26-53.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        Modelliamo la cavità risonante come un cubo di lato $L$ con pareti metalliche (sotto l'approssimazione di conduttore perfetto). %
+        Consideriamo un'onda elettromagnetica piana (es. la componente $y$ del campo elettrico) che si propaga lungo l'asse $x$: %
+        \begin{equation*}
+            \vec{\mathcal{E}}_y(x,t) = \mathcal{E}_{01} \hat{u}_y e^{-i(k_x x - \omega t)} + \mathcal{E}_{02} \hat{u}_y e^{i(k_x x + \omega t)}
+        \end{equation*}
+    \end{minipage}
+\end{figure}
+
+Applicando la prima condizione al contorno sulla parete metallica in $x=0$, il campo elettrico tangenziale deve necessariamente annullarsi: %
+\begin{equation*}
+    \vec{\mathcal{E}}_y(0,t) = 0 \quad \Rightarrow \quad \mathcal{E}_{01} \hat{u}_y e^{i\omega t} + \mathcal{E}_{02} \hat{u}_y e^{i\omega t} = 0 \quad \Rightarrow \quad \mathcal{E}_{01} = -\mathcal{E}_{02}
+\end{equation*}
+
+\noindent
+Sostituendo $\mathcal{E}_{02}$ e raccogliendo i termini, otteniamo l'equazione caratteristica di un'\textbf{onda stazionaria}: %
+\begin{equation*}
+    \vec{\mathcal{E}}_y(x,t) = \mathcal{E}_{01} \hat{u}_y e^{i\omega t} \left[ e^{ik_x x} - e^{-ik_x x} \right] = \mathcal{E}_{01} \hat{u}_y e^{i\omega t} [2i \sin(k_x x)]
+\end{equation*}
+Applicando la seconda condizione al contorno sulla parete opposta in $x=L$: %
+\begin{equation*}
+    \vec{\mathcal{E}}_y(L,t) = 0 \quad \Rightarrow \quad \sin(k_x L) = 0
+\end{equation*}
+Affinché il seno sia nullo, l'argomento deve essere per forza un multiplo intero di $\pi$: %
+\begin{equation*}
+    k_x L = n_x \pi \quad \Rightarrow \quad k_x = n_x \frac{\pi}{L} \quad (\text{con } n_x = 1, 2, 3 \dots)
+\end{equation*}
+Generalizzando lo stesso ragionamento in tre dimensioni, le componenti del vettore d'onda $\vec{k}$ risultano quantizzate: %
+\begin{equation}
+    \begin{cases}
+        k_x = n_x \frac{\pi}{L} \\
+        k_y = n_y \frac{\pi}{L} \\
+        k_z = n_z \frac{\pi}{L}
+    \end{cases} \quad \Rightarrow \quad \text{definiti POSITIVI}
+\end{equation}
+
+\section{Lo Spazio dei Vettori d'Onda ($\vec{k}$)} %
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.25\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-03-05-18-32-05.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.7\textwidth}
+        Proviamo a disegnare tutte le onde che possono "vivere" nella cavità nello spazio dei $\vec{k}$. %
+        Ogni terna $(k_x, k_y, k_z)$ rappresenta un'ONDA STAZIONARIA. %
+        Nello spazio delle fasi di $\vec{k}$, ogni stato occupa un volume elementare pari a $(\frac{\pi}{L})^3$. %
+    \end{minipage}
+\end{figure}
+Il numero totale di stati (i "pallini" nel reticolo) fino a un certo vettore d'onda massimo $\bar{k}$ è dato dal prodotto dei numeri quantici massimi: %
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.25\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-03-05-18-33-12.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.7\textwidth}
+        \begin{align*}
+            \text{\# PALLINI} &= \text{\# onde staz.} = N_x \times N_y \times N_z = \frac{\bar{k}_x}{\pi/L} \times \frac{\bar{k}_y}{\pi/L} \times \frac{\bar{k}_z}{\pi/L} \\
+            &= \frac{\bar{k}^3}{(\pi/L)^3} \Rightarrow \text{\# DI STATI}
+        \end{align*}
+    \end{minipage}
+\end{figure}
+
+\noindent
+Verifichiamo il volume "occupato" da ogni singolo stato: %
+\begin{equation*}
+    \frac{\text{Vol. totale}}{\text{\# STATI}} = \frac{\bar{k}^3}{\bar{k}^3/(\pi/L)^3} = \left(\frac{\pi}{L}\right)^3
+\end{equation*} %
+
+\noindent
+\textbf{Passaggio al continuo:}
+Se consideriamo una cavità macroscopica con $L = 1 \text{ cm}$ e luce visibile/IR con $\lambda = 1 \mu\text{m}$, abbiamo: %
+\begin{equation*}
+    \Delta k = \frac{\pi}{L} \sim 10^{-1} \text{ m}^{-1} \quad \text{mentre} \quad k = \frac{2\pi}{\lambda} \sim 10^6 \text{ m}^{-1}
+\end{equation*} %
+Poiché $k \gg \Delta k$, i punti sono così densi che possiamo fare un'\textbf{Approssimazione del continuo} ($\vec{k}$ diventa una variabile continua). %
+
+\subsection{Densità degli Stati} %
+
+Vogliamo contare il numero di onde comprese nel range di frequenze tra $\nu$ e $\nu + d\nu$, che equivale a contare gli stati con vettore d'onda tra $k$ e $k + dk$. %
+Ricordiamo le relazioni base: $k = \frac{\omega}{c} = \frac{2\pi}{c}\nu$ e differenziando $dk = \frac{2\pi}{c} d\nu$. %
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-03-05-18-43-34.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        Quanti stati ci sono tra $0$ e $\bar{k}$? %
+        Dobbiamo contare i pallini tali che $\sqrt{k_x^2 + k_y^2 + k_z^2} \le \bar{k}$. Siccome $k_x, k_y, k_z$ sono positivi, questo corrisponde a un \textbf{ottavo di sfera} di raggio $\bar{k}$. %
+        
+        Il numero totale di stati fino a $\bar{k}$ è il volume dell'ottavo di sfera diviso per il volume di un singolo stato: %
+        \begin{equation*}
+            N(|\vec{k}| < \bar{k}) = \frac{\frac{1}{8} \left(\frac{4}{3}\pi \bar{k}^3\right)}{\left(\frac{\pi}{L}\right)^3} = \frac{\bar{k}^3 L^3}{6\pi^2}
+        \end{equation*} %
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-03-05-18-44-53.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        Il numero di stati nel guscio sferico compreso tra $\bar{k}$ e $\bar{k} + dk$ è il differenziale $dN$: %
+        \begin{equation*}
+            dN = N(|\vec{k}| < \bar{k} + dk) - N(|\vec{k}| < \bar{k}) = d\left( \frac{\bar{k}^3 L^3}{6\pi^2} \right) = \frac{\bar{k}^2 L^3}{2\pi^2} \, dk
+        \end{equation*} %
+    \end{minipage}
+\end{figure}
+
+Sostituendo $k$ e $dk$ in funzione della frequenza $\nu$: %
+\begin{equation}
+    dN = \frac{\left(\frac{2\pi}{c}\nu\right)^2 L^3}{2\pi^2} \left(\frac{2\pi}{c} d\nu\right) = \frac{4\pi L^3 \nu^2}{c^3} \, d\nu
+\end{equation} %
+
+Definiamo quindi la \textbf{Densità degli stati} $D(\nu)$: %
+\begin{equation}
+    D(\nu) = \frac{4\pi L^3 \nu^2}{c^3} \quad \Rightarrow \quad dN_{\text{ONDE}} = D(\nu) d\nu = \frac{4\pi L^3 \nu^2}{c^3} d\nu
+\end{equation} %
+
+\subsection{Formula di Rayleigh-Jeans e Catastrofe Ultravioletta} %
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.2\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-03-05-19-09-52.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.75\textwidth}
+        Per calcolare l'energia media di un'onda, la associamo all'energia di un \textbf{oscillatore armonico} (immaginiamo le pareti della cavità composte da atomi che si comportano come oscillatori in equilibrio termico con la radiazione). %
+        \begin{equation*}
+            \langle E \rangle_{\text{1 ONDA}} = \langle E \rangle_{\text{OSC}} \quad \text{dove} \quad E_{\text{OSC}} = \frac{1}{2}mv^2 + \frac{1}{2}Kx^2
+        \end{equation*} %
+    \end{minipage}
+\end{figure}
+Per il Teorema di Equipartizione dell'energia: %
+\begin{equation*}
+    \langle E \rangle_{\text{OSC}} = \frac{1}{2}k_B T + \frac{1}{2}k_B T = k_B T
+\end{equation*} %
+Calcoliamo ora la densità di energia spettrale $\mu(\nu, T)$. % 
+\textit{Nota cruciale:} per ogni direzione di propagazione ci sono $\textcolor{red}{2}$ direzioni indipendenti di polarizzazione dell'onda elettromagnetica. Dobbiamo quindi moltiplicare gli stati per 2: %
+
+\begin{align*}
+    \mu(\nu, T) \, d\nu &= \frac{1}{V} \times \left( \textcolor{red}{2} \times dN_{\text{ONDE}} \right) \times \langle E \rangle_{\text{1 ONDA}} = \\
+    &= \frac{1}{L^3} \times \left[ \textcolor{red}{2} \times \left( \frac{4\pi L^3}{c^3} \nu^2 \, d\nu \right) \right] \times (k_B T) = \\
+    &= \frac{8\pi \nu^2}{c^3} k_B T \, d\nu
+\end{align*} %
+
+Questa è la \textbf{Formula di Rayleigh-Jeans} per il corpo nero: %
+\begin{equation}
+    \boxed{ \mu(\nu, T) = \frac{8\pi \nu^2}{c^3} k_B T }
+\end{equation} %
+$\Rightarrow$ Questa formula \textbf{NON È IN ACCORDO CON I DATI SPERIMENTALI}. \\
+
+\noindent
+Se proviamo a calcolare la potenza totale irraggiata integrando su tutte le frequenze, l'integrale \textbf{diverge} perché la densità cresce con il quadrato della frequenza ($\mu \propto \nu^2$): %
+\begin{equation}
+    W_{\text{TOT}} = S \int_0^{+\infty} e_{CN}(\nu, T) d\nu = S \frac{c}{4} \int_0^{+\infty} \mu(\nu, T) d\nu \rightarrow +\infty
+\end{equation} %
+
+Questo assurdo fisico prende il nome di \textbf{CATASTROFE ULTRAVIOLETTA}. \\
+
+\section{L'Ipotesi di Planck (1900)} %
+
+L'ipotesi fondamentale di Planck è che l'energia scambiata con la materia sia quantizzata: %
+\begin{equation}
+    \boxed{ E = n(h\nu) } \quad \text{con } n = 0, 1, 2, 3, \dots %
+\end{equation}
+
+Calcoliamo l'energia media dell'oscillatore $\langle E \rangle_{osc}$ usando la distribuzione statistica di Boltzmann (Planck utilizza ancora le formule statistiche classiche): %
+\begin{equation*}
+    \langle G \rangle = \frac{\int G(q,p) \rho(q,p) \, dq \, dp}{\int \rho(q,p) \, dq \, dp} \quad \Rightarrow \quad \langle E \rangle_{osc} = \frac{\sum_{n=0}^{+\infty} n h \nu e^{-\frac{n h \nu}{k_B T}}}{\sum_{n=0}^{+\infty} e^{-\frac{n h \nu}{k_B T}}} %
+\end{equation*}
+
+Risolviamo separatamente numeratore e denominatore. %
+
+\textbf{Denominatore (1):} %
+\begin{equation*}
+    \sum_{n=0}^{+\infty} e^{-\frac{n h \nu}{k_B T}} = \left\{ x = e^{-\frac{h \nu}{k_B T}} \text{ con } |x| < 1 \right\} = \sum_{n=0}^{+\infty} x^n = \frac{1}{1-x} %
+\end{equation*}
+
+\textbf{Numeratore (2):} %
+\begin{align*}
+    \sum_{n=0}^{+\infty} n h \nu e^{-\frac{n h \nu}{k_B T}} &= h\nu e^{-\frac{h\nu}{k_B T}} + 2h\nu e^{-\frac{2h\nu}{k_B T}} + 3h\nu e^{-\frac{3h\nu}{k_B T}} + \dots = \\
+    &= h\nu e^{-\frac{h\nu}{k_B T}} \left[ 1 + 2e^{-\frac{h\nu}{k_B T}} + 3e^{-\frac{2h\nu}{k_B T}} + \dots \right] = \\
+    &= \left\{ x = e^{-\frac{h\nu}{k_B T}} \right\} = h\nu x [1 + 2x + 3x^2 + \dots] = \\
+    &= h\nu x \left[ \sum_{n=0}^{+\infty} \frac{d}{dx}(x^n) \right] = h\nu x \left[ \frac{1}{(1-x)^2} \right] %
+\end{align*}
+
+\newpage
+Mettendo insieme i due risultati: %
+\begin{align*}
+    \langle E \rangle_{osc} &= \frac{\frac{h\nu x}{(1-x)^2}}{\frac{1}{1-x}} = \frac{h\nu x}{1-x} = \frac{h\nu e^{-\frac{h\nu}{k_B T}}}{1 - e^{-\frac{h\nu}{k_B T}}} \cdot \frac{e^{\frac{h\nu}{k_B T}}}{e^{\frac{h\nu}{k_B T}}} \quad \Rightarrow \quad \boxed{ \langle E \rangle_{osc} = \frac{h\nu}{e^{\frac{h\nu}{k_B T}} - 1} } %
+\end{align*}
+(Nota: Possiamo anche esprimerla come $\langle E \rangle_{osc} = \langle n \rangle h\nu$, da cui si ricava il numero medio dei quanti di energia: $\langle n \rangle = \frac{1}{e^{\frac{h\nu}{k_B T}} - 1}$). %
+
+Sostituendo l'energia media corretta $\langle E \rangle_{osc}$ nella formula della densità degli stati calcolata in precedenza, otteniamo la \textbf{Formula di Planck per il corpo nero}: %
+\begin{equation}
+    \boxed{ \mu(\nu, T) = \frac{8\pi}{c^3} \frac{h\nu^3}{e^{\frac{h\nu}{k_B T}} - 1} } %
+\end{equation}
+(Questa formula riproduce perfettamente i risultati di laboratorio). %
+
+\textbf{Verifica dei limiti:} %
+\begin{enumerate}
+    \item \textbf{Basse frequenze ($\nu \to 0$):} Sviluppando l'esponenziale in serie di Taylor ($e^x \approx 1 + x$): %
+    \begin{equation*}
+        \mu(\nu, T) \simeq \frac{8\pi}{c^3} \frac{h\nu^3}{1 + \frac{h\nu}{k_B T} - 1} = \frac{8\pi \nu^2}{c^3} (k_B T) \quad \rightarrow \quad \text{\textbf{Formula Classica}} %
+    \end{equation*}
+    \item \textbf{Alte frequenze ($\nu \to \infty$):} L'esponenziale domina ($e^{\frac{h\nu}{k_B T}} \gg 1$): %
+    \begin{equation*}
+        \mu(\nu, T) \to 0 \quad \text{(La catastrofe ultravioletta è risolta!)} %
+    \end{equation*}
+\end{enumerate}
+
+\newpage
+\subsection{Derivazione delle Leggi Empiriche} %
+
+\textbf{1. Potenza totale (Stefan-Boltzmann):} %
+Calcoliamo la potenza totale emessa $W_{TOT}$ integrando su tutte le frequenze: %
+\begin{align*}
+    W_{TOT} &= \frac{S c}{4} \int_0^{+\infty} \mu(\nu, T) \, d\nu = \frac{S c}{4} \int_0^{+\infty} \frac{8\pi}{c^3} \frac{h\nu^3}{e^{\frac{h\nu}{k_B T}} - 1} \, d\nu = \\
+    &= S \cdot \underbrace{\left[ \frac{2\pi^5}{15} \frac{k_B^4}{h^3 c^2} \right]}_{=\sigma} T^4 = S \sigma T^4 %
+\end{align*}
+
+\textbf{2. Legge dello Spostamento di Wien:} %
+Passando alla distribuzione in lunghezza d'onda $\mu(\lambda, T)$ e imponendo la derivata nulla per trovare il picco: %
+\begin{equation*}
+    \frac{d\mu(\lambda, T)}{d\lambda} = 0 \quad \Rightarrow \quad \text{Trovo } \lambda_{max} \quad \Rightarrow \quad \lambda_{max} T = \frac{hc}{5 k_B} %
+\end{equation*}
+
+\textbf{Determinazione delle costanti:} %
+Poiché $\sigma$ e il prodotto $\lambda_{max}T$ sono misurabili sperimentalmente (sono noti dai dati), abbiamo un sistema di due equazioni con due incognite ($h$ e $k_B$): %
+\begin{equation}
+    \begin{cases}
+        \frac{2\pi^5 k_B^4}{15 h^3 c^2} = \sigma \\
+        \frac{hc}{5 k_B} = \lambda_{max} T
+    \end{cases} \quad \Rightarrow \quad \boxed{ \text{Si ricavano i valori di } h \text{ e } k_B } %
+\end{equation}
+
+\newpage
+\section{Problema dei Calori Specifici} %
+
+Per un gas di 1 molecolare, la capacità termica per alzare la temperatura di $\Delta T = 1 \text{ K}$ (un quanto di calore) a volume costante è: %
+\begin{equation*}
+    C_v = \left( \frac{dU}{dT} \right)_{V=\text{cost}} %
+\end{equation*}
+
+% ---------------------------------------------------------
+% \begin{figure}[h!]
+%     \centering
+%     % \includegraphics[width=0.6\textwidth]{calore_specifico_H2.png}
+%     \vspace{4.0cm} % Spazio provvisorio
+%     \caption{\textit{[Spazio per disegno: Grafico Cv/R in funzione della Temperatura (T), che mostra i "gradini" sperimentali a 3/2, 5/2 e 7/2 invece della linea orizzontale classica]}}
+% \end{figure}
+% ---------------------------------------------------------
+
+Consideriamo la molecola di idrogeno ($H_2$, gas biatomico). Dalla teoria classica: %
+\begin{equation*}
+    H-H \quad \Rightarrow \quad 3 \text{ GdL Traslazionali} + 2 \text{ GdL Rotazionali} = 5 \text{ GdL} %
+\end{equation*}
+Per il Teorema di Equipartizione dell'energia, l'energia interna di una molecola è: %
+\begin{equation*}
+    \langle E \rangle_{1 \text{ molec}} = U_{1 \text{ molec}} = 5 \cdot \frac{1}{2} k_B T = \frac{5}{2} k_B T %
+\end{equation*}
+Moltiplicando per il Numero di Avogadro ($N_A$) otteniamo l'energia per una mole intera: %
+\begin{equation*}
+    \langle E \rangle_{1 \text{ mol}} = U_{1 \text{ mol}} = \frac{5}{2} N_A k_B T = \frac{5}{2} R T %
+\end{equation*}
+Derivando, il valore teorico classico del calore specifico dovrebbe essere: %
+\begin{equation}
+    C_v = \frac{5}{2} R %
+\end{equation}
+
+Come mostra il grafico sperimentale, questo valore classico non corrisponde alla realtà. La curva assume una forma a gradini perché, a basse temperature, i gradi di libertà rotazionali e vibrazionali non sono eccitati. Questo "congelamento" dei gradi di libertà si può spiegare solo ammettendo che \textbf{l'energia sia quantizzata}! %
 
 
 
