@@ -53,5 +53,5 @@
 \contentsline {subsection}{Densità degli Stati}{26}{}%
 \contentsline {subsection}{Formula di Rayleigh-Jeans e Catastrofe Ultravioletta}{27}{}%
 \contentsline {section}{L'Ipotesi di Planck (1900)}{27}{}%
-\contentsline {subsection}{Derivazione delle Leggi Empiriche}{30}{}%
-\contentsline {section}{Problema dei Calori Specifici}{31}{}%
+\contentsline {subsection}{Derivazione delle Leggi Empiriche}{29}{}%
+\contentsline {section}{Problema dei Calori Specifici}{29}{}%

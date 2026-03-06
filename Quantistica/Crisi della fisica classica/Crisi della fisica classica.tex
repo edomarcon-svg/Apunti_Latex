@@ -1487,19 +1487,20 @@ Risolviamo separatamente numeratore e denominatore.
     &= h\nu x \left[ \sum_{n=0}^{+\infty} \frac{d}{dx}(x^n) \right] = h\nu x \left[ \frac{1}{(1-x)^2} \right] %
 \end{align*}
 
-\newpage
 Mettendo insieme i due risultati: %
 \begin{align*}
     \langle E \rangle_{osc} &= \frac{\frac{h\nu x}{(1-x)^2}}{\frac{1}{1-x}} = \frac{h\nu x}{1-x} = \frac{h\nu e^{-\frac{h\nu}{k_B T}}}{1 - e^{-\frac{h\nu}{k_B T}}} \cdot \frac{e^{\frac{h\nu}{k_B T}}}{e^{\frac{h\nu}{k_B T}}} \quad \Rightarrow \quad \boxed{ \langle E \rangle_{osc} = \frac{h\nu}{e^{\frac{h\nu}{k_B T}} - 1} } %
 \end{align*}
-(Nota: Possiamo anche esprimerla come $\langle E \rangle_{osc} = \langle n \rangle h\nu$, da cui si ricava il numero medio dei quanti di energia: $\langle n \rangle = \frac{1}{e^{\frac{h\nu}{k_B T}} - 1}$). %
+(Nota: Possiamo anche esprimerla come $\langle E \rangle_{osc} = \langle n \rangle h\nu$, da cui si ricava il numero medio dei quanti di energia: $\langle n \rangle = \frac{1}{e^{\frac{h\nu}{k_B T}} - 1}$). \\
 
+\noindent
 Sostituendo l'energia media corretta $\langle E \rangle_{osc}$ nella formula della densità degli stati calcolata in precedenza, otteniamo la \textbf{Formula di Planck per il corpo nero}: %
 \begin{equation}
     \boxed{ \mu(\nu, T) = \frac{8\pi}{c^3} \frac{h\nu^3}{e^{\frac{h\nu}{k_B T}} - 1} } %
 \end{equation}
-(Questa formula riproduce perfettamente i risultati di laboratorio). %
+(Questa formula riproduce perfettamente i risultati di laboratorio). \\
 
+\noindent
 \textbf{Verifica dei limiti:} %
 \begin{enumerate}
     \item \textbf{Basse frequenze ($\nu \to 0$):} Sviluppando l'esponenziale in serie di Taylor ($e^x \approx 1 + x$): %
@@ -1512,7 +1513,6 @@ Sostituendo l'energia media corretta $\langle E \rangle_{osc}$ nella formula del
     \end{equation*}
 \end{enumerate}
 
-\newpage
 \subsection{Derivazione delle Leggi Empiriche} %
 
 \textbf{1. Potenza totale (Stefan-Boltzmann):} %
@@ -1522,12 +1522,14 @@ Calcoliamo la potenza totale emessa $W_{TOT}$ integrando su tutte le frequenze: 
     &= S \cdot \underbrace{\left[ \frac{2\pi^5}{15} \frac{k_B^4}{h^3 c^2} \right]}_{=\sigma} T^4 = S \sigma T^4 %
 \end{align*}
 
+\noindent
 \textbf{2. Legge dello Spostamento di Wien:} %
 Passando alla distribuzione in lunghezza d'onda $\mu(\lambda, T)$ e imponendo la derivata nulla per trovare il picco: %
 \begin{equation*}
     \frac{d\mu(\lambda, T)}{d\lambda} = 0 \quad \Rightarrow \quad \text{Trovo } \lambda_{max} \quad \Rightarrow \quad \lambda_{max} T = \frac{hc}{5 k_B} %
 \end{equation*}
 
+\noindent
 \textbf{Determinazione delle costanti:} %
 Poiché $\sigma$ e il prodotto $\lambda_{max}T$ sono misurabili sperimentalmente (sono noti dai dati), abbiamo un sistema di due equazioni con due incognite ($h$ e $k_B$): %
 \begin{equation}
@@ -1537,23 +1539,12 @@ Poiché $\sigma$ e il prodotto $\lambda_{max}T$ sono misurabili sperimentalmente
     \end{cases} \quad \Rightarrow \quad \boxed{ \text{Si ricavano i valori di } h \text{ e } k_B } %
 \end{equation}
 
-\newpage
 \section{Problema dei Calori Specifici} %
 
-Per un gas di 1 molecolare, la capacità termica per alzare la temperatura di $\Delta T = 1 \text{ K}$ (un quanto di calore) a volume costante è: %
+Per una mole di gas, la capacità termica per alzare la temperatura di $\Delta T = 1 \text{ K}$ (un quanto di calore) a volume costante è: %
 \begin{equation*}
     C_v = \left( \frac{dU}{dT} \right)_{V=\text{cost}} %
 \end{equation*}
-
-% ---------------------------------------------------------
-% \begin{figure}[h!]
-%     \centering
-%     % \includegraphics[width=0.6\textwidth]{calore_specifico_H2.png}
-%     \vspace{4.0cm} % Spazio provvisorio
-%     \caption{\textit{[Spazio per disegno: Grafico Cv/R in funzione della Temperatura (T), che mostra i "gradini" sperimentali a 3/2, 5/2 e 7/2 invece della linea orizzontale classica]}}
-% \end{figure}
-% ---------------------------------------------------------
-
 Consideriamo la molecola di idrogeno ($H_2$, gas biatomico). Dalla teoria classica: %
 \begin{equation*}
     H-H \quad \Rightarrow \quad 3 \text{ GdL Traslazionali} + 2 \text{ GdL Rotazionali} = 5 \text{ GdL} %
@@ -1571,8 +1562,17 @@ Derivando, il valore teorico classico del calore specifico dovrebbe essere: %
     C_v = \frac{5}{2} R %
 \end{equation}
 
-Come mostra il grafico sperimentale, questo valore classico non corrisponde alla realtà. La curva assume una forma a gradini perché, a basse temperature, i gradi di libertà rotazionali e vibrazionali non sono eccitati. Questo "congelamento" dei gradi di libertà si può spiegare solo ammettendo che \textbf{l'energia sia quantizzata}! %
-
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-03-06-17-14-02.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        Come mostra il grafico sperimentale, questo valore classico non corrisponde alla realtà. La curva assume una forma a gradini perché, a basse temperature, i gradi di libertà rotazionali e vibrazionali non sono eccitati. Questo "congelamento" dei gradi di libertà si può spiegare solo ammettendo che \textbf{l'energia sia quantizzata}! %
+        
+    \end{minipage}
+\end{figure}
 
 
 
