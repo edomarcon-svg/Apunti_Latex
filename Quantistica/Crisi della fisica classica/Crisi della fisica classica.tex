@@ -1574,6 +1574,596 @@ Derivando, il valore teorico classico del calore specifico dovrebbe essere: %
     \end{minipage}
 \end{figure}
 
+\subsection{Confronto: Formula Classica vs Formula di Planck} %
+
+Riassumendo le densità di energia spettrale ricavate: %
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-03-13-13-56-42.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        \begin{align*}
+            \text{Rayleigh-Jeans: } \quad \mu_{RJ}(\nu, T) &= \frac{8\pi}{c^3} k_B T \nu^2 \\ %
+            \text{Planck: } \quad \mu_P(\nu, T) &= \frac{8\pi}{c^3} \frac{h\nu^3}{e^{\frac{h\nu}{k_B T}} - 1} %
+        \end{align*}
+    \end{minipage}
+\end{figure}
+
+\textit{Recap: Problema dei Calori Specifici per $H_2$ (Diatomico)} %
+
+L'energia interna teorica classica per una molecola biatomica (5 GdL) è: %
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-03-13-13-57-32.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        \begin{equation*}
+            \langle E \rangle_{1 \text{ mol}} = U_{1 \text{ mol}} = \frac{5}{2} N_A k_B T \quad \Rightarrow \quad C_v = \frac{5}{2} R %
+        \end{equation*}
+    \end{minipage}
+\end{figure}
+
+\section{Applicazioni del Corpo Nero}
+
+\subsection{1. L'Effetto Serra} %
+
+Possiamo modellizzare il Sole e la Terra come corpi neri a temperature diverse. 
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-03-13-13-59-15.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.5\textwidth}
+        \begin{itemize}
+            \item \textbf{Sole:} $T = 6000 \text{ K}$. Lo spettro di emissione $e_S(\lambda, T)$ ha il picco nella zona del \textbf{Visibile} %.
+            \item \textbf{Terra:} $T = 300 \text{ K}$. Lo spettro di emissione $e_T(\lambda, T)$ ha il picco nella zona dell'\textbf{Infrarosso (IR)} %.
+        \end{itemize}
+    \end{minipage}
+\end{figure}
+
+L'atmosfera terrestre si comporta come una "plastica" protettiva: %
+\begin{enumerate}
+    \item È trasparente alla luce visibile in arrivo dal Sole (la lascia passare) %.
+    \item La radiazione assorbita dalla Terra viene riemessa verso lo spazio come radiazione infrarossa (IR) %.
+    \item L'atmosfera è composta da gas che \textbf{riflettono e assorbono bene l'IR} %.
+    \item La radiazione emessa dalla Terra viene quindi riflessa nuovamente verso il basso dall'atmosfera, intrappolando il calore %.
+\end{enumerate}
+
+\subsection{2. Radiazione Cosmica di Fondo (CMB)} %
+
+Nel $\sim 1965$, Penzias e Wilson, studiando l'infrarosso, trovarono sempre un rumore di fondo isotropo (uguale in qualsiasi direzione puntassero l'antenna) %. 
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-03-13-14-02-22.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        La curva di questo rumore corrisponde esattamente all'emissione di un corpo nero con un picco a $\lambda_{max} = 0,1 \text{ cm}$, che per la legge di Wien corrisponde a una temperatura: %
+        \begin{equation}
+            T_T \simeq 2,7 \text{ K} %
+        \end{equation}
+    \end{minipage}
+\end{figure}
+
+\noindent
+\textbf{Il modello Cosmologico:} %
+Sappiamo che l'Universo è isotropo e omogeneo. La sua evoluzione è governata dall'\textbf{Equazione di Friedman}: %
+\begin{equation*}
+    a(t) \rightarrow \text{Fattore di scala (funzione che descrive come l'universo si espande)} %
+\end{equation*}
+Le variabili principali sono: %
+\begin{itemize}
+    \item $\rho \rightarrow$ Densità di energia %
+    \item $T \rightarrow$ Temperatura %
+    \item $K \rightarrow$ Curvatura dello spaziotempo %
+\end{itemize}
+
+Cosa succede per tempi piccolissimi ($t \to 0$)? %
+\begin{equation*}
+    t \to 0 \quad \Rightarrow \quad 
+    \begin{cases}
+        a(t) \to 0 \\
+        \rho \to +\infty \\
+        T \to +\infty
+    \end{cases} \quad \Rightarrow \quad \textbf{SINGOLARITÀ MATEMATICA } (\text{BIG BANG}) %
+\end{equation*}
+
+Dopo il Big Bang, l'universo si espande e si raffredda: %
+\begin{enumerate}
+    \item Fino a $\sim 300.000$ anni dopo il B.B., l'universo era una \textbf{nube densa} (plasma) da cui la luce non riusciva a sfuggire %.
+    \item Dopo $\sim 380.000$ anni, gli elettroni si legano ai nuclei formando i **primi atomi stabili** (Ricombinazione) %. La luce inizia a viaggiare liberamente %.
+    \item In quel momento, l'intero universo si comportava come un \textbf{corpo nero} perfetto incandescente %.
+    \item Espandendosi e raffreddandosi per 13,8 miliardi di anni, la $\lambda$ dell'emissione termica si è abbassata enormemente (redshift cosmologico), passando dalla luce visibile alle microonde, portandoci agli attuali $2,7 \text{ K}$ misurati da Penzias e Wilson %.
+\end{enumerate}
+
+\section{L'Effetto Fotoelettrico} %
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-03-13-14-07-26.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        Se illuminiamo una placca metallica (emettitore) con luce ultravioletta, essa emette elettroni (fotoemissione). %
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-03-13-14-08-13.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        \textbf{1. Fissiamo l'intensità $I$ e la frequenza $\nu$ della luce} %
+        \begin{itemize}
+            \item Applicando una differenza di potenziale positiva, si raggiunge una corrente di saturazione $i_{sat}$: tutti gli elettroni emessi vengono raccolti %.
+            \item Applicando una differenza di potenziale negativa ($\Delta V < 0$), stiamo frenando gli elettroni. Esiste un valore $V_0$ (Potenziale di arresto) che li ferma tutti, per cui $i = 0$ %.
+        \end{itemize}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-03-13-14-09-19.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        Gli elettroni nel metallo arrivano fino all'Energia di Fermi ($E_F$). Per estrarli e portarli al livello del vuoto ($E_V$) con energia cinetica nulla, bisogna fornire un'energia pari alla \textbf{Funzione Lavoro ($\varphi$)} %.
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-03-13-14-09-43.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        Per le forze conservative, l'energia si conserva tra l'emettitore (E) e il collettore (C): %
+        \begin{equation*}
+            E_{k_E} - eV_E = E_{k_C} - eV_C \quad \Rightarrow \quad E_{k_C} = E_{k_E} + e\Delta V %
+        \end{equation*}
+    \end{minipage}
+\end{figure}
+Gli elettroni che vengono frenati per ultimi, ovvero al potenziale di arresto, sono quelli che sono partiti con l'energia cinetica massima: %
+\begin{equation}
+    \boxed{ E_{k_E}^{max} = eV_0 } %
+\end{equation}
+
+\subsection{I paradossi classici} %
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-03-13-14-12-44.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        \textbf{1. Fissiamo $\nu$ e aumentiamo l'intensità $I$} %
+        Classicamente, poiché $I \propto \frac{E}{\Delta t \cdot S}$, aumentando l'intensità dovrebbe aumentare l'energia fornita, e quindi il potenziale di arresto $V_0$ dovrebbe muoversi (più energia cinetica). % 
+        \textit{Invece, sperimentalmente, $V_0$ rimane fisso! Ne escono di più, ma sempre con la stessa energia.} %
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-03-13-14-13-59.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        \textbf{2. Fissiamo $I$ e variamo $\nu$} %
+        Il potenziale di arresto $V_0$ (e quindi l'energia cinetica) cresce linearmente con la frequenza, ma solo a partire da una \textbf{frequenza di soglia $\nu_0$}. Sotto $\nu_0$ non c'è emissione, indipendentemente da quanto sia alta $I$! %
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-03-13-14-14-56.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        \textbf{3. Ritardo temporale} %
+        La fisica classica prevede che a basse intensità ci voglia tempo per accumulare l'energia sufficiente all'estrazione. Ad esempio, per una sorgente da $P = 10 \text{ W}$, classicamente ci vorrebbero $\Delta t = 40 \text{ s}$ per emettere un elettrone. %
+        In realtà l'emissione è istantanea: $\Delta t_{reale} = 10^{-12} \text{ s} = 1 \text{ ps}$ %.
+    \end{minipage}
+\end{figure}
+
+$\ulcorner$ \textbf{NON SI È IN GRADO DI SPIEGARE CLASSICAMENTE QUESTO FENOMENO} (poiché classicamente $E \propto I \propto |A|^2$, slegata da $\nu$) $\lrcorner$ %
+
+\section{1905: Einstein spiega l'Effetto Fotoelettrico} %
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{immagini/2026-03-13-14-16-38.png}
+    \end{figure}
+
+Einstein estende l'ipotesi di Planck: la luce stessa è quantizzata. I fotoni sono pacchetti di energia $E = h\nu$. %
+Principio base: \textbf{Non è possibile assorbire frazioni di fotone: O TUTTO O NIENTE.} %
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-03-13-14-17-27.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        Bilancio energetico per l'elettrone estratto: %
+        \begin{equation}
+            \boxed{ h\nu = \varphi + E_{k_E}^{max} } %
+        \end{equation}
+    \end{minipage}
+\end{figure}
+
+\noindent
+Se $h\nu < \varphi \Rightarrow$ NO FOTOEMISSIONE (l'energia del singolo fotone non basta per estrarre l'elettrone, anche se ne arrivano miliardi). %
+L'energia minima per l'emissione definisce la frequenza di soglia $\nu_0$: %
+\begin{equation*}
+    h\nu_0 = \varphi \quad \Rightarrow \quad \nu_0 = \frac{\varphi}{h} %
+\end{equation*}
+
+Riprendendo la definizione di $V_0$ ($E_{k_E}^{max} = eV_0$), sostituiamo nel bilancio di Einstein: %
+\begin{equation*}
+    h\nu = \varphi + eV_0 \quad \Rightarrow \quad V_0 = \frac{h}{e}\nu - \frac{\varphi}{e} %
+\end{equation*}
+Questa è esattamente l'\textbf{equazione della retta} del grafico sperimentale $V_0$ in funzione di $\nu$ misurato prima! %
+Inoltre, aumentare l'intensità $I$ significa semplicemente aumentare il \textbf{numero di fotoni}, quindi verranno estratti più elettroni, ma ognuno con la stessa energia massima %.
+
+\section{L'Effetto Compton} %
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-03-13-14-20-00.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        Classicamente la \textbf{Diffusione Rayleigh} (elastica) prevede che un'onda elettromagnetica venga deviata senza cambiare frequenza: $\sigma_{RAY} \propto \nu^4$ (\textit{più la frequenza $\nu$ è grande, più viene deviata $\Rightarrow$ ragione per cui il cielo è blu, la luce blu viene diffusa più degli altri colori}) %.
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{immagini/2026-03-13-14-20-52.png}
+    \end{figure}
+
+Se usiamo i Raggi X ($\lambda_0 \simeq 0,7 \text{\AA}$) su un bersaglio di grafite, lo spettrometro rivela, oltre al picco elastico ($\lambda_0$), un \textbf{secondo picco $\lambda'$} (lunghezza d'onda maggiore, quindi energia minore) che si sposta all'aumentare dell'angolo di diffusione $\theta$ %.
+
+La variazione di lunghezza d'onda è data dalla formula di Compton: %
+\begin{equation}
+    \boxed{ \lambda' - \lambda_0 = \Delta \lambda = \lambda_c(1 - \cos\theta) } %
+\end{equation}
+dove $\lambda_c$ è la \textbf{Lunghezza d'onda Compton}: %
+\begin{equation*}
+    \lambda_c = \frac{h}{m_e c} %
+\end{equation*}
+
+\noindent
+\textbf{Idea del calcolo:} %
+Si modella l'interazione come un vero e proprio urto elastico relativistico tra il fotone incidente (con energia $h\nu$ e quantità di moto $\frac{h\nu}{c}$) e l'elettrone esterno dell'atomo bersaglio (considerato pressoché libero, $E_K \simeq 0$) %. Si applica la conservazione dell'energia e del momento.
+
+\section{Spettri Atomici} %
+
+Gli spettri atomici si studiano tramite un monocromatore (es. prisma dispersivo o reticolo di diffrazione) e un rivelatore. %
+
+\subsection{1. Spettro di Assorbimento} %
+Si invia luce a spettro continuo (es. luce bianca con intensità $I(\lambda)$ nota) attraverso un gas di atomi. %
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-03-13-15-02-12.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.5\textwidth}
+        \begin{itemize}
+            \item La luce in uscita ($I_{out}$) viene analizzata dal monocromatore. %
+            \item Si osserva uno spettro continuo interrotto da \textbf{RIGHE NERE} a specifiche lunghezze d'onda ($\lambda_0, \lambda_1, \lambda_2 \dots$). %
+            \item \textit{Metodo:} Si confronta quello che esce con quello che entra. %
+        \end{itemize}
+    \end{minipage}
+\end{figure}
+
+\subsection{2. Spettro di Emissione} %
+Si eccita un gas atomico (ad esempio tramite un innalzamento di temperatura \begin{figure}[H]
+    \centering
+    \begin{minipage}{0.4\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-03-13-15-03-12.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.55\textwidth}
+        $\uparrow T$ o una scarica elettrica). %
+        \begin{itemize}
+            \item Uno dei modi in cui l'atomo può diseccitarsi è emettere luce. %
+            \item Analizzando questa luce emessa, si osserva uno spettro composto solo da righe colorate isolate (discrete) a specifiche $\lambda$. %
+        \end{itemize}
+    \end{minipage}
+\end{figure}
+
+\section{Spettro di Emissione dell'Atomo di Idrogeno ($H$)} %
+
+Sulla Terra si trova comunemente l'idrogeno molecolare ($H_2$), quindi per studiare l'idrogeno atomico si misurano gli spettri provenienti dalle stelle. %
+
+Nella regione del visibile, si osserva la cosiddetta \textbf{Serie di Balmer}: %
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.4\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-03-13-15-04-37.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.55\textwidth}
+        Le principali righe visibili sono: %
+        \begin{itemize}
+            \item $H_\alpha \rightarrow \lambda = 656.3 \text{ nm}$ (\textcolor{red}{ROSSO}) %
+            \item $H_\beta \rightarrow \lambda = 486.1 \text{ nm}$ (\textcolor{blue}{BLU}) %
+            \item $H_\gamma \rightarrow \lambda = 434 \text{ nm}$ (\textcolor{violet}{VIOLETTO}) %
+            \item Le righe si addensano progressivamente fino a un limite $H_\infty = 364.7 \text{ nm}$, oltre il quale lo spettro diventa continuo. %
+        \end{itemize}
+    \end{minipage}
+\end{figure}
+
+\subsection{Calcolo delle Energie dei Fotoni Emessi} %
+Ricordando che $\lambda \nu = c \Rightarrow \nu = \frac{c}{\lambda}$ e l'energia del fotone è $h\nu = \frac{hc}{\lambda}$: %
+
+Per la riga $H_\alpha$: %
+\begin{equation*}
+    h\nu_{H_\alpha} = \frac{hc}{\lambda_{H_\alpha}} = \frac{6.62 \cdot 10^{-34} \text{ J}\cdot\text{s} \times 3 \cdot 10^8 \text{ m/s}}{656.3 \cdot 10^{-9} \text{ m}} = 3.024 \cdot 10^{-19} \text{ J} %
+\end{equation*}
+Convertendo in elettronvolt (dividendo per $1.6 \cdot 10^{-19}$): %
+\begin{equation}
+    h\nu_{H_\alpha} = 1.89 \text{ eV} %
+\end{equation}
+
+Per le altre righe si ottiene analogamente: %
+\begin{align*}
+    h\nu_{H_\beta} &= \frac{hc}{\lambda_{H_\beta}} = 2.55 \text{ eV} \\ %
+    h\nu_{H_\gamma} &= 2.85 \text{ eV} %
+\end{align*}
+
+\subsection{La Formula Empirica di Balmer-Rydberg} %
+Queste energie seguono una regolarità matematica sorprendente. Possono essere descritte dalla formula empirica: %
+\begin{equation}
+    \boxed{ h\nu = R_y \left( \frac{1}{2^2} - \frac{1}{n^2} \right) } \quad \text{con } n \text{ intero } > 2 %
+\end{equation}
+dove $R_y$ è la \textbf{Costante di Rydberg}: $R_y = 13.6 \text{ eV}$ %.
+
+Verifichiamo la formula per le righe note: %
+\begin{align*}
+    n=3 \Rightarrow \quad & h\nu_{H_\alpha} = 13.6 \text{ eV} \left( \frac{1}{2^2} - \frac{1}{3^2} \right) = 1.89 \text{ eV} \\ %
+    n=4 \Rightarrow \quad & h\nu_{H_\beta} = 13.6 \text{ eV} \left( \frac{1}{2^2} - \frac{1}{4^2} \right) = 2.55 \text{ eV} %
+\end{align*}
+In questo modo si riescono a ricavare tutte le linee dello spettro visibile! %
+
+\subsection{Schema Energetico basato su salti tra livelli} %
+
+Questa regolarità suggerisce che l'emissione sia dovuta a \textbf{salti quantici} tra livelli di energia predefiniti. % La formula generale diventa:
+\begin{equation}
+    \boxed{ h\nu = R_y \left( \frac{1}{n_1^2} - \frac{1}{n_2^2} \right) } \quad \text{con } n_2 > n_1 %
+\end{equation}
+In realtà esistono altri salti, che generano altre serie spettrali al di fuori del visibile: %
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.35\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-03-13-15-07-21.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        \begin{itemize}
+            \item \textbf{Serie di Lyman:} Salti con arrivo al livello fondamentale ($n_1 = 1$). Genera fotoni altamente energetici che cadono nell'\textbf{Ultravioletto (UV)}. %
+            \item \textbf{Serie di Balmer:} Salti con arrivo a $n_1 = 2$. Come visto, cade nel \textbf{Visibile}. %
+            \item \textbf{Serie di Paschen:} Salti con arrivo a $n_1 = 3$. Genera fotoni a bassa energia, nella regione dell'\textbf{Infrarosso (IR)}. %
+        \end{itemize}
+    \end{minipage}
+\end{figure}
+
+\noindent
+\textit{Nota sperimentale:} %
+Le serie di Balmer e Paschen sono viste solo in emissione. %
+La serie di Lyman è vista \textbf{sia in Emissione che in Assorbimento} (poiché gli atomi a riposo si trovano per la quasi totalità nello stato fondamentale $n=1$). %
+
+\section{Modello di Bohr per H (1913)} %
+
+Il modello si basa su quattro \textbf{POSTULATI} fondamentali: %
+\begin{enumerate}
+    \item L'elettrone ($e^-$) orbita attorno al nucleo su orbite circolari a causa della forza elettromagnetica $\vec{F}_{el}$ (come in Rutherford) %.
+    \item Le uniche orbite permesse sono quelle per cui il momento angolare è quantizzato: %
+    \begin{equation*}
+        L = n\hbar \quad \text{con } n = 1, 2, 3 \dots %
+    \end{equation*}
+    \item Finché è in moto su un'orbita permessa, l'elettrone \textbf{NON irradia}: la sua energia $E$ rimane costante $\Rightarrow$ STATO STAZIONARIO %.
+    \item L'energia viene emessa o assorbita (attraverso la luce) solo quando l'elettrone salta tra due orbite, purché: %
+    \begin{equation}
+        \nu = \frac{(E_i - E_f)}{h} \quad \Rightarrow \quad \boxed{ h\nu = E_i - E_f } %
+    \end{equation}
+\end{enumerate}
+I risultati di Bohr si applicano all'Idrogeno o a ioni idrogenoidi (atomi con un solo elettrone che orbita attorno al nucleo di carica $+Ze$) %.
+
+\subsection{Quantizzazione delle Orbite} %
+Dalla meccanica classica, la forza centripeta è fornita dall'attrazione coulombiana: %
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-03-13-15-09-32.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        \begin{equation*}
+            F = m a_c \Rightarrow F = m\frac{v^2}{r} \quad \Rightarrow \quad \frac{Z e^2}{4\pi\varepsilon_0 r^2} = \frac{mv^2}{r} %
+        \end{equation*}
+        Dal secondo postulato, quantizziamo il momento angolare: %
+        \begin{equation*}
+            L = n\hbar = |\vec{r} \wedge \vec{p}| = mvr \quad \Rightarrow \quad v = \frac{n\hbar}{mr} %
+        \end{equation*}
+    \end{minipage}
+\end{figure}
+Sostituendo la velocità nell'equazione della forza: %
+\begin{align*}
+    \frac{Z e^2}{4\pi\varepsilon_0 r^2} &= \frac{m}{r} \left( \frac{n\hbar}{mr} \right)^2 = \frac{m}{r} \frac{n^2\hbar^2}{m^2 r^2} \\ %
+    \Rightarrow \quad r &= \left( \frac{4\pi\varepsilon_0 \hbar^2}{m Z e^2} \right) n^2 \quad \text{\textbf{(ORBITE QUANTIZZATE)}} %
+\end{align*}
+L'intero $n = 1, 2, 3 \dots$ è definito \textbf{Numero Quantico Principale} %.
+
+\subsection{Raggio di Bohr e Costante di Struttura Fine} %
+
+Per lo \textbf{Stato Fondamentale} ($n=1$) dell'atomo di Idrogeno ($Z=1$), il raggio è il \textbf{Raggio di Bohr} ($a_0$): %
+\begin{equation}
+    r_1 = \frac{4\pi\varepsilon_0 \hbar^2}{m e^2} = a_0 \quad \Rightarrow \quad \boxed{ a_0 = 0,53 \text{ \AA} } %
+\end{equation}
+
+\noindent
+Calcoliamo ora la velocità dell'elettrone sull'$n$-esima orbita: %
+\begin{equation*}
+    v_n = \frac{n\hbar}{m r_n} = \frac{n\hbar}{m} \cdot \frac{m Z e^2}{4\pi\varepsilon_0 \hbar^2 n^2} = \frac{Z e^2}{4\pi\varepsilon_0 \hbar} \frac{1}{n} %
+\end{equation*}
+Moltiplicando e dividendo per $c$, introduciamo la \textbf{Costante di Struttura Fine ($\alpha$)}: %
+\begin{equation}
+    \boxed{ \alpha = \frac{e^2}{4\pi\varepsilon_0 \hbar c} \simeq \frac{1}{137} } \quad \Rightarrow \quad v_n = \frac{Z}{n} \alpha c %
+\end{equation}
+Verifichiamo se l'approssimazione classica usata è valida controllando se il moto è relativistico: %
+\begin{equation*}
+    \frac{v_n}{c} = \frac{Z}{n} \alpha \quad \xrightarrow{Z=1, n=1} \quad \frac{\alpha}{1} \ll 1 \quad \Rightarrow \quad \text{H è \textbf{NON RELATIVISTICO}} %
+\end{equation*}
+(Per $n=1$ in H, $v \simeq 2 \cdot 10^6 \text{ m/s} \ll c$). %
+
+\subsection{Energia dei Livelli} %
+
+L'energia totale è la somma dell'energia cinetica e dell'energia potenziale: %
+\begin{equation*}
+    E = K + V = \frac{1}{2}mv^2 - \frac{Z e^2}{4\pi\varepsilon_0 r} %
+\end{equation*}
+Sapendo dal bilancio delle forze che $mv^2 = \frac{Z e^2}{4\pi\varepsilon_0 r}$, sostituiamo: %
+\begin{equation}
+    E = \frac{1}{2}\left(\frac{Z e^2}{4\pi\varepsilon_0 r}\right) - \frac{Z e^2}{4\pi\varepsilon_0 r} = -\frac{Z e^2}{8\pi\varepsilon_0 r} < 0 \quad \text{(\textbf{STATO LEGATO})} %
+\end{equation}
+
+Sostituendo l'espressione di $r_n$ in $E_n$: %
+\begin{align*}
+    E_n &= -\frac{Z e^2}{8\pi\varepsilon_0} \cdot \left( \frac{m Z e^2}{4\pi\varepsilon_0 \hbar^2} \frac{1}{n^2} \right) = -Z^2 \frac{m e^4}{(4\pi\varepsilon_0)^2 2\hbar^2} \frac{1}{n^2} %
+\end{align*}
+Riconosciamo nel termine costante esattamente l'energia calcolata sperimentalmente dalla \textbf{Costante di Rydberg ($R_y$)}: %
+\begin{equation}
+    \frac{m e^4}{(4\pi\varepsilon_0)^2 2\hbar^2} = 13.6 \text{ eV} = R_y \quad \Rightarrow \quad \boxed{ E_n = -Z^2 \frac{R_y}{n^2} } %
+\end{equation}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{immagini/2026-03-13-15-18-42.png}
+    \end{figure}
+
+\noindent
+\textit{Legge di Conservazione dell'Energia:} L'energia del fotone emesso/assorbito deve combaciare esattamente con una differenza tra livelli $h\nu = E_i - E_f$ %.
+
+\subsection{Perché la Serie di Balmer si osserva solo in emissione?} %
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{immagini/2026-03-13-15-19-54.png}
+    \end{figure}
+
+Consideriamo la probabilità statistica $P$ che un elettrone si trovi in un certo livello energetico $n$, data dalla distribuzione di Boltzmann: $P \propto e^{-\frac{E}{k_B T}}$ %.
+Confrontiamo la probabilità di trovarsi a $n=2$ rispetto a $n=1$ per una collezione di idrogeno a temperatura ambiente ($T \simeq 300\text{ K}$): %
+\begin{equation*}
+    \frac{P_{n=2}}{P_{n=1}} = \frac{e^{-\frac{E_2}{k_B T}}}{e^{-\frac{E_1}{k_B T}}} = e^{-\frac{(E_2 - E_1)}{k_B T}} %
+\end{equation*}
+
+Sostituendo le energie $E_2 = -\frac{R_y}{4}$ e $E_1 = -R_y$: %
+\begin{equation*}
+    E_2 - E_1 = \frac{3}{4} R_y \quad \Rightarrow \quad \frac{P_{n=2}}{P_{n=1}} = e^{-\frac{\frac{3}{4}R_y}{k_B T}} \simeq e^{-400} %
+\end{equation*}
+Questo rapporto è un numero \textbf{gigantesco in senso negativo}. Significa che, in condizioni ambientali, praticamente TUTTI gli elettroni dell'intera collezione si trovano nello \textbf{STATO FONDAMENTALE ($n=1$)} %.
+
+\noindent
+QUINDI la Serie di Balmer (che comporta assorbimenti o emissioni da/verso $n=2$) si vede \textbf{solo in Emissione} (dopo aver preventivamente eccitato il gas ad altissime temperature o con scariche elettriche). Non ci sono atomi che possono assorbire fotoni visibili partendo da $n=2$! %
+Per eccitarli dallo stato fondamentale, serve la luce UV (che attiva la Serie di Lyman) %.
+
+\section{Regole di Quantizzazione di Wilson e Sommerfeld} %
+
+Osservando i risultati precedenti: %
+\begin{equation*}
+    \left.
+    \begin{aligned}
+        &\text{\textbf{Planck}: Osc. ARMONICO} \Rightarrow E = n h \nu \\ %
+        &\text{\textbf{Einstein}: } E = h \nu \\ %
+        &\text{\textbf{Bohr}: } L = n \hbar %
+    \end{aligned}
+    \right\} \quad \text{c'è una regola generale} %
+\end{equation*}
+
+\noindent
+Wilson e Sommerfeld si sono concentrati sui \textbf{SISTEMI PERIODICI} (Einstein escluso). %
+
+\noindent
+Per ogni coordinata generalizzata $(q_i, p_i)$ dello spazio delle fasi, postularono la quantizzazione dell'\textbf{Azione}: %
+\begin{equation}
+    \boxed{ \oint p_i \, dq_i = n_i h } \quad \Rightarrow \quad \text{QUANTIZZAZIONE DELL'AZIONE} %
+\end{equation}
+
+\subsection{Applicazione: Oscillatore Armonico} %
+
+L'Hamiltoniana di un oscillatore armonico unidimensionale è: %
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-03-13-15-24-47.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        \begin{equation*}
+            H = \frac{p^2}{2m} + \frac{1}{2} m \omega^2 q^2 = E = \text{cost} %
+        \end{equation*}
+        
+        L'equazione dell'energia rappresenta un'ellisse nello spazio delle fasi. Riscriviamola nella forma canonica $\frac{p^2}{a^2} + \frac{q^2}{b^2} = 1$: %
+        \begin{equation*}
+            \frac{p^2}{(\sqrt{2mE})^2} + \frac{q^2}{\left(\sqrt{\frac{2E}{m\omega^2}}\right)^2} = 1 %
+        \end{equation*}
+    \end{minipage}
+\end{figure}
+Identifichiamo i semiassi: $a = \sqrt{2mE}$ e $b = \sqrt{\frac{2E}{m\omega^2}}$. %
+
+L'integrale di linea chiuso $\oint p \, dq$ corrisponde geometricamente all'area $A$ racchiusa dall'ellisse: %
+\begin{equation*}
+    A = \pi a b = \pi (\sqrt{2mE}) \left(\sqrt{\frac{2E}{m\omega^2}}\right) = \pi \sqrt{\frac{4 m E^2}{m \omega^2}} = \frac{2\pi E}{\omega} %
+\end{equation*}
+
+Applicando la regola di quantizzazione di Wilson-Sommerfeld ($\oint p \, dq = nh$): %
+\begin{equation*}
+    \frac{2\pi E}{\omega} = n h \quad \Rightarrow \quad E = n \frac{h}{2\pi} \omega %
+\end{equation*}
+Riconoscendo che $\hbar = \frac{h}{2\pi}$ e $\omega = 2\pi\nu$, otteniamo: %
+\begin{equation}
+    \boxed{ E = n \hbar \omega = n h \nu } %
+\end{equation}
+\textit{Siamo tornati all'ipotesi iniziale di Planck!} %
+
+\subsection{Il Limite Classico ($n \to +\infty$)} %
+
+Valutiamo la differenza di energia relativa tra due livelli adiacenti per grandi numeri quantici: %
+\begin{equation*}
+    \frac{E_{n+1} - E_n}{E_n} = \frac{(n+1)\hbar\omega - n\hbar\omega}{n\hbar\omega} = \frac{\hbar\omega}{n\hbar\omega} = \frac{1}{n} %
+\end{equation*}
+Prendendo il limite per $n \to +\infty$: %
+\begin{equation*}
+    \lim_{n \to \infty} \frac{1}{n} = 0 \quad \Rightarrow \quad 0 %
+\end{equation*}
+Questo significa che se $n$ è molto grande (macroscopico), la distanza fra i salti di quantizzazione diventa trascurabile: l'energia $E$ torna a comportarsi come un continuo %. 
+Si ritrova così il $\Rightarrow$ \textbf{LIMITE CLASSICO} %.
+
+% --- FINE BLOCCO ---
+
+
 
 
 \end{document}

@@ -55,3 +55,26 @@
 \contentsline {section}{L'Ipotesi di Planck (1900)}{27}{}%
 \contentsline {subsection}{Derivazione delle Leggi Empiriche}{29}{}%
 \contentsline {section}{Problema dei Calori Specifici}{29}{}%
+\contentsline {subsection}{Confronto: Formula Classica vs Formula di Planck}{30}{}%
+\contentsline {section}{Applicazioni del Corpo Nero}{30}{}%
+\contentsline {subsection}{1. L'Effetto Serra}{30}{}%
+\contentsline {subsection}{2. Radiazione Cosmica di Fondo (CMB)}{31}{}%
+\contentsline {section}{L'Effetto Fotoelettrico}{31}{}%
+\contentsline {subsection}{I paradossi classici}{32}{}%
+\contentsline {section}{1905: Einstein spiega l'Effetto Fotoelettrico}{33}{}%
+\contentsline {section}{L'Effetto Compton}{34}{}%
+\contentsline {section}{Spettri Atomici}{34}{}%
+\contentsline {subsection}{1. Spettro di Assorbimento}{34}{}%
+\contentsline {subsection}{2. Spettro di Emissione}{35}{}%
+\contentsline {section}{Spettro di Emissione dell'Atomo di Idrogeno ($H$)}{35}{}%
+\contentsline {subsection}{Calcolo delle Energie dei Fotoni Emessi}{35}{}%
+\contentsline {subsection}{La Formula Empirica di Balmer-Rydberg}{36}{}%
+\contentsline {subsection}{Schema Energetico basato su salti tra livelli}{36}{}%
+\contentsline {section}{Modello di Bohr per H (1913)}{37}{}%
+\contentsline {subsection}{Quantizzazione delle Orbite}{37}{}%
+\contentsline {subsection}{Raggio di Bohr e Costante di Struttura Fine}{37}{}%
+\contentsline {subsection}{Energia dei Livelli}{38}{}%
+\contentsline {subsection}{Perché la Serie di Balmer si osserva solo in emissione?}{39}{}%
+\contentsline {section}{Regole di Quantizzazione di Wilson e Sommerfeld}{39}{}%
+\contentsline {subsection}{Applicazione: Oscillatore Armonico}{40}{}%
+\contentsline {subsection}{Il Limite Classico ($n \to +\infty $)}{40}{}%
