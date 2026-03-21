@@ -1,0 +1,33 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {section}{Richiamo sul Moto Ondulatorio}{2}{}%
+\contentsline {subsection}{Onde Reali e Pacchetto d'Onda}{2}{}%
+\contentsline {subsection}{Esempio: Trasformata di un'onda confinata}{3}{}%
+\contentsline {section}{Esperimento di Young (Interferenza da 2 fenditure)}{4}{}%
+\contentsline {subsection}{Interferenza da N Sorgenti}{5}{}%
+\contentsline {section}{Diffrazione da Singola Fenditura ($a \simeq \lambda $)}{5}{}%
+\contentsline {section}{Reticolo di Diffrazione Completo}{6}{}%
+\contentsline {subsection}{Diffrazione di Bragg (Cristallografia)}{6}{}%
+\contentsline {section}{Unificazione di Onde e Corpuscoli}{7}{}%
+\contentsline {subsection}{Relazione tra Intensità d'Onda e Flusso di Fotoni}{7}{}%
+\contentsline {section}{Dualismo Onda-Particella: La Doppia Fenditura}{8}{}%
+\contentsline {section}{Principio di Complementarietà di Bohr}{8}{}%
+\contentsline {subsection}{1. Esperimento con Beam Splitter (BS)}{9}{}%
+\contentsline {subsection}{2. Interferometro di Mach-Zehnder}{9}{}%
+\contentsline {subsection}{Analisi dei casi (Onda Continua)}{10}{}%
+\contentsline {subsection}{Analisi a Singolo Fotone (Paradosso Quantistico)}{10}{}%
+\contentsline {section}{Dualismo Onda-Particella: Elettroni (1924, De Broglie)}{11}{}%
+\contentsline {subsection}{Confronto: Macroscopico vs Microscopico}{11}{}%
+\contentsline {section}{Diffrazione e Interferenza degli Elettroni}{12}{}%
+\contentsline {subsection}{Esperimento della doppia fenditura con $\mathbf {e^-}$}{12}{}%
+\contentsline {section}{Reinterpretazione del Modello di Bohr}{12}{}%
+\contentsline {subsection}{Significato Statistico della Funzione d'Onda ($\psi $)}{13}{}%
+\contentsline {section}{Limiti dell'Onda Piana per le Particelle}{13}{}%
+\contentsline {subsection}{Il Pacchetto d'Onda}{14}{}%
+\contentsline {section}{Significato Fisico di $\mathbf {A(k)}$}{15}{}%
+\contentsline {subsection}{Confronto Probabilistico: Fotoni vs Elettroni}{15}{}%
+\contentsline {section}{Principio (di Indeterminazione) di Heisenberg}{16}{}%
+\contentsline {subsection}{Varianza e Incertezza ($\Delta x$ e $\Delta k$)}{16}{}%
+\contentsline {subsection}{Evoluzione Temporale ($t>0$)}{17}{}%
+\contentsline {subsection}{Definizione Generale delle Incertezze}{17}{}%
+\contentsline {subsection}{Significato Statistico (L'Ensemble)}{18}{}%

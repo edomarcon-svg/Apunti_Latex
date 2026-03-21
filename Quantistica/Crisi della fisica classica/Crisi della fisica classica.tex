@@ -2161,8 +2161,82 @@ Prendendo il limite per $n \to +\infty$: %
 Questo significa che se $n$ è molto grande (macroscopico), la distanza fra i salti di quantizzazione diventa trascurabile: l'energia $E$ torna a comportarsi come un continuo %. 
 Si ritrova così il $\Rightarrow$ \textbf{LIMITE CLASSICO} %.
 
-% --- FINE BLOCCO ---
+% --- CONTINUAZIONE: ESEMPIO LIMITE CLASSICO E PROBLEMI APERTI ---
 
+\subsection{Esempio Macroscopico del Limite Classico} %
+
+Consideriamo un oscillatore armonico macroscopico (un tipico sistema massa-molla): %
+
+Ipotizziamo i seguenti valori realistici di laboratorio: %
+\begin{itemize}
+    \item $K = 1 \text{ N/m}$ e $m = 1 \text{ kg}$ %
+    \item $x_0 = 10 \text{ cm} = 0.1 \text{ m}$ (posizione iniziale) %
+    \item $v_0 = 1 \text{ m/s}$ (velocità iniziale) %
+\end{itemize}
+
+L'energia totale $E_{TOT}$ del sistema classico è: %
+\begin{equation*}
+    E_{TOT} = \frac{1}{2} m v_0^2 + \frac{1}{2} K x_0^2 \simeq 0.5 \text{ J} %
+\end{equation*}
+La pulsazione angolare $\omega$ è data da: %
+\begin{equation*}
+    \omega = \sqrt{\frac{K}{m}} = 1 \text{ rad/s} %
+\end{equation*}
+
+Calcoliamo l'energia del singolo "quanto" per questo specifico oscillatore: %
+\begin{equation*}
+    E = \hbar \omega = 1.05 \cdot 10^{-34} \text{ J} %
+\end{equation*}
+
+Il numero di quanti $n$ che compongono l'energia totale è quindi: %
+\begin{equation*}
+    n = \frac{E_{TOT}}{E} \cong 10^{33} \quad \text{(numero di quanti)} %
+\end{equation*}
+Essendo il numero di quanti così spaventosamente grande, $\Rightarrow$ \textbf{NON ci accorgiamo della quantizzazione}. L'energia ci appare a tutti gli effetti come un \textbf{continuo} %.
+
+\section{Problemi Aperti della Teoria di Bohr-Sommerfeld} %
+
+Sebbene le regole di quantizzazione dell'azione forniscano risultati coerenti per alcuni sistemi specifici, la teoria presenta dei limiti insormontabili: %
+
+\begin{itemize}
+    \item $\rightarrow$ \textbf{Vale solo per sistemi periodici} %.
+    \item $\rightarrow$ \textbf{Non prevede quali righe} si vedono negli spettri atomici (quali transizioni sono permesse o "proibite") %.
+    \begin{itemize}
+        \item $\hookrightarrow$ E \textbf{non ne prevede l'intensità} (quanto sono brillanti le righe emesse) %.
+        \item $\hookrightarrow$ \textbf{Non prevede la presenza di più elettroni} (il modello fallisce per atomi con $Z > 1$, incapace di descrivere le interazioni repulsive tra gli elettroni stessi) %.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Derivazione del Postulato di Bohr da Wilson-Sommerfeld} %
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-03-21-14-27-16.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        Possiamo dimostrare come il postulato di Bohr sia in realtà un caso particolare della regola di Wilson-Sommerfeld applicata a un'orbita circolare %.
+        Scegliamo come coordinate generalizzate l'angolo $\theta$ e il momento angolare $L$: %
+    \end{minipage}
+\end{figure}
+\begin{equation*}
+    q \rightarrow \theta \quad , \quad p \rightarrow L %
+\end{equation*}
+
+Applicando la regola di quantizzazione dell'azione sull'intero periodo (un giro completo): %
+\begin{equation*}
+    \oint p \, dq = \oint L \, d\theta %
+\end{equation*}
+Poiché in un'orbita circolare in un campo di forze centrali il momento angolare $L$ si conserva, esso è una costante e può essere portato fuori dall'integrale: %
+\begin{equation*}
+    L \oint d\theta = L (2\pi) %
+\end{equation*}
+Uguagliando l'espressione a $nh$: %
+\begin{equation}
+    2\pi L = n h \quad \Rightarrow \quad \boxed{ L = n \frac{h}{2\pi} = n\hbar } \quad \Downarrow \text{ Sistemi periodici} %
+\end{equation}
+Abbiamo così riottenuto in modo formale la condizione di quantizzazione del momento angolare imposta da Bohr! %
 
 
 

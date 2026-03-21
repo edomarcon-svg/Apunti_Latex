@@ -1,80 +1,83 @@
 \babel@toc {italian}{}\relax 
 \babel@toc {italian}{}\relax 
-\contentsline {section}{Introduzione}{3}{}%
-\contentsline {subsection}{Regime Relativistico e Non Relativistico}{3}{}%
-\contentsline {subsection}{Quantizzazione}{3}{}%
-\contentsline {section}{Formalismo Lagrangiano}{4}{}%
-\contentsline {subsection}{Lagrangiana}{4}{}%
-\contentsline {subsection}{Azione e Principio di Hamilton}{4}{}%
-\contentsline {subsection}{Momento Canonico e Coordinate Cicliche}{5}{}%
-\contentsline {subsubsection}{Es. 1: Particella nel campo 3D}{6}{}%
-\contentsline {subsubsection}{Es. 2: Particella in un piano con forza centrale $F=F(r)$}{6}{}%
-\contentsline {section}{Formalismo Hamiltoniano}{6}{}%
-\contentsline {subsubsection}{Es.: $H(q,p)$ per particella con $V(x,y,z)$}{7}{}%
-\contentsline {subsection}{Es.: $\mathcal {L}$ di una particella immersa in un campo Elettromagnetico}{7}{}%
-\contentsline {section}{Spazio delle Fasi}{8}{}%
-\contentsline {section}{Fondamenti di Meccanica Statistica: Ensemble}{9}{}%
-\contentsline {subsection}{Il Concetto di Ensemble}{9}{}%
-\contentsline {subsection}{Ipotesi Ergodica}{10}{}%
-\contentsline {subsection}{Teorema di Liouville}{10}{}%
-\contentsline {section}{I Tipi di Ensemble}{10}{}%
-\contentsline {subsection}{1. Ensemble Microcanonico}{10}{}%
-\contentsline {subsection}{2. Ensemble Canonico}{11}{}%
-\contentsline {subsection}{3. Ensemble Grancanonico}{11}{}%
-\contentsline {section}{Distribuzione di Boltzmann e Funzione di Partizione}{12}{}%
-\contentsline {subsection}{Energia Media e Sottosistemi}{12}{}%
-\contentsline {section}{Teorema di Equipartizione dell'Energia}{13}{}%
-\contentsline {section}{Applicazione: Gas Perfetto Monoatomico}{13}{}%
-\contentsline {section}{Atomi e Particelle: metodi sperimentali e classici}{14}{}%
-\contentsline {subsection}{Misura della massa: Spettrometro di massa}{15}{}%
-\contentsline {section}{Stimare il Raggio Atomico}{15}{}%
-\contentsline {subsection}{1. Libero cammino medio ($\ell _m$)}{15}{}%
-\contentsline {subsection}{2. Equazione di stato dei Gas Reali (1 mol)}{16}{}%
-\contentsline {subsection}{3. Diffrazione di Bragg}{16}{}%
-\contentsline {subsection}{Confronto Raggi Atomici}{16}{}%
-\contentsline {section}{Elettroni e Particelle Elementari}{17}{}%
-\contentsline {subsection}{Raggi X}{17}{}%
-\contentsline {section}{Sezione d'Urto ($\sigma $)}{18}{}%
-\contentsline {subsection}{Attenuazione del Fascio}{18}{}%
-\contentsline {subsection}{Scattering e Parametro d'Impatto}{19}{}%
-\contentsline {subsection}{Sezione d'Urto Differenziale}{19}{}%
-\contentsline {section}{Modelli Classici dell'Atomo}{20}{}%
-\contentsline {subsection}{1. Modello di Thomson ($\simeq 1900$) $\rightarrow $ Modello a "panettone"}{20}{}%
-\contentsline {subsection}{2. Esperimento di Geiger e Marsden (1909)}{20}{}%
-\contentsline {subsection}{3. Modello di Rutherford (Modello planetario)}{21}{}%
-\contentsline {section}{Il Problema del Corpo Nero}{22}{}%
-\contentsline {subsection}{Sorgenti Termiche}{22}{}%
-\contentsline {subsection}{Teorema di Kirchhoff (1870)}{23}{}%
-\contentsline {subsection}{Esperimenti e Leggi Empiriche}{23}{}%
-\contentsline {section}{Definizione di Corpo Nero}{23}{}%
-\contentsline {subsection}{Densità di Energia Spettrale}{24}{}%
-\contentsline {subsection}{Onde Stazionarie nella Cavità}{25}{}%
-\contentsline {section}{Lo Spazio dei Vettori d'Onda ($\vec {k}$)}{25}{}%
-\contentsline {subsection}{Densità degli Stati}{26}{}%
-\contentsline {subsection}{Formula di Rayleigh-Jeans e Catastrofe Ultravioletta}{27}{}%
-\contentsline {section}{L'Ipotesi di Planck (1900)}{27}{}%
-\contentsline {subsection}{Derivazione delle Leggi Empiriche}{29}{}%
-\contentsline {section}{Problema dei Calori Specifici}{29}{}%
-\contentsline {subsection}{Confronto: Formula Classica vs Formula di Planck}{30}{}%
-\contentsline {section}{Applicazioni del Corpo Nero}{30}{}%
-\contentsline {subsection}{1. L'Effetto Serra}{30}{}%
-\contentsline {subsection}{2. Radiazione Cosmica di Fondo (CMB)}{31}{}%
-\contentsline {section}{L'Effetto Fotoelettrico}{31}{}%
-\contentsline {subsection}{I paradossi classici}{32}{}%
-\contentsline {section}{1905: Einstein spiega l'Effetto Fotoelettrico}{33}{}%
-\contentsline {section}{L'Effetto Compton}{34}{}%
-\contentsline {section}{Spettri Atomici}{34}{}%
-\contentsline {subsection}{1. Spettro di Assorbimento}{34}{}%
-\contentsline {subsection}{2. Spettro di Emissione}{35}{}%
-\contentsline {section}{Spettro di Emissione dell'Atomo di Idrogeno ($H$)}{35}{}%
-\contentsline {subsection}{Calcolo delle Energie dei Fotoni Emessi}{35}{}%
-\contentsline {subsection}{La Formula Empirica di Balmer-Rydberg}{36}{}%
-\contentsline {subsection}{Schema Energetico basato su salti tra livelli}{36}{}%
-\contentsline {section}{Modello di Bohr per H (1913)}{37}{}%
-\contentsline {subsection}{Quantizzazione delle Orbite}{37}{}%
-\contentsline {subsection}{Raggio di Bohr e Costante di Struttura Fine}{37}{}%
-\contentsline {subsection}{Energia dei Livelli}{38}{}%
-\contentsline {subsection}{Perché la Serie di Balmer si osserva solo in emissione?}{39}{}%
-\contentsline {section}{Regole di Quantizzazione di Wilson e Sommerfeld}{39}{}%
-\contentsline {subsection}{Applicazione: Oscillatore Armonico}{40}{}%
-\contentsline {subsection}{Il Limite Classico ($n \to +\infty $)}{40}{}%
+\contentsline {section}{Introduzione}{4}{}%
+\contentsline {subsection}{Regime Relativistico e Non Relativistico}{4}{}%
+\contentsline {subsection}{Quantizzazione}{4}{}%
+\contentsline {section}{Formalismo Lagrangiano}{5}{}%
+\contentsline {subsection}{Lagrangiana}{5}{}%
+\contentsline {subsection}{Azione e Principio di Hamilton}{5}{}%
+\contentsline {subsection}{Momento Canonico e Coordinate Cicliche}{6}{}%
+\contentsline {subsubsection}{Es. 1: Particella nel campo 3D}{7}{}%
+\contentsline {subsubsection}{Es. 2: Particella in un piano con forza centrale $F=F(r)$}{7}{}%
+\contentsline {section}{Formalismo Hamiltoniano}{7}{}%
+\contentsline {subsubsection}{Es.: $H(q,p)$ per particella con $V(x,y,z)$}{8}{}%
+\contentsline {subsection}{Es.: $\mathcal {L}$ di una particella immersa in un campo Elettromagnetico}{8}{}%
+\contentsline {section}{Spazio delle Fasi}{9}{}%
+\contentsline {section}{Fondamenti di Meccanica Statistica: Ensemble}{10}{}%
+\contentsline {subsection}{Il Concetto di Ensemble}{10}{}%
+\contentsline {subsection}{Ipotesi Ergodica}{11}{}%
+\contentsline {subsection}{Teorema di Liouville}{11}{}%
+\contentsline {section}{I Tipi di Ensemble}{11}{}%
+\contentsline {subsection}{1. Ensemble Microcanonico}{11}{}%
+\contentsline {subsection}{2. Ensemble Canonico}{12}{}%
+\contentsline {subsection}{3. Ensemble Grancanonico}{12}{}%
+\contentsline {section}{Distribuzione di Boltzmann e Funzione di Partizione}{13}{}%
+\contentsline {subsection}{Energia Media e Sottosistemi}{13}{}%
+\contentsline {section}{Teorema di Equipartizione dell'Energia}{14}{}%
+\contentsline {section}{Applicazione: Gas Perfetto Monoatomico}{14}{}%
+\contentsline {section}{Atomi e Particelle: metodi sperimentali e classici}{15}{}%
+\contentsline {subsection}{Misura della massa: Spettrometro di massa}{16}{}%
+\contentsline {section}{Stimare il Raggio Atomico}{16}{}%
+\contentsline {subsection}{1. Libero cammino medio ($\ell _m$)}{16}{}%
+\contentsline {subsection}{2. Equazione di stato dei Gas Reali (1 mol)}{17}{}%
+\contentsline {subsection}{3. Diffrazione di Bragg}{17}{}%
+\contentsline {subsection}{Confronto Raggi Atomici}{17}{}%
+\contentsline {section}{Elettroni e Particelle Elementari}{18}{}%
+\contentsline {subsection}{Raggi X}{18}{}%
+\contentsline {section}{Sezione d'Urto ($\sigma $)}{19}{}%
+\contentsline {subsection}{Attenuazione del Fascio}{19}{}%
+\contentsline {subsection}{Scattering e Parametro d'Impatto}{20}{}%
+\contentsline {subsection}{Sezione d'Urto Differenziale}{20}{}%
+\contentsline {section}{Modelli Classici dell'Atomo}{21}{}%
+\contentsline {subsection}{1. Modello di Thomson ($\simeq 1900$) $\rightarrow $ Modello a "panettone"}{21}{}%
+\contentsline {subsection}{2. Esperimento di Geiger e Marsden (1909)}{21}{}%
+\contentsline {subsection}{3. Modello di Rutherford (Modello planetario)}{22}{}%
+\contentsline {section}{Il Problema del Corpo Nero}{23}{}%
+\contentsline {subsection}{Sorgenti Termiche}{23}{}%
+\contentsline {subsection}{Teorema di Kirchhoff (1870)}{24}{}%
+\contentsline {subsection}{Esperimenti e Leggi Empiriche}{24}{}%
+\contentsline {section}{Definizione di Corpo Nero}{24}{}%
+\contentsline {subsection}{Densità di Energia Spettrale}{25}{}%
+\contentsline {subsection}{Onde Stazionarie nella Cavità}{26}{}%
+\contentsline {section}{Lo Spazio dei Vettori d'Onda ($\vec {k}$)}{26}{}%
+\contentsline {subsection}{Densità degli Stati}{27}{}%
+\contentsline {subsection}{Formula di Rayleigh-Jeans e Catastrofe Ultravioletta}{28}{}%
+\contentsline {section}{L'Ipotesi di Planck (1900)}{28}{}%
+\contentsline {subsection}{Derivazione delle Leggi Empiriche}{30}{}%
+\contentsline {section}{Problema dei Calori Specifici}{30}{}%
+\contentsline {subsection}{Confronto: Formula Classica vs Formula di Planck}{31}{}%
+\contentsline {section}{Applicazioni del Corpo Nero}{31}{}%
+\contentsline {subsection}{1. L'Effetto Serra}{31}{}%
+\contentsline {subsection}{2. Radiazione Cosmica di Fondo (CMB)}{32}{}%
+\contentsline {section}{L'Effetto Fotoelettrico}{32}{}%
+\contentsline {subsection}{I paradossi classici}{33}{}%
+\contentsline {section}{1905: Einstein spiega l'Effetto Fotoelettrico}{34}{}%
+\contentsline {section}{L'Effetto Compton}{35}{}%
+\contentsline {section}{Spettri Atomici}{35}{}%
+\contentsline {subsection}{1. Spettro di Assorbimento}{35}{}%
+\contentsline {subsection}{2. Spettro di Emissione}{36}{}%
+\contentsline {section}{Spettro di Emissione dell'Atomo di Idrogeno ($H$)}{36}{}%
+\contentsline {subsection}{Calcolo delle Energie dei Fotoni Emessi}{36}{}%
+\contentsline {subsection}{La Formula Empirica di Balmer-Rydberg}{37}{}%
+\contentsline {subsection}{Schema Energetico basato su salti tra livelli}{37}{}%
+\contentsline {section}{Modello di Bohr per H (1913)}{38}{}%
+\contentsline {subsection}{Quantizzazione delle Orbite}{38}{}%
+\contentsline {subsection}{Raggio di Bohr e Costante di Struttura Fine}{38}{}%
+\contentsline {subsection}{Energia dei Livelli}{39}{}%
+\contentsline {subsection}{Perché la Serie di Balmer si osserva solo in emissione?}{40}{}%
+\contentsline {section}{Regole di Quantizzazione di Wilson e Sommerfeld}{40}{}%
+\contentsline {subsection}{Applicazione: Oscillatore Armonico}{41}{}%
+\contentsline {subsection}{Il Limite Classico ($n \to +\infty $)}{41}{}%
+\contentsline {subsection}{Esempio Macroscopico del Limite Classico}{41}{}%
+\contentsline {section}{Problemi Aperti della Teoria di Bohr-Sommerfeld}{42}{}%
+\contentsline {subsection}{Derivazione del Postulato di Bohr da Wilson-Sommerfeld}{42}{}%
