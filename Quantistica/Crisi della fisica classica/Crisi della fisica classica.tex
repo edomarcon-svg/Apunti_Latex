@@ -1040,7 +1040,7 @@ Dal grafico sperimentale: tante particelle non deflesse (angolo piccolo), ma un 
 
 Facciamo due assunzioni classiche:
 \begin{enumerate}
-    \item $m_\alpha \gg m_{atm} \Rightarrow$ Atomi bersaglio considerati immobili.
+    \item $m_\alpha \ll m_{atm} \Rightarrow$ Atomi bersaglio considerati immobili.
     \item $m_\alpha \gg m_e \Rightarrow$ Conta solo la distribuzione di carica positiva.
 \end{enumerate}
 Valutiamo la forza massima nel modello di Thomson (alla superficie dell'atomo):
@@ -1216,7 +1216,7 @@ Studiando l'emissione del corpo nero, sperimentalmente si deducono due leggi fon
         \includegraphics[width=\linewidth]{immagini/2026-03-05-18-18-02.png}
     \end{minipage}\hfill
     \begin{minipage}{0.65\textwidth}
-        Realizzazione pratica: una cavità con un piccolo foro. %
+        Realizzazione pratica: una cavità con un piccolo foro tale che la luce non riesce a uscire. %
         Ogni riflessione sulle pareti interne comporta un assorbimento $\Rightarrow$ tutta la luce in ingresso viene assorbita. %
         Al contempo, le pareti interne della cavità emettono luce. %
         Se la cavità è a contatto con un \textbf{TERMOSTATO}, si raggiunge l'Equilibrio Termico: %
@@ -1242,6 +1242,7 @@ In questo stato macroscopico, c'è un equilibrio termico esatto tra la luce emes
         \begin{equation*}
             e_{\text{CORPO}}(\nu, T) = a_{\text{CORPO}}(\nu, T) \cdot e_{CN}(\nu, T)
         \end{equation*}
+        Poiché $a_{\text{CN}} = 1$ quindi si ha che $e_{\text{CN}} = f(\nu, T)$. %
     \end{minipage}
 \end{figure}
 
@@ -1270,7 +1271,7 @@ In questo stato macroscopico, c'è un equilibrio termico esatto tra la luce emes
     \end{minipage}
 \end{figure}
 
-Tuttavia, facendo i calcoli esatti (mediando su tutte le direzioni spaziali con il Vettore di Poynting), si ottiene un fattore correttivo geometrico pari a $1/4$: %
+Il calcolo precedente prende in cosiderazione solo le onde con direzione di propapagazione perpendicolare a {S}. Tuttavia, facendo i calcoli esatti (mediando su tutte le direzioni spaziali con il Vettore di Poynting), si ottiene un fattore correttivo geometrico pari a $1/4$: %
 \begin{equation}
     e_{CN}(\nu, T) = \frac{c}{4} \mu(\nu, T)
 \end{equation}
