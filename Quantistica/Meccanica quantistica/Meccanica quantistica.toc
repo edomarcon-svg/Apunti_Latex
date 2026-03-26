@@ -21,7 +21,7 @@
 \contentsline {section}{Diffrazione e Interferenza degli Elettroni}{12}{}%
 \contentsline {subsection}{Esperimento della doppia fenditura con $\mathbf {e^-}$}{12}{}%
 \contentsline {section}{Reinterpretazione del Modello di Bohr}{12}{}%
-\contentsline {subsection}{Significato Statistico della Funzione d'Onda ($\psi $)}{13}{}%
+\contentsline {subsection}{Significato Statistico della Funzione d'Onda ($\Psi $)}{13}{}%
 \contentsline {section}{Limiti dell'Onda Piana per le Particelle}{13}{}%
 \contentsline {subsection}{Il Pacchetto d'Onda}{14}{}%
 \contentsline {section}{Significato Fisico di $\mathbf {A(k)}$}{15}{}%
