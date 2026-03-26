@@ -1038,6 +1038,624 @@ Preparando $2N$ sistemi (scatole) identici: %
     \item Sui restanti $N$ sistemi misuro la velocità $\Rightarrow p = mv \Rightarrow$ Troverò un $\Delta p$ che, moltiplicato per il $\Delta x$ precedente, obbedisce a $\Delta x \Delta p \ge \hbar/2$ %.
 \end{itemize}
 
+% --- CONTINUAZIONE: MICROSCOPIO DI HEISENBERG E COLLASSO DELL'ONDA ---
+
+\newpage
+\section*{Principio di Heisenberg: Microscopio di Bohr-Heisenberg} %
+
+Per misurare la posizione di un elettrone, devo illuminarlo con un fotone e raccogliere la luce diffusa su uno schermo. %
+
+% ---------------------------------------------------------
+% \begin{figure}[h!]
+%     \centering
+%     % \includegraphics[width=0.7\textwidth]{microscopio_heisenberg.png}
+%     \vspace{5.0cm} % Spazio provvisorio
+%     \caption{\textit{[Spazio per disegno: Elettrone e- bersagliato da un fotone. Il fotone diffuso p'_f passa attraverso una fessura di larghezza 'a' e arriva su uno schermo distante 'L']}}
+% \end{figure}
+% ---------------------------------------------------------
+
+Prima dell'urto, l'elettrone è fermo: $\vec{p}_e = 0 \Rightarrow \Delta p_x = 0 \Rightarrow \Delta x \to +\infty$. %
+Il fotone incidente ha momento: $|\vec{p}_f| = \hbar |\vec{k}| = \frac{h}{\lambda}$. %
+Proiettando: $p_{f_y} = \frac{h}{\lambda}$ e $p_{f_x} = 0$. %
+
+Consideriamo l'\textbf{Urto Quasi-Elastico} in cui il fotone viene diffuso ad un angolo $\theta$. %
+L'incertezza sul momento trasferito all'elettrone lungo $x$ dipende dall'angolo massimo sotteso dall'apertura $a$ del microscopio: %
+\begin{equation*}
+    \Delta p_{f_x} = |\vec{p}'_f| \sin\theta \cong |\vec{p}'_f| \tan\theta = |\vec{p}'_f| \cdot \frac{a/2}{L} = \frac{h}{\lambda} \frac{a}{2L} %
+\end{equation*}
+Per conservazione del momento, l'incertezza acquisita dall'elettrone è $\Delta p_{e_x} = \Delta p_{f_x}$. %
+Dall'ottica, l'incertezza con cui posso misurare la posizione sullo schermo (potere risolutivo) è $\Delta x_e = \frac{\lambda}{a} L$. %
+
+Moltiplicando le due incertezze dell'elettrone dopo la misura: %
+\begin{equation}
+    \Delta x \Delta p_x \approx \left( \frac{\lambda}{a} L \right) \cdot \left( \frac{h}{\lambda} \frac{a}{2L} \right) = \frac{h}{2} %
+\end{equation}
+$\Rightarrow$ \textbf{La sonda che io mando per misurare modifica irreversibilmente il sistema.} %
+Il Principio di Heisenberg è legato fisicamente al modo stesso in cui effettuiamo la misura: se "allargo" l'apertura $a$ diminuisco l'incertezza $\Delta x$, ma aumento inesorabilmente $\Delta p_x$! %
+
+\newpage
+\subsection*{Il Collasso della Funzione d'Onda} %
+
+Immaginiamo un'onda piana: $\psi(x,t) = A e^{i(k_0 x - \omega_0 t)}$. %
+I valori di $p_0 = \hbar k_0$ ed $E = \hbar\omega_0$ sono \textbf{BEN DEFINITI}. %
+
+% ---------------------------------------------------------
+% \begin{figure}[h!]
+%     \centering
+%     % \includegraphics[width=0.7\textwidth]{collasso_onda.png}
+%     \vspace{6.0cm} % Spazio provvisorio
+%     \caption{\textit{[Spazio per disegno: 1. Prima della misura: |psi|^2 piatto e |A|^2 a Delta di Dirac in k0. 2. Dopo la misura: |psi|^2 a Delta in x0 e |A|^2 piatto su tutti i k]}}
+% \end{figure}
+% ---------------------------------------------------------
+
+Prima della misura spaziale, nello spazio $k$ la distribuzione $|A(k)|^2$ è una \textbf{Delta di Dirac} $\delta(k-k_0)$, ovvero $\Delta k = 0$. Nello spazio reale, $|\psi|^2$ è costante ovunque ($\Delta x \to +\infty$). %
+
+\textbf{ORA MISURO LA POSIZIONE:} %
+Trovando la particella in un punto esatto $x_0$, la probabilità $|\psi|^2$ diventa una Delta di Dirac $\delta(x-x_0)$ ("adesso si trova esattamente qui"). %
+La trasformata di Fourier di una Delta di Dirac è un'onda piana $\Rightarrow |A(k)|^2$ diventa costante su tutti i valori di $k$, portando $\Delta k \to +\infty$. %
+
+\begin{quote}
+    La misura ha fatto collassare la funzione d'onda in un unico volume $\Rightarrow$ \textbf{COLLASSO DELLA FUNZIONE D'ONDA} %. \\
+    Questo è un \textbf{PROCESSO IRREVERSIBILE}. %
+\end{quote}
+
+\newpage
+\section*{Commenti Finali sul Principio di Indeterminazione} %
+
+\textbf{1. Fine della Traiettoria Classica} %
+Classicamente, l'equazione di Newton $\vec{F} = m\vec{a}$ (Eq. differenziale del II ordine) necessita di due condizioni iniziali per essere risolta: $\begin{cases} x(t_0) \\ v(t_0) \Rightarrow p(t_0) \end{cases}$. %
+Se Heisenberg mi vieta di conoscere \textbf{ENTRAMBE} simultaneamente $\Rightarrow$ NON LA RISOLVO. %
+\begin{equation*}
+    \text{Non ha più senso parlare di \textbf{TRAIETTORIA}} %
+\end{equation*}
+
+\textbf{2. Macroscopico vs Microscopico} %
+\begin{itemize}
+    \item \textbf{Oggetto Macroscopico:} $v = 40 \text{ m/s}, m = 50 \text{ g} \Rightarrow p = mv = 2 \text{ kg}\cdot\text{m/s}$. %
+    Se abbiamo una precisione strumentale $\frac{\Delta p}{p} = 10^{-3} \Rightarrow \Delta p = 2 \cdot 10^{-3} \text{ kg}\cdot\text{m/s}$. %
+    L'incertezza minima sulla posizione è $\Delta x \simeq \frac{\hbar}{2\Delta p} \approx 10^{-32} \text{ m}$. %
+    \item \textbf{Elettrone:} $E_K = 10 \text{ eV} \Rightarrow p = \sqrt{2mE_K} \simeq 10^{-24} \text{ kg}\cdot\text{m/s}$. %
+    Con la stessa precisione $\frac{\Delta p}{p} = 10^{-3} \Rightarrow \Delta p = 10^{-27} \text{ kg}\cdot\text{m/s}$. %
+    L'incertezza salta a $\Delta x \simeq \frac{\hbar}{2\Delta p} \simeq 10^{-8} \text{ m}$. %
+\end{itemize}
+
+\textit{Confronto scenari per l'elettrone:} %
+\begin{enumerate}
+    \item[a)] Elettrone sparato da un cannone elettronico verso un bersaglio lontano $L = 10 \text{ cm}$. Su distanze di centimetri, un errore $\Delta x \sim 10^{-8} \text{ m}$ \textbf{NON è rilevante} (posso approssimare con la traiettoria classica). %
+    \item[b)] Elettrone nell'atomo di idrogeno. Il raggio di Bohr è $a_B = 0.53 \text{ \AA} \simeq 10^{-10} \text{ m}$. Rispetto all'atomo, l'incertezza $\Delta x \sim 10^{-8} \text{ m}$ è \textbf{GIGANTESCA}. Non posso trattare l'elettrone come una particella localizzata! %
+\end{enumerate}
+
+\newpage
+\textbf{3. Misurazioni e Precisione} %
+Se MISURO, trovo valori ben precisi. L'incertezza teorica di Heisenberg emerge dalle misurazioni ripetute (Ensemble). %
+
+\textbf{4. Disaccoppiamento Ortogonale} %
+Il principio vale lungo le coppie canoniche coniugate: %
+\begin{equation}
+    \Delta x \Delta p_x \ge \frac{\hbar}{2} \quad , \quad \Delta y \Delta p_y \ge \frac{\hbar}{2} \quad , \quad \Delta z \Delta p_z \ge \frac{\hbar}{2} %
+\end{equation}
+$\Rightarrow \Delta x \Delta p_y = 0$ (misurare precisamente lungo $x$ non disturba il momento lungo $y$, così come qualsiasi altra combinazione mista). %
+
+\textbf{5. Indeterminazione Energia-Tempo} %
+\begin{equation}
+    \Delta E \Delta t \ge \frac{\hbar}{2} %
+\end{equation}
+Il tempo \textbf{NON} è una grandezza dinamica (non è un osservabile associato a un operatore). $\Delta t$ \textbf{NON} è l'incertezza sul tempo assoluto, MA l'\textbf{INTERVALLO di tempo $\tau$ affinché il sistema CAMBI STATO}. $\Delta E$ è l'incertezza sull'energia del sistema in quello stato. %
+
+% ---------------------------------------------------------
+% \begin{figure}[h!]
+%     \centering
+%     % \includegraphics[width=0.6\textwidth]{emissione_spontanea.png}
+%     \vspace{4.5cm} % Spazio provvisorio
+%     \caption{\textit{[Spazio per disegno: Livelli energetici. Nello stato eccitato n=2 c'è un "allargamento" Delta E = 10^-8 eV dovuto al tempo di decadimento spontaneo tau = 10^-8 s]}}
+% \end{figure}
+% ---------------------------------------------------------
+
+Se $\Delta E \to 0 \Rightarrow \Delta t \to +\infty$ (Stato perfettamente \textbf{STAZIONARIO}). %
+Per il modello di Bohr, i livelli dovrebbero essere stazionari. Ma sperimentalmente si osserva che se un elettrone si trova nello stato eccitato $n=2$, in $\tau \simeq 10^{-8} \text{ s}$ \textbf{decade} allo stato fondamentale ($n=1$) emettendo un fotone. % Questo è il Tempo di Vita di uno stato eccitato.
+
+Invertendo il principio, l'energia del livello $n=2$ non può essere esatta al $100\%$, ma ha una piccola incertezza intrinseca: %
+\begin{equation}
+    \Delta E \simeq \frac{\hbar}{2\tau} \simeq 10^{-8} \text{ eV} \quad \text{(\textbf{EMISSIONE SPONTANEA})} %
+\end{equation}
+(Questo fenomeno spiega la cosiddetta \textit{larghezza naturale} delle righe spettrali!). %
+
+% --- FINE DOCUMENTO ---
+
+% --- CONTINUAZIONE: EQUAZIONE DI SCHRÖDINGER E OPERATORI ---
+
+\newpage
+\section*{L'Equazione di Schrödinger} %
+
+Per descrivere la dinamica quantistica non possiamo usare: %
+\begin{itemize}
+    \item Eq. di Newton ($\vec{F}=m\vec{a}$) $\rightarrow$ \textbf{NO} %
+    \item Eq. di Maxwell $\rightarrow$ \textbf{NO} (valgono solo per fotoni, $m=0$) %
+\end{itemize}
+
+Nel 1926, Schrödinger formula la sua equazione (che è un \textbf{postulato} fondamentale): %
+\begin{equation}
+    \boxed{ i\hbar \frac{\partial \psi(x,t)}{\partial t} = -\frac{\hbar^2}{2m} \frac{\partial^2 \psi(x,t)}{\partial x^2} + \underbrace{V(x,t)}_{\text{En. Pot.}} \psi(x,t) } \quad \text{(in 1 Dim.)} %
+\end{equation}
+
+\subsection*{Derivazione dagli Operatori (Onda Piana)} %
+
+Consideriamo una particella libera descritta da un'onda piana $\psi(x,t) = A e^{i(kx - \omega t)}$ %.
+Calcoliamo le derivate spaziali e temporali: %
+
+\textbf{1. Operatore Momento ($\mathbf{\hat{p}}$):} %
+\begin{equation*}
+    \frac{\partial \psi}{\partial x} = ik\psi \quad \Rightarrow \quad -i\hbar \frac{\partial \psi}{\partial x} = \underbrace{\hbar k}_{p} \psi = p\psi %
+\end{equation*}
+Si definisce l'\textbf{Operatore Momento} (una funzione che applicata a $\psi$ restituisce $p\cdot\psi$): %
+\begin{equation}
+    \boxed{ \hat{p} = -i\hbar \frac{\partial}{\partial x} } %
+\end{equation}
+
+\textbf{2. Operatore Energia ($\mathbf{\hat{E}}$):} %
+\begin{equation*}
+    \frac{\partial \psi}{\partial t} = -i\omega\psi \quad \Rightarrow \quad i\hbar \frac{\partial \psi}{\partial t} = \underbrace{\hbar \omega}_{E} \psi = E\psi %
+\end{equation*}
+Si definisce l'\textbf{Operatore Energia}: %
+\begin{equation}
+    \boxed{ \hat{E} = i\hbar \frac{\partial}{\partial t} } %
+\end{equation}
+
+\newpage
+\subsection*{Costruzione dell'Equazione (Particella Libera e Forze)} %
+
+Per una particella libera, l'energia è solo cinetica: $E = K = \frac{p^2}{2m}$ %.
+In termini di operatori: $\hat{E}\psi = \frac{\hat{p}^2}{2m}\psi$ %.
+Calcoliamo l'operatore momento al quadrato $\hat{p}^2$: %
+\begin{equation*}
+    \hat{p}^2 = \hat{p}(\hat{p}\psi) = -i\hbar \frac{\partial}{\partial x} \left( -i\hbar \frac{\partial \psi}{\partial x} \right) = -\hbar^2 \frac{\partial^2 \psi}{\partial x^2} %
+\end{equation*}
+Quindi $\frac{\hat{p}^2}{2m} = -\frac{\hbar^2}{2m} \frac{\partial^2 \psi}{\partial x^2}$ %.
+Uguagliando a $\hat{E}\psi$, otteniamo l'eq. di Schrödinger per particella libera (senza $V$): %
+\begin{equation}
+    i\hbar \frac{\partial \psi}{\partial t} = -\frac{\hbar^2}{2m} \frac{\partial^2 \psi}{\partial x^2} %
+\end{equation}
+
+Postuliamo che questo valga anche in \textbf{presenza di FORZE} %.
+Classicamente l'energia totale è l'Hamiltoniana $E = K + V = H$. %
+Introduciamo l'\textbf{Operatore Hamiltoniano} $\hat{H}$: %
+\begin{equation*}
+    \hat{H} = \hat{K} + \hat{V} = -\frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2} + \hat{V}(x,t) %
+\end{equation*}
+Sostituendo nell'equazione generale $\hat{E}\psi = \hat{H}\psi$: %
+\begin{equation}
+    i\hbar \frac{\partial \psi}{\partial t} = \hat{H}\psi = -\frac{\hbar^2}{2m} \frac{\partial^2 \psi}{\partial x^2} + \hat{V}\psi %
+\end{equation}
+\textit{Nota:} $\psi(x,t)$ è necessariamente \textbf{COMPLESSA} (poiché l'equazione contiene una derivata prima in $t$ e una derivata seconda in $x$, con il coefficiente immaginario $i$). Non ha significato fisico diretto! %
+
+\newpage
+\section*{Estensione in 3 Dimensioni} %
+
+In 3D, l'onda di materia dipende dal vettore posizione: $\psi(\vec{r},t) = \psi(x,y,z,t)$ %.
+Il momento diventa un vettore $\vec{p} = (p_x, p_y, p_z)$, e il suo operatore corrisponde al gradiente moltiplicato per $-i\hbar$: %
+\begin{equation*}
+    \hat{\vec{p}} = -i\hbar \left( \frac{\partial}{\partial x}, \frac{\partial}{\partial y}, \frac{\partial}{\partial z} \right) = -i\hbar \nabla %
+\end{equation*}
+
+Calcoliamo $\hat{p}^2$: %
+\begin{align*}
+    \hat{p}^2 &= \hat{\vec{p}} \cdot \hat{\vec{p}} = (-i\hbar \nabla) \cdot (-i\hbar \nabla) = -\hbar^2 (\nabla \cdot \nabla) = \\ %
+    &= -\hbar^2 \Delta^2 = -\hbar^2 \left( \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} + \frac{\partial^2}{\partial z^2} \right) %
+\end{align*}
+L'operatore $\Delta^2$ (o $\nabla^2$) è il \textbf{Laplaciano}. %
+
+L'Equazione di Schrödinger completa in 3D è: %
+\begin{equation}
+    \boxed{ i\hbar \frac{\partial \psi}{\partial t} = \hat{H}\psi = -\frac{\hbar^2}{2m} \Delta \psi + \hat{V}(\vec{r},t)\psi } %
+\end{equation}
+
+% ---------------------------------------------------------
+% \begin{figure}[h!]
+%     \centering
+%     % \includegraphics[width=0.7\textwidth]{collasso_schrodinger.png}
+%     \vspace{4.0cm} % Spazio provvisorio
+%     \caption{\textit{[Spazio per disegno: Grafico di |psi|^2 delocalizzato, freccia con "=> MISURO (COLLASSO)", e nuovo grafico con la Delta di Dirac centrata in 'a']}}
+% \end{figure}
+% ---------------------------------------------------------
+
+\textbf{Il problema della misura:} %
+Se misuro la posizione, l'onda collassa in una Delta di Dirac $\delta(x-a)$. %
+Passato un po' di tempo ($\Delta t$), avremo una \textbf{NUOVA} $\psi(x,t)$ la cui condizione iniziale sarà $\psi(x,0) = \psi(a)$ (la delta di Dirac). %
+L'equazione di Schrödinger descrive perfettamente l'evoluzione deterministica dell'onda tra una misura e l'altra, ma \textbf{non ha gli strumenti per spiegare il collasso stesso} (ha "problemi con la misura", l'equazione non ne tiene conto in modo organico) %.
+
+% --- CONTINUAZIONE: PROPRIETÀ DI PSI E CONSERVAZIONE DELLA PROBABILITÀ ---
+
+\newpage
+\section*{Proprietà della Funzione d'Onda $\psi(x,t)$} %
+
+Affinché la $\psi(x,t)$ abbia un senso fisico e matematico accettabile per descrivere la probabilità, deve soddisfare le seguenti proprietà: %
+
+\begin{enumerate}
+    \item \textbf{Principio di Sovrapposizione (Linearità):} Se $\psi_1(x,t)$ e $\psi_2(x,t)$ sono soluzioni dell'equazione di Schrödinger, allora lo è anche una loro combinazione lineare: %
+    \begin{equation*}
+        \psi_{TOT} = \alpha\psi_1 + \beta\psi_2 %
+    \end{equation*}
+    \item \textbf{Modulo quadro finito:} $|\psi|^2 \Rightarrow \text{FINITO}$ %.
+    \item \textbf{Continuità:} La derivata prima spaziale $\frac{\partial \psi}{\partial x} \Rightarrow \text{FINITO} \Rightarrow \psi \text{ è CONTINUA}$ %.
+    \item \textbf{Continuità della derivata:} La derivata seconda $\frac{\partial^2 \psi}{\partial x^2} \Rightarrow \text{FINITO} \Rightarrow \frac{\partial \psi}{\partial x} \text{ è CONTINUA}$ %.
+    \item \textbf{Univocità:} $\psi$ e $\frac{\partial \psi}{\partial x}$ devono essere a \textbf{SINGOLO VALORE} in ogni punto dello spazio %.
+    \item \textbf{Annullamento all'infinito:} %
+    \begin{equation*}
+        \int_{\mathbb{R}} |\psi(x,t)|^2 dx = 1 \quad \Rightarrow \quad \psi(x,t) \to 0 \text{ per } x \to \pm\infty %
+    \end{equation*}
+    (La funzione appartiene allo spazio di Hilbert delle funzioni a quadrato sommabile: $\psi \in \mathcal{L}^2(\mathbb{R}^3)$) %.
+    \item \textbf{Invarianza di Fase Globale:} Moltiplicare la funzione d'onda per una fase costante non altera le probabilità fisiche: %
+    \begin{equation*}
+        \psi \to \psi' = e^{i\varphi}\psi \quad \Rightarrow \quad |\psi'|^2 = |\psi|^2 %
+    \end{equation*}
+    \item \textbf{Condizione di Normalizzazione (Parseval):} La probabilità si conserva passando dallo spazio reale a quello dei momenti: %
+    \begin{equation*}
+        \int_{\mathbb{R}} |\psi(x,t=0)|^2 dx = 1 \quad \Rightarrow \quad \int_{\mathbb{R}} |A(k)|^2 dk = 1 %
+    \end{equation*}
+\end{enumerate}
+
+\newpage
+\subsection*{Dimostrazione: Conservazione della Probabilità nel Tempo} %
+
+Vogliamo dimostrare che, se la funzione d'onda è normalizzata all'istante iniziale ($t=0$), essa \textbf{rimane normalizzata per ogni $t>0$}. Ovvero, la probabilità totale non cambia nel tempo: %
+\begin{equation*}
+    \frac{d}{dt} \left[ \int_{\mathbb{R}} |\psi|^2 dx \right] = 0 %
+\end{equation*}
+
+Calcoliamo la derivata temporale dell'integrale (usando la derivata parziale sotto il segno di integrale): %
+\begin{equation}
+    \frac{d}{dt} \int_{\mathbb{R}} |\psi|^2 dx = \int_{\mathbb{R}} \frac{\partial}{\partial t} (\psi^* \psi) dx = \int_{\mathbb{R}} \left( \frac{\partial \psi^*}{\partial t} \psi + \psi^* \frac{\partial \psi}{\partial t} \right) dx %
+\end{equation}
+
+Prendiamo l'Equazione di Schrödinger e la sua Complessa Coniugata per ricavare le derivate temporali: %
+\begin{align*}
+    i\hbar \frac{\partial \psi}{\partial t} &= -\frac{\hbar^2}{2m} \frac{\partial^2 \psi}{\partial x^2} + V\psi \quad \Rightarrow \quad \frac{\partial \psi}{\partial t} = \frac{i\hbar}{2m} \frac{\partial^2 \psi}{\partial x^2} - \frac{i}{\hbar} V\psi \\ %
+    -i\hbar \frac{\partial \psi^*}{\partial t} &= -\frac{\hbar^2}{2m} \frac{\partial^2 \psi^*}{\partial x^2} + V\psi^* \quad \Rightarrow \quad \frac{\partial \psi^*}{\partial t} = -\frac{i\hbar}{2m} \frac{\partial^2 \psi^*}{\partial x^2} + \frac{i}{\hbar} V\psi^* %
+\end{align*}
+
+Sostituiamo queste espressioni nell'argomento dell'integrale: %
+\begin{align*}
+    \frac{\partial \psi^*}{\partial t}\psi + \psi^*\frac{\partial \psi}{\partial t} &= \left[ -\frac{i\hbar}{2m} \frac{\partial^2 \psi^*}{\partial x^2} + \frac{i}{\hbar} V\psi^* \right]\psi + \left[ \frac{i\hbar}{2m} \frac{\partial^2 \psi}{\partial x^2} - \frac{i}{\hbar} V\psi \right]\psi^* = \\ %
+    &= -\frac{i\hbar}{2m} \psi \frac{\partial^2 \psi^*}{\partial x^2} + \cancel{\frac{i}{\hbar} V\psi^*\psi} + \frac{i\hbar}{2m} \psi^* \frac{\partial^2 \psi}{\partial x^2} - \cancel{\frac{i}{\hbar} V\psi^*\psi} = \\ %
+    &= \frac{i\hbar}{2m} \left[ \psi^* \frac{\partial^2 \psi}{\partial x^2} - \psi \frac{\partial^2 \psi^*}{\partial x^2} \right] %
+\end{align*}
+\textit{(Nota: i termini con l'energia potenziale $V$ si annullano perfettamente!)} %
+
+Riconosciamo che l'espressione tra parentesi quadre è la derivata spaziale di un prodotto: %
+\begin{equation*}
+    \psi^* \frac{\partial^2 \psi}{\partial x^2} - \psi \frac{\partial^2 \psi^*}{\partial x^2} = \frac{\partial}{\partial x} \left( \psi^* \frac{\partial \psi}{\partial x} - \psi \frac{\partial \psi^*}{\partial x} \right) %
+\end{equation*}
+
+Torniamo all'integrale iniziale e applichiamo il Teorema Fondamentale del Calcolo Integrale: %
+\begin{align*}
+    \frac{d}{dt} \int_{\mathbb{R}} |\psi|^2 dx &= \int_{\mathbb{R}} \frac{i\hbar}{2m} \frac{\partial}{\partial x} \left( \psi^* \frac{\partial \psi}{\partial x} - \psi \frac{\partial \psi^*}{\partial x} \right) dx = \\ %
+    &= \frac{i\hbar}{2m} \left[ \psi^* \frac{\partial \psi}{\partial x} - \psi \frac{\partial \psi^*}{\partial x} \right]_{-\infty}^{+\infty} %
+\end{align*}
+
+Dalla Proprietà (6), sappiamo che $\psi(x \to \pm\infty) = 0$. Pertanto, valutando gli estremi di integrazione all'infinito, tutto il blocco si annulla: %
+\begin{equation}
+    \frac{d}{dt} \int_{\mathbb{R}} |\psi|^2 dx = 0 \quad \Rightarrow \quad \boxed{ \int_{\mathbb{R}} |\psi|^2 dx = 1 \quad \forall t \ge 0 } %
+\end{equation}
+\textbf{Conclusione:} Una volta normalizzata a $t=0$, la funzione d'onda rimane normalizzata nel tempo (vale anche per la sua trasformata $A(k)$ per l'uguaglianza di Parseval). %
+
+% --- FINE BLOCCO ---
+
+% --- CONTINUAZIONE: DENSITÀ DI CORRENTE DI PROBABILITÀ E CONTINUITÀ ---
+
+\newpage
+\section*{Densità di Corrente di Probabilità} %
+
+Sappiamo che su tutto lo spazio la probabilità si conserva: $\frac{d}{dt} \int_{\mathbb{R}} |\psi|^2 dx = 0$ %.
+Cosa succede se invece calcoliamo la probabilità di trovare la particella in un segmento finito $[a, b]$? %
+\begin{equation*}
+    P_{ab} = \int_a^b |\psi|^2 dx \quad \Rightarrow \quad \frac{dP_{ab}}{dt} = \frac{d}{dt} \int_a^b |\psi|^2 dx = \int_a^b \frac{\partial |\psi|^2}{\partial t} dx %
+\end{equation*}
+
+Dalla dimostrazione precedente, sappiamo che: %
+\begin{equation*}
+    \frac{\partial |\psi|^2}{\partial t} = \frac{\partial}{\partial x} \left[ \frac{i\hbar}{2m} \left( \psi^* \frac{\partial \psi}{\partial x} - \psi \frac{\partial \psi^*}{\partial x} \right) \right] %
+\end{equation*}
+
+Definiamo quindi la \textbf{Densità di Corrente di Probabilità (1D)} indicata con $J(x,t)$: %
+\begin{equation}
+    \boxed{ J(x,t) = -\frac{i\hbar}{2m} \left( \psi^* \frac{\partial \psi}{\partial x} - \psi \frac{\partial \psi^*}{\partial x} \right) } %
+\end{equation}
+\textit{(Nota: estraendo un segno meno, la derivata rispetto al tempo di $|\psi|^2$ diventa esattamente la derivata spaziale di $-J$).} %
+
+Sostituendo questa definizione nell'integrale: %
+\begin{equation*}
+    \frac{dP_{ab}}{dt} = \int_a^b \left( -\frac{\partial J}{\partial x} \right) dx = -[J(x,t)]_a^b \quad \Rightarrow \quad \boxed{ \frac{dP_{ab}}{dt} = J(a,t) - J(b,t) } %
+\end{equation*}
+
+Eliminando l'integrale, si ottiene la celebre \textbf{Equazione di Continuità}: %
+\begin{equation}
+    \boxed{ \frac{\partial |\psi|^2}{\partial t} = -\frac{\partial J}{\partial x} } \quad \text{(Legge di Conservazione Locale)} %
+\end{equation}
+
+% ---------------------------------------------------------
+% \begin{figure}[h!]
+%     \centering
+%     % \includegraphics[width=0.6\textwidth]{flusso_probabilita_1d.png}
+%     \vspace{3.5cm} % Spazio provvisorio
+%     \caption{\textit{[Spazio per disegno: Asse x con intervallo tra 'a' e 'b'. Frecce che entrano ed escono agli estremi rappresentanti il flusso J(a) e J(b)]}}
+% \end{figure}
+% ---------------------------------------------------------
+
+\textbf{Significato Fisico:} %
+La probabilità $P_{ab}$ in una regione cambia nel tempo solo se il flusso in ingresso ($J_a$) è diverso dal flusso in uscita ($J_b$). % 
+Differenzialmente, la probabilità di trovare la particella in un punto cambia solo se c'è "qualcosa che la fa fluire altrove" %. 
+La $J$ indica la rapidità con cui la probabilità fluisce in un punto %. \\
+$\Rightarrow$ L'Eq. di Schrödinger \textbf{conserva intrinsecamente la probabilità}! %
+
+\newpage
+\subsection*{Applicazioni: Particelle e Cariche} %
+
+Prendiamo $N$ particelle uguali e indipendenti. %
+Possiamo definire la \textbf{Densità di Particelle} $n(x,t)$: %
+\begin{equation*}
+    n(x,t) = N |\psi(x,t)|^2 %
+\end{equation*}
+\textit{Esempio:} se $N=100$ e $|\psi|^2 = 0.1 \Rightarrow$ mi aspetto una densità di $10$ particelle %.
+
+Moltiplicando l'equazione di continuità della probabilità per $N$: %
+\begin{equation*}
+    \frac{\partial (N|\psi|^2)}{\partial t} = -\frac{\partial (NJ)}{\partial x} \quad \Rightarrow \quad \frac{\partial n}{\partial t} = -\frac{\partial J_{TOT}}{\partial x} %
+\end{equation*}
+$\Rightarrow$ \textbf{Legge di Conservazione per le Particelle} (Conservazione Particelle $\Leftrightarrow$ Conservazione Probabilità). %
+
+\textbf{Densità di Carica Elettrica ($\rho$):} %
+Moltiplicando per la carica elementare $e$: %
+\begin{equation*}
+    e|\psi|^2 = \rho(x,t) \quad \Rightarrow \quad \frac{\partial (e|\psi|^2)}{\partial t} = -\frac{\partial (eJ)}{\partial x} \quad \Rightarrow \quad \frac{\partial \rho}{\partial t} = -\frac{\partial J_{el}}{\partial x} %
+\end{equation*}
+(Abbiamo riottenuto l'equazione di continuità per la carica elettrica nota dall'elettromagnetismo!). %
+
+\subsection*{Generalizzazione in 3 Dimensioni (3D)} %
+
+Passando allo spazio tridimensionale, la derivata spaziale $\frac{\partial}{\partial x}$ diventa l'operatore Divergenza ($\nabla \cdot$): %
+\begin{equation}
+    \frac{\partial |\psi|^2}{\partial t} = -\text{div}\vec{J} = -\nabla \cdot \vec{J} %
+\end{equation}
+
+E il vettore densità di corrente di probabilità $\vec{J}(\vec{r},t)$ è definito tramite il Gradiente ($\nabla$): %
+\begin{equation}
+    \boxed{ \vec{J}(\vec{r},t) = -\frac{i\hbar}{2m} (\psi^* \nabla \psi - \psi \nabla \psi^*) } %
+\end{equation}
+
+% --- FINE DOCUMENTO ---
+
+% --- CONTINUAZIONE: VALORI DI ASPETTAZIONE E OSSERVABILI ---
+
+\newpage
+\section*{Valori di Aspettazione} %
+
+Sappiamo che $\psi(x,t) \Rightarrow |\psi|^2$ rappresenta la densità di probabilità. %
+Il \textbf{Valore di Aspettazione} (o valore medio atteso) della posizione $x$ si calcola come la media statistica ponderata sulla probabilità: %
+\begin{equation}
+    \langle x \rangle = \int_{\mathbb{R}} x |\psi|^2 dx %
+\end{equation}
+
+Più in generale, per una funzione dipendente solo dalla posizione $f = f(x)$, il valore atteso è: %
+\begin{equation*}
+    \langle f \rangle = \int_{\mathbb{R}} f(x) |\psi|^2 dx \quad \Rightarrow \quad \text{Es. } V = V(x) \Rightarrow \langle V \rangle = \int_{\mathbb{R}} V |\psi|^2 dx %
+\end{equation*}
+
+\subsection*{Derivazione del Momento $\langle p \rangle$} %
+
+Classicamente la quantità di moto è una funzione $p(x,t)$. Ma per il Principio di Heisenberg non possiamo conoscerla come funzione esatta se usiamo $\psi$. Come calcoliamo $\langle p \rangle$? %
+
+Assumiamo valido il teorema classico per le medie (Teorema di Ehrenfest): $\langle v \rangle = \frac{d\langle x \rangle}{dt}$ %.
+Calcoliamo la derivata temporale di $\langle x \rangle$: %
+\begin{align*}
+    \frac{d\langle x \rangle}{dt} &= \frac{d}{dt} \int_{\mathbb{R}} x |\psi|^2 dx = \int_{\mathbb{R}} x \frac{\partial |\psi|^2}{\partial t} dx = \int_{\mathbb{R}} x \frac{\partial}{\partial x} \left[ \frac{i\hbar}{2m} \left( \psi^* \frac{\partial \psi}{\partial x} - \psi \frac{\partial \psi^*}{\partial x} \right) \right] dx %
+\end{align*}
+
+Integriamo per parti (sapendo che $\int f g' = fg - \int f' g$): %
+\begin{align*}
+    \frac{d\langle x \rangle}{dt} &= \frac{i\hbar}{2m} \left\{ \underbrace{ \left[ x \left( \psi^* \frac{\partial \psi}{\partial x} - \psi \frac{\partial \psi^*}{\partial x} \right) \right]_{-\infty}^{+\infty} }_{\to 0 \text{ perché } \psi \to 0 \text{ a } \pm\infty} - \int_{\mathbb{R}} \left( \psi^* \frac{\partial \psi}{\partial x} - \psi \frac{\partial \psi^*}{\partial x} \right) dx \right\} = \\ %
+    &= -\frac{i\hbar}{2m} \left[ \int_{\mathbb{R}} \psi^* \frac{\partial \psi}{\partial x} dx - \int_{\mathbb{R}} \psi \frac{\partial \psi^*}{\partial x} dx \right] %
+\end{align*}
+
+Il secondo integrale può essere a sua volta integrato per parti: %
+\begin{equation*}
+    \int_{\mathbb{R}} \psi \frac{\partial \psi^*}{\partial x} dx = \underbrace{ [\psi \psi^*]_{-\infty}^{+\infty} }_{=0} - \int_{\mathbb{R}} \psi^* \frac{\partial \psi}{\partial x} dx = -\int_{\mathbb{R}} \psi^* \frac{\partial \psi}{\partial x} dx %
+\end{equation*}
+
+Sostituendo: %
+\begin{equation*}
+    \frac{d\langle x \rangle}{dt} = -\frac{i\hbar}{2m} \left[ \int_{\mathbb{R}} \psi^* \frac{\partial \psi}{\partial x} dx - \left( -\int_{\mathbb{R}} \psi^* \frac{\partial \psi}{\partial x} dx \right) \right] = -\frac{i\hbar}{2m} \left[ 2 \int_{\mathbb{R}} \psi^* \frac{\partial \psi}{\partial x} dx \right] = -\frac{i\hbar}{m} \int_{\mathbb{R}} \psi^* \frac{\partial \psi}{\partial x} dx %
+\end{equation*}
+
+Tornando alla formula iniziale del momento $\langle p \rangle = m \frac{d\langle x \rangle}{dt}$: %
+\begin{equation}
+    \langle p \rangle = m \left( -\frac{i\hbar}{m} \int_{\mathbb{R}} \psi^* \frac{\partial \psi}{\partial x} dx \right) = \int_{\mathbb{R}} \psi^* \underbrace{ \left( -i\hbar \frac{\partial}{\partial x} \right) }_{\text{Operat. Diff.}} \psi \, dx \quad \Rightarrow \quad \boxed{ \langle p \rangle = \int_{\mathbb{R}} \psi^* \hat{p} \psi \, dx } %
+\end{equation}
+
+Confrontando con la posizione $\langle x \rangle = \int \psi^* x \psi dx$, notiamo che l'espressione formale è identica, a patto di inserire l'operatore tra $\psi^*$ e $\psi$ (per la posizione l'operatore è semplicemente la moltiplicazione per $x$) %.
+
+\newpage
+\section*{Osservabili Fisiche e Operatori} %
+
+Nel formalismo Hamiltoniano, qualunque grandezza fisica $A$ è funzione di posizione e momento: $A = A(x,p)$ (variabili indipendenti) %.
+Tutte le grandezze fisiche misurabili prendono il nome di \textbf{OSSERVABILI} %.
+
+\textbf{POSTULATO:} Ad ogni osservabile $A$ corrisponde un operatore $\hat{A} = \hat{A}(x,\hat{p})$. Il valore di aspettazione (media dei dati sperimentali) si calcola sempre come: %
+\begin{equation}
+    \boxed{ \langle A \rangle = \langle \hat{A} \rangle = \int_{\mathbb{R}} \psi^* \hat{A} \psi \, dx } %
+\end{equation}
+
+\textit{Esempio (Energia Cinetica):} %
+\begin{equation*}
+    K = \frac{p^2}{2m} \quad \Rightarrow \quad \hat{K} = \frac{\hat{p}^2}{2m} \quad \Rightarrow \quad \langle K \rangle = \int_{\mathbb{R}} \psi^* \left( \frac{\hat{p}^2}{2m} \right) \psi \, dx = \int_{\mathbb{R}} \psi^* \left( -\frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2} \right) \psi \, dx %
+\end{equation*}
+
+\subsection*{Incertezza (Deviazione Standard)} %
+
+La funzione d'onda $\psi(x,t)$ definisce completamente lo stato del sistema. Conoscendo $\psi$, posso calcolare non solo i valori medi $\langle A \rangle$, ma anche le rispettive incertezze statistiche $\sigma$ %.
+
+La deviazione standard per l'osservabile $\hat{A}$ è definita come $\sigma_A = \Delta A = \sqrt{\langle (\hat{A} - \langle \hat{A} \rangle)^2 \rangle}$ %.
+Sviluppando il quadrato del binomio all'interno del valore atteso: %
+\begin{align*}
+    \sigma_A^2 &= \langle (\hat{A} - \langle \hat{A} \rangle)^2 \rangle = \langle \hat{A}^2 + \langle \hat{A} \rangle^2 - 2\hat{A}\langle \hat{A} \rangle \rangle = \\ %
+               &= \langle \hat{A}^2 \rangle + \langle \hat{A} \rangle^2 - 2\langle \hat{A} \rangle\langle \hat{A} \rangle = \\ %
+               &= \langle \hat{A}^2 \rangle - \langle \hat{A} \rangle^2 %
+\end{align*}
+\textit{(Ricordiamo che $\langle \hat{A} \rangle$ è un numero scalare, quindi la media di quel numero è il numero stesso).} %
+
+Otteniamo la formula pratica per calcolare la Varianza (da cui si estrae l'incertezza $\Delta A$ da usare nel principio di Heisenberg): %
+\begin{equation}
+    \boxed{ \sigma_A^2 = \langle \hat{A}^2 \rangle - \langle \hat{A} \rangle^2 } %
+\end{equation}
+
+% --- FINE BLOCCO ---
+
+% --- CONTINUAZIONE: COMMUTATORI E TEOREMA DI EHRENFEST ---
+
+\newpage
+\section*{Operatori Lineari e Commutatori} %
+
+Gli operatori quantistici sono lineari: %
+\begin{equation*}
+    \hat{A} [\alpha f(x) + \beta g(x)] = \alpha \hat{A}f(x) + \beta \hat{A}g(x) %
+\end{equation*}
+In generale, il prodotto di operatori \textbf{NON È COMMUTATIVO}: $\hat{A}\hat{B}f(x) \neq \hat{B}\hat{A}f(x)$ %.
+Si definisce quindi il \textbf{Commutatore} tra due operatori: %
+\begin{equation}
+    \boxed{ [\hat{A}, \hat{B}] = \hat{A}\hat{B} - \hat{B}\hat{A} } %
+\end{equation}
+
+\textbf{Esempio a) Commutatore tra Posizione e Potenziale:} %
+Sia $\hat{f}(x) = \hat{V}(x)$. Applichiamo il commutatore a una funzione generica $g(x)$: %
+\begin{equation*}
+    [\hat{x}, \hat{V}(x)]g(x) = [\hat{x}\hat{V}(x) - \hat{V}(x)\hat{x}]g(x) = x V(x) g(x) - V(x) x g(x) = 0 \quad \Rightarrow \quad \boxed{[\hat{x}, \hat{f}(x)] = 0} %
+\end{equation*}
+
+\textbf{Esempio b) Commutatore tra Posizione e Momento:} %
+Calcoliamo $[\hat{x}, \hat{p}_x]$ applicandolo a $g(x)$: %
+\begin{align*}
+    [\hat{x}, \hat{p}_x]g(x) &= \left[ x, -i\hbar \frac{\partial}{\partial x} \right] g(x) = x \left( -i\hbar \frac{\partial g}{\partial x} \right) - \left( -i\hbar \frac{\partial}{\partial x}(xg) \right) = \\ %
+                             &= -i\hbar x \frac{\partial g}{\partial x} + i\hbar \left( g + x \frac{\partial g}{\partial x} \right) = -i\hbar x \frac{\partial g}{\partial x} + i\hbar g + i\hbar x \frac{\partial g}{\partial x} = i\hbar g(x) %
+\end{align*}
+Eliminando la funzione test $g(x)$, si ottiene la \textbf{Regola di Commutazione Fondamentale}: %
+\begin{equation}
+    \boxed{ [\hat{x}, \hat{p}_x] = i\hbar } \quad \text{e in 3D: } [\hat{\vec{r}}, -i\hbar\nabla] = i\hbar %
+\end{equation}
+
+\newpage
+\section*{Teorema di Ehrenfest} %
+
+Vogliamo calcolare la derivata temporale del valore d'aspettazione del momento $\langle \hat{p} \rangle$: %
+\begin{equation*}
+    \frac{d\langle \hat{p} \rangle}{dt} = -i\hbar \frac{d}{dt} \int_{\mathbb{R}} \psi^* \frac{\partial \psi}{\partial x} dx = -i\hbar \int_{\mathbb{R}} \frac{\partial}{\partial t} \left( \psi^* \frac{\partial \psi}{\partial x} \right) dx = -i\hbar \int_{\mathbb{R}} \left[ \frac{\partial \psi^*}{\partial t} \frac{\partial \psi}{\partial x} + \psi^* \frac{\partial^2 \psi}{\partial t \partial x} \right] dx %
+\end{equation*}
+
+Dall'equazione di Schrödinger, ricaviamo le derivate temporali: %
+\begin{align*}
+    \frac{\partial \psi}{\partial t} &= \frac{i\hbar}{2m} \frac{\partial^2 \psi}{\partial x^2} - \frac{i}{\hbar} V\psi \quad ; \quad \frac{\partial \psi^*}{\partial t} = -\frac{i\hbar}{2m} \frac{\partial^2 \psi^*}{\partial x^2} + \frac{i}{\hbar} V\psi^* %
+\end{align*}
+
+Sostituiamo nell'integrale: %
+\begin{equation*}
+    = -i\hbar \int_{\mathbb{R}} \left[ \left( -\frac{i\hbar}{2m} \frac{\partial^2 \psi^*}{\partial x^2} + \frac{i}{\hbar} V\psi^* \right) \frac{\partial \psi}{\partial x} + \psi^* \frac{\partial}{\partial x} \left( \frac{i\hbar}{2m} \frac{\partial^2 \psi}{\partial x^2} - \frac{i}{\hbar} V\psi \right) \right] dx %
+\end{equation*}
+Sviluppando le parentesi e la derivata del prodotto $\frac{\partial}{\partial x}(V\psi)$: %
+\begin{equation*}
+    = -i\hbar \int_{\mathbb{R}} \left[ \underbrace{ -\frac{i\hbar}{2m} \frac{\partial^2 \psi^*}{\partial x^2} \frac{\partial \psi}{\partial x} + \frac{i\hbar}{2m} \psi^* \frac{\partial^3 \psi}{\partial x^3} }_{\text{Termine Cinetico}} + \underbrace{ \frac{i}{\hbar} V\psi^* \frac{\partial \psi}{\partial x} - \frac{i}{\hbar} \psi^* \left( \frac{\partial V}{\partial x}\psi + V\frac{\partial \psi}{\partial x} \right) }_{\text{Termine Potenziale}} \right] dx %
+\end{equation*}
+
+% ---------------------------------------------------------
+% \begin{figure}[h!]
+%     \centering
+%     % \includegraphics[width=0.7\textwidth]{ehrenfest_cancellazione.png}
+%     \vspace{3.5cm} % Spazio provvisorio
+%     \caption{\textit{[Spazio per disegno: Schema dei termini che si elidono e dell'integrazione per parti del blocco cinetico che porta a zero]}}
+% \end{figure}
+% ---------------------------------------------------------
+
+Separiamo i due blocchi. Il termine cinetico, integrato 2 volte per parti, va a zero:
+\begin{equation*}
+    -i\hbar \left( \frac{i\hbar}{2m} \right) \int_{\mathbb{R}} \left( \psi^* \frac{\partial^3 \psi}{\partial x^3} - \frac{\partial^2 \psi^*}{\partial x^2} \frac{\partial \psi}{\partial x} \right) dx = 0 %
+\end{equation*}
+
+Ci rimane solo il termine potenziale: %
+\begin{equation*}
+    \frac{d\langle \hat{p} \rangle}{dt} = \int_{\mathbb{R}} \left[ \cancel{V \psi^* \frac{\partial \psi}{\partial x}} - \psi^* \frac{\partial V}{\partial x} \psi - \cancel{\psi^* V \frac{\partial \psi}{\partial x}} \right] dx = \int_{\mathbb{R}} \psi^* \left( -\frac{\partial V}{\partial x} \right) \psi \, dx %
+\end{equation*}
+
+Poiché l'integrale del valore atteso corrisponde alla media dell'operatore, abbiamo dimostrato che: %
+\begin{equation}
+    \boxed{ \frac{d\langle \hat{p} \rangle}{dt} = \left\langle -\frac{\partial V}{\partial x} \right\rangle = \langle \hat{F} \rangle } %
+\end{equation}
+
+\textbf{Conclusione Straordinaria:} %
+La fisica classica è il limite della fisica quantistica calcolato sui \textbf{valori medi}! %
+Questo ci fornisce l'Equivalente Quantistico delle Equazioni di Hamilton: %
+\begin{equation}
+    \boxed{ \frac{d\langle \hat{p} \rangle}{dt} = \left\langle -\frac{\partial \hat{H}}{\partial x} \right\rangle } \qquad \text{e} \qquad \boxed{ \frac{d\langle \hat{x} \rangle}{dt} = \left\langle \frac{\partial \hat{H}}{\partial p} \right\rangle } %
+\end{equation}
+
+% --- FINE DEL QUADERNO DI APPUNTI ---
+
+% --- CONTINUAZIONE: SOLUZIONI A VARIABILI SEPARABILI E SCHRODINGER INDIP. DAL TEMPO ---
+
+\newpage
+\section*{Soluzioni a Variabili Separabili} %
+
+Partiamo dall'equazione di Schrödinger completa in 1D: %
+\begin{equation*}
+    i\hbar \frac{\partial \psi}{\partial t} = -\frac{\hbar^2}{2m} \frac{\partial^2 \psi}{\partial x^2} + V\psi %
+\end{equation*}
+
+\textbf{Ipotesi:} Assumiamo che il potenziale non dipenda dal tempo, ovvero $V = V(x)$ %.
+Cerchiamo soluzioni particolari in cui la funzione d'onda è il prodotto di due funzioni, una dipendente solo dallo spazio e una solo dal tempo: %
+\begin{equation*}
+    \psi(x,t) = u(x) f(t) %
+\end{equation*}
+
+Sostituendo questa "ansatz" nell'equazione: %
+\begin{equation*}
+    i\hbar u(x) \frac{\partial f}{\partial t} = -\frac{\hbar^2}{2m} f(t) \frac{\partial^2 u}{\partial x^2} + V(x) u(x) f(t) %
+\end{equation*}
+Dividiamo l'intera equazione per la funzione d'onda completa $\psi = u(x)f(t)$: %
+\begin{equation*}
+    i\hbar \frac{1}{f(t)} \frac{\partial f}{\partial t} = -\frac{\hbar^2}{2m} \frac{1}{u(x)} \frac{\partial^2 u}{\partial x^2} + V(x) %
+\end{equation*}
+
+Notiamo una cosa fondamentale: %
+\begin{itemize}
+    \item Il termine a sinistra dell'uguaglianza \textbf{dipende solo da $t$} %.
+    \item Il blocco a destra dell'uguaglianza \textbf{dipende solo da $x$} %.
+\end{itemize}
+L'unico modo affinché una funzione solo di $t$ sia sempre uguale a una funzione solo di $x$ per qualsiasi valore di $x$ e $t$, è che \textbf{entrambe siano uguali a una costante} %. 
+Chiamiamo questa costante $E$ (poiché dimensionalmente rappresenta un'energia): %
+
+Il problema si sdoppia in due equazioni ordinarie: %
+\begin{align}
+    \text{1) } \quad & i\hbar \frac{1}{f(t)} \frac{\partial f}{\partial t} = E \label{eq:tempo} \\ %
+    \text{2) } \quad & -\frac{\hbar^2}{2m} \frac{1}{u(x)} \frac{\partial^2 u}{\partial x^2} + V(x) = E \label{eq:spazio} %
+\end{align}
+
+\subsection*{Soluzione dell'Equazione Temporale (1)} %
+Risolviamo l'equazione \ref{eq:tempo}: %
+\begin{equation*}
+    i\hbar \frac{\partial f}{\partial t} = E f \quad \Rightarrow \quad f(t) = \text{cost} \cdot e^{-i\frac{E}{\hbar}t} \quad \Rightarrow \quad \omega = \frac{E}{\hbar} %
+\end{equation*}
+\textit{Conclusione fisica:} Se l'energia potenziale non dipende dal tempo, la parte della funzione d'onda che dipende da $t$ è un semplice \textbf{esponenziale complesso che oscilla} con pulsazione $\omega$ proporzionale all'energia %.
+
+\subsection*{Equazione di Schrödinger Non Dipendente dal Tempo (2)} %
+Moltiplicando l'equazione \ref{eq:spazio} per $u(x)$, otteniamo l'equazione agli autovalori per la parte spaziale: %
+\begin{equation*}
+    -\frac{\hbar^2}{2m} \frac{\partial^2 u}{\partial x^2} + V(x) u(x) = E u(x) %
+\end{equation*}
+Riconoscendo l'operatore Hamiltoniano $\hat{H}$ al primo membro, arriviamo alla forma compatta definitiva: %
+\begin{equation}
+    \boxed{ \hat{H} u(x) = E u(x) } \quad \text{(\textbf{Eq. di SCHRÖDINGER NON DIPENDENTE dal tempo})} %
+\end{equation}
+
+% --- FINE BLOCCO ---
+
+
+
 
 
 
