@@ -135,9 +135,9 @@ INPUT C:\Users\edoma\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\sym
 INPUT C:\Users\edoma\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Users\edoma\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx8.tfm
 INPUT C:\Users\edoma\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx6.tfm
-OUTPUT Meccanica quantistica.toc
 OUTPUT Meccanica quantistica.pdf
 INPUT C:\Users\edoma\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+OUTPUT Meccanica quantistica.toc
 INPUT C:\Users\edoma\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
 INPUT C:\Users\edoma\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx7.tfm
 INPUT C:\Users\edoma\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1095.tfm
