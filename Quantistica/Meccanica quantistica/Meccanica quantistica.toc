@@ -1,54 +1,81 @@
 \babel@toc {italian}{}\relax 
 \babel@toc {italian}{}\relax 
-\contentsline {section}{Richiamo sul Moto Ondulatorio}{3}{}%
-\contentsline {subsection}{Onde Reali e Pacchetto d'Onda}{3}{}%
-\contentsline {subsection}{Esempio: Trasformata di un'onda confinata}{4}{}%
-\contentsline {section}{Esperimento di Young (Interferenza da 2 fenditure)}{5}{}%
-\contentsline {subsection}{Interferenza da N Sorgenti}{6}{}%
-\contentsline {section}{Diffrazione da Singola Fenditura ($a \simeq \lambda $)}{6}{}%
-\contentsline {section}{Reticolo di Diffrazione Completo}{7}{}%
-\contentsline {subsection}{Diffrazione di Bragg (Cristallografia)}{7}{}%
-\contentsline {section}{Unificazione di Onde e Corpuscoli}{8}{}%
-\contentsline {subsection}{Relazione tra Intensità d'Onda e Flusso di Fotoni}{8}{}%
-\contentsline {section}{Dualismo Onda-Particella: La Doppia Fenditura}{9}{}%
-\contentsline {section}{Principio di Complementarietà di Bohr}{9}{}%
-\contentsline {subsection}{1. Esperimento con Beam Splitter (BS)}{10}{}%
-\contentsline {subsection}{2. Interferometro di Mach-Zehnder}{10}{}%
-\contentsline {subsection}{Analisi dei casi (Onda Continua)}{11}{}%
-\contentsline {subsection}{Analisi a Singolo Fotone (Paradosso Quantistico)}{11}{}%
-\contentsline {section}{Dualismo Onda-Particella: Elettroni (1924, De Broglie)}{12}{}%
-\contentsline {subsection}{Confronto: Macroscopico vs Microscopico}{12}{}%
-\contentsline {section}{Diffrazione e Interferenza degli Elettroni}{13}{}%
-\contentsline {subsection}{Esperimento della doppia fenditura con $\mathbf {e^-}$}{13}{}%
-\contentsline {section}{Reinterpretazione del Modello di Bohr}{13}{}%
-\contentsline {subsection}{Significato Statistico della Funzione d'Onda ($\Psi $)}{14}{}%
-\contentsline {section}{Limiti dell'Onda Piana per le Particelle}{14}{}%
-\contentsline {subsection}{Il Pacchetto d'Onda}{15}{}%
-\contentsline {section}{Significato Fisico di $\mathbf {A(k)}$}{16}{}%
-\contentsline {subsection}{Confronto Probabilistico: Fotoni vs Elettroni}{16}{}%
-\contentsline {section}{Principio (di Indeterminazione) di Heisenberg}{17}{}%
-\contentsline {subsection}{Varianza e Incertezza ($\Delta x$ e $\Delta k$)}{17}{}%
-\contentsline {subsection}{Evoluzione Temporale ($t>0$)}{18}{}%
-\contentsline {subsection}{Definizione Generale delle Incertezze}{18}{}%
-\contentsline {subsection}{Significato Statistico (L'Ensemble)}{19}{}%
-\contentsline {section}{Principio di Heisenberg: Microscopio di Bohr-Heisenberg}{19}{}%
-\contentsline {subsection}{Il Collasso della Funzione d'Onda}{20}{}%
-\contentsline {subsection}{Commenti Finali sul Principio di Indeterminazione}{20}{}%
-\contentsline {section}{L'Equazione di Schrödinger}{22}{}%
-\contentsline {subsection}{Derivazione dagli Operatori (Onda Piana)}{22}{}%
-\contentsline {subsection}{Costruzione dell'Equazione (Particella Libera e Forze)}{22}{}%
-\contentsline {subsection}{Estensione in 3 Dimensioni}{23}{}%
-\contentsline {subsection}{Proprietà della Funzione d'Onda $\Psi (x,t)$}{23}{}%
-\contentsline {subsection}{Dimostrazione: Conservazione della Probabilità nel Tempo}{24}{}%
-\contentsline {section}{Densità di Corrente di Probabilità}{25}{}%
-\contentsline {subsection}{Applicazioni: Particelle e Cariche}{26}{}%
-\contentsline {subsection}{Generalizzazione in 3 Dimensioni (3D)}{26}{}%
-\contentsline {section}{Valori di Aspettazione}{26}{}%
-\contentsline {subsection}{Derivazione del Momento $\langle p \rangle $}{26}{}%
-\contentsline {subsection}{Osservabili Fisiche e Operatori}{27}{}%
-\contentsline {subsection}{Incertezza (Deviazione Standard)}{27}{}%
-\contentsline {section}{Operatori Lineari e Commutatori}{28}{}%
-\contentsline {section}{Teorema di Ehrenfest}{28}{}%
-\contentsline {section}{Soluzioni a Variabili Separabili}{29}{}%
-\contentsline {subsection}{(1) Soluzione dell'Equazione Temporale}{30}{}%
-\contentsline {subsection}{(2) Equazione di Schrödinger Non Dipendente dal Tempo}{30}{}%
+\contentsline {section}{Richiamo sul Moto Ondulatorio}{4}{}%
+\contentsline {subsection}{Onde Reali e Pacchetto d'Onda}{4}{}%
+\contentsline {subsection}{Esempio: Trasformata di un'onda confinata}{5}{}%
+\contentsline {section}{Esperimento di Young (Interferenza da 2 fenditure)}{6}{}%
+\contentsline {subsection}{Interferenza da N Sorgenti}{7}{}%
+\contentsline {section}{Diffrazione da Singola Fenditura ($a \simeq \lambda $)}{7}{}%
+\contentsline {section}{Reticolo di Diffrazione Completo}{8}{}%
+\contentsline {subsection}{Diffrazione di Bragg (Cristallografia)}{8}{}%
+\contentsline {section}{Unificazione di Onde e Corpuscoli}{9}{}%
+\contentsline {subsection}{Relazione tra Intensità d'Onda e Flusso di Fotoni}{9}{}%
+\contentsline {section}{Dualismo Onda-Particella: La Doppia Fenditura}{10}{}%
+\contentsline {section}{Principio di Complementarietà di Bohr}{10}{}%
+\contentsline {subsection}{1. Esperimento con Beam Splitter (BS)}{11}{}%
+\contentsline {subsection}{2. Interferometro di Mach-Zehnder}{11}{}%
+\contentsline {subsection}{Analisi dei casi (Onda Continua)}{12}{}%
+\contentsline {subsection}{Analisi a Singolo Fotone (Paradosso Quantistico)}{12}{}%
+\contentsline {section}{Dualismo Onda-Particella: Elettroni (1924, De Broglie)}{13}{}%
+\contentsline {subsection}{Confronto: Macroscopico vs Microscopico}{13}{}%
+\contentsline {section}{Diffrazione e Interferenza degli Elettroni}{14}{}%
+\contentsline {subsection}{Esperimento della doppia fenditura con $\mathbf {e^-}$}{14}{}%
+\contentsline {section}{Reinterpretazione del Modello di Bohr}{14}{}%
+\contentsline {subsection}{Significato Statistico della Funzione d'Onda ($\Psi $)}{15}{}%
+\contentsline {section}{Limiti dell'Onda Piana per le Particelle}{15}{}%
+\contentsline {subsection}{Il Pacchetto d'Onda}{16}{}%
+\contentsline {section}{Significato Fisico di $\mathbf {A(k)}$}{17}{}%
+\contentsline {subsection}{Confronto Probabilistico: Fotoni vs Elettroni}{17}{}%
+\contentsline {section}{Principio (di Indeterminazione) di Heisenberg}{18}{}%
+\contentsline {subsection}{Varianza e Incertezza ($\Delta x$ e $\Delta k$)}{18}{}%
+\contentsline {subsection}{Evoluzione Temporale ($t>0$)}{19}{}%
+\contentsline {subsection}{Definizione Generale delle Incertezze}{19}{}%
+\contentsline {subsection}{Significato Statistico (L'Ensemble)}{20}{}%
+\contentsline {section}{Principio di Heisenberg: Microscopio di Bohr-Heisenberg}{20}{}%
+\contentsline {subsection}{Il Collasso della Funzione d'Onda}{21}{}%
+\contentsline {subsection}{Commenti Finali sul Principio di Indeterminazione}{21}{}%
+\contentsline {section}{L'Equazione di Schrödinger}{23}{}%
+\contentsline {subsection}{Derivazione dagli Operatori (Onda Piana)}{23}{}%
+\contentsline {subsection}{Costruzione dell'Equazione (Particella Libera e Forze)}{23}{}%
+\contentsline {subsection}{Estensione in 3 Dimensioni}{24}{}%
+\contentsline {subsection}{Proprietà della Funzione d'Onda $\Psi (x,t)$}{24}{}%
+\contentsline {subsection}{Dimostrazione: Conservazione della Probabilità nel Tempo}{25}{}%
+\contentsline {section}{Densità di Corrente di Probabilità}{26}{}%
+\contentsline {subsection}{Applicazioni: Particelle e Cariche}{27}{}%
+\contentsline {subsection}{Generalizzazione in 3 Dimensioni (3D)}{27}{}%
+\contentsline {section}{Valori di Aspettazione}{27}{}%
+\contentsline {subsection}{Derivazione del Momento $\langle p \rangle $}{27}{}%
+\contentsline {subsection}{Osservabili Fisiche e Operatori}{28}{}%
+\contentsline {subsection}{Incertezza (Deviazione Standard)}{28}{}%
+\contentsline {section}{Operatori Lineari e Commutatori}{29}{}%
+\contentsline {section}{Teorema di Ehrenfest}{29}{}%
+\contentsline {section}{Soluzioni a Variabili Separabili}{30}{}%
+\contentsline {subsection}{(1) Soluzione dell'Equazione Temporale}{31}{}%
+\contentsline {subsection}{(2) Equazione di Schrödinger Non Dipendente dal Tempo}{31}{}%
+\contentsline {subsection}{Proprietà degli Stati Stazionari}{31}{}%
+\contentsline {section}{Evoluzione Temporale di $\Psi (x,t)$ (Ricetta Generale)}{32}{}%
+\contentsline {section}{Spazi Vettoriali vs Spazi Funzionali}{33}{}%
+\contentsline {subsection}{Elenco dei Principali Operatori}{33}{}%
+\contentsline {subsection}{Operatore Momento Angolare ($\hat {\vec {L}}$)}{33}{}%
+\contentsline {subsection}{Regole di Commutazione Fondamentali}{34}{}%
+\contentsline {section}{Spazi Vettoriali e Notazione di Dirac}{34}{}%
+\contentsline {subsection}{a) Norma, Prodotto Scalare e Bra-Ket}{34}{}%
+\contentsline {subsection}{b) Trasformazioni sui Vettori: Matrici}{35}{}%
+\contentsline {subsection}{c) Autovettori e Autovalori}{35}{}%
+\contentsline {subsection}{d) Matrice Aggiunta (Operatori Hermitiani)}{36}{}%
+\contentsline {section}{Spazi Funzionali}{36}{}%
+\contentsline {subsection}{a) Norma e Prodotto Scalare}{36}{}%
+\contentsline {subsection}{b) Trasformazioni sulle Funzioni: Operatori}{37}{}%
+\contentsline {subsection}{c) Autovalori e Autofunzioni}{37}{}%
+\contentsline {subsection}{d) Operatore Aggiunto ed Hermitiano}{37}{}%
+\contentsline {subsection}{Completezza e Stati Stazionari}{38}{}%
+\contentsline {section}{Proprietà degli Operatori per la Meccanica Quantistica}{38}{}%
+\contentsline {subsection}{1. Operatori che commutano}{38}{}%
+\contentsline {subsection}{2. Le Osservabili sono Operatori Hermitiani}{38}{}%
+\contentsline {subsection}{3. Autovalori Reali e Incertezza Nulla}{39}{}%
+\contentsline {subsection}{Valore d'Aspettazione in uno Stato Generico (Regola di Born)}{39}{}%
+\contentsline {subsection}{4. Cambio di Base}{40}{}%
+\contentsline {subsection}{5. Evoluzione Temporale}{40}{}%
+\contentsline {subsection}{Esempi: 1. Operatori a Spettro Continuo (Operatore $\hat {x}$)}{41}{}%
+\contentsline {subsection}{2. Collasso della Funzione d'Onda e Preparazione}{41}{}%
+\contentsline {section}{Principio di Heisenberg Generalizzato}{42}{}%

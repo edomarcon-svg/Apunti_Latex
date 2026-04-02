@@ -1642,7 +1642,587 @@ Riconoscendo l'operatore Hamiltoniano $\hat{H}$ al primo membro, arriviamo alla 
     \boxed{ \hat{H} u(x) = E u(x) } \quad \text{(\textbf{Eq. di SCHRÖDINGER NON DIPENDENTE dal tempo})} %
 \end{equation}
 
-% --- FINE BLOCCO ---
+\subsection{Proprietà degli Stati Stazionari} %
+
+Le soluzioni a variabili separabili $\Psi(x,t) = u(x)e^{-i\frac{E}{\hbar}t}$ presentano proprietà fisiche particolarissime: \\
+
+\noindent
+\textbf{1. Densità di probabilità costante nel tempo:} %
+\begin{equation*}
+    |\Psi(x,t)|^2 = \Psi^* \Psi = (u^* e^{+i\frac{E}{\hbar}t}) (u e^{-i\frac{E}{\hbar}t}) = u^* u = |u(x)|^2 %
+\end{equation*}
+Poiché $|\Psi|^2 \neq |\Psi(t)|^2$ (non dipende da $t$), questi stati prendono il nome di \textbf{STATI STAZIONARI} %.
+
+\noindent
+Di conseguenza, il valore di aspettazione di \textbf{qualsiasi grandezza fisica} $\hat{A}$ è costante nel tempo: %
+\begin{equation*}
+    \langle \hat{A} \rangle = \int_{\mathbb{R}} \Psi^* \hat{A} \Psi \, dx = \int_{\mathbb{R}} u^* \cancel{e^{i\omega t}} \hat{A} u \cancel{e^{-i\omega t}} \, dx = \int_{\mathbb{R}} u^* \hat{A} u \, dx = \text{COSTANTE NEL TEMPO} %
+\end{equation*}
+
+\noindent
+\textit{Risoluzione del paradosso di Maxwell per l'atomo di Bohr:} %
+La densità di carica è $\rho = e|\Psi|^2$. Se l'elettrone è in uno stato stazionario, $\rho \neq \rho(t)$. Per le equazioni di Maxwell, per avere emissione di luce serve una densità di carica variabile nel tempo ($\rho = \rho(t)$). Quindi, un elettrone in un'orbita atomica in stato stazionario \textbf{NON emette luce} anche se è accelerato! \\
+
+\noindent
+\textbf{2. Energia Esatta (Incertezza Nulla):} %
+Gli stati stazionari sono stati con Energia $E$ ben definita %.
+Calcoliamo il valore atteso dell'energia: %
+\begin{equation*}
+    \langle E \rangle = \langle \hat{H} \rangle = \int_{\mathbb{R}} u^* \cancel{e^{i\frac{E}{\hbar}t}} \hat{H} u \cancel{e^{-i\frac{E}{\hbar}t}} \, dx = \int_{\mathbb{R}} u^* \hat{H} u \, dx %
+\end{equation*}
+Sfruttando l'equazione di Schrödinger indipendente dal tempo ($\hat{H}u = Eu$): %
+\begin{equation*}
+    \langle E \rangle = \int_{\mathbb{R}} u^* (Eu) \, dx = E \underbrace{ \int_{\mathbb{R}} |u|^2 \, dx }_{=1} = E %
+\end{equation*}
+
+Calcoliamo l'incertezza $\sigma_E^2 = \Delta E^2 = \langle \hat{H}^2 \rangle - \langle \hat{H} \rangle^2$: %
+\begin{align*}
+    \langle \hat{H}^2 \rangle &= \int_{\mathbb{R}} u^* \hat{H} (\hat{H}u) \, dx = \int_{\mathbb{R}} u^* \hat{H} (Eu) \, dx = E \int_{\mathbb{R}} u^* \hat{H} u \, dx = E \int_{\mathbb{R}} u^* (Eu) \, dx = E^2 \int_{\mathbb{R}} |u|^2 \, dx = E^2 %
+\end{align*}
+\begin{equation*}
+    \sigma_E^2 = E^2 - E^2 = 0 \quad \Rightarrow \quad \textbf{NON C'È incertezza su E negli stati stazionari.} %
+\end{equation*}\\
+
+\noindent
+\textbf{3. Momento Medio Nullo per Autofunzioni Reali:} %
+L'equazione $\hat{H}u(x) = Eu(x)$ è un'equazione differenziale a coefficienti reali, per cui ammette soluzioni $u(x)$ \textbf{REALI} %.
+Se $u(x)$ è reale, calcoliamo il momento medio $\langle \hat{p} \rangle$: %
+\begin{equation*}
+    \langle \hat{p} \rangle = \int_{\mathbb{R}} \underbrace{u^*}_{\text{REALE}} \underbrace{\left(-i\hbar \frac{\partial}{\partial x}\right)}_{\text{Complesso}} \underbrace{u}_{\text{REALE}} \, dx %
+\end{equation*}
+L'integrale di una funzione puramente immaginaria darebbe un risultato complesso (se fosse $\neq 0$). Ma $\langle \hat{p} \rangle$ rappresenta la media di dati sperimentali, quindi \textbf{deve essere reale} %.
+Di conseguenza, l'integrale è per forza pari a zero: $\langle \hat{p} \rangle = 0$ \\
+
+\noindent
+\textbf{4. Principio di Sovrapposizione Completo:} %
+L'equazione agli autovalori $\hat{H}u = Eu$ ammette in genere infinite soluzioni (ci sono $n$ soluzioni per questa eq.), ognuna associata a un'energia $E_n$: %
+\begin{equation*}
+    \hat{H} u_n(x) = E_n u_n(x) %
+\end{equation*}
+Essendo l'operatore Hamiltoniano lineare, vale il Principio di Sovrapposizione %.
+\textbf{Qualunque soluzione} fisica generale si può scrivere come combinazione lineare di stati stazionari: %
+\begin{equation}
+    \boxed{ \Psi(x,t) = \sum_n c_n u_n(x) e^{-i\frac{E_n}{\hbar}t} } %
+\end{equation}
+
+\section{Evoluzione Temporale di $\Psi(x,t)$ (Ricetta Generale)} %
+
+Per calcolare l'evoluzione temporale di un sistema quantistico, si segue un procedimento a 4 passi: %
+
+\begin{enumerate}
+    \item \textbf{Condizioni iniziali:} Conosco il potenziale $V = V(x)$ e lo stato del sistema a $t=0$, ovvero $\Psi(x,0)$ %.
+    \item \textbf{Spettro dell'Hamiltoniana:} Risolvo l'equazione indipendente dal tempo $\hat{H}u_n(x) = E_n u_n(x)$. $\Rightarrow$ Trovo la base degli autostati $u_n(x)$ e le rispettive energie $E_n$ %.
+    \item \textbf{Coefficienti della combinazione:} Trovo i coefficienti $c_n$ tali che la sovrapposizione degli autostati riproduca esattamente lo stato iniziale: %
+    \begin{equation*}
+        \Psi(x,0) = \sum_n c_n u_n(x) %
+    \end{equation*}
+    \textit{(Nota: Questo sfrutta l'ortogonalità delle autofunzioni per estrarre i $c_n$ tramite integrali di sovrapposizione).}
+    \item \textbf{Evoluzione Completa:} Scrivo la soluzione generale "attaccando" a ogni termine il suo fattore di fase temporale oscillante: %
+    \begin{equation*}
+        \Psi(x,t) = \sum_n c_n u_n(x) e^{-i\frac{E_n}{\hbar}t} %
+    \end{equation*}
+\end{enumerate}
+
+\section{Spazi Vettoriali vs Spazi Funzionali} %
+
+Nel passaggio dalla meccanica classica a quella quantistica, le grandezze fisiche (appartenenti allo spazio vettoriale classico) diventano \textbf{Operatori} (che agiscono in uno spazio funzionale, lo spazio di Hilbert). %
+Il valore di aspettazione fa da ponte tra i due mondi: %
+\begin{equation*}
+    \langle A \rangle = \langle \hat{A} \rangle = \int_{\mathbb{R}} \Psi^* \hat{A} \Psi \, dx %
+\end{equation*}
+
+\subsection{Elenco dei Principali Operatori} %
+
+\begin{itemize}
+    \item \textbf{Posizione:} $\hat{x} \quad \text{(moltiplicazione per } x \text{)}$ %
+    \item \textbf{Momento (Quantità di moto):} $\hat{p} = -i\hbar \frac{\partial}{\partial x} \quad \left( \text{In 3D: } -i\hbar\nabla \right)$ %
+    \item \textbf{Energia Cinetica:} $\hat{K} = \frac{\hat{p}^2}{2m} \quad \left( \text{In 3D: } -\frac{\hbar^2}{2m}\Delta \right)$ %
+    \item \textbf{Energia Totale (Hamiltoniana):} $\hat{H} = \frac{\hat{p}^2}{2m} + \hat{V}(x) \quad \left( \text{In 3D: } -\frac{\hbar^2}{2m}\Delta + V(\vec{r}) \right)$ %
+\end{itemize}
+
+\subsection{Operatore Momento Angolare ($\hat{\vec{L}}$)} %
+
+Classicamente, il momento angolare è definito come il prodotto vettoriale tra posizione e momento: $\vec{L} = \vec{r} \wedge \vec{p}$. %
+Sviluppando il determinante formale: %
+\begin{equation*}
+    \vec{L} = \underbrace{(y p_z - z p_y)}_{L_x}\hat{u}_x + \underbrace{(z p_x - x p_z)}_{L_y}\hat{u}_y + \underbrace{(x p_y - y p_x)}_{L_z}\hat{u}_z %
+\end{equation*}
+
+\noindent
+Per ottenere l'operatore quantistico $\hat{\vec{L}}$, applichiamo le sostituzioni per ogni componente ($x \to \hat{x}$, $p_x \to -i\hbar \frac{\partial}{\partial x}$, ecc.): %
+\begin{align*}
+    \hat{L}_x &= -i\hbar \left( y \frac{\partial}{\partial z} - z \frac{\partial}{\partial y} \right) \\ %
+    \hat{L}_y &= -i\hbar \left( z \frac{\partial}{\partial x} - x \frac{\partial}{\partial z} \right) \\ %
+    \hat{L}_z &= -i\hbar \left( x \frac{\partial}{\partial y} - y \frac{\partial}{\partial x} \right) %
+\end{align*}
+\textit{(Nota: Un qualunque operatore quantistico può essere costruito e scritto utilizzando combinazioni degli operatori base $\hat{x}$ e $\hat{p}$).} %
+
+\subsection{Regole di Commutazione Fondamentali} %
+
+Abbiamo già dimostrato la regola di commutazione canonica tra posizione e momento lungo la stessa coordinata: %
+\begin{equation*}
+    [\hat{x}, \hat{p}_x] = i\hbar %
+\end{equation*}
+
+\noindent
+Per le componenti dell'operatore Momento Angolare, valgono le seguenti \textbf{relazioni di commutazione cicliche}: %
+\begin{align*}
+    [\hat{L}_x, \hat{L}_y] &= i\hbar \hat{L}_z \\ %
+    [\hat{L}_y, \hat{L}_z] &= i\hbar \hat{L}_x \\ %
+    [\hat{L}_z, \hat{L}_x] &= i\hbar \hat{L}_y %
+\end{align*}
+
+\noindent
+Questo set di equazioni può essere scritto in una forma compatta ed elegantissima utilizzando il \textbf{Tensore di Levi-Civita ($\varepsilon_{ijk}$)}: %
+\begin{equation}
+    \boxed{ [\hat{L}_i, \hat{L}_j] = \varepsilon_{ijk} i\hbar \hat{L}_k } \quad \text{con } i,j,k \in \{x,y,z\} %
+\end{equation}
+
+\noindent
+Il tensore di Levi-Civita è completamente antisimmetrico, e vale $1$ per le permutazioni cicliche pari degli indici: %
+\begin{equation*}
+    \varepsilon_{xyz} = \varepsilon_{zxy} = \varepsilon_{yzx} = 1 %
+\end{equation*}
+\textit{Il fatto che le componenti del momento angolare non commutino tra loro implica (per il principio di Heisenberg generalizzato) che NON è possibile conoscere simultaneamente e con esattezza più di una singola componente del momento angolare di una particella.}
+
+\section{Spazi Vettoriali e Notazione di Dirac} %
+
+Per capire a fondo gli operatori quantistici, richiamiamo le proprietà degli spazi vettoriali (le cui componenti possono essere numeri complessi) %.
+
+\subsection{a) Norma, Prodotto Scalare e Bra-Ket} %
+
+Un vettore colonna viene definito come un \textbf{KET} ($| \rangle$): %
+\begin{equation*}
+    \vec{g} = \begin{pmatrix} g_x \\ g_y \\ g_z \end{pmatrix} = |g\rangle \quad \Rightarrow \quad \text{KET} %
+\end{equation*}
+
+La \textbf{Norma} del vettore è definita come: %
+\begin{equation*}
+    ||\vec{g}|| = |\vec{g}| = \sqrt{g_x^2 + g_y^2 + g_z^2} \ge 0 %
+\end{equation*}
+
+Il vettore trasposto e complesso coniugato viene definito come un \textbf{BRA} ($\langle |$): %
+\begin{equation*}
+    \vec{g}^{*T} = \begin{pmatrix} g_x^* \\ g_y^* \\ g_z^* \end{pmatrix}^T = (g_x^*, g_y^*, g_z^*) = \langle g| \quad \Rightarrow \quad \text{BRA} %
+\end{equation*}
+
+Il \textbf{Prodotto Scalare} si scrive unendo un Bra e un Ket, formando una parentesi ("Bracket"): %
+\begin{equation}
+    \langle g | g \rangle \quad \Rightarrow \quad ||\vec{g}|| = \sqrt{\langle g | g \rangle} \quad \text{(\textbf{BRACKET})} %
+\end{equation}
+
+\textbf{Base dello spazio vettoriale:} Insieme di $n$ vettori linearmente indipendenti. %
+\begin{equation*}
+    \vec{u}_x = \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix} , \quad \vec{u}_y = \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix} , \quad \vec{u}_z = \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix} %
+\end{equation*}
+Condizione di ortonormalità tramite la \textbf{Delta di Kronecker}: $\vec{u}_i \cdot \vec{u}_j = \delta_{ij}$ %.
+Ogni vettore può essere scritto come proiezione su tale base: %
+\begin{equation*}
+    \vec{F} = F_x \vec{u}_x + F_y \vec{u}_y + F_z \vec{u}_z \quad \text{con } F_x = \langle \vec{u}_x | \vec{F} \rangle \quad \Rightarrow \quad \vec{F} = \begin{pmatrix} F_x \\ F_y \\ F_z \end{pmatrix} %
+\end{equation*}
+
+\subsection{b) Trasformazioni sui Vettori: Matrici} %
+
+Definiamo una nuova base ruotata, per esempio: %
+\begin{equation*}
+    \vec{u}_{x'} = \begin{pmatrix} 1/\sqrt{2} \\ 1/\sqrt{2} \\ 0 \end{pmatrix} , \quad \vec{u}_{y'} = \begin{pmatrix} -1/\sqrt{2} \\ 1/\sqrt{2} \\ 0 \end{pmatrix} , \quad \vec{u}_{z'} = \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix} %
+\end{equation*}
+Un vettore nella nuova base è $\vec{f}' = f_{x'} \vec{u}_{x'} + f_{y'} \vec{u}_{y'} + f_{z'} \vec{u}_{z'}$ %.
+Ricaviamo la componente $f_{x'}$ proiettando il vettore originale sulla nuova base: %
+\begin{align*}
+    f_{x'} &= \langle \vec{u}_{x'} | \vec{f} \rangle = \langle \vec{u}_{x'} | f_x \vec{u}_x + f_y \vec{u}_y + f_z \vec{u}_z \rangle = f_x \langle \vec{u}_{x'} | \vec{u}_x \rangle + f_y \langle \vec{u}_{x'} | \vec{u}_y \rangle + f_z \langle \vec{u}_{x'} | \vec{u}_z \rangle = \\ %
+           &= f_x \left( \frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}, 0 \right) \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix} + f_y \left( \frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}, 0 \right) \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix} + f_z \dots = \frac{1}{\sqrt{2}}f_x + \frac{1}{\sqrt{2}}f_y %
+\end{align*}
+
+Questo genera un sistema lineare, riscrivibile come \textbf{prodotto matrice-vettore}: %
+\begin{equation*}
+    \begin{pmatrix} f_{x'} \\ f_{y'} \\ f_{z'} \end{pmatrix} = \begin{bmatrix} 1/\sqrt{2} & 1/\sqrt{2} & 0 \\ -1/\sqrt{2} & 1/\sqrt{2} & 0 \\ 0 & 0 & 1 \end{bmatrix} \begin{pmatrix} f_x \\ f_y \\ f_z \end{pmatrix} \quad \Rightarrow \quad \vec{f}' = \hat{T}\vec{f} %
+\end{equation*}
+La trasformazione $\hat{T}$ è descritta da una matrice con $N^2$ numeri complessi (Elementi di matrice) %.
+
+\noindent
+\textbf{Non commutatività:} Applicando due matrici (trasformazioni) in ordine diverso, il risultato finale cambia. %
+\begin{equation}
+    \hat{G}\hat{T}\vec{f} = \vec{h} \quad \text{ma} \quad \hat{G}\hat{T} \neq \hat{T}\hat{G} %
+\end{equation}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-04-01-16-29-02.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        \textit{(Esempio classico: una rotazione di 90° lungo z seguita da una lungo x genera un'orientazione finale diversa se si invertono gli ordini di rotazione).} %
+    \end{minipage}
+\end{figure}
+
+\subsection{c) Autovettori e Autovalori} %
+
+L'equazione agli autovalori per una matrice (operatore) $\hat{T}$ è: %
+\begin{equation}
+    \hat{T}\vec{f} = t\vec{f} %
+\end{equation}
+Dove $\vec{f}$ è l'autovettore e $t$ è l'autovalore associato (uno scalare). %
+
+\noindent
+Per una matrice quadrata $N \times N$, si hanno al più $N$ autovalori distinti %.
+Le equazioni risolutive sono: %
+\begin{align*}
+    \det(\lambda I - \hat{T}) &= 0 \quad \text{(Calcolo Autovalori)} \\ %
+    (\lambda I - \hat{T})\vec{f} &= 0 \quad \text{(Calcolo Autovettori)} %
+\end{align*}
+\begin{itemize}
+    \item \textbf{Non Degenere:} 1 Autovettore $\rightarrow$ 1 Autovalore %.
+    \item \textbf{Degenere:} 1 Autovalore $\rightarrow$ 2 o più Autovettori differenti %.
+\end{itemize}
+
+\noindent
+\textbf{Proprietà fondamentale:} Gli autovettori di un operatore $\hat{T}$ formano una base completa. Se due operatori commutano ($[\hat{T}, \hat{G}] = 0$), essi \textbf{condividono la stessa base di autovettori} %.
+
+\subsection{d) Matrice Aggiunta (Operatori Hermitiani)} %
+
+Ricordiamo la proprietà del prodotto scalare complesso: $\langle \vec{f} | \vec{g} \rangle = \langle \vec{g} | \vec{f} \rangle^*$. %
+Sia $\vec{g} = \hat{A}\vec{v}$. Calcoliamo: %
+\begin{equation*}
+    \langle \vec{f} | \hat{A}\vec{v} \rangle = \langle \hat{A}\vec{v} | \vec{f} \rangle^* \quad \Rightarrow \quad \vec{f}^{*T} \cdot (\hat{A}\vec{v}) = \left[ (\hat{A}\vec{v})^{*T} \cdot \vec{f} \right]^* %
+\end{equation*}
+
+Sfruttando le proprietà della trasposizione complessa coniugata $(\hat{A}\hat{B})^{*T} = \hat{B}^{*T}\hat{A}^{*T}$: %
+\begin{equation*}
+    \vec{f}^{*T} \hat{A} \vec{v} = [ \hat{A}^{*T} \vec{f} ]^{*T} \vec{v} \quad \Rightarrow \quad \langle \vec{f} | \hat{A}\vec{v} \rangle = \langle \hat{A}^{*T} \vec{f} | \vec{v} \rangle %
+\end{equation*}
+
+\noindent
+Definiamo la \textbf{Matrice Aggiunta} come l'operatore trasposto complesso coniugato: $\hat{A}^\dagger = \hat{A}^{*T}$ %.
+In questo modo: %
+\begin{equation*}
+    \langle \vec{f} | \hat{A}\vec{v} \rangle = \langle \hat{A}^\dagger \vec{f} | \vec{v} \rangle %
+\end{equation*}
+(È una matrice che "spostata" nel prodotto scalare, invece di agire su $\vec{v}$, agisce su $\vec{f}$ a sinistra) %.
+
+\noindent
+\textbf{Operatore Hermitiano:} Nel caso speciale in cui la matrice coincida con la sua aggiunta ($\hat{A}^\dagger = \hat{A}$), l'operatore è detto autoaggiunto o Hermitiano %.
+\begin{equation}
+    \boxed{ \langle \vec{f} | \hat{A}\vec{v} \rangle = \langle \hat{A}\vec{f} | \vec{v} \rangle } \quad \text{(\textbf{Operatore Hermitiano})} %
+\end{equation}
+\textit{Importanza fisica: Tutte le OSSERVABILI in meccanica quantistica devono essere rappresentate da operatori hermitiani, perché l'hermitianità garantisce che gli autovalori (le quantità misurabili) siano reali!}
+
+\section{Spazi Funzionali} %
+
+Le funzioni d'onda appartengono allo spazio di Hilbert delle funzioni a quadrato sommabile: %
+\begin{equation*}
+    f(x,y,z) \in \mathcal{L}^2(\mathbb{R}^3) \quad \Rightarrow \quad \int_{\mathbb{R}^3} |\Psi|^2 \, dx \, dy \, dz < \infty %
+\end{equation*}
+
+\subsection{a) Norma e Prodotto Scalare} %
+Estendiamo i concetti vettoriali classici alle funzioni continue: %
+\begin{align*}
+    \text{Prodotto scalare:} \quad & \langle f | g \rangle = \int_{\mathbb{R}} f^*(x) g(x) \, dx \\ %
+    \text{Norma:} \quad & ||f||^2 = \langle f | f \rangle = \int_{\mathbb{R}} |f(x)|^2 \, dx %
+\end{align*}
+
+\noindent
+\textbf{Completezza:} Un insieme di funzioni $f_i(x)$ forma una base ortonormale se vale la condizione con la Delta di Kronecker: %
+\begin{equation*}
+    \int_{\mathbb{R}} f_i^* f_j \, dx = \langle f_i | f_j \rangle = \delta_{ij} %
+\end{equation*}
+Una generica funzione $\Phi(x)$ può essere scritta come combinazione lineare (somma) delle funzioni di base: %
+\begin{equation*}
+    \Phi(x) = \sum_i c_i f_i(x) \quad \Rightarrow \quad c_i = \langle f_i | \Phi \rangle %
+\end{equation*}
+\textit{(Esattamente analogo ai vettori: $\vec{F} = \sum c_i \vec{u}_i \Rightarrow c_i = \langle \vec{u}_i | \vec{F} \rangle$).} %
+
+\subsection{b) Trasformazioni sulle Funzioni: Operatori} %
+Come le matrici trasformano i vettori, gli \textbf{Operatori} trasformano le funzioni: $g(x) = \hat{A}v(x)$ %.
+Sappiamo che in generale non commutano ($[\hat{A}, \hat{B}] \neq 0$), ad esempio $[\hat{x}, \hat{p}_x] = i\hbar$ %.
+Se commutano ($[\hat{A}, \hat{B}] = 0$), significa che non si disturbano, come per la posizione e l'energia potenziale: $[\hat{x}, \hat{V}(x)] = 0$ %.
+
+\subsection{c) Autovalori e Autofunzioni} %
+L'Equazione agli Autovalori per un operatore $\hat{A}$ è: %
+\begin{equation}
+    \hat{A} \phi_n = a_n \phi_n %
+\end{equation}
+Dove $n$ è il Numero Quantico, $a_n = \{a_0, a_1, \dots, a_n\}$ rappresenta lo \textbf{Spettro degli Autovalori}, e $\phi_n$ sono le \textbf{Autofunzioni} (o Autostati) %.
+
+Gli autovalori possono essere di due tipi:
+\begin{itemize}
+    \item \textbf{Continui:} Operatore a spettro continuo (es. $\hat{x}$, $\hat{p}$, e $\hat{H}$ per particella libera) %.
+    Esempio per il momento: $\hat{p} = -i\hbar \frac{\partial}{\partial x} \Rightarrow -i\hbar \frac{\partial \phi_p}{\partial x} = p \phi_p \Rightarrow \phi_p = \text{cost} \cdot e^{i\frac{p}{\hbar}x}$ (Autofunzione di $\hat{p}$) %.
+    \item \textbf{Discreti:} Operatore a spettro discreto (es. $\hat{H}$ per particella legata in una buca, $\hat{L}$ momento angolare) %.
+\end{itemize}
+
+\noindent
+Anche qui vale il concetto di degenerazione: se a un autovalore $a_n$ corrisponde $1$ sola $\phi_n$ è non degenere, se corrispondono $2$ o più $\phi_n$ è degenere %.
+
+\subsection{d) Operatore Aggiunto ed Hermitiano} %
+Sapendo che $\langle f | g \rangle = \langle g | f \rangle^* \Rightarrow \int f^* g \, dx = \int (g^* f)^* \, dx$ %.
+Sia $g = \hat{A}v$. Allora $\langle f | \hat{A}v \rangle = \langle \hat{A}v | f \rangle^* \Rightarrow \int f^* \hat{A}v \, dx = \int \left[ (\hat{A}v)^* f \right] \, dx$ %.
+
+\noindent
+Definiamo $\hat{A}^\dagger$ come l'\textbf{Operatore Aggiunto} di $\hat{A}$, tale che: %
+\begin{equation}
+    \int_{\mathbb{R}} f^* \hat{A}v \, dx = \int_{\mathbb{R}} (\hat{A}^\dagger f)^* v \, dx \quad \Rightarrow \quad \langle f | \hat{A}v \rangle = \langle \hat{A}^\dagger f | v \rangle %
+\end{equation}
+
+\noindent
+Se un operatore coincide con il suo aggiunto ($\boxed{ \hat{A}^\dagger = \hat{A} }$), si dice \textbf{Operatore Autoaggiunto} o \textbf{HERMITIANO} %.
+
+\noindent
+\textbf{Esempio: L'operatore derivata prima NON è Hermitiano} %
+Consideriamo lo spazio $S = \{ \mathcal{L}^2([0,L]), \langle \rangle \}$ con funzioni di bordo nulle $v(0)=v(L)=0$ e l'operatore $\hat{A} = \frac{d}{dx}$ %.
+\begin{align*}
+    \langle f | \hat{A} v \rangle &= \int_0^L f^* \hat{A} v \, dx = \int_0^L f^* \frac{dv}{dx} \, dx = \underbrace{ \left[ f^* v \right]_0^L }_{=0} - \int_0^L \frac{df^*}{dx} v \, dx = \\ %
+    &= \int_0^L \left( -\frac{d}{dx} f \right)^* v \, dx = \langle \hat{A}^\dagger f | v \rangle %
+\end{align*}
+Ne deduciamo che $\hat{A}^\dagger = -\frac{d}{dx}$ 
+
+\subsection{Completezza e Stati Stazionari} %
+\textbf{Teorema:} Se $\hat{A} = \hat{A}^\dagger$ (Operatore Hermitiano), la base formata dalle sue autofunzioni è \textbf{COMPLETA e ORTOGONALE} %.
+
+\noindent
+Ogni funzione di $\mathcal{L}^2$ può essere espressa come combinazione lineare degli autovettori di $\hat{H}$: $\Phi = \sum_n c_n \phi_n$ %.
+
+\noindent
+Per l'equazione di Schrödinger, gli autostati di $\hat{H}$ sono $u_n(x)$ con autovalori $E_n$: %
+\begin{equation*}
+    \Psi(x,t) = \sum_n c_n u_n(x) e^{-i\frac{E_n}{\hbar}t} %
+\end{equation*}
+Applicando l'operatore energia all'evoluzione temporale, il fattore di fase non altera l'essere autofunzione rispetto a $x$: %
+\begin{equation*}
+    \hat{H} \left( u_n(x) e^{-i\frac{E_n}{\hbar}t} \right) = \underbrace{E_n u_n(x)}_{\hat{H}u_n} e^{-i\frac{E_n}{\hbar}t} = E_n \left( u_n(x) e^{-i\frac{E_n}{\hbar}t} \right) %
+\end{equation*}
+Le autofunzioni dell'operatore Hamiltoniano sono quindi i classici \textbf{Stati Stazionari} %.
+
+\section{Proprietà degli Operatori per la Meccanica Quantistica} %
+
+\textit{Attenzione:} Il tempo $t$ è un PARAMETRO (non una grandezza dinamica associata a un operatore). Nelle seguenti dimostrazioni su $\Psi(x,t)$, suppongo $t$ fissato per valutare gli integrali spaziali \\
+
+\noindent
+\subsection{1. Operatori che commutano} %
+\begin{equation}
+    \text{SE } [\hat{A}, \hat{B}] = 0 \quad \Rightarrow \quad \text{Hanno una BASE di AUTOFUNZIONI in COMUNE} %
+\end{equation}
+\textit{Dimostrazione (caso non degenere):} %
+Sia $\hat{A}\phi_1 = a_1\phi_1$. Applichiamo $\hat{B}$ a entrambi i membri: $\hat{B}(\hat{A}\phi_1) = \hat{B}(a_1\phi_1)$ %.
+Poiché commutano, $\hat{B}\hat{A} = \hat{A}\hat{B}$, quindi: %
+\begin{equation*}
+    \hat{A}(\hat{B}\phi_1) = a_1(\hat{B}\phi_1) %
+\end{equation*}
+Questo significa che la funzione $(\hat{B}\phi_1)$ è essa stessa un autostato di $\hat{A}$ con lo stesso autovalore $a_1$. Essendo il caso non degenere, l'autostato deve essere proporzionale a $\phi_1$, ovvero $\hat{B}\phi_1 \propto \phi_1 \Rightarrow \hat{B}\phi_1 = b_1\phi_1$ \\
+
+\noindent
+\subsection{2. Le Osservabili sono Operatori Hermitiani} %
+Gli operatori associati a grandezze fisiche sono \textbf{sempre HERMITIANI} (autoaggiunti) %.
+
+\noindent
+Il valore d'aspettazione (media dei dati sperimentali) deve essere \textbf{reale}: $\langle A \rangle = \langle A \rangle^* \Rightarrow \langle \hat{A} \rangle = \langle \hat{A} \rangle^*$ %.
+\begin{align*}
+    \langle \hat{A} \rangle &= \int_{\mathbb{R}} \Psi^* \hat{A} \Psi \, dx = \left( \int_{\mathbb{R}} \Psi^* \hat{A} \Psi \, dx \right)^* = \int_{\mathbb{R}} (\Psi^* \hat{A} \Psi)^* \, dx = \\ %
+    &= \int_{\mathbb{R}} (\hat{A}^* \Psi^*) \Psi \, dx = \int_{\mathbb{R}} (\hat{A} \Psi)^* \Psi \, dx %
+\end{align*}
+Per definizione di operatore aggiunto, quest'ultimo integrale equivale a $\int \Psi^* \hat{A}^\dagger \Psi \, dx$. Affinché l'uguaglianza valga per ogni $\Psi$, deve necessariamente essere: %
+\begin{equation}
+    \boxed{ \hat{A} = \hat{A}^\dagger } %
+\end{equation}
+\textit{(Deriva dal fatto che le misure che faccio sono REALI)} \\
+
+\noindent
+\subsection{3. Autovalori Reali e Incertezza Nulla} %
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-04-01-16-51-23.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        Gli autovalori di un operatore associato ad una grandezza fisica sono sempre REALI %.
+        Se misuro $N$ repliche dello stesso sistema, ottengo un valore medio $\langle E \rangle$. 
+    \end{minipage}
+\end{figure}
+
+\noindent
+\textbf{Esiste un caso in cui misuro sempre la stessa cosa?} %
+
+Se misuro SEMPRE il valore $E$, la varianza è nulla: $\sigma_E^2 = 0 \Rightarrow \langle (\hat{H} - \langle \hat{H} \rangle)^2 \rangle = 0$. Ponendo $\langle \hat{H} \rangle = E$: %
+\begin{align*}
+    \langle (\hat{H} - E)^2 \rangle = 0 \quad &\Rightarrow \quad \int_{\mathbb{R}} \Psi^* (\hat{H} - E)^2 \Psi \, dx = 0 \\ %
+    &\Rightarrow \quad \int_{\mathbb{R}} \Psi^* (\hat{H} - E) (\hat{H} - E) \Psi \, dx = 0 %
+\end{align*}
+Poiché $(\hat{H} - E)$ è un operatore Hermitiano, possiamo spostarlo sul bra: %
+\begin{equation*}
+    \int_{\mathbb{R}} \underbrace{ [(\hat{H} - E) \Psi]^* }_{f^*} \underbrace{ (\hat{H} - E) \Psi }_{f} \, dx = 0 \quad \Rightarrow \quad \int_{\mathbb{R}} f^* f \, dx = 0 %
+\end{equation*}
+L'integrale del modulo quadro $|f|^2$ è zero se e solo se $f = 0$. Pertanto: %
+\begin{equation}
+    (\hat{H} - E) \Psi = 0 \quad \Rightarrow \quad \boxed{ \hat{H}\Psi = E\Psi } %
+\end{equation}
+\textit{Conclusione:} Se $\Psi$ è autofunzione dell'operatore della grandezza che sto misurando, trovo sempre e solo un valore (il suo autovalore). Cioè se $\hat{A}\phi_n = a_n\phi_n$ e lo stato è $\Psi = \phi_n \Rightarrow$ misuro sempre e solo $a_n$ %.
+
+\subsection{Valore d'Aspettazione in uno Stato Generico (Regola di Born)} %
+
+E se \textbf{NON} sono in un autostato di $\hat{H}$? %
+Scrivo lo stato come combinazione lineare (principio di sovrapposizione): %
+\begin{equation*}
+    \Psi(x,t) = \sum_n c_n u_n(x) e^{-i\frac{E_n}{\hbar}t} %
+\end{equation*}
+Calcoliamo il valore atteso dell'energia: %
+\begin{align*}
+    \langle E \rangle &= \langle \hat{H} \rangle = \int_{\mathbb{R}} \Psi^* \hat{H} \Psi \, dx = \\ %
+    &= \int_{\mathbb{R}} \left( \sum_n c_n^* u_n^* e^{i\frac{E_n}{\hbar}t} \right) \hat{H} \left( \sum_m c_m u_m e^{-i\frac{E_m}{\hbar}t} \right) dx = \\ %
+    &= \sum_{n,m} c_n^* c_m e^{i\frac{(E_n - E_m)}{\hbar}t} \int_{\mathbb{R}} u_n^* \underbrace{ \hat{H} u_m }_{E_m u_m} dx = \\ %
+    &= \sum_{n,m} c_n^* c_m e^{i\frac{(E_n - E_m)}{\hbar}t} E_m \underbrace{ \int_{\mathbb{R}} u_n^* u_m \, dx }_{\delta_{nm} \text{ (Delta di Kronecker)}} %
+\end{align*}
+
+\noindent
+Grazie alla condizione di ortonormalità ($\delta_{nm}$), i termini non nulli della doppia sommatoria sono solo quelli in cui $n = m$. In questo caso l'esponenziale temporale si annulla ($e^0 = 1$) %:
+\begin{equation}
+    \langle E \rangle = \langle \hat{H} \rangle = \sum_n c_n^* c_n E_n = \sum_n |c_n|^2 E_n = \sum_n P_n E_n %
+\end{equation}
+
+\textbf{Postulato della Misura:} %
+\begin{itemize}
+    \item $P_n = |c_n|^2$ rappresenta la \textbf{Probabilità} di misurare un certo numero (autovalore) $E_n$ %.
+    \item Se la $\Psi$ non corrisponde a nessun autostato di $\hat{H}$, gli unici risultati possibili della misura sono comunque gli autovalori $E_n$, e la probabilità di ottenere proprio $E_n$ è $\mathbb{P}(E_n) = |c_n|^2$ %.
+\end{itemize}
+
+\begin{quote}
+    \textbf{Schema riassuntivo finale per lo stato $\Psi(x,t)$:} \\
+    $\rightarrow$ Se è un \textbf{AUTOSTATO} di $\hat{A}$ (es. $\Psi = \phi_n$): l'unico risultato della misura è l'autovalore $a_n$ (certezza al 100\%). \\
+    $\rightarrow$ Se è uno \textbf{STATO GENERICO} ($\Psi = \sum c_n \phi_n$): la probabilità di ottenere $a_n$ è $\mathbb{P}(a_n) = |c_n|^2$. I POSSIBILI RISULTATI DELLA MISURA SONO \textit{SOLO E SOLTANTO} GLI AUTOVALORI ASSOCIATI ALLA GRANDEZZA! %
+\end{quote}
+
+\subsection{4. Cambio di Base} %
+
+Associato ad ogni operatore (osservabile) si ha una base completa di autovettori. %
+Siano $\hat{A}$ e $\hat{B}$ due operatori con le rispettive basi di autovettori $\phi_n^{(A)}$ e $\phi_m^{(B)}$: %
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{immagini/2026-04-01-17-00-38.png}
+    \end{figure}
+
+\begin{align*}
+    \hat{A} \phi_n^{(A)} &= a_n \phi_n^{(A)} \quad \Rightarrow \quad \Psi = \sum_n c_n^{(A)} \phi_n^{(A)} \quad (c_n \text{ NOTI}) \\ %
+    \hat{B} \phi_m^{(B)} &= b_m \phi_m^{(B)} \quad \Rightarrow \quad \Psi = \sum_m \xi_m^{(B)} \phi_m^{(B)} %
+\end{align*}
+
+\noindent
+Posso ricavare i coefficienti $\xi_m$ proiettando la funzione d'onda $\Psi$ (già nota nella base di $\hat{A}$) sul generico autovettore di $\hat{B}$: %
+\begin{align*}
+    \xi_m &= \langle \phi_m^{(B)} | \Psi \rangle = \int_{\mathbb{R}} (\phi_m^{(B)})^* \Psi \, dx = \int_{\mathbb{R}} (\phi_m^{(B)})^* \left( \sum_n c_n^{(A)} \phi_n^{(A)} \right) dx = \\ %
+        &= \sum_n c_n^{(A)} \underbrace{ \int_{\mathbb{R}} (\phi_m^{(B)})^* \phi_n^{(A)} \, dx }_{\text{Proiez. dei vett. di A sui vett. di B}} = \sum_n c_n \langle \phi_m^{(B)} | \phi_n^{(A)} \rangle %
+\end{align*}
+
+\subsection{5. Evoluzione Temporale} %
+L'equazione di Schrödinger dipendente dal tempo $i\hbar \frac{\partial \Psi}{\partial t} = \hat{A} \Psi$ (dove $\hat{A} = \hat{H}$) definisce l'evoluzione: %
+\begin{equation*}
+    \Psi(x,t) = \sum_n c_n u_n(x) \underbrace{ e^{-i\frac{E_n}{\hbar}t} }_{\text{Evoluz. temp.}} %
+\end{equation*}
+
+\subsection{Esempi: 1. Operatori a Spettro Continuo (Operatore $\hat{x}$)} %
+
+L'equazione agli autovalori per l'operatore posizione $\hat{x}$ (che agisce moltiplicando per $x$) è: %
+\begin{equation*}
+    \underbrace{x}_{\text{operat.}} \phi_{x_0}(x) = \underbrace{x_0}_{\text{autoval.}} \phi_{x_0}(x) \quad \Rightarrow \quad \phi_{x_0}(x) = \delta(x - x_0) %
+\end{equation*}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-04-02-15-10-58.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        L'autofunzione dell'operatore posizione è la \textbf{Delta di Dirac}. L'autovalore $x_0$ è un parametro \textbf{continuo}. %
+    \end{minipage}
+\end{figure}
+
+\noindent
+Nel caso discreto avevamo: $\Psi = \sum c_n \phi_n \Rightarrow |c_n|^2 = \mathbb{P}(\text{di misurare } a_n)$. %
+Passando al continuo (l'integrale sostituisce la sommatoria): %
+\begin{equation*}
+    \Psi(x) = \int_{\mathbb{R}} c(x_0) \delta(x - x_0) \, dx \quad \Rightarrow \quad |c(x_0)|^2 dx = \mathbb{P}(\text{trov. la part. in } x = x_0) %
+\end{equation*}
+
+Calcoliamo il coefficiente continuo $c(x_0)$: %
+\begin{equation*}
+    c(x_0) = \langle \phi_{x_0} | \Psi \rangle = \int_{\mathbb{R}} \underbrace{ \delta(x - x_0)^* }_{\text{non es. il compl. coniug.}} \Psi(x) \, dx = \int_{\mathbb{R}} \delta(x - x_0) \Psi(x) \, dx = \Psi(x_0) %
+\end{equation*}
+Di conseguenza: %
+\begin{equation*}
+    |c|^2 dx = \mathbb{P}(\text{trovare la part. in un punto}) \quad \Rightarrow \quad |\Psi(x_0)|^2 dx %
+\end{equation*}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-04-02-15-13-48.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        La funzione d'onda stessa può essere pensata come un'infinita sovrapposizione di stati di posizione (Delta di Dirac) campionati dal valore $\Psi(x_0)$. %
+    \end{minipage}
+\end{figure}
+
+\noindent
+\textit{(Nota: La funzione d'onda per l'operatore posizione assume un significato fisico, nel senso che diventa il coefficiente che metto davanti alla generica delta quando scrivo la $\Psi$ come combinazione lineare di autostati di $\hat{x}$, perchè il modulo del coefficiente al quadrato mi dà la probabilità di trovare quell'autovalore e il modulo di $\Psi^2$ mi dà la probabilità di trovare la particella in quel punto, le due cose coincidono).} %
+
+\subsection{2. Collasso della Funzione d'Onda e Preparazione} %
+
+Sia $\Psi(x,t)$ lo stato del sistema. Voglio misurare l'osservabile $A$ associata all'operatore $\hat{A}$, i cui autostati sono $\hat{A}\phi_n = a_n \phi_n$ %.
+
+\noindent
+A un certo istante $\bar{t}$, \textbf{MISURO} il valore $a_0$. In quell'istante, la funzione d'onda \textbf{COLLASSA}: %
+\begin{equation*}
+    \Psi \xrightarrow{\text{collassa}} \phi_0 \quad \Rightarrow \quad \Psi = \phi_0 %
+\end{equation*}
+
+\noindent
+Verifichiamo che l'incertezza $\sigma_A^2 = \langle \hat{A}^2 \rangle - \langle \hat{A} \rangle^2$ diventa rigorosamente nulla subito dopo la misura: %
+\begin{align*}
+    \langle \hat{A}^2 \rangle &= \int_{\mathbb{R}} \phi_0^* \hat{A}^2 \phi_0 \, dx = \int_{\mathbb{R}} \phi_0^* \hat{A} (a_0 \phi_0) \, dx = \int_{\mathbb{R}} (\hat{A}\phi_0)^* (a_0 \phi_0) \, dx = a_0^2 \int_{\mathbb{R}} |\phi_0|^2 \, dx = a_0^2 \\ %
+    \langle \hat{A} \rangle &= \int_{\mathbb{R}} \phi_0^* \hat{A} \phi_0 \, dx = \int_{\mathbb{R}} \phi_0^* a_0 \phi_0 \, dx = a_0 \int_{\mathbb{R}} |\phi_0|^2 \, dx = a_0 %
+\end{align*}
+Sostituendo, otteniamo $\sigma_A^2 = a_0^2 - a_0^2 = 0$. %
+\begin{equation}
+    \boxed{ \sigma_A^2 = 0 } \quad \text{(Quando collassa, l'incertezza sulla misura è zero)} %
+\end{equation}
+
+\noindent
+\textbf{Preparazione del Sistema:} %
+Per calcolare l'evoluzione $\Psi(x,t)$, ho bisogno di conoscere le condizioni iniziali $\Psi(x,0)$. Come faccio a conoscerle? Devo \textbf{MISURARE}. %
+\begin{quote}
+    IL SISTEMA A $t=0$ VA SEMPRE PREPARATO. Misuro un'osservabile, trovo $a_0$, e "faccio collassare" $\Psi$ in una funzione nota $\phi_0$. Da lì faccio partire l'evoluzione temporale di Schrödinger! %
+\end{quote}
+
+\section{Principio di Heisenberg Generalizzato} %
+
+Finora abbiamo visto l'indeterminazione di Heisenberg tramite l'approccio di Fourier ($\Delta x \Delta p \ge \hbar/2$), misurando $x$ su un ensemble di $N$ repliche e $p$ su altre $N$ repliche %.
+
+\noindent
+Nella formalizzazione dell'algebra operatoriale, per \textbf{due generici operatori hermitiani $\hat{A}$ e $\hat{B}$}, si dimostra matematicamente il \textbf{Principio Generalizzato}: %
+\begin{equation}
+    \boxed{ \sigma_A \sigma_B \ge \frac{1}{2} \left| \langle [\hat{A}, \hat{B}] \rangle \right| } %
+\end{equation}
+
+\noindent
+\textbf{Verifica con Posizione e Momento:} %
+Inseriamo $\hat{x}$ e $\hat{p}_x$, il cui commutatore è $[\hat{x}, \hat{p}_x] = i\hbar$: %
+\begin{equation*}
+    \sigma_x \sigma_p \ge \frac{1}{2} | \langle [\hat{x}, \hat{p}_x] \rangle | = \frac{1}{2} | \langle i\hbar \rangle | \quad \Rightarrow \quad \boxed{ \sigma_x \sigma_p \ge \frac{\hbar}{2} } %
+\end{equation*}
+
+\noindent
+\textbf{Se due operatori commutano ($[\hat{A}, \hat{B}] = 0$):} %
+\begin{equation*}
+    \sigma_A \sigma_B \ge 0 %
+\end{equation*}
+In questo caso, posso misurare entrambe le grandezze contemporaneamente con incertezza teorica nulla ($\sigma_A=0$ e $\sigma_B=0$). Questo è fisicamente possibile perché, se commutano, \textbf{condividono una base di autovettori in comune} %.
+Se preparo il sistema nell'autostato comune $\Psi = \phi_1$, ho la certezza assoluta di misurare $a_1$ per l'osservabile $A$ e $b_1$ per l'osservabile $B$: %
+\begin{align*}
+    \hat{A} \phi_1 &= a_1 \phi_1 \\ %
+    \hat{B} \phi_1 &= b_1 \phi_1 %
+\end{align*}
+
+% --- FINE DEL CORSO DI FISICA QUANTISTICA ---
 
 
 
