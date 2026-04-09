@@ -1,0 +1,11 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {section}{Particella Libera 1D}{2}{}%
+\contentsline {subsection}{Cosa possiamo dire del Momento $\hat {p}$?}{2}{}%
+\contentsline {subsection}{Esempio Pratico (Sovrapposizione di Momenti)}{3}{}%
+\contentsline {subsection}{Onda Stazionaria Pura}{4}{}%
+\contentsline {section}{Buca di Potenziale Infinita (Particella nella Scatola)}{4}{}%
+\contentsline {subsection}{Soluzione all'interno della Buca ($0 \le x \le a$)}{4}{}%
+\contentsline {subsection}{Normalizzazione e Autofunzioni}{5}{}%
+\contentsline {subsection}{Proprietà Aggiuntive (Buca Infinita 1D)}{6}{}%
+\contentsline {section}{Particella Confinata su un Anello (Rotore Rigido 1D)}{8}{}%

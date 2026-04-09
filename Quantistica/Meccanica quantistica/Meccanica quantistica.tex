@@ -2222,12 +2222,225 @@ Se preparo il sistema nell'autostato comune $\Psi = \phi_1$, ho la certezza asso
     \hat{B} \phi_1 &= b_1 \phi_1 %
 \end{align*}
 
-% --- FINE DEL CORSO DI FISICA QUANTISTICA ---
+\section{Postulati della Meccanica Quantistica} %
 
+Possiamo ora riassumere l'intera teoria quantistica in quattro postulati fondamentali: %
 
+\begin{enumerate}
+    \item \textbf{STATO:} Lo stato di un sistema fisico è completamente descritto da una funzione d'onda a quadrato sommabile. %
+    \begin{equation*}
+        \Psi(x,t) \in \mathcal{L}^2(\mathbb{R}^3) %
+    \end{equation*}
+    Vale il principio di sovrapposizione: se $\Psi_1$ e $\Psi_2 \in \mathcal{L}^2 \Rightarrow \Psi_{TOT} = \Psi_1 + \Psi_2 \in \mathcal{L}^2$ %.
 
+    \item \textbf{OSSERVABILI:} Ad ogni grandezza fisica classica $A$ è associato un operatore lineare hermitiano $\hat{A} = \hat{A}^\dagger$ %.
+    Tale operatore si ottiene sostituendo le variabili classiche con i rispettivi operatori: %
+    \begin{equation*}
+        A(x,p) \quad \Rightarrow \quad \hat{A}\left(\hat{x}, -i\hbar \frac{\partial}{\partial x}\right) %
+    \end{equation*}
 
+    \item \textbf{MISURA:} I soli possibili risultati della misurazione di un'osservabile $\hat{A}$ sono i suoi autovalori $a_n$, ricavati dall'equazione $\hat{A}\phi_n = a_n\phi_n$ %.
+    La probabilità di misurare $a_n$ su uno stato generico $\Psi(x,t)$ è data dal modulo quadro del coefficiente di proiezione: %
+    \begin{equation*}
+        \mathbb{P}(a_n) = |c_n|^2 = \left| \int_{\mathbb{R}} \phi_n^*(x) \Psi(x) \, dx \right|^2 %
+    \end{equation*}
+    \textbf{Collasso della $\Psi$:} Se misuro il valore $a_0$, la funzione d'onda collassa istantaneamente nell'autostato corrispondente: $\Psi \to \phi_0$ %.
 
+    \item \textbf{EVOLUZIONE TEMPORALE:} Tra una misurazione e l'altra, lo stato evolve in modo continuo e deterministico secondo l'Equazione di Schrödinger dipendente dal tempo: %
+    \begin{equation}
+        \boxed{ i\hbar \frac{\partial \Psi}{\partial t} = \hat{H} \Psi } %
+    \end{equation}
+    (Il modello quantistico, sebbene probabilistico nella misura, è intrinsecamente predittivo e deterministico nella sua evoluzione) %.
+    \begin{equation*}
+        \Psi(x,t) = \sum_n c_n u_n(x) e^{-i\frac{E_n}{\hbar}t} %
+    \end{equation*}
+\end{enumerate}
 
+\section{Formulazione Generale del Teorema di Ehrenfest} %
+
+Dimostriamo il teorema di Ehrenfest in forma totalmente operatoriale. Partiamo dall'Hamiltoniana: %
+\begin{align*}
+    \text{Classica:} \quad & H = \frac{p^2}{2m} + V(x) \\ %
+    \text{Quantistica:} \quad & \hat{H} = \frac{\hat{p}^2}{2m} + \hat{V}(x) = \hat{K} + \hat{V}(x) %
+\end{align*}
+
+Calcoliamo le derivate classiche e i loro equivalenti quantistici: %
+\begin{align*}
+    \frac{\partial H}{\partial x} &= \frac{\partial V}{\partial x} \quad \Rightarrow \quad \frac{\partial \hat{H}}{\partial x} = \frac{\partial \hat{V}}{\partial x} \\ %
+    \frac{\partial H}{\partial p} &= \frac{\partial K}{\partial p} = \frac{p}{m} \quad \Rightarrow \quad \frac{\partial \hat{H}}{\partial p} = \frac{\partial \hat{K}}{\partial p} %
+\end{align*}
+
+\subsection{Calcolo dei Commutatori con $\hat{H}$} %
+
+Per agevolare il calcolo, usiamo la comoda regola per il commutatore tra un operatore e una funzione di un altro operatore: $[\hat{A}, f(\hat{B})] = [\hat{A}, \hat{B}] \frac{\partial f}{\partial B}$ %.
+
+\textbf{1. Commutatore Posizione-Hamiltoniana $[\hat{x}, \hat{H}]$:} %
+\begin{align*}
+    [\hat{x}, \hat{H}] &= [\hat{x}, \hat{K} + \hat{V}] = [\hat{x}, \hat{K}] + \underbrace{ [\hat{x}, \hat{V}(x)] }_{=0} = [\hat{x}, \hat{K}] = [\hat{x}, K(\hat{p})] = \\ %
+                       &= [\hat{x}, \hat{p}] \frac{dK}{dp} = i\hbar \frac{dK}{dp} = i\hbar \frac{\partial \hat{H}}{\partial p} %
+\end{align*}
+\begin{equation}
+    \boxed{ [\hat{x}, \hat{H}] = i\hbar \frac{\partial \hat{H}}{\partial p} } %
+\end{equation}
+
+\textbf{2. Commutatore Momento-Hamiltoniana $[\hat{p}, \hat{H}]$:} %
+\begin{align*}
+    [\hat{p}, \hat{H}] &= [\hat{p}, \hat{K} + \hat{V}] = \underbrace{ [\hat{p}, \hat{K}] }_{=0} + [\hat{p}, \hat{V}] = [\hat{p}, \hat{V}(x)] = \\ %
+                       &= [\hat{p}, \hat{x}] \frac{dV}{dx} = -i\hbar \frac{dV}{dx} = -i\hbar \frac{\partial \hat{H}}{\partial x} %
+\end{align*}
+\begin{equation}
+    \boxed{ [\hat{p}, \hat{H}] = -i\hbar \frac{\partial \hat{H}}{\partial x} } %
+\end{equation}
+
+\subsection{La Legge di Evoluzione Dinamica} %
+
+Sostituiamo i commutatori appena trovati nelle equazioni del teorema di Ehrenfest che avevamo già dimostrato (che legano le derivate temporali dei valori medi alle forze classiche): %
+
+\begin{itemize}
+    \item \textbf{Derivata del Momento:} %
+    \begin{equation*}
+        \frac{d\langle\hat{p}\rangle}{dt} = \left\langle \frac{d\hat{p}}{dt} \right\rangle = \left\langle -\frac{\partial \hat{V}}{\partial x} \right\rangle = \left\langle -\frac{\partial \hat{H}}{\partial x} \right\rangle \quad \Rightarrow \quad \boxed{ \frac{d\langle\hat{p}\rangle}{dt} = \frac{1}{i\hbar} \langle [\hat{p}, \hat{H}] \rangle } %
+    \end{equation*}
+
+    \item \textbf{Derivata della Posizione:} %
+    \begin{equation*}
+        \frac{d\langle\hat{x}\rangle}{dt} = \left\langle \frac{d\hat{x}}{dt} \right\rangle = \left\langle \frac{\partial \hat{H}}{\partial p} \right\rangle \quad \Rightarrow \quad \boxed{ \frac{d\langle\hat{x}\rangle}{dt} = \frac{1}{i\hbar} \langle [\hat{x}, \hat{H}] \rangle } %
+    \end{equation*}
+\end{itemize}
+
+\noindent
+Questo schema suggerisce una \textbf{legge universale}: per una qualsiasi osservabile $\hat{A}$ che \textbf{non dipende esplicitamente dal tempo} ($\hat{A} \neq \hat{A}(t)$), la sua evoluzione temporale è governata unicamente dal suo commutatore con l'Hamiltoniana: %
+\begin{equation}
+    \boxed{ \frac{d\langle\hat{A}\rangle}{dt} = \left\langle \frac{d\hat{A}}{dt} \right\rangle = \frac{1}{i\hbar} \langle [\hat{A}, \hat{H}] \rangle } %
+\end{equation}
+
+\textbf{Conseguenze Matematiche e Fisiche di prim'ordine:} %
+
+1) L'equazione definisce la \textbf{Derivata di un Operatore} nel quadro di Heisenberg: %
+\begin{equation*}
+    \frac{d\hat{A}}{dt} = \frac{1}{i\hbar} [\hat{A}, \hat{H}] %
+\end{equation*}
+
+2) Per una funzione d'onda $\Psi(x,t)$ QUALUNQUE, il valore di aspettazione dell'energia totale $\langle\hat{H}\rangle$ non dipende mai dal tempo: %
+\begin{equation*}
+    \langle\hat{H}\rangle = \int_{\mathbb{R}} \Psi^* \hat{H} \Psi \, dx = \sum_n |c_n|^2 E_n = \text{COSTANTE} %
+\end{equation*}
+
+\noindent
+\textbf{LEGGE DI CONSERVAZIONE:} Dalla formula generale si evince che se un operatore commuta con l'Hamiltoniana ($[\hat{A}, \hat{H}] = 0$), la sua derivata temporale è nulla. %
+\begin{quote}
+    $\Rightarrow$ \textbf{Le grandezze fisiche che si conservano sono tutte e sole quelle associate ad operatori che COMMUTANO con l'Hamiltoniana $\hat{H}$ del sistema!} %
+\end{quote}
+
+\section{La Delta di Dirac} %
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-04-09-16-02-10.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        La Delta di Dirac non è una funzione vera e propria, ma una "distribuzione" (funzionale generalizzato). Si definisce informalmente come: %
+        \begin{equation}
+            \delta(x-a) = \begin{cases}
+                \infty & \text{se } x = a \\ %
+                0 & \text{altrove} %
+            \end{cases}
+        \end{equation}
+        
+        La sua proprietà integrale fondamentale è la normalizzazione: %
+        \begin{equation*}
+            \int_{\mathbb{R}} \delta(x-a) \, dx = 1 %
+        \end{equation*}
+        
+        Matematicamente, può essere vista come il limite di una gaussiana infinitesimamente stretta e infinitamente alta: %
+        \begin{equation*}
+            f_\varepsilon(x-a) = \frac{1}{\sqrt{2\pi}\varepsilon} e^{-\frac{(x-a)^2}{2\varepsilon^2}} \quad \Rightarrow \quad \delta(x-a) = \lim_{\varepsilon \to 0} f_\varepsilon(x-a) %
+        \end{equation*}
+    \end{minipage}
+\end{figure}
+
+\textbf{Proprietà di "Campionamento" (Setacciamento):} %
+Integrare una funzione $f(x)$ contro una Delta restituisce il valore della funzione nel punto in cui la Delta è centrata: %
+\begin{equation}
+    \boxed{ \int_{\mathbb{R}} f(x) \delta(x-a) \, dx = f(a) } \quad , \quad \int_{\mathbb{R}} f(x) \delta(x) \, dx = f(0) %
+\end{equation}
+
+\subsection{Rappresentazione Integrale della Delta} %
+
+Sfruttando le trasformate di Fourier: %
+\begin{align*}
+    f(x) &= \frac{1}{\sqrt{2\pi}} \int_{\mathbb{R}} F(k) e^{ikx} \, dk \\ %
+    F(k) &= \frac{1}{\sqrt{2\pi}} \int_{\mathbb{R}} f(x') e^{-ikx'} \, dx' %
+\end{align*}
+Sostituendo $F(k)$ nella prima equazione: %
+\begin{align*}
+    f(x) &= \frac{1}{\sqrt{2\pi}} \int_{\mathbb{R}} \left[ \frac{1}{\sqrt{2\pi}} \int_{\mathbb{R}} f(x') e^{-ikx'} \, dx' \right] e^{ikx} \, dk = \int_{\mathbb{R}} f(x') \underbrace{ \left[ \frac{1}{2\pi} \int_{\mathbb{R}} e^{ik(x-x')} \, dk \right] }_{\text{Deve essere } \delta(x-x')} dx' %
+\end{align*}
+Confrontando con la proprietà di campionamento $f(x) = \int \delta(x-x') f(x') dx'$, otteniamo un'identità cruciale: %
+\begin{equation}
+    \boxed{ \delta(x-x') = \frac{1}{2\pi} \int_{\mathbb{R}} e^{ik(x-x')} \, dk } \quad \Rightarrow \quad \delta(x) = \frac{1}{2\pi} \int_{\mathbb{R}} e^{\pm ikx} \, dk %
+\end{equation}
+La Delta di Dirac è quindi la Trasformata di Fourier di una costante (l'esponenziale complesso nullo) %.
+
+\section{Spazio dei Momenti ($\Phi(p)$)} %
+
+Riscriviamo la funzione d'onda sostituendo il vettore d'onda $k$ con il momento quantistico $p = \hbar k$: %
+\begin{equation}
+    \Psi(x,t) = \frac{1}{\sqrt{2\pi\hbar}} \int_{\mathbb{R}} \Phi(p) e^{i\frac{(px - Et)}{\hbar}} \, dp \qquad \text{dove } |\Phi(p)|^2 \text{ è } P(p \div p+dp) %
+\end{equation}
+
+\noindent
+Per trovare $\Phi(p)$, applichiamo l'anti-trasformata valutando a $t=0$: moltiplichiamo entrambi i membri per $e^{-i\frac{p'x}{\hbar}}$ e integriamo su $x$: %
+\begin{align*}
+    \int_{\mathbb{R}} \Psi(x,0) e^{-i\frac{p'x}{\hbar}} \, dx &= \int_{\mathbb{R}} \left[ \frac{1}{\sqrt{2\pi\hbar}} \int_{\mathbb{R}} \Phi(p) e^{i\frac{px}{\hbar}} \, dp \right] e^{-i\frac{p'x}{\hbar}} \, dx = \\ %
+    &= \frac{1}{\sqrt{2\pi\hbar}} \int_{\mathbb{R}} \Phi(p) \underbrace{ \left[ \int_{\mathbb{R}} e^{i\frac{(p-p')x}{\hbar}} \, dx \right] }_{2\pi\hbar \, \delta(p-p')} dp = \\ %
+    &= \frac{2\pi\hbar}{\sqrt{2\pi\hbar}} \int_{\mathbb{R}} \Phi(p) \delta(p-p') \, dp = \sqrt{2\pi\hbar} \, \Phi(p') %
+\end{align*}
+Dividendo per $\sqrt{2\pi\hbar}$, otteniamo la \textbf{Funzione d'onda nello Spazio dei Momenti}: %
+\begin{equation}
+    \boxed{ \Phi(p) = \frac{1}{\sqrt{2\pi\hbar}} \int_{\mathbb{R}} \Psi(x,0) e^{-i\frac{px}{\hbar}} \, dx } \quad \text{($\Phi$ è la trasformata di Fourier di $\Psi$)} %
+\end{equation}
+
+\subsection{Dualità Operatoriale (Coordinate vs Momenti)} %
+
+Verifichiamo la coerenza di $\Phi(p)$ nello spazio dei momenti: %
+
+\noindent
+\textbf{1. Teorema di Parseval (Conservazione probabilità globale):} %
+\begin{equation*}
+    \int_{\mathbb{R}} |\Psi(x,0)|^2 \, dx = 1 = \int_{\mathbb{R}} |\Phi(p)|^2 \, dp %
+\end{equation*}
+
+\noindent
+\textbf{2. Valore atteso del Momento $\langle \hat{p} \rangle$:} %
+Calcolandolo da $\Psi(x)$ tramite l'operatore $-i\hbar\frac{\partial}{\partial x}$ e sostituendo l'espressione in funzione di $\Phi(p)$: %
+\begin{align*}
+    \langle \hat{p} \rangle &= \int_{\mathbb{R}} \Psi^* \left( -i\hbar \frac{\partial}{\partial x} \right) \Psi \, dx = \dots = \int_{\mathbb{R}} \Phi^*(p) \, p \, \Phi(p) \, dp = \int_{\mathbb{R}} p |\Phi(p)|^2 \, dp %
+\end{align*}
+$\Rightarrow$ Nello spazio dei momenti, l'operatore impulso $\hat{p}$ è una \textbf{semplice moltiplicazione per $p$}. %
+
+\noindent
+\textbf{3. Valore atteso della Posizione $\langle \hat{x} \rangle$:} %
+\begin{align*}
+    \langle \hat{x} \rangle &= \int_{\mathbb{R}} \Psi^* x \Psi \, dx = \dots = \int_{\mathbb{R}} \Phi^*(p) \left( i\hbar \frac{\partial}{\partial p} \right) \Phi(p) \, dp %
+\end{align*}
+
+\begin{quote}
+    \textbf{SIMMETRIA FONDAMENTALE (Coordinate e Momenti):} % \\
+    \begin{itemize}
+        \item \textbf{SPAZIO DELLE COORDINATE ($x$):} %
+        \begin{itemize}
+            \item Operatore Posizione: $\hat{x} = x \cdot$ %
+            \item Operatore Momento: $\hat{p} = -i\hbar \frac{\partial}{\partial x}$ %
+        \end{itemize}
+        \item \textbf{SPAZIO DEI MOMENTI ($p$):} %
+        \begin{itemize}
+            \item Operatore Posizione: $\hat{x} = i\hbar \frac{\partial}{\partial p}$ %
+            \item Operatore Momento: $\hat{p} = p \cdot$ %
+        \end{itemize}
+    \end{itemize}
+\end{quote}
 
 \end{document}
