@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1775747883.56841 "c:/Users/edoma/Desktop/Apunti_Latex/Quantistica/Sistemi esatti/Sistemi esatti.tex" "Sistemi esatti.pdf" "Sistemi esatti" 1775747884.99077 0
+["pdflatex"] 1775747975.63023 "c:/Users/edoma/Desktop/Apunti_Latex/Quantistica/Sistemi esatti/Sistemi esatti.tex" "Sistemi esatti.pdf" "Sistemi esatti" 1775747977.07383 0
   "C:/Users/edoma/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1772981276 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/edoma/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1095.pk" 1772631623 12668 1af809b85333ac0a1407b2989c127b1b ""
   "C:/Users/edoma/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1772204131 13333487 92a129026fef23baeab8382685944d0c ""
@@ -87,10 +87,10 @@
   "C:/Users/edoma/AppData/Local/Programs/MiKTeX/tex/latex/multirow/multirow.sty" 1731767677 6696 886c9f3087d0b973ed2c19aa79cb3023 ""
   "C:/Users/edoma/AppData/Local/Programs/MiKTeX/tex/latex/sectsty/sectsty.sty" 1469029225 23038 d476012cd03f82f9475ad54ba6cd3267 ""
   "C:/Users/edoma/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "Sistemi esatti.aux" 1775747884 1201 3b72857ec4a06820f7dcfd471435db4f "pdflatex"
-  "Sistemi esatti.tex" 1775747882 22246 09ab94d900cce6a7d170765cc16e9cd6 ""
-  "Sistemi esatti.toc" 1775747884 719 2a1da4b763dd765d6eb9e628679cf001 "pdflatex"
-  "c:/Users/edoma/Desktop/Apunti_Latex/Quantistica/Sistemi esatti/Sistemi esatti.tex" 1775747882 22246 09ab94d900cce6a7d170765cc16e9cd6 ""
+  "Sistemi esatti.aux" 1775747976 1201 3b72857ec4a06820f7dcfd471435db4f "pdflatex"
+  "Sistemi esatti.tex" 1775747974 22244 223d0c78442cfcbfda371a2c7e701659 ""
+  "Sistemi esatti.toc" 1775747976 719 2a1da4b763dd765d6eb9e628679cf001 "pdflatex"
+  "c:/Users/edoma/Desktop/Apunti_Latex/Quantistica/Sistemi esatti/Sistemi esatti.tex" 1775747974 22244 223d0c78442cfcbfda371a2c7e701659 ""
   "immagini/2026-04-09-16-43-51.png" 1775745832 34063 3447e13613f6abe78740753eca00d015 ""
   "immagini/2026-04-09-16-51-23.png" 1775746283 34966 71806cc4ad470e97ec7fcfb66abc76ab ""
   "immagini/2026-04-09-17-00-22.png" 1775746822 48672 0460efe409481c0710338e7890704f94 ""

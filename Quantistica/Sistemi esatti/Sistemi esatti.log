@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.2.27)  9 APR 2026 17:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.2.27)  9 APR 2026 17:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -368,12 +368,7 @@ File: immagini/2026-04-09-17-16-57.png Graphic file (type png)
 <use immagini/2026-04-09-17-16-57.png>
 Package pdftex.def Info: immagini/2026-04-09-17-16-57.png  used on input line 386.
 (pdftex.def)             Requested size: 136.57462pt x 125.32263pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 420--421
-
- []
-
-[8 <./immagini/2026-04-09-17-01-32.png> <./immagini/2026-04-09-17-16-57.png>] [9] (Sistemi esatti.aux)
+ [8 <./immagini/2026-04-09-17-01-32.png> <./immagini/2026-04-09-17-16-57.png>] [9] (Sistemi esatti.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -386,9 +381,9 @@ Here is how much of TeX's memory you used:
  34372 multiletter control sequences out of 15000+600000
  639361 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,17n,65p,509b,318s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,17n,65p,485b,318s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\edoma\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "Sistemi esatti.pdf" (9 pages, 357233 bytes).
+Output written on "Sistemi esatti.pdf" (9 pages, 356995 bytes).
 PDF statistics:
  132 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
