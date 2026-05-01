@@ -1,0 +1,11 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {section}{Interazione Radiazione Materia}{2}{}%
+\contentsline {subsection}{L'Hamiltoniana di Interazione}{2}{}%
+\contentsline {subsection}{Evoluzione dei Coefficienti nel Tempo}{3}{}%
+\contentsline {subsection}{Approssimazione delle Piccole Perturbazioni (Primo Ordine)}{4}{}%
+\contentsline {subsection}{La Regola d'Oro di Fermi}{5}{}%
+\contentsline {section}{Assorbimento ed Emissione Stimolata}{6}{}%
+\contentsline {subsection}{Modello Drude-Lorentz vs Meccanica Quantistica}{7}{}%
+\contentsline {subsection}{Il Limite della Delta e l'Emissione Spontanea}{7}{}%
+\contentsline {section}{Elemento di Matrice e Regola di Selezione}{8}{}%
