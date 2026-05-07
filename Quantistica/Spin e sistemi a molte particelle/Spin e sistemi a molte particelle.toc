@@ -1,0 +1,28 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {section}{Momento Angolare Intrinseco: Spin}{2}{}%
+\contentsline {subsection}{Fisica Atomica (Momento Magnetico Orbitale)}{2}{}%
+\contentsline {subsection}{Precessione di Larmor e Diamagnetismo}{3}{}%
+\contentsline {subsection}{Campo Magnetico Non Uniforme (Forza di Deflessione)}{3}{}%
+\contentsline {subsection}{Quantizzazione e Magnetone di Bohr}{4}{}%
+\contentsline {section}{L'Esperimento di Stern-Gerlach (1923)}{4}{}%
+\contentsline {subsection}{Il Mistero delle Due Macchie}{5}{}%
+\contentsline {subsection}{Formalismo dell'Operatore di Spin $\hat {S}$}{6}{}%
+\contentsline {subsection}{Deduzione del Valore dello Spin ($s=1/2$)}{6}{}%
+\contentsline {subsection}{Conclusione e Relatività (Dirac, 1928)}{7}{}%
+\contentsline {section}{Lo Spin delle Particelle}{7}{}%
+\contentsline {subsection}{Spinori (La Funzione d'Onda di Spin)}{8}{}%
+\contentsline {subsection}{Matrici di Pauli}{9}{}%
+\contentsline {subsection}{Ricerca degli Autostati per le altre componenti}{9}{}%
+\contentsline {subsection}{Misura delle Componenti dello Spin}{10}{}%
+\contentsline {subsection}{La Funzione d'Onda Completa (Spazio + Spin)}{10}{}%
+\contentsline {subsection}{Esempi Pratici di Funzioni d'Onda Totali}{11}{}%
+\contentsline {section}{Somma di Momenti Angolari}{11}{}%
+\contentsline {subsection}{Teorema di Somma dei Momenti Angolari}{11}{}%
+\contentsline {subsection}{La Base Disaccoppiata}{12}{}%
+\contentsline {subsection}{La Base Accoppiata e Clebsch-Gordan}{12}{}%
+\contentsline {section}{Spin di Due Elettroni (Singoletto e Tripletto)}{13}{}%
+\contentsline {section}{Momento Angolare Totale dell'Elettrone ($\vec {J}$)}{14}{}%
+\contentsline {section}{Effetto Einstein-de Haas}{16}{}%
+\contentsline {section}{Interazione Spin-Orbita}{16}{}%
+\contentsline {subsection}{Sdoppiamento dei Livelli (Doppietti)}{18}{}%
