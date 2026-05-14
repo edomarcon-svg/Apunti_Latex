@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.2.27)  7 MAY 2026 17:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.2.27)  14 MAY 2026 18:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -324,168 +324,291 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 24.
  (C:\Users\edoma\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (Spin e sistemi a molte particelle.toc)
+) (Spin e sistemi a molte particelle.toc [1
+
+{C:/Users/edoma/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}])
 \tf@toc=\write3
 \openout3 = `"Spin e sistemi a molte particelle.toc"'.
 
- [1
-
-{C:/Users/edoma/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-<immagini/2026-05-07-14-59-28.png, id=9, 162.6075pt x 105.39375pt>
+ [2]
+<immagini/2026-05-07-14-59-28.png, id=13, 162.6075pt x 105.39375pt>
 File: immagini/2026-05-07-14-59-28.png Graphic file (type png)
 <use immagini/2026-05-07-14-59-28.png>
 Package pdftex.def Info: immagini/2026-05-07-14-59-28.png  used on input line 36.
 (pdftex.def)             Requested size: 136.57462pt x 88.52692pt.
-<immagini/2026-05-07-14-59-48.png, id=10, 181.42781pt x 164.11313pt>
+<immagini/2026-05-07-14-59-48.png, id=14, 181.42781pt x 164.11313pt>
 File: immagini/2026-05-07-14-59-48.png Graphic file (type png)
 <use immagini/2026-05-07-14-59-48.png>
 Package pdftex.def Info: immagini/2026-05-07-14-59-48.png  used on input line 51.
 (pdftex.def)             Requested size: 136.57462pt x 123.54279pt.
-<immagini/2026-05-07-15-00-39.png, id=11, 268.75406pt x 277.78781pt>
+<immagini/2026-05-07-15-00-39.png, id=15, 268.75406pt x 277.78781pt>
 File: immagini/2026-05-07-15-00-39.png Graphic file (type png)
 <use immagini/2026-05-07-15-00-39.png>
 Package pdftex.def Info: immagini/2026-05-07-15-00-39.png  used on input line 67.
 (pdftex.def)             Requested size: 136.57462pt x 141.16548pt.
- [2 <./immagini/2026-05-07-14-59-28.png> <./immagini/2026-05-07-14-59-48.png> <./immagini/2026-05-07-15-00-39.png>]
-<immagini/2026-05-07-15-02-40.png, id=20, 209.28188pt x 241.65282pt>
+ [3 <./immagini/2026-05-07-14-59-28.png> <./immagini/2026-05-07-14-59-48.png> <./immagini/2026-05-07-15-00-39.png>]
+<immagini/2026-05-07-15-02-40.png, id=23, 209.28188pt x 241.65282pt>
 File: immagini/2026-05-07-15-02-40.png Graphic file (type png)
 <use immagini/2026-05-07-15-02-40.png>
 Package pdftex.def Info: immagini/2026-05-07-15-02-40.png  used on input line 105.
 (pdftex.def)             Requested size: 95.6018pt x 110.3873pt.
-<immagini/2026-05-07-15-02-57.png, id=21, 204.765pt x 238.64156pt>
+<immagini/2026-05-07-15-02-57.png, id=24, 204.765pt x 238.64156pt>
 File: immagini/2026-05-07-15-02-57.png Graphic file (type png)
 <use immagini/2026-05-07-15-02-57.png>
 Package pdftex.def Info: immagini/2026-05-07-15-02-57.png  used on input line 127.
 (pdftex.def)             Requested size: 95.6018pt x 111.4187pt.
- [3 <./immagini/2026-05-07-15-02-40.png> <./immagini/2026-05-07-15-02-57.png>]
-<immagini/2026-05-07-15-05-43.png, id=28, 226.59656pt x 190.46156pt>
+ [4 <./immagini/2026-05-07-15-02-40.png> <./immagini/2026-05-07-15-02-57.png>]
+<immagini/2026-05-07-15-05-43.png, id=31, 226.59656pt x 190.46156pt>
 File: immagini/2026-05-07-15-05-43.png Graphic file (type png)
 <use immagini/2026-05-07-15-05-43.png>
 Package pdftex.def Info: immagini/2026-05-07-15-05-43.png  used on input line 182.
 (pdftex.def)             Requested size: 136.57462pt x 114.7951pt.
- [4 <./immagini/2026-05-07-15-05-43.png>]
-<immagini/2026-05-07-15-07-14.png, id=34, 630.85687pt x 231.86626pt>
+ [5 <./immagini/2026-05-07-15-05-43.png>]
+<immagini/2026-05-07-15-07-14.png, id=37, 630.85687pt x 231.86626pt>
 File: immagini/2026-05-07-15-07-14.png Graphic file (type png)
 <use immagini/2026-05-07-15-07-14.png>
 Package pdftex.def Info: immagini/2026-05-07-15-07-14.png  used on input line 201.
 (pdftex.def)             Requested size: 273.14923pt x 100.39398pt.
-<immagini/2026-05-07-15-07-37.png, id=35, 442.65375pt x 198.7425pt>
+<immagini/2026-05-07-15-07-37.png, id=38, 442.65375pt x 198.7425pt>
 File: immagini/2026-05-07-15-07-37.png Graphic file (type png)
 <use immagini/2026-05-07-15-07-37.png>
 Package pdftex.def Info: immagini/2026-05-07-15-07-37.png  used on input line 206.
 (pdftex.def)             Requested size: 227.62206pt x 102.20038pt.
-<immagini/2026-05-07-15-11-00.png, id=36, 260.47313pt x 176.15813pt>
+<immagini/2026-05-07-15-11-00.png, id=39, 260.47313pt x 176.15813pt>
 File: immagini/2026-05-07-15-11-00.png Graphic file (type png)
 <use immagini/2026-05-07-15-11-00.png>
 Package pdftex.def Info: immagini/2026-05-07-15-11-00.png  used on input line 226.
 (pdftex.def)             Requested size: 91.04742pt x 61.57562pt.
- [5 <./immagini/2026-05-07-15-07-14.png> <./immagini/2026-05-07-15-07-37.png> <./immagini/2026-05-07-15-11-00.png>] [6]
-<immagini/2026-05-07-15-16-17.png, id=46, 243.15843pt x 242.40562pt>
+ [6 <./immagini/2026-05-07-15-07-14.png> <./immagini/2026-05-07-15-07-37.png> <./immagini/2026-05-07-15-11-00.png>] [7]
+<immagini/2026-05-07-15-16-17.png, id=50, 243.15843pt x 242.40562pt>
 File: immagini/2026-05-07-15-16-17.png Graphic file (type png)
 <use immagini/2026-05-07-15-16-17.png>
 Package pdftex.def Info: immagini/2026-05-07-15-16-17.png  used on input line 315.
 (pdftex.def)             Requested size: 136.57462pt x 136.14938pt.
- [7 <./immagini/2026-05-07-15-16-17.png>] [8] [9]
-<immagini/2026-05-07-15-26-29.png, id=57, 509.65407pt x 218.31563pt>
+ [8 <./immagini/2026-05-07-15-16-17.png>] [9] [10]
+<immagini/2026-05-07-15-26-29.png, id=60, 509.65407pt x 218.31563pt>
 File: immagini/2026-05-07-15-26-29.png Graphic file (type png)
 <use immagini/2026-05-07-15-26-29.png>
 Package pdftex.def Info: immagini/2026-05-07-15-26-29.png  used on input line 485.
 (pdftex.def)             Requested size: 163.88815pt x 70.2022pt.
- [10 <./immagini/2026-05-07-15-26-29.png>] [11]
-<immagini/2026-05-07-15-33-05.png, id=65, 429.10312pt x 211.54031pt>
+ [11 <./immagini/2026-05-07-15-26-29.png>] [12]
+<immagini/2026-05-07-15-33-05.png, id=68, 429.10312pt x 211.54031pt>
 File: immagini/2026-05-07-15-33-05.png Graphic file (type png)
 <use immagini/2026-05-07-15-33-05.png>
 Package pdftex.def Info: immagini/2026-05-07-15-33-05.png  used on input line 574.
 (pdftex.def)             Requested size: 182.09486pt x 89.76947pt.
-<immagini/2026-05-07-15-32-52.png, id=66, 550.30594pt x 255.20343pt>
+<immagini/2026-05-07-15-32-52.png, id=69, 550.30594pt x 255.20343pt>
 File: immagini/2026-05-07-15-32-52.png Graphic file (type png)
 <use immagini/2026-05-07-15-32-52.png>
 Package pdftex.def Info: immagini/2026-05-07-15-32-52.png  used on input line 582.
 (pdftex.def)             Requested size: 182.09486pt x 84.44714pt.
- [12 <./immagini/2026-05-07-15-33-05.png> <./immagini/2026-05-07-15-32-52.png>]
-<immagini/2026-05-07-15-48-01.png, id=70, 892.08281pt x 242.40562pt>
+ [13 <./immagini/2026-05-07-15-33-05.png> <./immagini/2026-05-07-15-32-52.png>]
+<immagini/2026-05-07-15-48-01.png, id=74, 892.08281pt x 242.40562pt>
 File: immagini/2026-05-07-15-48-01.png Graphic file (type png)
 <use immagini/2026-05-07-15-48-01.png>
 Package pdftex.def Info: immagini/2026-05-07-15-48-01.png  used on input line 670.
 (pdftex.def)             Requested size: 364.19667pt x 98.96158pt.
- [13 <./immagini/2026-05-07-15-48-01.png>]
-<immagini/2026-05-07-15-45-16.png, id=75, 987.69pt x 562.35094pt>
+ [14 <./immagini/2026-05-07-15-48-01.png>]
+<immagini/2026-05-07-15-45-16.png, id=78, 987.69pt x 562.35094pt>
 File: immagini/2026-05-07-15-45-16.png Graphic file (type png)
 <use immagini/2026-05-07-15-45-16.png>
 Package pdftex.def Info: immagini/2026-05-07-15-45-16.png  used on input line 687.
 (pdftex.def)             Requested size: 364.19667pt x 207.35439pt.
-<immagini/2026-05-07-15-50-29.png, id=76, 179.92218pt x 228.10219pt>
+<immagini/2026-05-07-15-50-29.png, id=79, 179.92218pt x 228.10219pt>
 File: immagini/2026-05-07-15-50-29.png Graphic file (type png)
 <use immagini/2026-05-07-15-50-29.png>
 Package pdftex.def Info: immagini/2026-05-07-15-50-29.png  used on input line 708.
 (pdftex.def)             Requested size: 109.2601pt x 138.52257pt.
-<immagini/2026-05-07-15-50-57.png, id=77, 346.29375pt x 268.00125pt>
+<immagini/2026-05-07-15-50-57.png, id=80, 346.29375pt x 268.00125pt>
 File: immagini/2026-05-07-15-50-57.png Graphic file (type png)
 <use immagini/2026-05-07-15-50-57.png>
 Package pdftex.def Info: immagini/2026-05-07-15-50-57.png  used on input line 718.
 (pdftex.def)             Requested size: 136.57462pt x 105.69778pt.
- [14 <./immagini/2026-05-07-15-45-16.png> <./immagini/2026-05-07-15-50-29.png>]
-<immagini/2026-05-07-15-54-54.png, id=81, 265.74281pt x 152.06813pt>
+ [15 <./immagini/2026-05-07-15-45-16.png> <./immagini/2026-05-07-15-50-29.png>]
+<immagini/2026-05-07-15-54-54.png, id=84, 265.74281pt x 152.06813pt>
 File: immagini/2026-05-07-15-54-54.png Graphic file (type png)
 <use immagini/2026-05-07-15-54-54.png>
 Package pdftex.def Info: immagini/2026-05-07-15-54-54.png  used on input line 744.
 (pdftex.def)             Requested size: 136.57462pt x 78.15468pt.
-<immagini/2026-05-07-15-55-06.png, id=82, 249.93375pt x 198.7425pt>
+<immagini/2026-05-07-15-55-06.png, id=85, 249.93375pt x 198.7425pt>
 File: immagini/2026-05-07-15-55-06.png Graphic file (type png)
 <use immagini/2026-05-07-15-55-06.png>
 Package pdftex.def Info: immagini/2026-05-07-15-55-06.png  used on input line 762.
 (pdftex.def)             Requested size: 136.57462pt x 108.60515pt.
- [15 <./immagini/2026-05-07-15-50-57.png> <./immagini/2026-05-07-15-54-54.png> <./immagini/2026-05-07-15-55-06.png>]
-<immagini/2026-05-07-15-56-29.png, id=86, 211.54031pt x 189.70876pt>
+ [16 <./immagini/2026-05-07-15-50-57.png> <./immagini/2026-05-07-15-54-54.png> <./immagini/2026-05-07-15-55-06.png>]
+<immagini/2026-05-07-15-56-29.png, id=89, 211.54031pt x 189.70876pt>
 File: immagini/2026-05-07-15-56-29.png Graphic file (type png)
 <use immagini/2026-05-07-15-56-29.png>
 Package pdftex.def Info: immagini/2026-05-07-15-56-29.png  used on input line 788.
 (pdftex.def)             Requested size: 91.04742pt x 81.65132pt.
-<immagini/2026-05-07-15-56-42.png, id=87, 188.20313pt x 177.66376pt>
+<immagini/2026-05-07-15-56-42.png, id=90, 188.20313pt x 177.66376pt>
 File: immagini/2026-05-07-15-56-42.png Graphic file (type png)
 <use immagini/2026-05-07-15-56-42.png>
 Package pdftex.def Info: immagini/2026-05-07-15-56-42.png  used on input line 799.
 (pdftex.def)             Requested size: 91.04742pt x 85.94994pt.
-<immagini/2026-05-07-15-59-02.png, id=88, 268.75406pt x 185.94469pt>
+<immagini/2026-05-07-15-59-02.png, id=91, 268.75406pt x 185.94469pt>
 File: immagini/2026-05-07-15-59-02.png Graphic file (type png)
 <use immagini/2026-05-07-15-59-02.png>
 Package pdftex.def Info: immagini/2026-05-07-15-59-02.png  used on input line 825.
 (pdftex.def)             Requested size: 136.57462pt x 94.49289pt.
-<immagini/2026-05-07-16-00-07.png, id=89, 252.19218pt x 184.43906pt>
+<immagini/2026-05-07-16-00-07.png, id=92, 252.19218pt x 184.43906pt>
 File: immagini/2026-05-07-16-00-07.png Graphic file (type png)
 <use immagini/2026-05-07-16-00-07.png>
 Package pdftex.def Info: immagini/2026-05-07-16-00-07.png  used on input line 842.
 (pdftex.def)             Requested size: 136.57462pt x 99.88266pt.
- [16 <./immagini/2026-05-07-15-56-29.png> <./immagini/2026-05-07-15-56-42.png> <./immagini/2026-05-07-15-59-02.png>]
-<immagini/2026-05-07-16-01-06.png, id=93, 329.73187pt x 167.87718pt>
+ [17 <./immagini/2026-05-07-15-56-29.png> <./immagini/2026-05-07-15-56-42.png> <./immagini/2026-05-07-15-59-02.png>]
+<immagini/2026-05-07-16-01-06.png, id=96, 329.73187pt x 167.87718pt>
 File: immagini/2026-05-07-16-01-06.png Graphic file (type png)
 <use immagini/2026-05-07-16-01-06.png>
 Package pdftex.def Info: immagini/2026-05-07-16-01-06.png  used on input line 858.
 (pdftex.def)             Requested size: 136.57462pt x 69.53708pt.
- [17 <./immagini/2026-05-07-16-00-07.png> <./immagini/2026-05-07-16-01-06.png>]
-<immagini/2026-05-07-17-22-12.png, id=97, 467.49657pt x 227.34938pt>
+ [18 <./immagini/2026-05-07-16-00-07.png> <./immagini/2026-05-07-16-01-06.png>]
+<immagini/2026-05-07-17-22-12.png, id=100, 467.49657pt x 227.34938pt>
 File: immagini/2026-05-07-17-22-12.png Graphic file (type png)
 <use immagini/2026-05-07-17-22-12.png>
 Package pdftex.def Info: immagini/2026-05-07-17-22-12.png  used on input line 915.
 (pdftex.def)             Requested size: 159.33821pt x 77.48856pt.
- [18 <./immagini/2026-05-07-17-22-12.png>] (Spin e sistemi a molte particelle.aux)
+<immagini/2026-05-14-16-28-37.png, id=101, 365.11406pt x 203.25937pt>
+File: immagini/2026-05-14-16-28-37.png Graphic file (type png)
+<use immagini/2026-05-14-16-28-37.png>
+Package pdftex.def Info: immagini/2026-05-14-16-28-37.png  used on input line 949.
+(pdftex.def)             Requested size: 136.57462pt x 76.02977pt.
+<immagini/2026-05-14-16-29-29.png, id=102, 243.91125pt x 186.6975pt>
+File: immagini/2026-05-14-16-29-29.png Graphic file (type png)
+<use immagini/2026-05-14-16-29-29.png>
+Package pdftex.def Info: immagini/2026-05-14-16-29-29.png  used on input line 964.
+(pdftex.def)             Requested size: 136.57462pt x 104.53848pt.
+ [19 <./immagini/2026-05-07-17-22-12.png> <./immagini/2026-05-14-16-28-37.png>]
+<immagini/2026-05-14-16-32-41.png, id=107, 682.80093pt x 229.60782pt>
+File: immagini/2026-05-14-16-32-41.png Graphic file (type png)
+<use immagini/2026-05-14-16-32-41.png>
+Package pdftex.def Info: immagini/2026-05-14-16-32-41.png  used on input line 1001.
+(pdftex.def)             Requested size: 273.14923pt x 91.852pt.
+ [20 <./immagini/2026-05-14-16-29-29.png> <./immagini/2026-05-14-16-32-41.png>]
+<immagini/2026-05-14-17-03-22.png, id=111, 286.82156pt x 260.47313pt>
+File: immagini/2026-05-14-17-03-22.png Graphic file (type png)
+<use immagini/2026-05-14-17-03-22.png>
+Package pdftex.def Info: immagini/2026-05-14-17-03-22.png  used on input line 1045.
+(pdftex.def)             Requested size: 136.57462pt x 124.02808pt.
+<immagini/2026-05-14-17-05-14.png, id=112, 218.31563pt x 219.06844pt>
+File: immagini/2026-05-14-17-05-14.png Graphic file (type png)
+<use immagini/2026-05-14-17-05-14.png>
+Package pdftex.def Info: immagini/2026-05-14-17-05-14.png  used on input line 1074.
+(pdftex.def)             Requested size: 136.57462pt x 137.04445pt.
+
+Overfull \hbox (16.81557pt too wide) detected at line 1079
+[] \OT1/cmr/m/n/10.95 = [] [] [] + []
+ []
+
+[21 <./immagini/2026-05-14-17-03-22.png>] [22 <./immagini/2026-05-14-17-05-14.png>]
+<immagini/2026-05-14-17-08-08.png, id=121, 730.22812pt x 220.57407pt>
+File: immagini/2026-05-14-17-08-08.png Graphic file (type png)
+<use immagini/2026-05-14-17-08-08.png>
+Package pdftex.def Info: immagini/2026-05-14-17-08-08.png  used on input line 1130.
+(pdftex.def)             Requested size: 250.38564pt x 75.6303pt.
+<immagini/2026-05-14-17-09-52.png, id=122, 246.1697pt x 178.41656pt>
+File: immagini/2026-05-14-17-09-52.png Graphic file (type png)
+<use immagini/2026-05-14-17-09-52.png>
+Package pdftex.def Info: immagini/2026-05-14-17-09-52.png  used on input line 1153.
+(pdftex.def)             Requested size: 136.57462pt x 98.98969pt.
+<immagini/2026-05-14-17-10-09.png, id=123, 222.8325pt x 176.15813pt>
+File: immagini/2026-05-14-17-10-09.png Graphic file (type png)
+<use immagini/2026-05-14-17-10-09.png>
+Package pdftex.def Info: immagini/2026-05-14-17-10-09.png  used on input line 1166.
+(pdftex.def)             Requested size: 136.57462pt x 107.967pt.
+ [23 <./immagini/2026-05-14-17-08-08.png> <./immagini/2026-05-14-17-09-52.png> <./immagini/2026-05-14-17-10-09.png>]
+<immagini/2026-05-14-17-13-19.png, id=127, 201.75375pt x 184.43906pt>
+File: immagini/2026-05-14-17-13-19.png Graphic file (type png)
+<use immagini/2026-05-14-17-13-19.png>
+Package pdftex.def Info: immagini/2026-05-14-17-13-19.png  used on input line 1224.
+(pdftex.def)             Requested size: 104.7042pt x 95.71748pt.
+ [24 <./immagini/2026-05-14-17-13-19.png>] [25]
+Underfull \hbox (badness 10000) in paragraph at lines 1311--1313
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1317--1319
+
+ []
+
+[26]
+<immagini/2026-05-14-17-58-43.png, id=138, 289.83281pt x 155.83218pt>
+File: immagini/2026-05-14-17-58-43.png Graphic file (type png)
+<use immagini/2026-05-14-17-58-43.png>
+Package pdftex.def Info: immagini/2026-05-14-17-58-43.png  used on input line 1369.
+(pdftex.def)             Requested size: 136.57462pt x 73.43135pt.
+ [27 <./immagini/2026-05-14-17-58-43.png>]
+<immagini/2026-05-14-18-00-29.png, id=142, 166.37157pt x 122.70844pt>
+File: immagini/2026-05-14-18-00-29.png Graphic file (type png)
+<use immagini/2026-05-14-18-00-29.png>
+Package pdftex.def Info: immagini/2026-05-14-18-00-29.png  used on input line 1402.
+(pdftex.def)             Requested size: 91.04742pt x 67.15282pt.
+<immagini/2026-05-14-18-07-33.png, id=143, 606.01407pt x 221.32687pt>
+File: immagini/2026-05-14-18-07-33.png Graphic file (type png)
+<use immagini/2026-05-14-18-07-33.png>
+Package pdftex.def Info: immagini/2026-05-14-18-07-33.png  used on input line 1444.
+(pdftex.def)             Requested size: 136.57462pt x 49.87744pt.
+<immagini/2026-05-14-18-08-45.png, id=144, 1011.78pt x 229.60782pt>
+File: immagini/2026-05-14-18-08-45.png Graphic file (type png)
+<use immagini/2026-05-14-18-08-45.png>
+Package pdftex.def Info: immagini/2026-05-14-18-08-45.png  used on input line 1459.
+(pdftex.def)             Requested size: 364.19667pt x 82.64824pt.
+ [28 <./immagini/2026-05-14-18-00-29.png> <./immagini/2026-05-14-18-07-33.png>]
+<immagini/2026-05-14-18-09-11.png, id=148, 297.36093pt x 219.06844pt>
+File: immagini/2026-05-14-18-09-11.png Graphic file (type png)
+<use immagini/2026-05-14-18-09-11.png>
+Package pdftex.def Info: immagini/2026-05-14-18-09-11.png  used on input line 1466.
+(pdftex.def)             Requested size: 136.57462pt x 100.61559pt.
+<immagini/2026-05-14-18-09-34.png, id=149, 979.40906pt x 229.60782pt>
+File: immagini/2026-05-14-18-09-34.png Graphic file (type png)
+<use immagini/2026-05-14-18-09-34.png>
+Package pdftex.def Info: immagini/2026-05-14-18-09-34.png  used on input line 1483.
+(pdftex.def)             Requested size: 364.19667pt x 85.37749pt.
+ [29 <./immagini/2026-05-14-18-08-45.png> <./immagini/2026-05-14-18-09-11.png> <./immagini/2026-05-14-18-09-34.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1542--1544
+
+ []
+
+<immagini/2026-05-14-18-21-34.png, id=154, 436.63126pt x 181.42781pt>
+File: immagini/2026-05-14-18-21-34.png Graphic file (type png)
+<use immagini/2026-05-14-18-21-34.png>
+Package pdftex.def Info: immagini/2026-05-14-18-21-34.png  used on input line 1550.
+(pdftex.def)             Requested size: 136.57462pt x 56.74864pt.
+<immagini/2026-05-14-18-24-37.png, id=155, 345.54094pt x 271.76532pt>
+File: immagini/2026-05-14-18-24-37.png Graphic file (type png)
+<use immagini/2026-05-14-18-24-37.png>
+Package pdftex.def Info: immagini/2026-05-14-18-24-37.png  used on input line 1566.
+(pdftex.def)             Requested size: 136.57462pt x 107.41454pt.
+[30 <./immagini/2026-05-14-18-21-34.png>]
+<immagini/2026-05-14-18-28-16.png, id=159, 191.21437pt x 178.41656pt>
+File: immagini/2026-05-14-18-28-16.png Graphic file (type png)
+<use immagini/2026-05-14-18-28-16.png>
+Package pdftex.def Info: immagini/2026-05-14-18-28-16.png  used on input line 1588.
+(pdftex.def)             Requested size: 113.81102pt x 106.19319pt.
+<immagini/2026-05-14-18-28-54.png, id=160, 179.92218pt x 170.13562pt>
+File: immagini/2026-05-14-18-28-54.png Graphic file (type png)
+<use immagini/2026-05-14-18-28-54.png>
+Package pdftex.def Info: immagini/2026-05-14-18-28-54.png  used on input line 1603.
+(pdftex.def)             Requested size: 91.04742pt x 86.09822pt.
+ [31 <./immagini/2026-05-14-18-24-37.png> <./immagini/2026-05-14-18-28-16.png> <./immagini/2026-05-14-18-28-54.png>] (Spin e sistemi a molte particelle.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 5726 strings out of 467871
- 93725 string characters out of 5418376
- 534024 words of memory out of 5000000
- 34524 multiletter control sequences out of 15000+600000
- 641066 words of font info for 90 fonts, out of 8000000 for 9000
+ 5864 strings out of 467871
+ 98987 string characters out of 5418376
+ 534025 words of memory out of 5000000
+ 34661 multiletter control sequences out of 15000+600000
+ 641411 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,18n,65p,569b,387s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\edoma\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "Spin e sistemi a molte particelle.pdf" (18 pages, 870191 bytes).
+ <C:\Users\edoma\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcbx1095.pk> <C:\Users\edoma\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/edoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on "Spin e sistemi a molte particelle.pdf" (31 pages, 1282377 bytes).
 PDF statistics:
- 175 PDF objects out of 1000 (max. 8388607)
+ 256 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 126 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 221 words of extra memory for PDF output out of 10000 (max. 10000000)
 

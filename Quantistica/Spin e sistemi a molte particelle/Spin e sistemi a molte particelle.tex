@@ -333,7 +333,7 @@ Uno stato generico sarà una combinazione lineare: $\vec{u} = \alpha \vec{u}_1 +
 \noindent
 Utilizzando la notazione di Dirac (Bra-Ket), lo stato colonna (Ket) e il suo duale riga complesso coniugato (Bra) si scrivono come: %
 \begin{equation*}
-    |\psi\rangle = \begin{pmatrix} \psi_1 \\ \psi_2 \end{pmatrix} \qquad , \qquad \langle\psi| = \begin{pmatrix} \psi_1^* & \psi_2^* \end{pmatrix} %
+    |w\rangle = \begin{pmatrix} w_1 \\ w_2 \end{pmatrix} \qquad , \qquad \langle w| = \begin{pmatrix} w_1^* & w_2^* \end{pmatrix} %
 \end{equation*}
 
 In questo spazio 2D, \textbf{GLI OPERATORI SONO MATRICI} $2\times 2$: %
@@ -369,7 +369,7 @@ Lo \textbf{Spinore Generico} è una combinazione di questi due stati fondamental
 E il suo Bra corrispondente è $\langle\chi| = \begin{pmatrix} a^* & b^* \end{pmatrix}$. %
 
 \noindent
-Come per la funzione d'onda spaziale $\psi = \sum c_n \phi_n$, i coefficienti al quadrato rappresentano le probabilità di misura: %
+Come per la funzione d'onda spaziale $\Psi = \sum c_n \phi_n$, i coefficienti al quadrato rappresentano le probabilità di misura: %
 \begin{itemize}
     \item $|a|^2 = \mathbb{P}\left(S_z = +\frac{\hbar}{2}\right)$ %
     \item $|b|^2 = \mathbb{P}\left(S_z = -\frac{\hbar}{2}\right)$ %
@@ -924,5 +924,712 @@ Fisicamente, l'interazione Spin-Orbita spezza la degenerazione dei livelli energ
 
 \noindent
 Questo "splitting" spiega esattamente perché negli spettri atomici (come le famose righe del Sodio) molte singole linee di emissione, se guardate ad altissima risoluzione, si rivelano essere in realtà due linee vicinissime! %
+
+\section{Regole di Selezione per il Momento Totale $\vec{J}$} %
+
+Per capire come cambia il momento angolare totale $\vec{J}$ di un atomo durante l'assorbimento o l'emissione, dobbiamo analizzare la particella scambiata: il \textbf{Fotone} (Elettrodinamica). %
+Il fotone è un bosone con spin $s = j = 1$ (possiede un momento angolare intrinseco e non orbitale). %
+
+\noindent
+Sappiamo dal postulato della Relatività che la luce viaggia a velocità $c$ in tutti i sistemi di riferimento. Essendo sempre alla velocità della luce, \textbf{non è possibile distinguere tra momento orbitale e intrinseco} per un fotone. Quindi: %
+\begin{equation*}
+    J_{fot}^2 = S_{fot}^2 = \hbar^2 s(s+1) \quad \Rightarrow \quad s = 1 \quad \Rightarrow \quad m_s = +1, 0, -1 %
+\end{equation*}
+
+Tuttavia, intervengono due vincoli fisici cruciali: %
+\begin{enumerate}
+    \item Avendo massa a riposo nulla ($M=0$), l'unica direzione spaziale fisicamente accettabile per quantizzare lo spin è quella del suo vettore impulso $\vec{p}$ (direzione di propagazione, che poniamo come asse $z$). %
+    \item I campi Elettromagnetici sono onde \textbf{trasversali} (non hanno componente longitudinale lungo l'asse di propagazione). Questo \textbf{PROIBISCE} l'esistenza dello stato con $m_s = 0$! %
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-05-14-16-28-37.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        Al fotone rimangono solo due stati di spin possibili lungo l'asse di propagazione: %
+        \begin{itemize}
+            \item $m_s = +1 \quad \Rightarrow \quad S_z = J_z = +\hbar \quad \Rightarrow \quad$ \textbf{Polarizzazione Circolare Destra} %
+            \item $m_s = -1 \quad \Rightarrow \quad S_z = J_z = -\hbar \quad \Rightarrow \quad$ \textbf{Polarizzazione Circolare Sinistra} %
+        \end{itemize}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-05-14-16-29-29.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        Quando un elettrone atomico assorbe (o emette) un fotone, il sistema globale deve conservare il momento angolare. Applicando il teorema di somma dei momenti angolari: %
+        \begin{equation*}
+            \vec{J}_1 \text{ (iniziale)} + \vec{J}_{fot} = \vec{J}_2 \text{ (finale)} \qquad (\text{con } j_{fot} = 1) %
+        \end{equation*}
+    \end{minipage}
+\end{figure}
+I valori permessi per $j_2$ partendo da $j_1$ sono limitati a $|j_1 - 1|, j_1, (j_1 + 1)$. Questo genera la Regola di Selezione universale per il momento totale in un processo a singolo fotone: %
+\begin{equation}
+    \boxed{ \Delta j = 0, \pm 1 } \quad \text{REGOLA DI SELEZIONE per } \vec{J} %
+\end{equation}
+
+\subsection{Il Set Completo delle Regole di Selezione} %
+
+Abbiamo visto in precedenza che in approssimazione di dipolo elettrico, l'operatore di interazione opera solo sulle coordinate spaziali, non toccando minimamente lo spin dell'elettrone. Di conseguenza, l'elettrone \textbf{non può "flippare" il suo spin} ($s=1/2$) semplicemente assorbendo un fotone di dipolo: %
+\begin{equation}
+    \boxed{ \Delta s = 0 } \quad \text{in una transizione di dipolo elettrico.} %
+\end{equation}
+\textit{Conclusione geniale:} Se il fotone porta con sé un momento angolare di $\pm 1$ e lo spin dell'elettrone non può cambiare, tutta l'unità di momento angolare del fotone \textbf{finisce inevitabilmente sul momento orbitale $\mathbf{l}$}! Ecco fisicamente spiegato il motivo profondo per cui la regola spaziale è $\boxed{\Delta l = \pm 1}$. %
+
+Riassumiamo il quadro completo per le \textbf{REGOLE DI SELEZIONE DI DIPOLO ELETTRICO}: %
+\begin{equation}
+    \begin{cases}
+        \Delta l = \pm 1 \\ %
+        \Delta j = 0, \pm 1 \\ %
+        \Delta s = 0 %
+    \end{cases}
+\end{equation}
+
+\subsection{Applicazione Pratica: Transizioni nell'Idrogeno} %
+
+Verifichiamo quali salti quantici sono permessi a partire dallo stato fondamentale dell'Idrogeno $1s$ (in cui $l=0, s=1/2, j=1/2$). Osserviamo le transizioni verso i primi stati eccitati ($n=2$), tenendo conto che il livello $2p$ è sdoppiato dalla struttura fine (Spin-Orbita, $\Delta E_{SO}$): %
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{immagini/2026-05-14-16-32-41.png}
+    \end{figure}
+
+\begin{enumerate}
+    \item \textbf{Transizione $\mathbf{1s \to 2s}$:} %
+    \begin{itemize}
+        \item Livello $2s$: $l=0, s=1/2, j=1/2$. %
+        \item Calcolo le differenze: $\Delta j = 0$ (OK), ma $\mathbf{\Delta l = 0}$ (NO!). %
+        \item \textbf{Verdetto: PROIBITA} $\times$ %
+    \end{itemize}
+    
+    \item \textbf{Transizione $\mathbf{1s \to 2p_{1/2}}$:} %
+    \begin{itemize}
+        \item Livello $2p_{1/2}$: $l=1, s=1/2, j=1/2$. %
+        \item Calcolo le differenze: $\Delta j = 0$ (OK) e $\Delta l = +1$ (OK). %
+        \item \textbf{Verdetto: PERMESSA} \checkmark %
+    \end{itemize}
+    
+    \item \textbf{Transizione $\mathbf{1s \to 2p_{3/2}}$:} %
+    \begin{itemize}
+        \item Livello $2p_{3/2}$: $l=1, s=1/2, j=3/2$. %
+        \item Calcolo le differenze: $\Delta j = +1$ (OK) e $\Delta l = +1$ (OK). %
+        \item \textbf{Verdetto: PERMESSA} \checkmark %
+    \end{itemize}
+\end{enumerate}
+
+\noindent
+Questo schemino finale è esattamente ciò che ci permette di spiegare i famosi spettri di emissione e assorbimento degli atomi che studiamo in laboratorio! %
+
+\section{Sistemi a Molte Particelle} %
+
+Fino ad ora abbiamo trattato sistemi con un singolo elettrone. Passiamo ora a sistemi con $N$ particelle (es. atomi multi-elettronici, molecole). 
+\textit{(Nota preliminare: per ora \textbf{trascuriamo lo Spin} e concentriamoci solo sulle coordinate spaziali).} %
+
+\noindent
+Per un sistema di $N$ particelle, la funzione d'onda totale dipende simultaneamente da tutti i vettori posizione $\vec{r}_1, \vec{r}_2, \dots, \vec{r}_N$ e dal tempo $t$: %
+\begin{equation}
+    \Psi_{TOT} = \Psi(\vec{r}_1, \vec{r}_2, \vec{r}_3, \dots, \vec{r}_N, t) %
+\end{equation}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-05-14-17-03-22.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        Il significato fisico del suo modulo quadro $|\Psi_{TOT}|^2$ si generalizza diventando una \textbf{Probabilità Congiunta} all'istante $t$: è la probabilità di trovare contemporaneamente la particella 1 nel volume $d\vec{r}_1$, \textbf{e} la particella 2 nel volume $d\vec{r}_2$, \textbf{e} la particella $N$ in $d\vec{r}_N$. %
+    \end{minipage}
+\end{figure}
+
+L'Equazione di Schrödinger dipendente dal tempo governa l'evoluzione dell'intero blocco: %
+\begin{equation*}
+    i\hbar \frac{\partial \Psi_{TOT}}{\partial t} = \hat{H} \Psi_{TOT} \qquad \text{dove } \hat{H} = \hat{K}_{TOT} + \hat{V}(\vec{r}_1, \vec{r}_2, \dots, \vec{r}_N, t) %
+\end{equation*}
+
+\noindent
+Se il potenziale \textbf{non} dipende esplicitamente dal tempo ($\hat{V} \neq \hat{V}(t)$), possiamo separare la dipendenza temporale isolando gli Stati Stazionari del sistema completo: %
+\begin{equation*}
+    \Psi_{TOT} = u(\vec{r}_1, \vec{r}_2, \dots, \vec{r}_N) e^{-i\frac{E_{TOT}}{\hbar}t} \quad \Rightarrow \quad \hat{H}_{TOT} u = E_{TOT} u %
+\end{equation*}
+
+\begin{quote}
+    \textbf{Dramma Matematico:} L'equazione stazionaria $\hat{H}_{TOT} u = E_{TOT} u$ \textbf{NON AMMETTE UNA SOLUZIONE ESATTA} analitica a partire da $N=3$ (es. un nucleo e due elettroni). %
+\end{quote}
+
+\subsection{Il Problema dell'Elio e la Repulsione Coulombiana} %
+
+Prendiamo l'esempio più semplice dopo l'Idrogeno: l'atomo di \textbf{Elio (He)}. È formato da un nucleo di carica $+2e$ e due elettroni $e_1, e_2$. L'Hamiltoniana esatta è: %
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-05-14-17-05-14.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        \begin{equation*}
+            \hat{H} = \underbrace{ -\frac{\hbar^2}{2m}\Delta_1 - \frac{\hbar^2}{2m}\Delta_2 }_{\hat{K}_{tot}} \underbrace{ - \frac{2e^2}{4\pi\varepsilon_0 r_1} }_{\hat{V}_1(\vec{r}_1)} \underbrace{ - \frac{2e^2}{4\pi\varepsilon_0 r_2} }_{\hat{V}_2(\vec{r}_2)} + \underbrace{ \frac{e^2}{4\pi\varepsilon_0 |\vec{r}_1 - \vec{r}_2|} }_{\hat{V}_{ee} \text{ (Termine di repulsione)}} %
+        \end{equation*}
+    \end{minipage}
+\end{figure}
+
+\noindent
+Il termine $\hat{V}_{ee}$ accoppia in modo inscindibile le coordinate del primo elettrone ($\vec{r}_1$) con quelle del secondo ($\vec{r}_2$). Rende l'equazione differenziale non lineare rispetto alle coordinate singole e \textbf{non risolvibile analiticamente}. %
+
+\subsection{Approssimazione a Particelle Indipendenti} %
+
+Per poter fare dei calcoli, introduciamo l'Approssimazione a Particelle Indipendenti: \textbf{trascuriamo la mutua interazione} tra le particelle. %
+Ponendo forzatamente $\hat{V}_{ee} \simeq 0$, l'Hamiltoniana si disaccoppia diventando una pura somma di Hamiltoniane di singola particella: %
+\begin{equation}
+    \hat{H} \simeq \sum_i \hat{K}_i + \sum_i \hat{V}_i(\vec{r}_i) \quad \Rightarrow \quad \hat{H} = \sum_i \left[ -\frac{\hbar^2}{2m}\Delta_i + V_i(\vec{r}_i) \right] = \sum_{i=1}^N \hat{H}_i %
+\end{equation}
+
+L'equazione di Schrödinger diventa: %
+\begin{equation}
+    \left( \sum_{i=1}^N \hat{H}_i \right) u(\vec{r}_1, \vec{r}_2, \dots, \vec{r}_N) = E_{TOT} u(\vec{r}_1, \vec{r}_2, \dots, \vec{r}_N) %
+\end{equation}
+
+\noindent
+Per risolvere questa equazione alle derivate parziali, usiamo l'\textbf{Ansatz della Separazione delle Variabili} (lo stesso ragionamento applicato per separare $x, y, z$ nella buca di potenziale 3D). Ipotizziamo che la funzione d'onda totale sia il prodotto di $N$ funzioni d'onda di singola particella: %
+\begin{equation*}
+    u(\vec{r}_1, \vec{r}_2, \dots, \vec{r}_N) = u_1(\vec{r}_1) \cdot u_2(\vec{r}_2) \dots u_N(\vec{r}_N) = \prod_{j=1}^N u_j(\vec{r}_j) %
+\end{equation*}
+
+\noindent
+Sostituiamo nell'equazione di Schrödinger. Poiché ogni operatore $\hat{H}_i$ agisce \textbf{solo} sulle derivate della coordinata $\vec{r}_i$, le altre funzioni $u_j$ si comportano come delle costanti ed escono dall'operatore: %
+\begin{equation*}
+    \sum_i \left[ \hat{H}_i u_i(\vec{r}_i) \right] \prod_{j \neq i} u_j(\vec{r}_j) = E_{TOT} \prod_j u_j(\vec{r}_j) %
+\end{equation*}
+
+Dividiamo ora l'intera equazione per la funzione d'onda totale stessa $\prod_j u_j(\vec{r}_j)$: %
+\begin{equation}
+    \Rightarrow \quad \sum_{i=1}^N \underbrace{ \left[ \frac{\hat{H}_i u_i(\vec{r}_i)}{u_i(\vec{r}_i)} \right] }_{\text{Dipende SOLO da } \vec{r}_i} = E_{TOT} \text{ (Costante)} %
+\end{equation}
+
+\noindent
+Affinché una somma di termini in cui ciascuno dipende da una variabile totalmente indipendente dagli altri sia costantemente uguale a un numero reale $E_{TOT}$, \textbf{ogni singolo termine della somma deve essere a sua volta una costante}, che chiameremo $E_i$! %
+
+\begin{equation}
+    \Rightarrow \quad \frac{\hat{H}_i u_i(\vec{r}_i)}{u_i(\vec{r}_i)} = E_i \quad \Rightarrow \quad \boxed{ \hat{H}_i u_i(\vec{r}_i) = E_i u_i(\vec{r}_i) } %
+\end{equation}
+
+\noindent
+\textbf{Risultato Epocale:} Siamo riusciti a smontare il mostruoso problema a $N$ particelle in $N$ semplicissimi problemi ad una sola particella! %
+La funzione d'onda totale è il prodotto degli orbitali singoli, e l'energia totale del sistema non è altro che la somma delle energie dei singoli elettroni (nella loro approssimazione imperturbata): %
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.55\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-05-14-17-08-08.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.40\textwidth}
+        \begin{equation}
+            \boxed{ E_{TOT} = \sum_{i=1}^N E_i } %
+        \end{equation}
+    \end{minipage}
+\end{figure}
+
+\section{Indistinguibilità delle Particelle} %
+
+Riprendiamo la soluzione fattorizzata per un sistema a $N$ particelle indipendenti: %
+\begin{equation*}
+    u(\vec{r}_1, \vec{r}_2, \dots, \vec{r}_N) = u_1(\vec{r}_1) u_2(\vec{r}_2) \dots u_N(\vec{r}_N) %
+\end{equation*}
+Ogni singola funzione d'onda $u_i$ è identificata da un set di numeri quantici (es. $N = \{n, l, m\}$) che descrive lo stato. %
+
+\noindent
+Consideriamo, per semplicità, un sistema a 2 particelle: %
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-05-14-17-09-52.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        \begin{equation*}
+            u(\vec{r}_1, \vec{r}_2) = u_a(\vec{r}_1) u_b(\vec{r}_2) \quad \text{più brevemente} \quad u_a(1)u_b(2) %
+        \end{equation*}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-05-14-17-10-09.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        \textbf{Il problema concettuale:} %
+        \begin{itemize}
+            \item \textbf{In Fisica Classica:} Anche se due particelle sono identiche (es. due palline da biliardo), posso sempre seguirne la traiettoria nel tempo. Posso \textit{sempre stabilire quale è la 1 e quale è la 2}. %
+            \item \textbf{In Meccanica Quantistica:} Gli elettroni ($e_1, e_2$) non hanno una vera e propria traiettoria definita. Le loro "nuvole di probabilità" (funzioni d'onda) si sovrappongono nello spazio. Se trovo un elettrone in una certa zona, è fisicamente impossibile sapere se sia l'elettrone 1 o l'elettrone 2. %
+        \end{itemize}
+    \end{minipage}
+\end{figure}
+
+\noindent
+Questo porta al \textbf{Principio di Indistinguibilità delle Particelle}: Particelle elementari della stessa natura (es. tutti gli elettroni dell'universo) sono assolutamente indistinguibili tra loro. %
+Di conseguenza, se scambio le due particelle, esse \textbf{devono entrare in modo paritetico nello stato} quantistico totale: %
+\begin{equation*}
+    u_a(1)u_b(2) \stackrel{\text{SCAMBIO LE PART.}}{\Leftrightarrow} u_a(2)u_b(1) %
+\end{equation*}
+
+\subsection{L'Operatore di Scambio $\hat{P}_{12}$} %
+
+Formalizziamo questa operazione introducendo l'\textbf{Operatore di Scambio} $\hat{P}_{12}$: %
+\begin{equation}
+    \hat{P}_{12} u(1,2) = u(2,1) %
+\end{equation}
+
+\noindent
+Essendo il sistema fisicamente indistinguibile dopo lo scambio, la densità di probabilità (ciò che misuriamo) deve rimanere assolutamente identica: %
+\begin{equation*}
+    |u(2,1)|^2 = |u(1,2)|^2 \quad \Rightarrow \quad u(2,1) = e^{i\alpha} u(1,2) \quad \text{(A meno di un fattore di fase)} %
+\end{equation*}
+
+\noindent
+Applicando l'operatore di scambio due volte di fila, il sistema torna alla configurazione di partenza: %
+\begin{align*}
+    \hat{P}_{12}^2 u(1,2) &= \hat{P}_{12} [\hat{P}_{12} u(1,2)] = \hat{P}_{12} u(2,1) = \hat{P}_{12} [e^{i\alpha} u(1,2)] = \\ %
+    &= e^{i\alpha} \hat{P}_{12} u(1,2) = e^{i\alpha} [e^{i\alpha} u(1,2)] = e^{i2\alpha} u(1,2) %
+\end{align*}
+Affinché $\hat{P}_{12}^2$ riporti lo stato a sé stesso, deve valere $e^{i2\alpha} = 1$, il che implica $2\alpha = 0$ oppure $2\alpha = 2\pi$. %
+In entrambi i casi, $e^{i\alpha} = \pm 1$. %
+
+Risolvendo l'equazione agli autovalori per l'operatore $\hat{P}_{12}$: %
+\begin{equation}
+    \boxed{ \hat{P}_{12} u(1,2) = \pm u(1,2) } \quad \Rightarrow \quad \lambda = \pm 1 %
+\end{equation}
+
+\noindent
+Se scambio le particelle tra loro ($u(2,1)$), la funzione d'onda può comportarsi solo in due modi: %
+\begin{enumerate}
+    \item \textbf{Resta Uguale ($+1$):} $u(2,1) = u(1,2) \Rightarrow \mathbf{u_S}$ \textbf{(Funzione d'onda SIMMETRICA)} %
+    \item \textbf{Cambia Segno ($-1$):} $u(2,1) = -u(1,2) \Rightarrow \mathbf{u_A}$ \textbf{(Funzione d'onda ANTISIMMETRICA)} %
+\end{enumerate}
+
+\subsection{Funzioni d'Onda Simmetrizzate} %
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.23\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-05-14-17-13-19.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.75\textwidth}
+        Torniamo al nostro prodotto originario: $u(1,2) = u_a(1)u_b(2)$. Se scambiamo 1 con 2, otteniamo $u_a(2)u_b(1)$. È evidente che \textbf{NON} vale l'uguaglianza $u(2,1) = \pm u(1,2)$. Il semplice prodotto di singole funzioni d'onda viola il principio di indistinguibilità! %
+    \end{minipage}
+\end{figure}
+
+\textbf{L'indistinguibilità produce un OBBLIGO di SIMMETRIZZAZIONE.} Dobbiamo costruire le funzioni fisiche come combinazioni lineari dei prodotti, sommandole o sottraendole e moltiplicandole per una costante di normalizzazione $A$: %
+\begin{align}
+    \text{Stato Simmetrico: } \quad u_S(1,2) &= A \left[ u_a(1)u_b(2) + u_a(2)u_b(1) \right] \\ %
+    \text{Stato Antisimmetrico: } \quad u_A(1,2) &= A \left[ u_a(1)u_b(2) - u_a(2)u_b(1) \right] %
+\end{align}
+\textit{(Nota: La regola si generalizza a $N$ particelle: $\hat{P}_{ij} u(\dots i \dots j \dots) = \pm u(\dots i \dots j \dots)$).} %
+
+\section{Teorema Spin-Statistica e Principio di Pauli} %
+
+Quindi, quale delle due funzioni d'onda ($u_S$ o $u_A$) sceglie la natura per le sue particelle? La scelta dipende unicamente dalle \textbf{Proprietà Statistiche}, ovvero dallo \textbf{SPIN}. %
+
+\textbf{Teorema Spin-Statistica (Postulato):} %
+\begin{itemize}
+    \item \textbf{BOSONI:} Hanno Spin \textbf{Intero} ($0, 1, 2 \dots$). Es. fotoni, mesoni. La loro funzione d'onda totale deve essere \textbf{SIMMETRICA}: $u(1,2) = u(2,1)$. %
+    \item \textbf{FERMIONI:} Hanno Spin \textbf{Semi-Intero} ($1/2, 3/2 \dots$). Es. elettroni, protoni, neutroni. La loro funzione d'onda totale deve essere \textbf{ANTISIMMETRICA}: $u(1,2) = -u(2,1)$. %
+\end{itemize}
+
+\noindent
+Lavoriamo sui \textbf{Fermioni} (elettroni), ponendo la costante $A = 1/\sqrt{2}$ (continuando per ora a trascurare temporaneamente la loro parte di spin per semplicità). La funzione spaziale è: %
+\begin{equation*}
+    u_A(1,2) = \frac{1}{\sqrt{2}} \left[ u_a(1)u_b(2) - u_a(2)u_b(1) \right] %
+\end{equation*}
+
+\noindent
+Cosa succede se cerchiamo di mettere i due elettroni \textbf{ESATTAMENTE NELLO STESSO STATO QUANTISTICO}? %
+Significherebbe porre $a = b$. Sostituiamo nell'equazione: %
+\begin{equation*}
+    u_A(1,2) = \frac{1}{\sqrt{2}} \left[ u_a(1)u_a(2) - u_a(2)u_a(1) \right] = 0 \quad \Rightarrow \quad \boxed{ u_A = 0 } %
+\end{equation*}
+    
+\noindent
+Se la funzione d'onda è nulla, la probabilità di trovare il sistema in quella configurazione è $0$. \textbf{È FISICAMENTE IMPOSSIBILE!} %
+Abbiamo appena dimostrato matematicamente il \textbf{PRINCIPIO DI ESCLUSIONE DI PAULI}: %
+\begin{quote}
+    \textit{"Due fermioni identici non possono occupare lo stesso stato quantistico."} %
+\end{quote}
+(Questo singolo e all'apparenza semplice teorema è ciò che impedisce a tutta la materia dell'universo di collassare nello stato di minima energia, determinando il volume e la stabilità della materia stessa e definendo l'intera struttura della Tavola Periodica della chimica!) %
+
+\section{Funzione d'Onda Totale e Scambio} %
+
+Consideriamo $2$ Fermioni identici (es. due elettroni). La loro funzione d'onda totale $u(1,2)$ è il prodotto della parte puramente spaziale $\varphi(1,2)$ e della parte puramente di spin $\chi(1,2)$: %
+\begin{equation}
+    u(1,2) = \varphi(1,2) \chi(1,2) \qquad \text{con l'obbligo } u(1,2) = -u(2,1) \text{ (Fermioni)} %
+\end{equation}
+
+\noindent
+Come abbiamo visto con l'approssimazione a particelle indipendenti, la parte spaziale simmetrizzata si scrive come: %
+\begin{equation*}
+    \varphi(1,2) = \frac{1}{\sqrt{2}} \left[ \varphi_a(1)\varphi_b(2) \pm \varphi_a(2)\varphi_b(1) \right] %
+\end{equation*}
+\textit{Nota profonda:} Già solo la presenza di questa simmetrizzazione spaziale (obbligata dall'indistinguibilità) crea una correlazione tra le particelle anche in assenza di forze di interazione! Questa correlazione statistica si chiama \textbf{ENTANGLEMENT}. %
+
+\subsection{Prodotto Tensoriale degli Spin} %
+
+Studiamo lo spazio di spin per 2 particelle. Ogni elettrone ha il suo spinore $\binom{a}{b}$ in uno spazio vettoriale 2D. Lo spazio totale del sistema è dato dal \textbf{Prodotto Tensoriale} ($\otimes$) dei due spazi di Hilbert: %
+\begin{equation*}
+    \vec{S}_1 \otimes \vec{S}_2 \quad \Rightarrow \quad 2D \otimes 2D = 4D %
+\end{equation*}
+Le $4$ combinazioni base (che formano la \textbf{Base Disaccoppiata} $|s_1, m_{s_1}, s_2, m_{s_2}\rangle$) sono: %
+\begin{align*}
+    m_s=1 \qquad\chi_+(1)\chi_+(2) &= |\uparrow\uparrow\rangle \\ %
+    m_s=0 \qquad\chi_+(1)\chi_-(2) &= |\uparrow\downarrow\rangle \\ %
+    m_s=0 \qquad\chi_-(1)\chi_+(2) &= |\downarrow\uparrow\rangle \\ %
+    m_s=-1 \qquad\chi_-(1)\chi_-(2) &= |\downarrow\downarrow\rangle %
+\end{align*}
+
+\noindent
+In forma matriciale, il prodotto tensoriale si calcola moltiplicando ogni elemento del primo vettore per l'intero secondo vettore: %
+\begin{equation*}
+    |\uparrow\uparrow\rangle = \binom{1}{0} \otimes \binom{1}{0} = \begin{pmatrix} 1 \binom{1}{0} \\ 0 \binom{1}{0} \end{pmatrix} = \begin{pmatrix} 1 \\ 0 \\ 0 \\ 0 \end{pmatrix} \quad , \quad |\uparrow\downarrow\rangle = \binom{1}{0} \otimes \binom{0}{1} = \begin{pmatrix} 0 \\ 1 \\ 0 \\ 0 \end{pmatrix} \quad \text{ecc.} %
+\end{equation*}
+
+\noindent
+\textbf{IL PROBLEMA:} Questi 4 autostati della base disaccoppiata \textbf{NON RISPETTANO LA SIMMETRIA PER SCAMBIO}! Ad esempio, se scambio 1 con 2, lo stato $|\uparrow\downarrow\rangle$ diventa $|\downarrow\uparrow\rangle$, che è uno stato \textit{diverso}, e non sé stesso o il suo opposto ($\pm |\uparrow\downarrow\rangle$). L'indistinguibilità viene violata! %
+
+\subsection{Autostati nella Base Accoppiata (Singoletto e Tripletto)} %
+
+Per risolvere il problema, dobbiamo passare alla \textbf{Base Accoppiata} dell'operatore di spin totale $\hat{S}^2$ e $\hat{S}_z$: $|S, m_s, s_1, s_2\rangle$. %
+Come visto in precedenza, per $s_1=1/2$ e $s_2=1/2$, lo spin totale può valere $S=0$ (Singoletto, $m_s=0$) oppure $S=1$ (Tripletto, $m_s=-1, 0, 1$). %
+
+\noindent
+Usando i Coefficienti di Clebsch-Gordan per passare dalla base disaccoppiata a quella accoppiata, costruiamo gli autostati di spin:\\
+
+\textbf{Stato con S = 0 (SINGOLETTO):} %
+\begin{equation}
+    |0, 0\rangle = \frac{1}{\sqrt{2}} \left[ \chi_+(1)\chi_-(2) - \chi_-(1)\chi_+(2) \right] = \frac{1}{\sqrt{2}} \left[ |\uparrow\downarrow\rangle - |\downarrow\uparrow\rangle \right] %
+\end{equation}
+\textit{Osservazione:} Se inverto 1 con 2 in questo stato, i due termini si scambiano e compare un segno meno globale. Questo stato è \textbf{ANTISIMMETRICO PER SCAMBIO}!\\
+
+\textbf{Stati con S = 1 (TRIPLETTO):} %
+\begin{align}
+    |1, 1\rangle &= \chi_+(1)\chi_+(2) = |\uparrow\uparrow\rangle \\ %
+    |1, 0\rangle &= \frac{1}{\sqrt{2}} \left[ \chi_+(1)\chi_-(2) + \chi_-(1)\chi_+(2) \right] = \frac{1}{\sqrt{2}} \left[ |\uparrow\downarrow\rangle + |\downarrow\uparrow\rangle \right] \\ %
+    |1, -1\rangle &= \chi_-(1)\chi_-(2) = |\downarrow\downarrow\rangle %
+\end{align}
+\textit{Osservazione:} Se inverto 1 con 2 in qualunque di questi tre stati, la funzione rimane esattamente identica (nella somma cambia l'ordine degli addendi, che è irrilevante). Questi stati sono tutti \textbf{SIMMETRICI RISPETTO ALLO SCAMBIO}! %
+
+\begin{quote}
+    \textbf{CONCLUSIONE FINALE SULL'INDISTINGUIBILITÀ:} \\ %
+    Essendo gli spin $\vec{S}_1$ e $\vec{S}_2$ particelle identiche, la base disaccoppiata (che li tratta come entità distinte con proiezioni distinte) non tiene conto dell'indistinguibilità della materia. % \\
+    \textbf{DEVO USARE SEMPRE LA BASE ACCOPPIATA} perché, come abbiamo appena dimostrato, lavorare con la base accoppiata identifica automaticamente gli stati già simmetrizzati (o antisimmetrizzati) pronti per obbedire al Principio di Pauli! %
+\end{quote}
+
+\subsection{La Funzione d'Onda Globale (Spazio + Spin)} %
+
+Per due fermioni identici (es. elettroni), il Teorema Spin-Statistica impone che la funzione d'onda \textbf{GLOBALE} $u(1,2)$ sia \textbf{ANTISIMMETRICA} per scambio: %
+\begin{equation}
+    u(1,2) = -u(2,1) %
+\end{equation}
+
+\noindent
+Poiché $u(1,2)$ è il prodotto della parte spaziale $\varphi(1,2)$ e della parte di spin $\chi(1,2)$, l'unico modo per ottenere un segno meno globale scambiando le particelle è che una delle due componenti sia simmetrica e l'altra antisimmetrica. Abbiamo due combinazioni possibili: %
+
+\begin{enumerate}
+    \item \textbf{Spazio Simmetrico + Spin Antisimmetrico (SINGOLETTO):} %
+    \begin{equation}
+        u(1,2) = \underbrace{ \frac{1}{\sqrt{2}} [\varphi_a(1)\varphi_b(2) + \varphi_a(2)\varphi_b(1)] }_{\varphi_S(1,2)} \cdot \underbrace{ \frac{1}{\sqrt{2}} [\uparrow\downarrow - \downarrow\uparrow] }_{\chi_{ANTI} \text{ (Singoletto)}} %
+    \end{equation}
+    
+    \item \textbf{Spazio Antisimmetrico + Spin Simmetrico (TRIPLETTO):} %
+    \begin{equation}
+        u(1,2) = \underbrace{ \frac{1}{\sqrt{2}} [\varphi_a(1)\varphi_b(2) - \varphi_a(2)\varphi_b(1)] }_{\varphi_A(1,2)} \cdot \begin{cases} \uparrow\uparrow \\ \frac{1}{\sqrt{2}}[\uparrow\downarrow + \downarrow\uparrow] \\ \downarrow\downarrow \end{cases} \leftarrow \chi_{SIM} \text{ (Tripletto)} %
+    \end{equation}
+\end{enumerate}
+
+\subsection{Conseguenze Fisiche dello Scambio} %
+
+Questa struttura matematica ha due conseguenze devastanti e fondamentali per la fisica della materia: %
+
+\noindent
+\textbf{1. Riformulazione del Principio di Pauli (Stesso Stato Spaziale):} %
+Cosa succede se metto i due elettroni nello stesso identico stato spaziale ($a=b$)? 
+La parte spaziale antisimmetrica si annulla: $\varphi_A = \varphi_a(1)\varphi_a(2) - \varphi_a(2)\varphi_a(1) = 0$. %
+L'unica configurazione globale che sopravvive è quella con la parte spaziale simmetrica ($\varphi_S$). Ma se la parte spaziale è $\varphi_S$, la parte di spin \textbf{DEVE} essere $\chi_{ANTI}$ (Singoletto)! %
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-05-14-17-58-43.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        \begin{quote}
+            $\Rightarrow$ Sullo stesso stato spaziale posso mettere \textbf{SOLO ELETTRONI CON SPIN OPPOSTO}. (Devono avere almeno un numero quantico diverso). %
+        \end{quote}
+    \end{minipage}
+\end{figure}
+
+\noindent
+\textbf{2. Distanza Media e Forza di Scambio:} %
+Calcoliamo la probabilità di trovare le due particelle vicinissime nello spazio, cioè valutiamo le densità di probabilità per $\vec{r}_1 \to \vec{r}_2$: %
+\begin{itemize}
+    \item Per il \textbf{Singoletto} ($\varphi_S$): $\varphi_S \to \sqrt{2} \varphi_a(2)\varphi_b(2) \Rightarrow |\varphi_S|^2 = 2 |\varphi_a(2)\varphi_b(2)|^2$. La probabilità di trovarli vicini è massima! %
+    \item Per il \textbf{Tripletto} ($\varphi_A$): $\varphi_A \to 0 \Rightarrow |\varphi_A|^2 = 0$. La probabilità di trovare due elettroni con lo stesso spin nello stesso punto è rigorosamente \textbf{ZERO}. Si respingono! %
+    \item Per particelle \textbf{Distinguibili} (classiche): $|\varphi_{dist}|^2 = |\varphi_a(1)\varphi_b(2)|^2$. (Valore intermedio). %
+\end{itemize}
+
+Valutando matematicamente il valore di aspettazione della distanza reciproca $\langle |\vec{r}_2 - \vec{r}_1| \rangle = \int |\vec{r}_2 - \vec{r}_1| |f|^2 d\vec{r}_1 d\vec{r}_2$, si ottiene una disuguaglianza fondamentale: %
+
+\begin{equation}
+    \boxed{ \langle |\vec{r}_2 - \vec{r}_1| \rangle_S < \langle |\vec{r}_2 - \vec{r}_1| \rangle_D < \langle |\vec{r}_2 - \vec{r}_1| \rangle_A } %
+\end{equation}
+
+\noindent
+Nella configurazione di Tripletto (spin paralleli), le particelle sono mediamente \textbf{più lontane} che nella configurazione di Singoletto. È come se emergesse una misteriosa forza repulsiva (chiamata \textbf{Interazione di Scambio}) che non ha natura elettromagnetica, ma nasce puramente dal requisito geometrico dell'antisimmetria della funzione d'onda! %
+
+\section{L'Atomo di Elio} %
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.2\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-05-14-18-00-29.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.75\textwidth}
+        Studiamo l'atomo di Elio (He), avente numero atomico $Z=2$. Il sistema è composto da un nucleo di carica $+2e$ e due elettroni ($-e$) posti a distanza $\vec{r}_1$ e $\vec{r}_2$. %
+    \end{minipage}
+\end{figure}
+L'Hamiltoniana esatta del sistema è: %
+\begin{equation*}
+    \hat{H} = \underbrace{ -\frac{\hbar^2}{2m}\Delta_1 - \frac{\hbar^2}{2m}\Delta_2 }_{\hat{K}_{tot}} \underbrace{ - \frac{Z e^2}{4\pi\varepsilon_0 r_1} - \frac{Z e^2}{4\pi\varepsilon_0 r_2} }_{\text{Attraz. Nucleare}} + \underbrace{ \frac{e^2}{4\pi\varepsilon_0 |\vec{r}_1 - \vec{r}_2|} }_{V_{ee} \text{ (Repulsione)}} %
+\end{equation*}
+
+\noindent
+Questa equazione differenziale si risolve solo con metodi matematici approssimati. La funzione d'onda totale è del tipo $u = \varphi(\vec{r}_1, \vec{r}_2)\chi_{spin}$. %
+Applichiamo due approssimazioni: %
+\begin{enumerate}
+    \item \textbf{Trascuro la repulsione $V_{ee}$} $\Rightarrow$ Approssimazione di Particelle Indipendenti. %
+    \item \textbf{Trascuro lo Spin} (per ora ci concentriamo solo sulle energie spaziali). %
+\end{enumerate}
+
+\noindent
+L'Hamiltoniana si disaccoppia in $\hat{H} = \hat{H}_1 + \hat{H}_2$. %
+La funzione spaziale diventa il prodotto di due orbitali idrogenoidi noti: %
+\begin{equation*}
+    \varphi(\vec{r}_1, \vec{r}_2) = \varphi_{n_1 l_1 m_1}(\vec{r}_1) \cdot \varphi_{n_2 l_2 m_2}(\vec{r}_2) %
+\end{equation*}
+Conosciamo già i risultati risolutivi delle singole equazioni $\hat{H}_1 \varphi_1 = E_1 \varphi_1$ e $\hat{H}_2 \varphi_2 = E_2 \varphi_2$: %
+\begin{equation*}
+    E_1 = -\frac{Z^2 Ry}{n_1^2} \quad , \quad E_2 = -\frac{Z^2 Ry}{n_2^2} %
+\end{equation*}
+
+L'energia totale è semplicemente la somma $E = E_1 + E_2$. %
+
+\subsubsection*{Lo Stato Fondamentale} %
+
+Per lo stato di minima energia (Stato Fondamentale), poniamo entrambi gli elettroni nel livello $n=1$. Avendo $Z=2$: %
+\begin{equation*}
+    E = -4 Ry - 4 Ry = -8 Ry = -108.8 \text{ eV} %
+\end{equation*}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-05-14-18-07-33.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        La funzione d'onda spaziale è $\varphi(\vec{r}_1, \vec{r}_2) = \varphi_{100}(\vec{r}_1) \varphi_{100}(\vec{r}_2)$. 
+        Questa è la \textbf{Configurazione Elettronica $\mathbf{1s^2}$}. (Entrambi sul livello $1s$, permessa dal Principio di Pauli purché abbiano spin opposti, in stato di Singoletto). %
+    \end{minipage}
+\end{figure}
+
+\subsubsection*{Gli Stati Eccitati e la Rimozione della Degenerazione} %
+
+Cosa succede se forniamo energia ed eccitiamo uno dei due elettroni al livello superiore ($n=2$)? %
+Se la repulsione fosse nulla ($V_{ee} = 0$), avere la configurazione $\mathbf{1s^1 2s^1}$ oppure $\mathbf{1s^1 2p^1}$ produrrebbe \textbf{esattamente la stessa energia} $E$, poiché nell'idrogeno i livelli $2s$ e $2p$ sono degeneri. %
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{immagini/2026-05-14-18-08-45.png}
+    \end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-05-14-18-09-11.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        \textbf{Nella realtà ($V_{ee} \neq 0$):} La repulsione tra gli elettroni esiste e rompe questa degenerazione! %
+        (Tra l'altro, il valore sperimentale per lo stato fondamentale non è $-108.8 \text{ eV}$, ma circa $E_{SF} \simeq -79 \text{ eV}$, proprio a causa dell'energia positiva di repulsione $V_{ee}$ che alza l'energia del sistema). %
+    \end{minipage}
+\end{figure}
+
+Osserviamo le densità di probabilità radiale $\mathbb{P}(r)$ per i vari orbitali: %
+\begin{itemize}
+    \item \textbf{Orbitale 1s:} Picco molto vicino al nucleo (a circa $a_0$). %
+    \item \textbf{Orbitale 2s:} Presenta due "gobbe". Il picco principale è lontano (circa $5a_0$), ma possiede una \textbf{piccola gobba interna} molto vicina al nucleo. %
+    \item \textbf{Orbitale 2p:} Presenta un solo picco a circa $4a_0$. %
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{immagini/2026-05-14-18-09-34.png}
+    \end{figure}
+
+    \noindent
+Confrontando le curve, notiamo che l'orbitale $2p$ \textbf{si sovrappone molto di più} con la "nuvola" dell'elettrone $1s$ rispetto a quanto faccia il $2s$. %
+Di conseguenza: %
+\begin{quote}
+    Gli elettroni di $1s$ e $2p$ \textbf{si repellono maggiormente} tra loro! 
+    Inoltre, la piccola gobba interna del $2s$ gli permette di "penetrare" la nuvola dell'$1s$ e "sentire" maggiormente la carica attrattiva del nucleo (+2e) non schermata. %
+\end{quote}
+
+\noindent
+Questo significa che lo stato $1s2s$ è \textbf{più stabile (meno energetico)} dello stato $1s2p$. L'ordinamento reale dei livelli energetici è: %
+\begin{enumerate}
+    \item \textbf{Stato Fondamentale:} $1s^2$ %
+    \item \textbf{1° Stato Eccitato:} $1s^1 2s^1$ %
+    \item \textbf{2° Stato Eccitato:} $1s^1 2p^1$ %
+\end{enumerate}
+
+\noindent
+Questo fenomenale principio (effetto di schermo e penetrazione degli orbitali) è alla base del riempimento a blocchi della Tavola Periodica ($s, p, d, f$) e di tutta la chimica moderna! %
+
+\section{L'Atomo di Elio Completo (Aggiunta dello Spin)} %
+
+Ripartiamo dall'atomo di Elio, ma questa volta aggiungiamo formalmente lo Spin alla funzione d'onda totale $u(1,2)$. %
+Essendo gli elettroni dei fermioni, la funzione d'onda globale deve essere antisimmetrica per scambio. %
+
+Definiamo prima le possibili \textbf{parti spaziali} $\varphi(\vec{r}_1, \vec{r}_2) = \pm \varphi(\vec{r}_2, \vec{r}_1)$: %
+\begin{align}
+    \varphi_A &= \frac{1}{\sqrt{2}} \left[ \varphi_{n_1 l_1 m_1}(\vec{r}_1) \varphi_{n_2 l_2 m_2}(\vec{r}_2) - \varphi_{n_1 l_1 m_1}(\vec{r}_2) \varphi_{n_2 l_2 m_2}(\vec{r}_1) \right] \quad \Rightarrow \quad \text{\textbf{STATI ORTO}} \\ %
+    \varphi_S &= \frac{1}{\sqrt{2}} \left[ \varphi_{n_1 l_1 m_1}(\vec{r}_1) \varphi_{n_2 l_2 m_2}(\vec{r}_2) + \varphi_{n_1 l_1 m_1}(\vec{r}_2) \varphi_{n_2 l_2 m_2}(\vec{r}_1) \right] \quad \Rightarrow \quad \text{\textbf{STATI PARA}} %
+\end{align}
+
+Ricordiamo le \textbf{parti di spin} $\chi_{spin}(1,2)$ (Singoletto e Tripletto): %
+\begin{align*}
+    \chi_{TRI}(1,2) &= \begin{cases} 
+        \chi_+(1)\chi_+(2) \rightarrow S_z = \hbar \\ 
+        \frac{1}{\sqrt{2}} [\chi_+(1)\chi_-(2) + \chi_-(1)\chi_+(2)] \rightarrow S_z = 0 \\ 
+        \chi_-(1)\chi_-(2) \rightarrow S_z = -\hbar 
+    \end{cases} \quad \text{(Simmetrica)} \\ %
+    \chi_{SING}(1,2) &= \frac{1}{\sqrt{2}} [\chi_+(1)\chi_-(2) - \chi_-(1)\chi_+(2)] \rightarrow S_z = 0 \quad \text{(Antisimmetrica)} %
+\end{align*}
+
+\noindent
+Per garantire l'antisimmetria totale $u(1,2) = -u(2,1)$, le uniche combinazioni fisicamente accettabili sono: %
+\begin{equation}
+    u(1,2) = \begin{cases} 
+        \varphi_A \chi_{TRI} & \text{(Ortoelio)} \\ 
+        \varphi_S \chi_{SING} & \text{(Paraelio)} 
+    \end{cases} %
+\end{equation}
+
+\subsection{Stato Fondamentale ed Eccitati dell'Elio} %
+
+\textbf{Stato Fondamentale $\mathbf{(1s^2)}$:} %
+Entrambi gli elettroni sono nello stato $100$. La parte spaziale è per forza simmetrica: $\varphi(\vec{r}_1, \vec{r}_2) = \varphi_{100}(\vec{r}_1) \varphi_{100}(\vec{r}_2)$. %
+L'unica combinazione possibile richiede lo spin antisimmetrico (Singoletto): %
+\begin{equation}
+    \boxed{ u(1,2) = \varphi_{100}(\vec{r}_1) \varphi_{100}(\vec{r}_2) \chi_{SING} } %
+\end{equation}
+\textit{Il fondamentale dell'Elio è un Paraelio.} \\
+
+\noindent
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-05-14-18-21-34.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        \textbf{Stati Eccitati (es. 1° stato eccitato 1s2s e 2° 1s2p):} %
+        Qui gli stati spaziali sono diversi, quindi possiamo avere sia la configurazione Paraelio ($\varphi_S \chi_{SING}$) che Ortoelio ($\varphi_A \chi_{TRI}$). %
+        Sappiamo che la distanza media tra due particelle nel tripletto è maggiore di quella nel singoletto: $\langle |\vec{r}_2 - \vec{r}_1| \rangle_{TRI} > \langle |\vec{r}_2 - \vec{r}_1| \rangle_{SING}$. %
+    \end{minipage}
+\end{figure}
+
+\noindent
+Se consideriamo la repulsione Coulombiana $V_{ee}$ tra gli elettroni, essere più distanti significa subire meno repulsione! Di conseguenza, a parità di configurazione elettronica (es. $1s2s$), \textbf{lo stato di Tripletto ($\mathbf{\chi_{TRI}}$) ha energia MINORE (è favorito) rispetto allo stato di Singoletto ($\mathbf{\chi_{SING}}$)}! %
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-05-14-18-24-37.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        Questo effetto sdoppia ulteriormente i livelli energetici: %
+        \begin{itemize}
+            \item Il livello $1s2s$ si divide in un livello inferiore di Tripletto ($\varphi_A \chi_{TRI}$) e uno superiore di Singoletto ($\varphi_S \chi_{SING}$). %
+            \item Il livello $1s2p$ si divide analogamente. %
+        \end{itemize}
+    \end{minipage}
+\end{figure}
+
+\begin{align*}
+    u_{1^\circ ecc} = \frac{1}{\sqrt{2}} \left[ \varphi_{100}(\vec{r}_1)\varphi_{200}(\vec{r}_2) - \varphi_{100}(\vec{r}_2)\varphi_{200}(\vec{r}_1) \right] \chi_{TRI} \\
+    u_{2^\circ ecc} = \frac{1}{\sqrt{2}} \left[ \varphi_{100}(\vec{r}_1)\varphi_{21m_2}(\vec{r}_2) - \varphi_{100}(\vec{r}_2)\varphi_{21m_1}(\vec{r}_1) \right] \chi_{TRI} 
+\end{align*}
+
+\section{Astrofisica: Pressione di Degenerazione} %
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.25\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-05-14-18-28-16.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.73\textwidth}
+        L'indistinguibilità dei fermioni e il Principio di Pauli hanno conseguenze su scala cosmica. Consideriamo una \textbf{Stella di Neutroni}. %
+        Si tratta di un oggetto astronomico superdenso, con un raggio di circa $20 \text{ km}$ e una densità spaventosa $\rho \simeq 10^{17} \text{ kg/m}^3$. %
+    \end{minipage}
+\end{figure}
+
+Perché la stella non collassa totalmente su sé stessa in un buco nero a causa della sua immensa gravità? %
+I neutroni, come gli elettroni, sono \textbf{Fermioni} (spin $1/2$). I neutroni della stella si trovano confinati in una gigantesca "buca di potenziale" tridimensionale generata dalla forza di gravità. %
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.2\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-05-14-18-28-54.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.73\textwidth}
+        Per il Principio di Esclusione di Pauli, \textbf{non possono stare tutti nello stesso stato quantico} (il livello di minima energia in fondo alla buca). Sono costretti a "impilarsi" su livelli energetici man mano sempre più alti, riempiendoli a coppie (spin up e spin down). %
+    \end{minipage}
+\end{figure}
+
+\noindent
+Questo riempimento forzato dei livelli superiori fa sì che, anche a temperature vicine allo zero assoluto, le particelle possiedano un'enorme \textbf{Energia Cinetica media ($E_K \uparrow$)}. %
+Questa energia cinetica si manifesta macroscopicamente come una \textbf{PRESSIONE DI DEGENERAZIONE}, una forza repulsiva puramente quantistica che si oppone tenacemente al collasso gravitazionale, mantenendo in equilibrio la stella! %
+
+% =========================================================
+% FINE ASSOLUTA E DEFINITIVA DEI TUOI APPUNTI!
+% IL CERCHIO È CHIUSO: DALL'ATOMO ALLE STELLE!
+% =========================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \end{document}
