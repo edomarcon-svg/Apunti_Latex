@@ -1,0 +1,22 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {section}{Rappresentazione Matriciale di Operatori e Funzioni d'Onda}{2}{}%
+\contentsline {subsection}{Proprietà dello Spazio dei Ket}{2}{}%
+\contentsline {subsection}{Scelta della Base e Vettori Colonna}{3}{}%
+\contentsline {subsection}{Gli Operatori diventano Matrici}{3}{}%
+\contentsline {subsection}{Risoluzione dell'Identità e Prodotto di Operatori}{4}{}%
+\contentsline {subsection}{Operatori a Spettro Continuo: La Funzione d'Onda}{5}{}%
+\contentsline {section}{Teoria delle Perturbazioni Non Dipendenti dal Tempo}{6}{}%
+\contentsline {subsection}{Stati Non Degeneri}{6}{}%
+\contentsline {subsection}{Uguaglianza dei Coefficienti}{7}{}%
+\contentsline {subsection}{Correzione dell'Energia al Primo Ordine}{7}{}%
+\contentsline {subsection}{Correzione della Funzione d'Onda al Primo Ordine}{8}{}%
+\contentsline {subsection}{Applicazione: Correzione dello Stato nella Buca}{9}{}%
+\contentsline {subsection}{Correzione dell'Energia al Secondo Ordine}{10}{}%
+\contentsline {subsection}{Applicazione: Energia della Buca al 2° Ordine}{11}{}%
+\contentsline {section}{Teoria delle Perturbazioni: Stati Degeneri}{11}{}%
+\contentsline {subsection}{L'Equazione Secolare}{11}{}%
+\contentsline {subsection}{Rimozione della Degenerazione e "Buoni Autostati"}{12}{}%
+\contentsline {subsection}{Degenerazione di Ordine Superiore}{13}{}%
+\contentsline {subsection}{Diagonalizzazione e "Buoni Autostati"}{13}{}%
+\contentsline {subsection}{Il Teorema dei "Buoni Autostati"}{13}{}%
