@@ -20,3 +20,11 @@
 \contentsline {subsection}{Degenerazione di Ordine Superiore}{13}{}%
 \contentsline {subsection}{Diagonalizzazione e "Buoni Autostati"}{13}{}%
 \contentsline {subsection}{Il Teorema dei "Buoni Autostati"}{13}{}%
+\contentsline {section}{Struttura Fine dell'Atomo di Idrogeno: Correzione Relativistica}{14}{}%
+\contentsline {subsection}{Derivazione della Perturbazione $\hat {H}'_r$}{14}{}%
+\contentsline {subsection}{Applicazione della Teoria delle Perturbazioni}{15}{}%
+\contentsline {subsection}{Teorema del Viriale e Calcolo Finale}{15}{}%
+\contentsline {section}{Correzione di Spin-Orbita}{16}{}%
+\contentsline {subsection}{Calcolo dell'Energia di Spin-Orbita}{16}{}%
+\contentsline {subsection}{La Struttura Fine Totale e la Teoria di Dirac}{17}{}%
+\contentsline {subsection}{L'Epilogo della QED: Il Lamb Shift (1954)}{18}{}%

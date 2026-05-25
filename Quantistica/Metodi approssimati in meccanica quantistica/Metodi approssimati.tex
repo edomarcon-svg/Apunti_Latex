@@ -684,4 +684,208 @@ Consideriamo il commutatore $[\hat{O}, \hat{H}'] = 0$. Calcoliamo l'elemento di 
 \end{align*}
 Poiché per ipotesi gli autovalori sono distinti ($\xi - \nu \neq 0$), l'unica soluzione possibile è che l'elemento di matrice sia nullo.
 
+\section{Struttura Fine dell'Atomo di Idrogeno: Correzione Relativistica} %
+
+Ripartiamo dall'Atomo di Idrogeno. La sua Hamiltoniana di Bohr (imperturbata) è: %
+\begin{equation}
+    \hat{H}^{(0)} = \frac{\hat{p}^2}{2m} + V(r) = -\frac{\hbar^2}{2m}\Delta + V(r) %
+\end{equation}
+
+\noindent
+Le cui soluzioni esatte sono note: $\hat{H}^{(0)} u_{nlm} = E_n^{(0)} u_{nlm}$, con $E_n^{(0)} = -\frac{Ry}{n^2}$. %
+
+\noindent
+Valutiamo l'ordine di grandezza delle energie in gioco. L'energia di legame (fondamentale) è $|E_n^{(0)}| \simeq 10 \text{ eV}$. L'energia a riposo dell'elettrone è $mc^2 \simeq 500 \text{ keV}$. %
+Poiché $|E_n^{(0)}| \ll mc^2$, il moto dell'elettrone è essenzialmente \textbf{Non Relativistico}. Tuttavia, la velocità non è esattamente zero, quindi possiamo applicare una correzione relativistica trattandola come una piccola perturbazione. %
+
+\subsection{Derivazione della Perturbazione $\hat{H}'_r$} %
+
+Partiamo dall'equazione dell'energia totale relativistica: $E^2 = p^2c^2 + m^2c^4$. L'energia cinetica relativistica $K$ è l'energia totale meno l'energia a riposo: %
+\begin{equation*}
+    K = \sqrt{p^2c^2 + m^2c^4} - mc^2 = mc^2 \left[ \sqrt{1 + \left(\frac{p}{mc}\right)^2} - 1 \right] %
+\end{equation*}
+
+\noindent
+Nel limite non relativistico ($p \ll mc$), la quantità $x = \left(\frac{p}{mc}\right)^2$ è molto piccola. Possiamo sviluppare la radice in Serie di Taylor ($\sqrt{1+x} \simeq 1 + \frac{x}{2} - \frac{x^2}{8} + \dots$): %
+\begin{equation*}
+    K \simeq mc^2 \left[ 1 + \frac{1}{2}\left(\frac{p}{mc}\right)^2 - \frac{1}{8}\left(\frac{p}{mc}\right)^4 + \dots - 1 \right] \quad \Rightarrow \quad K \simeq \frac{p^2}{2m} - \frac{p^4}{8m^3c^2} + \dots %
+\end{equation*}
+
+\noindent
+Il primo termine ($\frac{p^2}{2m}$) è la classica energia cinetica già inclusa in $\hat{H}^{(0)}$. Il secondo termine rappresenta la nostra \textbf{Perturbazione Relativistica}: %
+\begin{equation}
+    \boxed{ \hat{H}'_r = -\frac{\hat{p}^4}{8m^3c^2} } %
+\end{equation}
+
+\subsection{Applicazione della Teoria delle Perturbazioni} %
+
+Per un dato livello $n$, esistono $l = 0, \dots, n-1$ stati, per un totale di $n^2$ stati \textbf{degeneri}. Potremmo rischiare di dover diagonalizzare matrici enormi! %
+
+\noindent
+Ma usiamo il \textbf{Teorema dei Buoni Autostati}: calcoliamo il commutatore tra la perturbazione $\hat{H}'_r$ e l'operatore momento angolare al quadrato $\hat{L}^2$: %
+\begin{equation*}
+    [\hat{H}'_r, \hat{L}^2] = \left[ -\frac{\hat{p}^4}{8m^3c^2}, \hat{L}^2 \right] = 0 \quad (\text{poiché } \hat{p}^2 \text{ è uno scalare isotropo nello spazio}) %
+\end{equation*}
+Poiché $[\hat{H}'_r, \hat{L}^2] = 0$ e $[\hat{H}'_r, \hat{L}_z] = 0$, gli autostati di $\hat{L}^2$ e $\hat{L}_z$ (che sono proprio le nostre armoniche sferiche $u_{nlm}$) \textbf{SONO GIÀ I BUONI AUTOSTATI}! La matrice perturbativa è già diagonale. Possiamo calcolare la correzione energetica usando la banale formula per stati non degeneri: %
+\begin{equation*}
+    E_n^{(1)} = \langle u_{nlm}^{(0)} | \hat{H}'_r | u_{nlm}^{(0)} \rangle = -\frac{1}{8m^3c^2} \langle u_{nlm}^{(0)} | \hat{p}^4 | u_{nlm}^{(0)} \rangle %
+\end{equation*}
+
+\noindent
+\textbf{Trucco Matematico per calcolare $\langle \hat{p}^4 \rangle$:} %
+Essendo $\hat{p}^2$ hermitiano, $\langle \Psi | \hat{p}^4 | \Psi \rangle = \langle \hat{p}^2 \Psi | \hat{p}^2 \Psi \rangle$. %
+Inoltre, dall'equazione imperturbata: $\left( \frac{\hat{p}^2}{2m} + V \right) u^{(0)} = E^{(0)} u^{(0)} \Rightarrow \hat{p}^2 u^{(0)} = 2m(E^{(0)} - V) u^{(0)}$. Sostituendo: %
+\begin{align*}
+    E_n^{(1)} &= -\frac{1}{8m^3c^2} \langle 2m(E_n^{(0)} - V) u_{nlm}^{(0)} | 2m(E_n^{(0)} - V) u_{nlm}^{(0)} \rangle = -\frac{4m^2}{8m^3c^2} \langle (E_n^{(0)} - V)^2 \rangle \\ %
+    &= -\frac{1}{2mc^2} \langle (E_n^{(0)})^2 + V^2 - 2E_n^{(0)}V \rangle = -\frac{1}{2mc^2} \left[ (E_n^{(0)})^2 - 2E_n^{(0)} \langle V \rangle + \langle V^2 \rangle \right] %
+\end{align*}
+
+Dobbiamo trovare i valori medi $\langle V \rangle$ e $\langle V^2 \rangle$ sapendo che $V(r) = -\frac{e^2}{4\pi\varepsilon_0} \frac{1}{r}$: %
+\begin{equation}
+    E_n^{(1)} = -\frac{1}{2mc^2} \left[ (E_n^{(0)})^2 + 2E_n^{(0)} \left( \frac{e^2}{4\pi\varepsilon_0} \right) \left\langle \frac{1}{r} \right\rangle + \left( \frac{e^2}{4\pi\varepsilon_0} \right)^2 \left\langle \frac{1}{r^2} \right\rangle \right] %
+\end{equation}
+
+\subsection{Teorema del Viriale e Calcolo Finale} %
+
+Per calcolare $\langle \frac{1}{r} \rangle$, usiamo il \textbf{Teorema del Viriale}: per un potenziale $V(r) \propto r^k$, vale $2\langle K \rangle = k\langle V \rangle$. %
+Nel caso coulombiano $k = -1$, quindi $2\langle K \rangle = -\langle V \rangle$. %
+L'energia totale è $E = \langle K \rangle + \langle V \rangle = -\frac{1}{2}\langle V \rangle + \langle V \rangle = \frac{1}{2}\langle V \rangle \Rightarrow \langle V \rangle = 2E_n^{(0)}$. %
+\begin{equation*}
+    -\frac{e^2}{4\pi\varepsilon_0} \left\langle \frac{1}{r} \right\rangle = 2E_n^{(0)} = 2 \left( -\frac{me^4}{(4\pi\varepsilon_0)^2 2\hbar^2 n^2} \right) \quad \Rightarrow \quad \left\langle \frac{1}{r} \right\rangle = \frac{me^2}{4\pi\varepsilon_0 \hbar^2 n^2} = \frac{1}{n^2 a_0} %
+\end{equation*}
+
+\noindent
+Per $\langle \frac{1}{r^2} \rangle$, il calcolo dell'integrale $\int u_{nlm}^* \frac{1}{r^2} u_{nlm} \, d\tau$ restituisce (dalle tabelle delle armoniche sferiche): %
+\begin{equation*}
+    \left\langle \frac{1}{r^2} \right\rangle = \frac{1}{(l + 1/2) n^3 a_0^2} %
+\end{equation*}
+
+Sostituiamo tutto nell'espressione per $E_n^{(1)}$, ricordando che $E_n^{(0)} = -\frac{Ry}{n^2}$: %
+\begin{equation*}
+    E_n^{(1)} = -\frac{1}{2mc^2} \left[ \frac{Ry^2}{n^4} + 2 \left(-\frac{Ry}{n^2}\right) \left(\frac{e^2}{4\pi\varepsilon_0}\right) \left(\frac{1}{n^2 a_0}\right) + \left(\frac{e^2}{4\pi\varepsilon_0}\right)^2 \frac{1}{(l+1/2)n^3 a_0^2} \right] %
+\end{equation*}
+
+\noindent
+Semplificando algebricamente tutti i termini, si arriva a un risultato sorprendentemente compatto: %
+\begin{equation}
+    \boxed{ E_n^{(1)} = -\frac{(E_n^{(0)})^2}{2mc^2} \left[ \frac{4n}{l + 1/2} - 3 \right] } %
+\end{equation}
+
+\textbf{Conclusioni Fisiche:} %
+\begin{itemize}
+    \item L'energia di correzione dipende non solo dal numero quantico principale $n$, ma anche dal momento angolare orbitale $l$. \textbf{La degenerazione accidentale per $l$ dell'Idrogeno è ufficialmente rimossa!} (Livelli con lo stesso $n$ ma diverso $l$ ora hanno energie leggermente diverse). %
+    \item La grandezza della correzione relativa è minuscola: $\frac{E_n^{(1)}}{E_n^{(0)}} \simeq \frac{E_n^{(0)}}{mc^2} \simeq \frac{10 \text{ eV}}{10^6 \text{ eV}} \simeq 10^{-5}$. È per questo che si chiama "Struttura Fine": produce scissioni delle righe spettrali invisibili ad occhio nudo, ma misurabili con spettrometri ad alta precisione. %
+\end{itemize}
+
+\section{Correzione di Spin-Orbita} %
+
+Aggiungiamo ora la seconda perturbazione fondamentale dell'atomo di Idrogeno: l'accoppiamento Spin-Orbita. L'Hamiltoniana perturbativa, come ricavato in precedenza, è: %
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-05-25-16-52-34.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.65\textwidth}
+        \begin{equation}
+            \hat{H}_{SO} = \left( \frac{e^2}{8\pi\varepsilon_0} \right) \frac{1}{m^2 c^2 r^3} \vec{S} \cdot \vec{L} %
+        \end{equation}
+    \end{minipage}
+\end{figure}
+
+\noindent
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.27\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{immagini/2026-05-25-16-57-15.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.7\textwidth}
+        Questa interazione causa lo sdoppiamento dei livelli degeneri dell'Idrogeno (i cosiddetti \textbf{Doppietti di Spin-Orbita}). %
+        I livelli energetici imperturbati $E_n^{(0)}$ sono altamente degeneri. Ad esempio, per $n=3$, abbiamo $l = 0, 1, 2$. Combinandoli con lo spin $s=1/2$, il momento totale $j$ può assumere i valori $5/2, 3/2, 1/2$. %
+    \end{minipage}
+\end{figure}
+
+\noindent
+Se lavorassimo nella \textbf{Base Disaccoppiata} $|n, l, m_l, s, m_s\rangle$, dovremmo risolvere enormi matrici fuori diagonale (poiché $\vec{S} \cdot \vec{L}$ non commuta con $L_z$ e $S_z$). 
+
+\noindent
+Tuttavia, sfruttiamo il \textbf{Teorema dei Buoni Autostati}! %
+Passiamo alla \textbf{Base Accoppiata} $|n, j, m_j, l, s\rangle$. Poiché $[\hat{H}_{SO}, \hat{J}^2] = 0$ e $[\hat{H}_{SO}, \hat{J}_z] = 0$, in questa base la matrice perturbativa è già perfettamente diagonale! %
+L'energia di correzione al primo ordine è semplicemente il valore di aspettazione in questa base: %
+\begin{equation}
+    E_{SO}^{(1)} = \langle n, j, m_j, l, s | \hat{H}_{SO} | n, j, m_j, l, s \rangle = \left( \frac{e^2}{8\pi\varepsilon_0 m^2 c^2} \right) \left\langle \frac{1}{r^3} \vec{S} \cdot \vec{L} \right\rangle %
+\end{equation}
+
+\subsection{Calcolo dell'Energia di Spin-Orbita} %
+
+Sfruttiamo l'identità operatoriale $\hat{J}^2 = (\hat{L} + \hat{S})^2 = \hat{L}^2 + \hat{S}^2 + 2\vec{S} \cdot \vec{L}$, da cui ricaviamo: %
+\begin{equation*}
+    \vec{S} \cdot \vec{L} = \frac{1}{2} (\hat{J}^2 - \hat{L}^2 - \hat{S}^2) %
+\end{equation*}
+
+\noindent
+Sostituiamo nell'energia e, poiché la parte radiale $1/r^3$ commuta con gli operatori angolari, separiamo i valori medi: %
+\begin{equation}
+    E_{SO}^{(1)} = \frac{e^2}{16\pi\varepsilon_0 m^2 c^2} \left\langle \frac{1}{r^3} \right\rangle \langle \hat{J}^2 - \hat{L}^2 - \hat{S}^2 \rangle %
+\end{equation}
+
+Gli autovalori della parte angolare sono banali nella base accoppiata: %
+\begin{equation*}
+    \langle \hat{J}^2 - \hat{L}^2 - \hat{S}^2 \rangle = \hbar^2 \left[ j(j+1) - l(l+1) - s(s+1) \right] \qquad \text{con } s = \frac{1}{2} \Rightarrow s(s+1) = \frac{3}{4} %
+\end{equation*}
+
+Dalle tabelle degli orbitali idrogenoidi, il valore medio radiale è: %
+\begin{equation*}
+    \left\langle \frac{1}{r^3} \right\rangle = \frac{1}{l(l+1/2)(l+1) n^3 a_0^3} %
+\end{equation*}
+
+\noindent
+Unendo i pezzi ed esprimendo le costanti in funzione dell'energia imperturbata $E_n^{(0)}$, arriviamo alla correzione di Spin-Orbita esatta: %
+\begin{equation}
+    E_{SO}^{(1)} = \frac{(E_n^{(0)})^2}{m c^2} \left\{ \frac{n [j(j+1) - l(l+1) - 3/4]}{l(l+1)(l+1/2)} \right\} %
+\end{equation}
+\textit{Nota: Per $l=0$, lo spin totale coincide con lo spin $j=s=1/2$. La formula darebbe la forma indeterminata $0/0$, ma un'analisi più rigorosa dimostra che l'effetto Spin-Orbita è fisicamente nullo per gli stati s.} %
+
+\subsection{La Struttura Fine Totale e la Teoria di Dirac} %
+
+La Correzione di Struttura Fine ($E_{SF}^{(1)}$) è la somma algebrica della perturbazione relativistica della massa (calcolata nel capitolo precedente) e dell'accoppiamento Spin-Orbita: %
+\begin{equation*}
+    E_{SF}^{(1)} = E_{REL}^{(1)} + E_{SO}^{(1)} %
+\end{equation*}
+
+\noindent
+Sommando le due frazioni complesse, accade una vera e propria magia algebrica. Tutti i termini contenenti esplicitamente il numero quantico orbitale $l$ si semplificano e scompaiono! Rimane solo: %
+\begin{equation}
+    \boxed{ E_{SF}^{(1)} = \frac{(E_n^{(0)})^2}{2 m c^2} \left[ 3 - \frac{4n}{j + 1/2} \right] } %
+\end{equation}
+
+\noindent
+Questa espressione straordinaria coincide \textbf{esattamente} con il limite a basse energie dell'Equazione di Dirac (la teoria quantistica relativistica esatta). %
+La degenerazione per $l$ è formalmente rimossa, ma compare una \textbf{nuova degenerazione}: stati con lo stesso numero quantico totale $j$ ma diverso $l$ possiedono esattamente la stessa energia! %
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{immagini/2026-05-25-17-01-37.png}
+    \end{figure}
+
+Ad esempio, nel livello $n=2$: %
+\begin{itemize}
+    \item Lo stato $2s_{1/2}$ ($l=0, j=1/2$) e lo stato $2p_{1/2}$ ($l=1, j=1/2$) sono \textbf{perfettamente degeneri}. %
+    \item Lo stato $2p_{3/2}$ ($j=3/2$) ha un'energia leggermente superiore. %
+\end{itemize}
+
+\subsection{L'Epilogo della QED: Il Lamb Shift (1954)} %
+
+La struttura fine di Dirac sembrava la parola definitiva sull'Idrogeno. Tuttavia, nel 1954, Willis Lamb condusse un esperimento a microonde con una precisione spaventosa, misurando un'anomalia inaspettata: %
+Gli stati $2s_{1/2}$ e $2p_{1/2}$ \textbf{NON} sono perfettamente degeneri! C'è un piccolissimo scarto energetico di circa $\approx 4 \, \mu\text{eV}$ (\textit{Lamb Shift}). %
+
+\noindent
+Da dove deriva? L'equazione di Dirac descrive perfettamente l'elettrone, ma considera il campo elettromagnetico e il vuoto come grandezze "classiche". %
+Il Lamb Shift è dovuto alle \textbf{fluttuazioni quantistiche del campo elettromagnetico nel vuoto}! L'elettrone interagisce con particelle virtuali che compaiono e scompaiono dal vuoto in tempi infinitesimi. %
+
+\noindent
+Per spiegare questo singolo scarto di $4 \, \mu\text{eV}$, la fisica ha dovuto sviluppare l'\textbf{Elettrodinamica Quantistica (QED)}, la teoria scientifica più precisa e testata della storia dell'umanità. %
+
+
 \end{document}
